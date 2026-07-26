@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/Favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/Favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon/favicon-16x16.png" />
+  <link rel="icon" href="assets/Favicon/favicon.ico" />
+  <link rel="manifest" href="assets/Favicon/site.webmanifest" />
+  <meta name="theme-color" content="#242422" />
+  <script>
+    document.documentElement.classList.add('motion-enabled');
+    window.setTimeout(() => document.documentElement.classList.add('motion-entered'), 700);
+  </script>
+  <title>About — David Montealegre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css?v=20260726-contact" />
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+
+<body class="about-page">
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+  </div>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ───────── TOPBAR ───────── -->
+  <header class="site-header cs-topbar">
+    <a class="logotype" href="index.html">
+      <img class="isotipo" src="assets/Home/logo/isotipo.svg" alt="David Montealegre" />
+    </a>
+    <a href="#contact" class="btn-contact">
+      <div class="btn-contact__thumb">
+        <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
+      </div>
+      <span class="btn-contact__label">Get in touch</span>
+    </a>
+  </header>
+
+  <!-- ───────── SIDENAV ───────── -->
+  <aside class="site-sidenav sidenav" id="sidenav" aria-label="Internal page navigation">
+    <nav class="site-sidenav__links">
+      <a href="index.html" class="text-link site-sidenav__link">Return</a>
+    </nav>
+    <div class="language-toggle" role="group" aria-label="Language selection">
+      <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
+      <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
+    </div>
+  </aside>
+
+  <!-- ── HERO ── -->
+  <section class="about-hero">
+    <div class="container">
+      <h1 class="about-hero-title">The full story</h1>
+      <p class="about-hero-sub">Some things that shaped how I think about design.<br>Each one started with a question I didn't expect.</p>
+    </div>
+  </section>
+
+  <!-- ── ARTICLES — same horizontal carousel as Home ── -->
+  <section class="section-articles about-articles-carousel" aria-label="My articles">
+    <div class="articles-scroll-sticky">
+      <div class="articles-scroll-track" id="aboutArticlesTrack">
+
+        <article class="article-item">
+          <div class="article-img">
+            <img src="assets/Home/Im%C3%A1genes/Img1.png" alt="Why I've worked with 4 different teams at Mercado Libre" />
+          </div>
+          <div class="article-text">
+            <h3 class="article-title">Why I've worked with 4 different teams at Mercado Libre</h3>
+            <p class="article-body">A couple of years ago, an interviewer asked me: why have you stayed so long at the same… <a href="#restlessness" class="article-link">Continue reading →</a></p>
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-img">
+            <img src="assets/Home/Im%C3%A1genes/Img2.png" alt="A bad interface not only creates a bad experience, it could be much worse" />
+          </div>
+          <div class="article-text">
+            <h3 class="article-title">A bad interface not only creates a bad experience, it could be much worse</h3>
+            <p class="article-body">I'm not only a designer who likes to create interfaces, I'm also a passionate of UX automotive… <a href="#cockpit" class="article-link">Continue reading →</a></p>
+          </div>
+        </article>
+
+        <article class="article-item">
+          <div class="article-img">
+            <img src="assets/Home/Im%C3%A1genes/Img3.png" alt="What I've learned from my other passion, music, about a good experience" />
+          </div>
+          <div class="article-text">
+            <h3 class="article-title">What I've learned from my other passion, music, about a good experience</h3>
+            <p class="article-body">When I was a teenager I used to practice guitar, and also… <a href="#automotive" class="article-link">Continue reading →</a></p>
+          </div>
+        </article>
+
+        <div class="articles-track-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STORIES CONTAINER ── -->
+  <div class="stories-container">
+
+    <!-- ══════════════════════════════════════
+         01 — RESTLESSNESS
+    ══════════════════════════════════════ -->
+    <article class="story-section active" id="restlessness">
+
+      <header class="story-header">
+        <span class="story-num">01</span>
+        <h2 class="story-title">Why I've worked with 4 different teams at Mercado Libre</h2>
+      </header>
+
+      <div class="story-body">
+
+        <p class="story-p">A couple of years ago, an interviewer asked me: <em>why have you stayed so long at the same company?</em> It caught me off guard. But the question stuck with me — and what I found when I sat with it became this article.</p>
+
+        <p class="story-p">Early in my career I changed jobs fast. What I didn't understand then was why: every time I stopped feeling like I was growing, the motivation disappeared.</p>
+
+        <blockquote class="story-pullquote">
+          I wasn't unstable. I was chasing learning.
+        </blockquote>
+
+        <p class="story-p">Mercado Libre was the first place where that didn't happen. The largest, most experienced UX team I'd ever seen. Colleagues so sharp they made me feel like I'd just graduated. And with dozens of teams and projects, there was a real option I hadn't had before: rotate internally instead of leaving.</p>
+
+        <p class="story-p">I did it four times. These are the four things I took from it.</p>
+
+        <div class="story-lessons">
+          <div class="story-lesson">
+            <h3 class="story-lesson-title">Thinking in business metrics</h3>
+            <p class="story-lesson-body">Maturing as a designer means stopping to evaluate your work only by how it looks — and starting to ask what it moves. What evidence of impact do we have? How do we know we achieved what we set out to achieve?</p>
+          </div>
+          <div class="story-lesson">
+            <h3 class="story-lesson-title">Expertise defines the role, not the other way around</h3>
+            <p class="story-lesson-body">For years I was obsessed with promotion. What I eventually understood is that comparing your path to someone else's is a dead end. I learned to separate a referent — someone who inspires you — from a role model — someone you're trying to imitate. They're not the same thing.</p>
+          </div>
+          <div class="story-lesson">
+            <h3 class="story-lesson-title">Ownership</h3>
+            <p class="story-lesson-body">The shift from waiting to be told what to do — to detecting problems and proposing solutions without being asked. Seniority isn't just skill level. It's initiative.</p>
+          </div>
+          <div class="story-lesson">
+            <h3 class="story-lesson-title">Everything is designed, not just the interface</h3>
+            <p class="story-lesson-body">My instinct was always to jump to deliverables: UI, final copy. What I had to learn is that the craft between the first idea and the final output is where the real difference lives. Mediocre and outstanding don't look that different in a brief — they look completely different in execution.</p>
+          </div>
+        </div>
+
+        <p class="story-p story-closing">Each of these came from a different leader, in a different context. That's the point: staying comfortable in one place for too long doesn't just slow your growth — it limits what you're exposed to.</p>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════
+         02 — COCKPIT
+    ══════════════════════════════════════ -->
+    <article class="story-section" id="cockpit">
+
+      <header class="story-header">
+        <span class="story-num">02</span>
+        <h2 class="story-title">How a car cockpit changed the way I think about every screen I design</h2>
+      </header>
+
+      <div class="story-body">
+
+        <p class="story-p">I studied graphic design, so for a long time I thought design was limited to the visual layer: the colors, the composition, how things look. That's not wrong — but it's an incomplete view I didn't fully understand until much later.</p>
+
+        <p class="story-p">I'm a big fan of automotive design, and one day while driving I started thinking about my car's cockpit. The question that came to me was: how does a driver interact with an infotainment system at 120 km/h? A poorly placed button, a screen that takes half a second too long to respond, ambiguous information on a critical action — the consequences can be far worse than a "bad experience."</p>
+
+        <blockquote class="story-pullquote">
+          At that speed, that's not a bad UX moment. It's a car accident.
+        </blockquote>
+
+        <p class="story-p">After that, I couldn't look at any screen the same way. A registration form, a payment flow, a settings menu — every screen has consequences. Someone's time, trust, and frustration are always on the line. The stakes vary by context, but they never disappear.</p>
+
+        <p class="story-p">That's when I stopped thinking of myself as an interface designer and started thinking of myself as an experience designer. The distinction matters more than it sounds.</p>
+
+        <p class="story-p">My principle shifted from "design for the user" — the standard HCD framing — to something more precise: design for the context. Context means the user, the business, and the technical capacity together. The full triad. Products that only optimize for one of the three tend to fail the other two.</p>
+
+        <p class="story-p story-closing">The cockpit question made that obvious. You can't design a great in-car interface thinking only about the person, or only about the engineering. You need all three at once.</p>
+
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════════
+         03 — AUTOMOTIVE
+    ══════════════════════════════════════ -->
+    <article class="story-section" id="automotive">
+
+      <header class="story-header">
+        <span class="story-num">03</span>
+        <h2 class="story-title">Why I work in fintech but want to be in automotive</h2>
+      </header>
+
+      <div class="story-body">
+
+        <p class="story-p">I've been passionate about cars for as long as I can remember — not just as objects, but as systems. The way a well-designed interior communicates before you even touch it. The different feel of a gear shift depending on whether it was designed to be precise or expressive. That kind of attention to physical experience is what got me interested in design in the first place.</p>
+
+        <p class="story-p">It took me a while to realize this wasn't separate from my professional interest — it was pointing directly at it. User experience in the automotive sector is where experience design gets genuinely hard, but also genuinely memorable.</p>
+
+        <blockquote class="story-pullquote">
+          In automotive UX, attention isn't just a limited resource — it's a critical one.
+        </blockquote>
+
+        <p class="story-p">Every interaction has to work within a fraction of a second of cognitive load, in varying light conditions, sometimes with only one hand available. The constraints are extreme. And extreme constraints, when taken seriously, produce better design thinking than comfortable ones. In my early career I worked on a UX project in mobility called Puntomóvil — a luxury marketplace for white-label mobility apps in Bogotá. One of the initial challenges was how to optimize the interface to facilitate interaction considering Fitts' Law. A simple example of how context shapes design.</p>
+
+        <p class="story-p">The challenge that excites me most about the coming years in this sector is how to reconcile autonomous driving with the joy of driving — and how companies like Tesla, Waymo, and others developing this technology will balance that tension. They're not designing a vehicle. They're designing the future of mobility: autonomous driving, connected ecosystems, a fundamental shift in what transportation means.</p>
+
+        <p class="story-p">As someone who considers driving a pleasure — not a task to be optimized — I'm fascinated by the tension this creates. What does it mean to be in the cockpit when there's no one at the wheel? What does it feel like to be in a self-driving car for someone who didn't want it to drive itself?</p>
+
+        <p class="story-p story-closing">Nobody has fully answered that question yet. These are precisely the experience challenges I'd like to work on.</p>
+
+      </div>
+    </article>
+
+  </div><!-- /stories-container -->
+
+  <!-- ══════════════════════════════════════
+       CLOSING
+  ══════════════════════════════════════ -->
+  <section class="about-closing" id="contact">
+    <div class="about-closing-inner">
+      <p class="about-closing-pre">That's the story so far.</p>
+      <h2 class="about-closing-title">If something here sparked a question,<br><em>that's exactly the point.</em></h2>
+      <a href="mailto:hello@davidmontealegre.com" class="btn-primary">
+        Let's talk <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <a href="mailto:idmr13@gmail.com" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.5-.5a.5.5 0 0 0-.5.5v.35l7 4.55 7-4.55V6.5a.5.5 0 0 0-.5-.5h-13ZM19 9.24l-6.45 4.2a1 1 0 0 1-1.1 0L5 9.24v8.26a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5V9.24Z" fill="currentColor"/></svg>
+        <span>idmr13@gmail.com</span>
+      </a>
+      <a href="tel:+573183922306" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h4a1 1 0 0 1 1 .8l.8 4a1 1 0 0 1-.35.95l-1.7 1.36a10.4 10.4 0 0 0 4.14 4.14l1.36-1.7a1 1 0 0 1 .95-.35l4 .8a1 1 0 0 1 .8 1v4a3 3 0 0 1-3 3A16 16 0 0 1 3 5a2 2 0 0 1 2-2h2Z" fill="currentColor"/></svg>
+        <span>+57 3183922306</span>
+      </a>
+      <a href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4.75 10.5h3.5V19h-3.5v-8.5Zm5.25 0h3.35v1.2c.55-.8 1.5-1.45 2.95-1.45 2.45 0 3.95 1.55 3.95 4.35V19h-3.5v-4c0-1.15-.45-1.8-1.45-1.8-1.1 0-1.8.8-1.8 2.05V19H10v-8.5Z" fill="currentColor"/></svg>
+        <span>David Montealegre Rey</span>
+      </a>
+    </div>
+    <div class="site-footer__divider"></div>
+    <div class="site-footer__bottom">
+      <span class="site-footer__copy">© David Montealegre 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=20260726-contact"></script>
+  <script src="js/main.js?v=20260726-contact"></script>
+  <script src="js/about-carousel.js"></script>
+
+</body>
+</html>

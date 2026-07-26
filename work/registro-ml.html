@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/Favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/Favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/Favicon/favicon-16x16.png" />
+  <link rel="icon" href="../assets/Favicon/favicon.ico" />
+  <link rel="manifest" href="../assets/Favicon/site.webmanifest" />
+  <meta name="theme-color" content="#242422" />
+  <script>
+    document.documentElement.classList.add('motion-enabled');
+    window.setTimeout(() => document.documentElement.classList.add('motion-entered'), 700);
+  </script>
+  <title>Registro Mercado Libre — David Montealegre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/styles.css?v=20260726-contact" />
+  <link rel="stylesheet" href="../css/case-study.css?v=20260726-timeline-gap" />
+</head>
+
+<body class="case-study-page case-study-registro-ml">
+
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+  </div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ───────── TOPBAR ───────── -->
+  <header class="site-header cs-topbar">
+    <a class="logotype" href="../index.html">
+      <img class="isotipo" src="../assets/Home/logo/isotipo.svg" alt="David Montealegre" />
+    </a>
+    <a href="#contact" class="btn-contact">
+      <div class="btn-contact__thumb">
+        <img src="../assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
+      </div>
+      <span class="btn-contact__label">Get in touch</span>
+    </a>
+  </header>
+
+  <aside class="site-sidenav sidenav" id="sidenav" aria-label="Internal page navigation">
+    <nav class="site-sidenav__links">
+      <a href="../index.html#work" class="text-link site-sidenav__link">Return</a>
+    </nav>
+    <div class="language-toggle" role="group" aria-label="Language selection">
+      <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
+      <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
+    </div>
+  </aside>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="cs-hero">
+    <div class="container">
+
+      <div class="cs-hero-layout">
+
+        <div class="cs-hero-left">
+
+          <h1 class="cs-title">Mercado Libre Sign-up</h1>
+
+        </div>
+
+        <div class="cs-hero-meta-panel">
+          <div class="cs-hero-metadata">
+            <div class="cs-meta-inline">
+              <img src="../assets/Registro ML/ML signup/Profile%20icon.svg" alt="" aria-hidden="true" class="cs-meta-icon" />
+              <span>Ux senior analyst / UI designer</span>
+            </div>
+            <div class="cs-meta-inline">
+              <img src="../assets/Registro ML/ML signup/Calendar%20icon.svg" alt="" aria-hidden="true" class="cs-meta-icon" />
+              <span>Q3 2023 → Q4 2025</span>
+            </div>
+          </div>
+
+          <div class="cs-hero-ctas">
+            <span class="cs-badge-live">Productive</span>
+            <a href="https://www.mercadolibre.com.co/registration/marketplace/form" target="_blank" rel="noopener" class="cs-btn-visit">Visit project</a>
+          </div>
+        </div>
+
+        <div class="cs-hero-right">
+          <img src="../assets/Registro ML/Hero mockup/Img hero.png" alt="Mercado Libre sign-up flow mockups" class="cs-mockups-img" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── UX OBJECTIVES ───────── -->
+  <section class="cs-objectives">
+    <div class="container">
+      <p class="cs-objectives-eyebrow">UX objectives</p>
+      <div class="cs-objectives-grid">
+        <div class="cs-obj-col">
+          <p class="cs-obj-statement">Increase flow conversion</p>
+        </div>
+        <div class="cs-obj-col">
+          <p class="cs-obj-statement">Reduce completion time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── ACHIEVEMENT ───────── -->
+  <section class="cs-achievement">
+    <div class="container">
+      <p class="cs-achievement-label">Our most important achievement</p>
+      <p class="cs-achievement-stat">
+        Reduced average completion time from
+        <span class="cs-achievement-accent">3 minutes and 25 seconds</span>
+        to
+        <span class="cs-achievement-accent">52 seconds</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ───────── CONTEXT ───────── -->
+  <section class="cs-section">
+    <div class="container">
+      <h2 class="cs-section-heading">Context</h2>
+      <div class="cs-prose">
+        <p>When I took ownership of this project, registration was a single shared flow for both Mercado Libre and Mercado Pago — two products with fundamentally different conversion goals.</p>
+        <p>Mercado Pago (fintech) needed flows that met regulatory requirements for each country: strict identity verification, mandatory account type selection, KYC compliance. Mercado Libre (marketplace) needed accounts created fast enough that friction didn't kill purchase intent.</p>
+        <p>The strategic decision to split the teams was the prerequisite for everything that followed. What I'm documenting here is the Mercado Libre side — four compounding changes over two years that turned a broken flow into the standard the team still ships against.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CHALLENGES ───────── -->
+  <section class="cs-section cs-section--challenges">
+    <div class="container">
+      <h2 class="cs-section-heading">Faced challenges</h2>
+      <ul class="cs-challenges-list">
+        <li>Create a complete new signup flow aligned with our new goal in Mercado Libre.</li>
+        <li>Stop being a friction in middle of purchases.</li>
+        <li>Unify the different kind of signup flows in one which operate modularly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ───────── COMPOUNDING CHANGES ───────── -->
+  <section class="cs-section cs-section--changes cs-change-disclosure" id="compounding-changes">
+    <div class="container">
+      <h2 class="cs-section-heading">Our compounding changes</h2>
+
+      <div class="cs-change-list">
+        <article class="cs-change-item is-active" data-change-accordion>
+          <div class="cs-change-timeline" aria-hidden="true">
+            <div class="cs-change-diamond"></div>
+            <div class="cs-change-line"></div>
+          </div>
+          <div class="cs-change-content">
+            <button class="cs-change-header cs-change-trigger" type="button" id="changeTrigger1" aria-expanded="true" aria-controls="changePanel1">
+              <span class="cs-change-heading">
+                <span class="cs-change-eyebrow">1st change</span>
+                <span class="cs-change-title">Agnostic sign-up</span>
+              </span>
+              <span class="sw-chevron" aria-hidden="true"><img src="../assets/Icons/chevron-accordion.svg" alt="" /></span>
+            </button>
+            <div class="cs-change-body" id="changePanel1" role="region" aria-labelledby="changeTrigger1">
+              <p>Mercado Libre was asking buyers to choose between "personal" and "business" accounts — a bifurcation that existed only because fintech required it for regulatory reasons. The decision was to remove the account type selection from the Mercado Libre flow entirely. A buyer doesn't need to categorize themselves before they can shop. This was only possible because we had split the teams — the same change would have broken Mercado Pago's compliance requirements.</p>
+
+              <div class="cs-impact">
+                <span class="cs-impact-label">Impact</span>
+                <p class="cs-impact-line"><span class="cs-impact-accent">+2% conversion rate, 160,000 additional monthly registrations</span> on 8M users/month.</p>
+              </div>
+
+              <div class="cs-new-flow">
+                <span class="cs-impact-label">New flow</span>
+                <div class="cs-flow-pills cs-flow-pills--single-line">
+                  <span class="cs-flow-pill">Enter sign-up</span>
+                  <span class="cs-flow-arrow">→</span>
+                  <span class="cs-flow-pill cs-flow-pill--removed">Account type</span>
+                  <span class="cs-flow-arrow">→</span>
+                  <span class="cs-flow-pill">HUB</span>
+                  <span class="cs-flow-arrow">→</span>
+                  <span class="cs-flow-pill">Add email</span>
+                  <span class="cs-flow-arrow">→</span>
+                  <span class="cs-flow-pill cs-flow-pill--fade">Add name</span>
+                  <span class="cs-flow-arrow cs-flow-arrow--fade">→</span>
+                  <span class="cs-flow-pill cs-flow-pill--fade">Add phone</span>
+                  <span class="cs-flow-arrow cs-flow-arrow--fade">→</span>
+                  <span class="cs-flow-pill cs-flow-pill--more">Add password</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cs-change-item" data-change-accordion>
+          <div class="cs-change-timeline" aria-hidden="true">
+            <div class="cs-change-diamond"></div>
+            <div class="cs-change-line"></div>
+          </div>
+          <div class="cs-change-content">
+            <button class="cs-change-header cs-change-trigger" type="button" id="changeTrigger2" aria-expanded="false" aria-controls="changePanel2">
+              <span class="cs-change-heading">
+                <span class="cs-change-eyebrow">2nd change</span>
+                <span class="cs-change-title">Sign-up form</span>
+              </span>
+              <span class="sw-chevron" aria-hidden="true"><img src="../assets/Icons/chevron-accordion.svg" alt="" /></span>
+            </button>
+            <div class="cs-change-body" id="changePanel2" role="region" aria-labelledby="changeTrigger2" inert>
+              <p>The existing flow was linear by design: enter a piece of data, validate it via OTP or identity challenge, wait for the system, move to the next screen. Five steps, ten screens. The model was built around verification, not conversion. We separated declaration from validation: all required fields on a single screen, with only phone number validated via OTP afterward. <span class="cs-text-accent">This collapsed 5 steps and 10 screens into 2 steps and 3 screens.</span> Removing step-by-step validation meant rethinking abuse control. We implemented ReCaptcha at the form level and at the OTP screen — lower friction without losing the detection layer.</p>
+
+              <div class="cs-impact">
+                <span class="cs-impact-label">Impact</span>
+                <p class="cs-impact-line"><span class="cs-impact-accent">3:25 → 1:54 completion time, 18% → 27% activation rate,</span> abuse dropped from 5.04% to 4.92%.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cs-change-item" data-change-accordion>
+          <div class="cs-change-timeline" aria-hidden="true">
+            <div class="cs-change-diamond"></div>
+            <div class="cs-change-line"></div>
+          </div>
+          <div class="cs-change-content">
+            <button class="cs-change-header cs-change-trigger" type="button" id="changeTrigger3" aria-expanded="false" aria-controls="changePanel3">
+              <span class="cs-change-heading">
+                <span class="cs-change-eyebrow">3rd change</span>
+                <span class="cs-change-title">Social sign-up with Google</span>
+              </span>
+              <span class="sw-chevron" aria-hidden="true"><img src="../assets/Icons/chevron-accordion.svg" alt="" /></span>
+            </button>
+            <div class="cs-change-body" id="changePanel3" role="region" aria-labelledby="changeTrigger3" inert>
+              <p>Even with the form, users still had to manually type name, email, password, and phone. Manual data entry is inherently error-prone and friction-generating especially on mobile. The solution was to implement Google Identity Services: the Google button, One Tap, and Credential Manager. With a verified Google account we pre-fill name and email, eliminate the password field, and reduce the flow to a single OTP.</p>
+
+              <div class="cs-impact">
+                <span class="cs-impact-label">Impact</span>
+                <p class="cs-impact-line">+0.6pp conversion vs form-only, <span class="cs-impact-accent">1:54 minutes → 50 seconds</span> completion time.</p>
+              </div>
+
+              <div class="cs-callout">
+                <p class="cs-callout-title">What we left on the table</p>
+                <p class="cs-callout-body">We couldn't eliminate phone OTP because it was the only validated recovery data. With Google, the validated data point becomes email. If shipped, registration drops to ~10 seconds via One Tap.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="cs-change-item" data-change-accordion>
+          <div class="cs-change-timeline" aria-hidden="true">
+            <div class="cs-change-diamond"></div>
+            <div class="cs-change-line cs-change-line--end"></div>
+          </div>
+          <div class="cs-change-content">
+            <button class="cs-change-header cs-change-trigger" type="button" id="changeTrigger4" aria-expanded="false" aria-controls="changePanel4">
+              <span class="cs-change-heading">
+                <span class="cs-change-eyebrow">4th change</span>
+                <span class="cs-change-title">Unification</span>
+              </span>
+              <span class="sw-chevron" aria-hidden="true"><img src="../assets/Icons/chevron-accordion.svg" alt="" /></span>
+            </button>
+            <div class="cs-change-body" id="changePanel4" role="region" aria-labelledby="changeTrigger4" inert>
+              <p>As we reduced friction, drop rates fell, but transformed. The switch rate between registration and login jumped from 16% to 41.4% after social was introduced. Social made registration so fast that users tried it impulsively before checking which flow they were in.</p>
+
+              <div class="cs-impact">
+                <span class="cs-impact-label">The reframe</span>
+              </div>
+              <p>Users don't have a task of "registering" or "logging in." They have a task of accessing Mercado Libre. ML sessions last 6+ months on the same device. Many users hadn't typed credentials in so long they couldn't confidently identify which flow they needed.</p>
+
+              <p>The solution was to implement one screen that accepts an identifier (email or phone), <span class="cs-impact-accent">the screen logic determines whether an account exists, and routes accordingly to sign-in or sign-up.</span> The user never has to decide which path they're on.</p>
+
+              <div class="cs-callout">
+                <p class="cs-callout-title">The risk we designed around</p>
+                <p class="cs-callout-body">Typos could route a user to the wrong flow and accidentally create a duplicate account. Solution: a persistent pill displaying the entered identifier in subsequent screens — turning a passive input into an active confirmation point.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── UI EVIDENCES ───────── -->
+  <section class="cs-section cs-section--evidences">
+    <div class="container">
+      <h2 class="cs-section-heading">Sign up with email</h2>
+      <div class="cs-evidence-stack">
+        <img src="../assets/Registro ML/UI evidences/Flow 1-1.png" alt="Sign up with email — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
+        <img src="../assets/Registro ML/UI evidences/Flow 1-2.png" alt="Sign up with email — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section cs-section--evidences">
+    <div class="container">
+      <h2 class="cs-section-heading">Sign up with Google</h2>
+      <div class="cs-evidence-stack">
+        <img src="../assets/Registro ML/UI evidences/Flow 2-1.png" alt="Sign up with Google — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
+        <img src="../assets/Registro ML/UI evidences/Flow 2-2.png" alt="Sign up with Google — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
+      </div>
+    </div>
+  </section>
+
+  <section class="cs-section cs-section--evidences">
+    <div class="container">
+      <h2 class="cs-section-heading">Sign up with phone number</h2>
+      <div class="cs-evidence-stack">
+        <img src="../assets/Registro ML/UI evidences/Flow 3-1.png" alt="Sign up with phone — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
+        <img src="../assets/Registro ML/UI evidences/Flow 3-2.png" alt="Sign up with phone — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FINAL RESULT ───────── -->
+  <section class="cs-section cs-final-result">
+    <div class="container">
+      <div class="cs-final-result-inner">
+        <div class="cs-final-result-block">
+          <h2 class="cs-section-heading">Final result</h2>
+          <div class="cs-prose cs-final-result-copy">
+            <p>At the moment I left this project the new unification flow hadn't been implemented, I didn't get information about the performance of the new flow productively, but part of the result was:</p>
+          </div>
+          <ul class="cs-final-result-list">
+            <li><span>Reduce the time completion significantly from 3:25 minutes to 50 seconds.</span></li>
+            <li><span>Increase flow conversion by 12.5% and 180k new users per month</span> when unification was implemented in specific sites like Brazil.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACT ───────── -->
+  <section class="section-closing" id="contact"></section>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <a href="mailto:idmr13@gmail.com" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.5-.5a.5.5 0 0 0-.5.5v.35l7 4.55 7-4.55V6.5a.5.5 0 0 0-.5-.5h-13ZM19 9.24l-6.45 4.2a1 1 0 0 1-1.1 0L5 9.24v8.26a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5V9.24Z" fill="currentColor"/></svg>
+        <span>idmr13@gmail.com</span>
+      </a>
+      <a href="tel:+573183922306" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h4a1 1 0 0 1 1 .8l.8 4a1 1 0 0 1-.35.95l-1.7 1.36a10.4 10.4 0 0 0 4.14 4.14l1.36-1.7a1 1 0 0 1 .95-.35l4 .8a1 1 0 0 1 .8 1v4a3 3 0 0 1-3 3A16 16 0 0 1 3 5a2 2 0 0 1 2-2h2Z" fill="currentColor"/></svg>
+        <span>+57 3183922306</span>
+      </a>
+      <a href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" class="site-footer__item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4.75 10.5h3.5V19h-3.5v-8.5Zm5.25 0h3.35v1.2c.55-.8 1.5-1.45 2.95-1.45 2.45 0 3.95 1.55 3.95 4.35V19h-3.5v-4c0-1.15-.45-1.8-1.45-1.8-1.1 0-1.8.8-1.8 2.05V19H10v-8.5Z" fill="currentColor"/></svg>
+        <span>David Montealegre Rey</span>
+      </a>
+    </div>
+    <div class="site-footer__divider"></div>
+    <div class="site-footer__bottom">
+      <span class="site-footer__copy">© David Montealegre 2026</span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js?v=20260726-contact"></script>
+  <script src="../js/main.js?v=20260726-case-accordions"></script>
+
+</body>
+</html>

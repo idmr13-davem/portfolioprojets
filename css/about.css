@@ -1,0 +1,226 @@
+/* ─────────────────────────────────────────
+   ABOUT PAGE — Blog format
+───────────────────────────────────────── */
+
+/* ── Hero ── */
+.about-hero {
+  padding: var(--space-hero) 0 var(--space-xxl);
+}
+
+.about-hero .container {
+  padding-left: var(--grid-margin-left);
+  padding-right: var(--grid-margin-right);
+}
+
+.about-hero-title {
+  font-size: var(--text-title-xl);
+  line-height: var(--lh-title-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-l);
+}
+
+.about-hero-sub {
+  font-size: var(--text-body-xl);
+  line-height: var(--lh-body-xl);
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+
+/* The About page reuses the Home article carousel without repeating its header. */
+.about-articles-carousel {
+  margin-top: calc(-1 * var(--space-xl));
+}
+
+/* ── Stories container ── */
+.stories-container {
+  position: relative;
+}
+
+/* ── Story Section ── */
+.story-section {
+  display: none;
+  padding: 0 var(--grid-margin-right) var(--space-mega) var(--grid-margin-left);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+}
+
+.story-section.active  { display: block; }
+.story-section.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Story Header ── */
+.story-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-l);
+  margin-bottom: var(--space-xxl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.story-num {
+  font-size: var(--text-cap-l);
+  font-weight: 600;
+  color: var(--color-brand);
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+  padding-top: 6px;
+}
+
+.story-title {
+  font-size: var(--text-title-l);
+  line-height: var(--lh-title-l);
+  font-weight: 700;
+}
+
+/* ── Story Body ── */
+.story-body {
+  max-width: 75%;
+}
+
+.story-p {
+  font-size: var(--text-body-m);
+  line-height: var(--lh-body-m);
+  font-weight: 300;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-m);
+}
+
+.story-p em {
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* ── Pull quote ── */
+.story-pullquote {
+  font-size: var(--text-title-m);
+  line-height: var(--lh-title-m);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-text-main);
+  border-left: 3px solid var(--color-accent-main);
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-l);
+  margin: var(--space-xl) 0;
+  max-width: 100%;
+}
+
+/* ── Lessons ── */
+.story-lessons {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-xl) 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.story-lesson {
+  padding: var(--space-l) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.story-lesson-title {
+  font-size: var(--text-body-m);
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.01em;
+}
+
+.story-lesson-body {
+  font-size: var(--text-body-m);
+  line-height: var(--lh-body-m);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+
+/* ── Closing line ── */
+.story-closing {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--color-text-secondary);
+}
+
+/* ── About closing ── */
+.about-closing {
+  padding: var(--space-mega) var(--grid-margin-right) var(--space-mega) var(--grid-margin-left);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.about-closing-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xxl);
+  width: 75%;
+}
+
+.about-closing-pre {
+  font-size: var(--text-body-m);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.about-closing-title {
+  font-size: var(--text-title-l);
+  line-height: var(--lh-title-l);
+  font-weight: 700;
+}
+
+.about-closing-title em {
+  color: var(--color-brand);
+  font-style: italic;
+}
+
+/* ── Reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 500ms var(--ease-out), transform 500ms var(--ease-out);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE ≤1499px — mismo sistema que Home y Caso 01
+───────────────────────────────────────── */
+@media (max-width: 1499px) {
+  /* Caption L → Caption M en desktop/laptop intermedio */
+  .story-num {
+    font-size: var(--text-cap-m);
+    line-height: var(--lh-cap-m);
+  }
+
+  /* Hero title — title-xl (56px) → title-l (40px) */
+  .about-hero-title {
+    font-size: var(--text-title-l);
+    line-height: var(--lh-title-l);
+  }
+  /* Hero subtitle — body-xl → body-m */
+  .about-hero-sub {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+  /* Story title + closing — title-l (40px) → title-m (28px) */
+  .story-title,
+  .about-closing-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+  /* Pull quote — title-m (28px) → title-s */
+  .story-pullquote {
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
