@@ -44,7 +44,7 @@
 
   /* Border radius aliases — compatibilidad con componentes actuales */
   --border-radius-large: var(--radius-l);
-  --border-radius-small: var(--radius-m);
+  --border-radius-small: var(--radius-s);
   --radius-pill: 100px;
 
   --font-title: 'Inter', sans-serif;
