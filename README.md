@@ -24,6 +24,7 @@ Internal strategy, drafts, source research, unapproved metrics, and compliance n
 The desktop experience currently includes:
 
 - A redesigned Home with fixed navigation, an animated hero scroll indicator, and a new About me section.
+- The first desktop article page, “Por qué Mercado Libre fue el primer lugar del que no quise irme?”, implemented from the Figma editorial design.
 - Exclusive project accordions: the first item opens by default and only one item can remain open at a time.
 - Matching idle, hover, open, and open-hover states with reduced-motion support.
 - A 24px content gap between image and copy in both About me and My articles.

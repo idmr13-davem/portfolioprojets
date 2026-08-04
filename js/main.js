@@ -28,7 +28,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
 (function initMobileUnderConstruction() {
   if (document.body.classList.contains('home-page')) return;
 
-  const isNestedPage = window.location.pathname.includes('/work/');
+  const isNestedPage = window.location.pathname.includes('/work/') || window.location.pathname.includes('/articles/');
   const rootPath = isNestedPage ? '../' : '';
   const overlay = document.createElement('section');
   overlay.className = 'mobile-construction';
@@ -115,7 +115,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
 //  Shared closing contact and copyright footer
 // ─────────────────────────────────────────
 (function initGlobalContactAndFooter() {
-  const isNestedPage = window.location.pathname.includes('/work/');
+  const isNestedPage = window.location.pathname.includes('/work/') || window.location.pathname.includes('/articles/');
   const rootPath = isNestedPage ? '../' : '';
   const closing = document.querySelector('.section-closing, .about-closing, .cs-cierre');
 
