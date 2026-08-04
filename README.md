@@ -33,6 +33,6 @@ The desktop experience currently includes:
 - The Registro Mercado Libre “Our compounding changes” section converted from scroll disclosure to exclusive accordions.
 - Header contact buttons that navigate to the closing contact section on the current page.
 
-The current mobile experience remains the temporary under-construction view.
+The Home mobile experience is implemented from the Figma mobile design. Internal pages still use the temporary under-construction mobile view.
 
 © 2026 David Montealegre. All rights reserved.

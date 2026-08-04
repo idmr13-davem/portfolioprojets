@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="css/styles.css?v=20260803-figma-tokens" />
 </head>
 
-<body>
+<body class="home-page">
 
   <!-- Global scroll progress -->
   <div class="scroll-progress" aria-hidden="true">
@@ -39,12 +39,40 @@
     <a class="logotype" href="#">
       <img class="isotipo" src="assets/Home/logo/isotipo.svg" alt="David Montealegre" />
     </a>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="homeMobileDrawer" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
     <a href="#contact" class="btn-contact" id="headerContact">
       <div class="btn-contact__thumb">
         <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
       </div>
       <span class="btn-contact__label">Get in touch</span>
     </a>
+    <div class="mobile-home-drawer" id="homeMobileDrawer" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a href="#work">Selected work</a>
+        <a href="#about">About me</a>
+        <a href="#articles">My articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn-contact mobile-home-drawer__contact">
+        <div class="btn-contact__thumb">
+          <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
+        </div>
+        <span class="btn-contact__label">Get in touch</span>
+      </a>
+      <div class="mobile-home-drawer__actions">
+        <div class="language-toggle" role="group" aria-label="Language selection">
+          <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
+          <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+      <footer class="mobile-home-drawer__footer">
+        <small>© David Montealegre 2026</small>
+      </footer>
+    </div>
   </header>
 
   <!-- ───────────── HERO ───────────── -->
@@ -80,7 +108,7 @@
 
       <!-- Subtitle -->
       <p class="hero-subtitle">
-        7 years designing for 60 million users across Latam, from zero-to-one products to systems that moved the needle on business metrics. Currently at Mercado Libre, the largest tech company in Latin America.
+        8 years designing for 60M+ users across Latam — from zero-to-one products to systems that moved the needle on business metrics. Currently at Mercado Libre, the largest tech company in Latin America.
       </p>
 
     </div>
@@ -356,8 +384,15 @@
         const raw        = Math.max(0, Math.min(1, scrolled / scrollable));
         const articles   = track.querySelectorAll('.article-item');
         const lastArticle = articles[articles.length - 1];
-        const contentLeft = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--grid-margin-left')) || 0;
-        const trackMax   = lastArticle ? Math.max(0, lastArticle.offsetLeft - contentLeft) : 0;
+        const isMobile   = window.matchMedia('(max-width: 768px)').matches;
+        const rootStyles = getComputedStyle(document.documentElement);
+        const contentLeft = isMobile
+          ? parseFloat(rootStyles.getPropertyValue('--margin-mobile')) || 0
+          : parseFloat(rootStyles.getPropertyValue('--grid-margin-left')) || 0;
+        const endOffset = isMobile
+          ? Math.max(0, lastArticle.offsetLeft + lastArticle.offsetWidth - window.innerWidth + contentLeft)
+          : Math.max(0, lastArticle.offsetLeft - contentLeft);
+        const trackMax = lastArticle ? endOffset : 0;
         track.style.transform = `translateX(${-raw * trackMax}px)`;
       }
 

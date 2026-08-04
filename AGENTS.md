@@ -10,9 +10,10 @@
 - Article progress as of 2026-08-03: the first improved article was drafted in Spanish and translated to English with a personal, colloquial narrative voice. Working title: "Por que Mercado Libre fue el primer lugar del que no quise irme?" / "Why Mercado Libre Was the First Place I Didn't Want to Leave." Preserve the article's personal tone while polishing spelling, rhythm, and readability.
 - Editorial design standard as of 2026-08-03: future articles should use the new Figma article structure for desktop and mobile, based on editorial references like Medium and Oz Gultekin's design articles. Standard blocks: title, reading time, publication date, language, skimmer/summary paragraph, curated tags, hero image or collage with caption, article body with clear section separators, and a closing reflection before the contact CTA.
 - Design tokens status as of 2026-08-03: typography tokens, color tokens, spacing tokens, margin tokens, and border-radius tokens were aligned with the current Figma definitions in `css/styles.css`. Figma-aligned semantic token names are now the source of truth, with legacy aliases preserved for compatibility. Border radius semantics: XS 8px, S 16px, M 20px, L 32px, XL 40px; `--border-radius-small` maps to Radius S and `--border-radius-large` maps to Radius L.
+- Home mobile implementation status as of 2026-08-03: the real mobile Home from Figma node `127:1370` has been implemented locally using the existing Figma-aligned CSS tokens. The open burger menu state from Figma node `129:1514` is implemented with a full-screen drawer, language toggle, contact CTA, footer, and scroll locking. The mobile articles section uses the same vertical-scroll-driven horizontal carousel behavior as desktop. Internal pages still use the temporary mobile under-construction view.
 - Next actionable backlog before the next project commit:
   1. Enable HTTPS.
-  2. Implement the real mobile experience in code. Mobile designs for the Home and three case studies were completed in Figma on 2026-08-02.
+  2. Implement the real mobile experience for internal pages/case studies in code. Mobile designs for the Home and three case studies were completed in Figma on 2026-08-02.
   3. Review readings and articles.
   4. Polish editorial content.
   5. Improve asset and video performance.
