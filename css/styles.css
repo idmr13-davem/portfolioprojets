@@ -2,29 +2,49 @@
    TOKENS — UI Kit
 ───────────────────────────────────────── */
 :root {
-  --color-bg-main:          #242422;  /* Main-background */
-  --color-bg-secondary:     #262B31;  /* Secondary-background */
-  --color-text-main:        #FFFFFF;  /* Main-text */
-  --color-text-secondary:   #BFB7C5;  /* Secondary-text */
-  --color-brand:            #BFB7C5;  /* Main-brand */
-  --color-brand-100:        #BFB7C5;  /* Main-brand 100% */
-  --color-brand-75:         rgba(191, 183, 197, 0.75); /* Main-brand 75% */
-  --color-brand-50:         rgba(191, 183, 197, 0.50); /* Main-brand 50% */
-  --color-brand-25:         rgba(191, 183, 197, 0.25); /* Main-brand 25% */
-  --color-accent-main:      #7755DE;  /* Main-accent — botón Loud / filled */
-  --color-accent-secondary: #A689FF;  /* Secondary-accent — texto, highlights */
-  --color-accent-clic:      #5533BB;  /* Clic-accent — estado pressed de botón Loud */
-  --color-clic-background:  #1A1A19;  /* Clic-background — estado pressed sobre fondos oscuros */
-  --color-positive:         #3ECF6E;  /* Accent-positive */
-  --color-alert:            #F5A623;  /* Accent-alert */
+  /* Color styles — nombres alineados con Figma */
+  --color-main-brand-100:        #BFB7C5;
+  --color-main-brand-75:         rgba(191, 183, 197, 0.75);
+  --color-main-brand-50:         rgba(191, 183, 197, 0.50);
+  --color-main-brand-25:         rgba(191, 183, 197, 0.25);
+  --color-main-text:             #FFFFFF;
+  --color-secondary-text:        #BFB7C5;
+  --color-main-accent:           #7755DE;
+  --color-secondary-accent:      #A689FF;
+  --color-clic-accent:           #5533BB;
+  --color-accent-positive:       #3ECF6E;
+  --color-accent-alert:          #F5A623;
+  --color-main-background:       #242422;
+  --color-secondary-background:  #262B31;
+  --color-clic-background:       #1A1A19;
 
-  /* ── Border radius ── */
-  --border-radius-large:  32px;
-  --border-radius-small:  20px;
+  /* Color aliases — compatibilidad con componentes actuales */
+  --color-bg-main:          var(--color-main-background);
+  --color-bg-secondary:     var(--color-secondary-background);
+  --color-text-main:        var(--color-main-text);
+  --color-text-secondary:   var(--color-secondary-text);
+  --color-brand:            var(--color-main-brand-100);
+  --color-brand-100:        var(--color-main-brand-100);
+  --color-brand-75:         var(--color-main-brand-75);
+  --color-brand-50:         var(--color-main-brand-50);
+  --color-brand-25:         var(--color-main-brand-25);
+  --color-accent-main:      var(--color-main-accent);
+  --color-accent-secondary: var(--color-secondary-accent);
+  --color-accent-clic:      var(--color-clic-accent);
+  --color-positive:         var(--color-accent-positive);
+  --color-alert:            var(--color-accent-alert);
+
+  /* Border radius — nombres alineados con Figma */
+  --radius-none: 0px;
   --radius-xs: 8px;
   --radius-s: 16px;
   --radius-m: 20px;
   --radius-l: 32px;
+  --radius-xl: 40px;
+
+  /* Border radius aliases — compatibilidad con componentes actuales */
+  --border-radius-large: var(--radius-l);
+  --border-radius-small: var(--radius-m);
   --radius-pill: 100px;
 
   --font-title: 'Inter', sans-serif;
@@ -63,16 +83,25 @@
   --sidenav-width:      180px;
   --grid-columns:       12;
   --grid-gutter:        10px;
-  --grid-margin-left:   218px;  /* sidenav + espacio contenido */
-  --grid-margin-right:  218px;  /* margen derecho */
+  /* Margin tokens — nombres alineados con Figma */
+  --margin-desktop: 218px;
+  --margin-mobile: 16px;
 
-  /* Spacing */
-  --space-xs:   8px;
-  --space-s:    16px;
-  --space-m:    24px;
-  --space-l:    32px;
-  --space-xl:   48px;
-  --space-xxl:  64px;
+  --grid-margin-left:   var(--margin-desktop);  /* sidenav + espacio contenido */
+  --grid-margin-right:  var(--margin-desktop);  /* margen derecho */
+
+  /* Spacing tokens — nombres alineados con Figma */
+  --space-none: 0px;
+  --space-micro: 2px;
+  --space-nano: 4px;
+  --space-xxs: 6px;
+  --space-xs: 8px;
+  --space-ss: 12px;
+  --space-s: 16px;
+  --space-m: 24px;
+  --space-l: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
   --space-huge: 80px;
   --space-mega: 120px;
   --space-hero: 160px;
