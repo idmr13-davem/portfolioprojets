@@ -1738,6 +1738,12 @@
 }
 
 @media (max-width: 1499px) {
+  .cs-change-title,
+  .cs-impact-label {
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
   .cs-change-body p {
     font-size: var(--text-body-m);
     line-height: var(--lh-body-m);

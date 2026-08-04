@@ -21,6 +21,11 @@
   /* ── Border radius ── */
   --border-radius-large:  32px;
   --border-radius-small:  20px;
+  --radius-xs: 8px;
+  --radius-s: 16px;
+  --radius-m: 20px;
+  --radius-l: 32px;
+  --radius-pill: 100px;
 
   --font-title: 'Inter', sans-serif;
   --font-body:  'Inter', sans-serif;
@@ -30,24 +35,26 @@
   /* Títulos — Inter Bold (700) */
   --text-title-hero: 72px;  --lh-title-hero: 80px;   /* H1 home */
   --text-title-xl:   56px;  --lh-title-xl:   64px;   /* sección grande */
-  --text-title-l:    40px;  --lh-title-l:    48px;   /* H2 secciones */
-  --text-title-m:    28px;  --lh-title-m:    34px;   /* H3 / casos */
-  --text-title-s:    20px;  --lh-title-s:    26px;   /* labels sección */
+  --text-title-l:    40px;  --lh-title-l:    50px;   /* H2 secciones */
+  --text-title-m:    32px;  --lh-title-m:    40px;   /* H3 / casos */
+  --text-title-s:    26px;  --lh-title-s:    32.5px; /* labels sección */
+  --text-title-xs:   20px;  --lh-title-xs:   25px;   /* headings compactos */
 
   /* Body — Inter Light (300) */
   --text-body-xl:   25px;  --lh-body-xl:   35px;
   --text-body-l:    20px;  --lh-body-l:    27px;
   --text-body-m:    16px;  --lh-body-m:    21.6px;
-  --text-body-s:    13px;  --lh-body-s:    17.6px;
+  --text-body-s:    12px;  --lh-body-s:    16.2px;
 
   /* Botones — Inter Semibold (600) */
-  --text-btn-l:     20px;  --lh-btn-l:     28px;
-  --text-btn-m:     16px;  --lh-btn-m:     22.4px;
-  --text-btn-s:     13px;  --lh-btn-s:     17.6px;
+  --text-btn-l:     20px;  --lh-btn-l:     24px;
+  --text-btn-m:     16px;  --lh-btn-m:     19px;
+  --text-btn-s:     12px;  --lh-btn-s:     14px;
 
   /* Captions — Inter Light (300) */
   --text-cap-l:     16px;  --lh-cap-l:     20px;
   --text-cap-m:     12.8px; --lh-cap-m:    16px;
+  --text-cap-s:     10px;  --lh-cap-s:     12.5px;
 
   /* ── Grid — Column-Desktop (Figma) ── */
   /* Márgenes fijos 218px · columnas fluidas · contenido crece con la pantalla */
@@ -768,9 +775,9 @@ img { display: block; max-width: 100%; }
 
 .sw-case-title {
   font-family: var(--font-title);
-  font-size: 26px;
+  font-size: var(--text-title-s);
   font-weight: 700;
-  line-height: 32.5px;
+  line-height: var(--lh-title-s);
   color: var(--color-text-main);
   transition: color var(--dur-micro) var(--ease-in-out);
 }
@@ -1024,8 +1031,8 @@ img { display: block; max-width: 100%; }
 
 .article-title {
   font-family: var(--font-title);
-  font-size: var(--text-title-m);
-  line-height: var(--lh-title-m);
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
   font-weight: 700;
   color: var(--color-text-main);
 }
@@ -1539,6 +1546,14 @@ img { display: block; max-width: 100%; }
     font-size: var(--text-body-m);
     line-height: var(--lh-body-m);
   }
+  .hero-location {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+  .hero-scroll-hint {
+    font-size: var(--text-cap-m);
+    line-height: var(--lh-cap-m);
+  }
 
   /* Secciones bajan 2 niveles (56→28px) para ampliar ratio vs hero (2:1) */
   .section-title {
@@ -1566,8 +1581,8 @@ img { display: block; max-width: 100%; }
     line-height: var(--lh-title-m);
   }
   .sw-case-title {
-    font-size: var(--text-title-s);
-    line-height: var(--lh-title-s);
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
   }
   .sw-body {
     font-size: var(--text-body-m);
@@ -1594,8 +1609,8 @@ img { display: block; max-width: 100%; }
     line-height: var(--lh-body-m);
   }
   .article-title {
-    font-size: var(--text-title-s);
-    line-height: var(--lh-title-s);
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
   }
 
   /* Closing/contact — escala intermedia */
@@ -1757,6 +1772,12 @@ img { display: block; max-width: 100%; }
 .btn--mute:hover  { background: var(--color-bg-secondary); transform: translateY(-1px); }
 .btn--mute:active { background: var(--color-clic-background); color: var(--color-accent-main); transform: translateY(0); }
 
+@media (max-width: 1499px) {
+  .sw-project-button {
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
+}
 
 /* ─────────────────────────────────────────
    BUTTON CONTACT — jerarquía especial
@@ -1825,6 +1846,24 @@ img { display: block; max-width: 100%; }
 .btn-contact:active .btn-contact__label::after {
   opacity: 1;
   margin-left: 8px;
+}
+
+@media (max-width: 1499px) {
+  .section-closing .closing-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .section-closing .closing-body {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+
+  .section-closing .btn-contact__label,
+  .section-closing .contact-action {
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
 }
 
 /* ─────────────────────────────────────────
