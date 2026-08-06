@@ -222,7 +222,7 @@
     </div>
   </section>
 
-  <!-- ───────────── ARTICLES — horizontal scroll ───────────── -->
+  <!-- ───────────── ARTICLES ───────────── -->
   <section class="section-articles" id="articles" aria-label="My articles">
     <div class="articles-scroll-sticky">
 
@@ -233,40 +233,51 @@
         </div>
       </div>
 
-      <div class="articles-scroll-track" id="articlesTrack">
+      <div class="articles-scroll-viewport">
+        <div class="articles-scroll-track" id="articlesTrack">
 
-        <article class="article-item">
-          <div class="article-img">
-            <img src="assets/Home/Im%C3%A1genes/Img1.png" alt="Why I've worked with 4 different teams at Mercado Libre" />
-          </div>
-          <div class="article-text">
-            <h3 class="article-title">Why I've worked with 4 different teams at Mercado Libre</h3>
-            <p class="article-body">A couple of years ago, an interviewer asked me: why have you stayed so long at the same… <a href="articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html" class="article-link">Continue reading →</a></p>
-          </div>
-        </article>
+          <article class="article-item">
+            <div class="article-img">
+              <img src="assets/Home/Im%C3%A1genes/Img1.png" alt="Why I've worked with 4 different teams at Mercado Libre" />
+            </div>
+            <div class="article-text">
+              <h3 class="article-title">Why I've worked with 4 different teams at Mercado Libre</h3>
+              <p class="article-body">A couple of years ago, an interviewer asked me: why have you stayed so long at the same… <a href="articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html" class="article-link">Continue reading →</a></p>
+            </div>
+          </article>
 
-        <article class="article-item">
-          <div class="article-img">
-            <img src="assets/Home/Im%C3%A1genes/Img2.png" alt="A bad interface not only creates a bad experience, it could be much worse" />
-          </div>
-          <div class="article-text">
-            <h3 class="article-title">A bad interface not only creates a bad experience, it could be much worse</h3>
-            <p class="article-body">I'm not only a designer who likes to create interfaces, I'm also a passionate of UX automotive… <a href="about.html#cockpit" class="article-link">Continue reading →</a></p>
-          </div>
-        </article>
+          <article class="article-item">
+            <div class="article-img">
+              <img src="assets/Home/Im%C3%A1genes/Img2.png" alt="A bad interface not only creates a bad experience, it could be much worse" />
+            </div>
+            <div class="article-text">
+              <h3 class="article-title">A bad interface not only creates a bad experience, it could be much worse</h3>
+              <p class="article-body">I'm not only a designer who likes to create interfaces, I'm also a passionate of UX automotive… <a href="about.html#cockpit" class="article-link">Continue reading →</a></p>
+            </div>
+          </article>
 
-        <article class="article-item">
-          <div class="article-img">
-            <img src="assets/Home/Im%C3%A1genes/Img3.png" alt="What I've learned from my other passion, music, about a good experience" />
-          </div>
-          <div class="article-text">
-            <h3 class="article-title">What I've learned from my other passion, music, about a good experience</h3>
-            <p class="article-body">When I was a teenager I used to practice guitar, and also… <a href="about.html#automotive" class="article-link">Continue reading →</a></p>
-          </div>
-        </article>
+          <article class="article-item">
+            <div class="article-img">
+              <img src="assets/Home/Im%C3%A1genes/Img3.png" alt="What I've learned from my other passion, music, about a good experience" />
+            </div>
+            <div class="article-text">
+              <h3 class="article-title">What I've learned from my other passion, music, about a good experience</h3>
+              <p class="article-body">When I was a teenager I used to practice guitar, and also… <a href="about.html#automotive" class="article-link">Continue reading →</a></p>
+            </div>
+          </article>
 
-        <div class="articles-track-spacer" aria-hidden="true"></div>
+          <div class="articles-track-spacer" aria-hidden="true"></div>
 
+        </div>
+      </div>
+
+      <div class="articles-carousel-controls" aria-label="Article carousel controls">
+        <button class="articles-carousel-arrow articles-carousel-arrow--prev" type="button" data-article-prev aria-label="Previous article">‹</button>
+        <button class="articles-carousel-pill is-active" type="button" data-article-index="0" aria-pressed="true">Article 1</button>
+        <button class="articles-carousel-pill" type="button" data-article-index="1" aria-pressed="false">Article 2</button>
+        <button class="articles-carousel-pill" type="button" data-article-index="2" aria-pressed="false">Article 3</button>
+        <button class="articles-carousel-arrow articles-carousel-arrow--next" type="button" data-article-next aria-label="Next article">›</button>
+        <span class="articles-carousel-line" aria-hidden="true"></span>
       </div>
 
     </div>
@@ -370,35 +381,49 @@
       items.forEach(el => observer.observe(el));
     })();
 
-    // ── Articles horizontal scroll on vertical scroll ──
+    // ── Articles carousel controls ──
     (function initArticles() {
-      const section = document.querySelector('.section-articles');
-      const track   = document.getElementById('articlesTrack');
-      if (!section || !track) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const track = document.getElementById('articlesTrack');
+      const controls = document.querySelector('.articles-carousel-controls');
+      if (!track || !controls) return;
 
-      function onScroll() {
-        const rect       = section.getBoundingClientRect();
-        const scrollable = section.offsetHeight - window.innerHeight;
-        const scrolled   = -rect.top;
-        const raw        = Math.max(0, Math.min(1, scrolled / scrollable));
-        const articles   = track.querySelectorAll('.article-item');
-        const lastArticle = articles[articles.length - 1];
-        const isCompact  = window.matchMedia('(max-width: 1024px)').matches;
-        const rootStyles = getComputedStyle(document.documentElement);
-        const trackStyles = getComputedStyle(track);
-        const contentLeft = isCompact
-          ? parseFloat(trackStyles.paddingLeft) || parseFloat(rootStyles.getPropertyValue('--margin-mobile')) || 0
-          : parseFloat(rootStyles.getPropertyValue('--grid-margin-left')) || 0;
-        const endOffset = isCompact
-          ? Math.max(0, lastArticle.offsetLeft + lastArticle.offsetWidth - window.innerWidth + contentLeft)
-          : Math.max(0, lastArticle.offsetLeft - contentLeft);
-        const trackMax = lastArticle ? endOffset : 0;
-        track.style.transform = `translateX(${-raw * trackMax}px)`;
+      const articles = Array.from(track.querySelectorAll('.article-item'));
+      const pills = Array.from(controls.querySelectorAll('[data-article-index]'));
+      const prev = controls.querySelector('[data-article-prev]');
+      const next = controls.querySelector('[data-article-next]');
+      let current = 0;
+
+      function setActive(index) {
+        current = Math.max(0, Math.min(articles.length - 1, index));
+        pills.forEach((pill, i) => {
+          const active = i === current;
+          pill.classList.toggle('is-active', active);
+          pill.setAttribute('aria-pressed', String(active));
+        });
       }
 
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
+      function scrollToArticle(index) {
+        setActive(index);
+        track.scrollTo({
+          left: articles[current].offsetLeft,
+          behavior: 'smooth'
+        });
+      }
+
+      pills.forEach((pill, index) => {
+        pill.addEventListener('click', () => scrollToArticle(index));
+      });
+      prev?.addEventListener('click', () => scrollToArticle(current - 1));
+      next?.addEventListener('click', () => scrollToArticle(current + 1));
+
+      track.addEventListener('scroll', () => {
+        const trackLeft = track.getBoundingClientRect().left;
+        const closest = articles.reduce((best, article, index) => {
+          const distance = Math.abs(article.getBoundingClientRect().left - trackLeft);
+          return distance < best.distance ? { index, distance } : best;
+        }, { index: current, distance: Infinity });
+        setActive(closest.index);
+      }, { passive: true });
     })();
   </script>
 
