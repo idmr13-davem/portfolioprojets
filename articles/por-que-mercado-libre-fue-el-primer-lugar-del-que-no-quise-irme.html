@@ -19,11 +19,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../css/styles.css?v=20260803-figma-tokens" />
-  <link rel="stylesheet" href="../css/article.css?v=20260803-article-body-weight" />
+  <link rel="stylesheet" href="../css/styles.css?v=20260805-mobile-internal" />
+  <link rel="stylesheet" href="../css/article.css?v=20260805-article-mobile" />
 </head>
 
-<body class="article-page">
+<body class="article-page has-mobile-layout">
 
   <div class="scroll-progress" aria-hidden="true">
     <div class="scroll-progress-fill" id="scrollProgressFill"></div>
@@ -40,7 +40,33 @@
       </div>
       <span class="btn-contact__label">Get in touch</span>
     </a>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="internalMobileDrawer" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </header>
+
+  <div class="mobile-home-drawer internal-mobile-drawer" id="internalMobileDrawer" aria-hidden="true">
+    <nav>
+      <a href="../index.html#articles">Return</a>
+    </nav>
+    <a href="#contact" class="btn-contact mobile-home-drawer__contact">
+      <div class="btn-contact__thumb">
+        <img src="../assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
+      </div>
+      <span class="btn-contact__label">Get in touch</span>
+    </a>
+    <div class="mobile-home-drawer__actions">
+      <div class="language-toggle" role="group" aria-label="Language selection">
+        <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
+        <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
+      </div>
+    </div>
+    <footer class="mobile-home-drawer__footer">
+      <small>© David Montealegre 2026</small>
+    </footer>
+  </div>
 
   <aside class="site-sidenav sidenav" id="sidenav" aria-label="Article navigation">
     <nav class="site-sidenav__links">
@@ -175,6 +201,6 @@
   </footer>
 
   <script src="../js/i18n.js?v=20260726-contact"></script>
-  <script src="../js/main.js?v=20260803-articles-paths"></script>
+  <script src="../js/main.js?v=20260805-internal-drawer"></script>
 </body>
 </html>

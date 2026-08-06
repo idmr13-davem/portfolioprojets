@@ -2087,6 +2087,317 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .case-study-page.has-mobile-layout {
+    overflow-x: hidden;
+  }
+
+  .case-study-page.has-mobile-layout.is-mobile-menu-open {
+    overflow: hidden;
+  }
+
+  .case-study-page.has-mobile-layout .scroll-progress,
+  .case-study-page.has-mobile-layout .cursor-dot,
+  .case-study-page.has-mobile-layout .site-sidenav,
+  .case-study-page.has-mobile-layout .cs-topbar > .btn-contact {
+    display: none !important;
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar {
+    position: fixed;
+    z-index: 1001;
+    height: 84px;
+    padding: var(--space-ss) 39px var(--space-ss) 20px;
+    background: var(--color-bg-main);
+    border-bottom: 1px solid var(--color-brand-25);
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open {
+    border-bottom-color: transparent;
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(7.75px) rotate(45deg);
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-7.75px) rotate(-45deg);
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar .logotype,
+  .case-study-page.has-mobile-layout .cs-topbar .isotipo {
+    width: 68px;
+    height: 60px;
+  }
+
+  .case-study-page.has-mobile-layout .cs-topbar .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer {
+    display: flex;
+  }
+
+  .case-study-page.has-mobile-layout .container {
+    padding-right: var(--margin-mobile);
+    padding-left: var(--margin-mobile);
+  }
+}
+
+@media (max-width: 768px) {
+  .case-study-registro-ml .cs-hero {
+    padding-top: calc(84px + var(--space-l));
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-hero .container {
+    display: block;
+  }
+
+  .case-study-registro-ml .cs-hero-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-registro-ml .cs-hero-meta-panel {
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-hero-metadata {
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-meta-inline {
+    gap: var(--space-xs);
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-registro-ml .cs-meta-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-study-registro-ml .cs-hero-ctas {
+    align-items: center;
+    gap: var(--space-s);
+  }
+
+  .case-study-registro-ml .cs-badge-live {
+    min-height: 28px;
+    padding: var(--space-xxs) var(--space-ss);
+    border-radius: var(--radius-l);
+    font-size: var(--text-cap-m);
+    font-weight: 400;
+    line-height: var(--lh-cap-m);
+  }
+
+  .case-study-registro-ml .cs-btn-visit {
+    min-height: 0;
+    padding: 0;
+    font-size: var(--text-btn-s);
+    line-height: var(--lh-btn-s);
+  }
+
+  .case-study-registro-ml .cs-mockups-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid var(--color-text-main);
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-registro-ml .cs-objectives,
+  .case-study-registro-ml .cs-achievement,
+  .case-study-registro-ml .cs-section,
+  .case-study-registro-ml .cs-final-result {
+    padding: var(--space-l) 0;
+  }
+
+  .case-study-registro-ml .cs-objectives .container,
+  .case-study-registro-ml .cs-achievement .container,
+  .case-study-registro-ml .cs-section .container,
+  .case-study-registro-ml .cs-final-result .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+  }
+
+  .case-study-registro-ml .cs-objectives .container {
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-objectives-eyebrow,
+  .case-study-registro-ml .cs-achievement-label {
+    margin: 0;
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-registro-ml .cs-objectives-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-obj-statement,
+  .case-study-registro-ml .cs-achievement-stat {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-registro-ml .cs-obj-statement::first-letter {
+    color: var(--color-accent-secondary);
+  }
+
+  .case-study-registro-ml .cs-section-heading {
+    margin: 0;
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
+  .case-study-registro-ml .cs-prose,
+  .case-study-registro-ml .cs-prose p,
+  .case-study-registro-ml .cs-challenges-list li,
+  .case-study-registro-ml .cs-change-body p,
+  .case-study-registro-ml .cs-impact-line,
+  .case-study-registro-ml .cs-callout .cs-callout-body,
+  .case-study-registro-ml .cs-final-result-copy p {
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-registro-ml .cs-prose p + p {
+    margin-top: var(--space-ss);
+  }
+
+  .case-study-registro-ml .cs-challenges-list {
+    gap: var(--space-nano);
+    padding-left: 18px;
+  }
+
+  .case-study-registro-ml .cs-change-disclosure {
+    padding: var(--space-xl) 0;
+  }
+
+  .case-study-registro-ml .cs-change-disclosure .container {
+    gap: var(--space-m);
+  }
+
+  .case-study-registro-ml .cs-change-item {
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-change-timeline {
+    width: 20px;
+  }
+
+  .case-study-registro-ml .cs-change-diamond {
+    width: 16px;
+    height: 16px;
+    margin-top: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-change-line {
+    margin-top: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-change-content {
+    gap: var(--space-s);
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-change-header {
+    min-height: 38px;
+    align-items: flex-end;
+  }
+
+  .case-study-registro-ml .cs-change-eyebrow {
+    font-size: var(--text-cap-s);
+    font-weight: 400;
+    line-height: var(--lh-cap-s);
+  }
+
+  .case-study-registro-ml .cs-change-title,
+  .case-study-registro-ml .cs-impact-label,
+  .case-study-registro-ml .cs-callout .cs-callout-title {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-registro-ml .cs-change-body {
+    gap: var(--space-s);
+  }
+
+  .case-study-registro-ml .cs-new-flow,
+  .case-study-registro-ml .cs-callout {
+    display: none;
+  }
+
+  .case-study-registro-ml .cs-section--evidences {
+    padding-top: var(--space-xl);
+    padding-bottom: 0;
+  }
+
+  .case-study-registro-ml .cs-section--evidences + .cs-section--evidences {
+    padding-top: var(--space-m);
+  }
+
+  .case-study-registro-ml .cs-evidence-stack {
+    gap: 0;
+  }
+
+  .case-study-registro-ml .cs-evidence-img {
+    width: 100%;
+    aspect-ratio: 2000 / 980;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .case-study-registro-ml .cs-evidence-img--top {
+    border-radius: var(--radius-s) var(--radius-s) 0 0;
+  }
+
+  .case-study-registro-ml .cs-evidence-img--bottom {
+    border-radius: 0 0 var(--radius-s) var(--radius-s);
+  }
+
+  .case-study-registro-ml .cs-final-result {
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-final-result-inner,
+  .case-study-registro-ml .cs-final-result-block {
+    gap: var(--space-s);
+  }
+
+  .case-study-registro-ml .cs-final-result-list {
+    gap: var(--space-nano);
+    padding-left: 18px;
+  }
+
+  .case-study-registro-ml .cs-final-result-list li {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-btn-s);
+  }
+}
+
 /* ═══════════════════════════════════════
    MOTION LEVEL — Figma case study
 ═══════════════════════════════════════ */
@@ -2169,6 +2480,7 @@
 }
 
 .motion-hero-media {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 6vw, 64px);
@@ -2179,6 +2491,7 @@
   background: #cad4e1;
   border: 2px solid #fff;
   border-radius: 32px;
+  clip-path: inset(0 round 32px);
 }
 
 .motion-hero-item {
@@ -2530,5 +2843,472 @@
   .motion-evidence-figure figcaption {
     font-size: var(--text-cap-m);
     line-height: var(--lh-cap-m);
+  }
+}
+
+/* Registro ML — mobile release overrides from Figma node 146:2045 */
+@media (max-width: 1024px) {
+  body.case-study-registro-ml.has-mobile-layout > .site-header,
+  body.case-study-registro-ml.has-mobile-layout > .mobile-home-drawer {
+    display: flex !important;
+  }
+
+  body.case-study-registro-ml.has-mobile-layout > section,
+  body.case-study-registro-ml.has-mobile-layout > footer {
+    display: block !important;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .container {
+    padding-right: var(--margin-mobile);
+    padding-left: var(--margin-mobile);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-left,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-right,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-metadata,
+  .case-study-registro-ml.has-mobile-layout .cs-meta-inline,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-ctas {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel {
+    gap: var(--space-xs);
+    padding-left: 0;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel::before {
+    display: none;
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer {
+    top: 84px;
+    min-height: 0;
+    padding: var(--space-xs) 0 var(--space-l);
+    border-bottom: 0;
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer nav {
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer nav a {
+    min-height: 51px;
+    padding: var(--space-s) var(--space-m);
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__contact {
+    width: calc(100% - (var(--space-s) * 2));
+    min-width: 0;
+    min-height: 48px;
+    max-height: 48px;
+    margin: var(--space-m) var(--space-s) 0;
+    justify-content: flex-start;
+    gap: var(--space-s);
+    padding: var(--space-xs) var(--space-s) var(--space-xs) var(--space-xs);
+    border: 1px solid var(--color-brand-25);
+    border-radius: var(--radius-xs);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__contact .btn-contact__thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-xs);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__contact .btn-contact__label {
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__actions {
+    width: 100%;
+    margin-top: auto;
+    padding: 0 var(--space-m) var(--space-l);
+    gap: var(--space-m);
+    border-bottom: 0;
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .language-toggle {
+    width: max-content;
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .language-toggle__option {
+    min-width: 54px;
+    padding: var(--space-xxs) var(--space-s);
+    border-radius: var(--radius-s);
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__footer {
+    width: 100%;
+    margin-top: 0;
+    border-top: 1px solid var(--color-brand-25);
+  }
+
+  .case-study-page.has-mobile-layout .internal-mobile-drawer .mobile-home-drawer__footer small {
+    display: block;
+    padding: 10px 20px;
+    font-size: var(--text-cap-m);
+    font-weight: 400;
+    line-height: var(--lh-cap-m);
+  }
+}
+
+@media (max-width: 768px) {
+  body.case-study-registro-ml.has-mobile-layout > .site-header,
+  body.case-study-registro-ml.has-mobile-layout > .mobile-home-drawer {
+    display: flex !important;
+  }
+
+  body.case-study-registro-ml.has-mobile-layout > section,
+  body.case-study-registro-ml.has-mobile-layout > footer {
+    display: block !important;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero {
+    padding-top: calc(84px + var(--space-l));
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-left,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel {
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-right {
+    display: flex !important;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-mockups-img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-topbar .mobile-menu-toggle {
+    display: flex !important;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-metadata,
+  .case-study-registro-ml.has-mobile-layout .cs-meta-inline,
+  .case-study-registro-ml.has-mobile-layout .cs-hero-ctas {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-objectives,
+  .case-study-registro-ml.has-mobile-layout .cs-achievement,
+  .case-study-registro-ml.has-mobile-layout .cs-section,
+  .case-study-registro-ml.has-mobile-layout .cs-final-result {
+    padding: var(--space-l) 0;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-section--evidences {
+    padding-top: var(--space-xl);
+    padding-bottom: 0;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-section--evidences + .cs-section--evidences {
+    padding-top: var(--space-m);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-evidence-stack {
+    gap: 0;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-evidence-img {
+    aspect-ratio: 2000 / 980;
+    object-fit: cover;
+  }
+}
+
+/* Motion Design System — mobile release overrides from Figma node 151:2515 */
+@media (max-width: 1024px) {
+  body.case-study-motion-level.has-mobile-layout > .site-header,
+  body.case-study-motion-level.has-mobile-layout > .mobile-home-drawer {
+    display: flex !important;
+  }
+
+  body.case-study-motion-level.has-mobile-layout > section,
+  body.case-study-motion-level.has-mobile-layout > footer {
+    display: block !important;
+  }
+
+  .case-study-motion-level.has-mobile-layout .container {
+    padding-right: var(--margin-mobile);
+    padding-left: var(--margin-mobile);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero {
+    padding-top: calc(84px + var(--space-l));
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-left,
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel,
+  .case-study-motion-level.has-mobile-layout .cs-hero-right,
+  .case-study-motion-level.has-mobile-layout .cs-hero-metadata,
+  .case-study-motion-level.has-mobile-layout .cs-meta-inline,
+  .case-study-motion-level.has-mobile-layout .cs-hero-ctas {
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-right {
+    display: block;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-title {
+    margin-bottom: 0;
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel {
+    gap: var(--space-xs);
+    padding-left: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel::before {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-metadata {
+    gap: var(--space-xs);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-meta-inline {
+    gap: var(--space-xs);
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-meta-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-badge-live {
+    min-height: 28px;
+    padding: var(--space-xxs) var(--space-ss);
+    border-radius: var(--radius-l);
+    font-size: var(--text-cap-m);
+    font-weight: 400;
+    line-height: var(--lh-cap-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-media {
+    width: 100%;
+    min-height: 400px;
+    height: 400px;
+    margin-top: var(--space-s);
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0;
+    padding: 39px 54px 0;
+    border-radius: var(--radius-s);
+    clip-path: inset(0 round var(--radius-s));
+    overflow: hidden;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item {
+    width: 216px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item:not(:first-child) {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item video {
+    width: 216px;
+    max-height: 480px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-achievement,
+  .case-study-motion-level.has-mobile-layout .cs-section,
+  .case-study-motion-level.has-mobile-layout .cs-final-result {
+    padding: var(--space-l) 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-objectives {
+    padding: var(--space-l) 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-achievement {
+    padding-top: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-objectives .container,
+  .case-study-motion-level.has-mobile-layout .cs-achievement .container,
+  .case-study-motion-level.has-mobile-layout .cs-section .container,
+  .case-study-motion-level.has-mobile-layout .cs-final-result .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-objectives .container {
+    gap: var(--space-l);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-achievement .container {
+    gap: var(--space-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-objectives-eyebrow,
+  .case-study-motion-level.has-mobile-layout .cs-achievement-label {
+    margin: 0;
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-objectives-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-obj-statement,
+  .case-study-motion-level.has-mobile-layout .cs-achievement-stat {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-section-heading {
+    margin: 0;
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-prose,
+  .case-study-motion-level.has-mobile-layout .cs-prose p,
+  .case-study-motion-level.has-mobile-layout .cs-challenges-list li,
+  .case-study-motion-level.has-mobile-layout .cs-final-result-copy p {
+    font-size: var(--text-body-s);
+    font-weight: 400;
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-prose p + p {
+    margin-top: var(--space-ss);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-challenges-list {
+    gap: var(--space-nano);
+    padding-left: 18px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h {
+    margin-top: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-line,
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-diamond {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step {
+    min-height: auto;
+    align-items: flex-start;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-label {
+    max-width: none;
+    font-size: var(--text-title-xs);
+    font-weight: 700;
+    line-height: var(--lh-title-xs);
+    text-align: left;
+    color: var(--color-text-main);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence {
+    padding: 0 0 var(--space-l);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure {
+    gap: var(--space-ss);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure img {
+    max-height: none;
+    aspect-ratio: 2000 / 980;
+    object-fit: cover;
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure--tall img {
+    aspect-ratio: 3143 / 2107;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure figcaption,
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure figcaption span {
+    font-size: var(--text-cap-s);
+    font-weight: 400;
+    line-height: var(--lh-cap-s);
   }
 }

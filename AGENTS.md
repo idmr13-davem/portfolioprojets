@@ -4,7 +4,7 @@
 - Do not restore or publish that case study on `main` while the product remains in development or under confidentiality.
 - When the product has launched and David asks to bring it back, recover only the needed case-study material from `Menores` into the current `main`, instead of reverting the whole project.
 - Expected recovery scope may include `work/menores-mexico.html`, the selected-work card in `index.html`, sitemap/README references, and related Spanish translations in `js/i18n.js`.
-- Publication status as of 2026-08-01: GitHub Pages is enabled for `idmr13-davem/portfolioprojets`, publishing from `main` at `/`, with custom domain `davidmontealegreux.com`. GoDaddy DNS was updated to the four GitHub Pages apex `A` records and `CNAME www -> idmr13-davem.github.io`, and the old GoDaddy Website Builder apex record was removed. Remaining follow-up: wait for DNS propagation, then enable Enforce HTTPS in GitHub Pages once the certificate is available.
+- Publication status as of 2026-08-05: GitHub Pages is enabled for `idmr13-davem/portfolioprojets`, publishing from `main` at `/`, with custom domain `davidmontealegreux.com`. GoDaddy DNS was updated to the four GitHub Pages apex `A` records and `CNAME www -> idmr13-davem.github.io`, and the old GoDaddy Website Builder apex record was removed. DNS check is successful and Enforce HTTPS is active in GitHub Pages.
 - Editorial strategy for articles and CDUs: use a roadmap/outline before drafting, built around the ideas each text needs to communicate. A useful reusable structure is: initial tension or uncomfortable question, context the reader needs, the change or contrast that reframes the topic, concrete evidence from the work or career experience, and a transferable closing idea that reveals David's judgment as a designer.
 - First article concept: "Why I've been so unstable at jobs" / "por que has estado tanto tiempo en Mercado Libre vs la inestabilidad en otras vacantes laborales antes?" The intended thesis is that staying at Mercado Libre was not stability for its own sake; it was the result of finding an environment that kept demanding growth. The article should contrast earlier job changes as exploration/search with the later decision to stay because the challenge kept renewing itself, supported by concrete examples of role changes, more complex projects, new responsibilities, and uncomfortable learning.
 - Article progress as of 2026-08-03: the first improved article was drafted in Spanish and translated to English with a personal, colloquial narrative voice. Working title: "Por que Mercado Libre fue el primer lugar del que no quise irme?" / "Why Mercado Libre Was the First Place I Didn't Want to Leave." Preserve the article's personal tone while polishing spelling, rhythm, and readability.
@@ -13,11 +13,10 @@
 - Design tokens status as of 2026-08-03: typography tokens, color tokens, spacing tokens, margin tokens, and border-radius tokens were aligned with the current Figma definitions in `css/styles.css`. Figma-aligned semantic token names are now the source of truth, with legacy aliases preserved for compatibility. Border radius semantics: XS 8px, S 16px, M 20px, L 32px, XL 40px; `--border-radius-small` maps to Radius S and `--border-radius-large` maps to Radius L.
 - Home mobile implementation status as of 2026-08-03: the real mobile Home from Figma node `127:1370` has been implemented locally using the existing Figma-aligned CSS tokens. The open burger menu state from Figma node `129:1514` is implemented with a full-screen drawer, language toggle, contact CTA, footer, and scroll locking. The mobile articles section uses the same vertical-scroll-driven horizontal carousel behavior as desktop. Internal pages still use the temporary mobile under-construction view.
 - Next actionable backlog before the next project commit:
-  1. Enable HTTPS.
-  2. Implement the real mobile experience for internal pages/case studies in code. Mobile designs for the Home and three case studies were completed in Figma on 2026-08-02.
-  3. Review readings and articles.
-  4. Polish editorial content.
-  5. Improve asset and video performance.
-  6. Improve SEO and social sharing metadata.
-  7. Review a framework for faster new case-study publishing, likely via a new skill that asks for basic project information before shaping the storytelling.
-  8. Apply that skill or framework to new cases such as "Familia de Empresas", "Ropstar", and other previous projects.
+  1. Implement the real mobile experience for internal pages/case studies in code. Mobile designs for the Home and three case studies were completed in Figma on 2026-08-02.
+  2. Review readings and articles.
+  3. Polish editorial content.
+  4. Improve asset and video performance.
+  5. Improve SEO and social sharing metadata.
+  6. Review a framework for faster new case-study publishing, likely via a new skill that asks for basic project information before shaping the storytelling.
+  7. Apply that skill or framework to new cases such as "Familia de Empresas", "Ropstar", and other previous projects.

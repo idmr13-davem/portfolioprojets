@@ -27,6 +27,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
 // ─────────────────────────────────────────
 (function initMobileUnderConstruction() {
   if (document.body.classList.contains('home-page')) return;
+  if (document.body.classList.contains('has-mobile-layout')) return;
 
   const isNestedPage = window.location.pathname.includes('/work/') || window.location.pathname.includes('/articles/');
   const rootPath = isNestedPage ? '../' : '';
@@ -94,6 +95,30 @@ const scrollFill = document.getElementById('scrollProgressFill');
   const header = document.querySelector('.home-header');
   const menu = header?.querySelector('.mobile-menu-toggle');
   const drawer = document.getElementById('homeMobileDrawer');
+  if (!header || !menu || !drawer) return;
+
+  function setDrawer(open) {
+    header.classList.toggle('is-mobile-drawer-open', open);
+    drawer.classList.toggle('is-open', open);
+    document.body.classList.toggle('is-mobile-menu-open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  }
+
+  menu.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => setDrawer(false));
+  });
+})();
+
+// ─────────────────────────────────────────
+//  Internal mobile — drawer navigation
+// ─────────────────────────────────────────
+(function initInternalMobileDrawer() {
+  const header = document.querySelector('.cs-topbar');
+  const menu = header?.querySelector('.mobile-menu-toggle');
+  const drawer = document.getElementById('internalMobileDrawer');
   if (!header || !menu || !drawer) return;
 
   function setDrawer(open) {

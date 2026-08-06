@@ -384,12 +384,13 @@
         const raw        = Math.max(0, Math.min(1, scrolled / scrollable));
         const articles   = track.querySelectorAll('.article-item');
         const lastArticle = articles[articles.length - 1];
-        const isMobile   = window.matchMedia('(max-width: 768px)').matches;
+        const isCompact  = window.matchMedia('(max-width: 1024px)').matches;
         const rootStyles = getComputedStyle(document.documentElement);
-        const contentLeft = isMobile
-          ? parseFloat(rootStyles.getPropertyValue('--margin-mobile')) || 0
+        const trackStyles = getComputedStyle(track);
+        const contentLeft = isCompact
+          ? parseFloat(trackStyles.paddingLeft) || parseFloat(rootStyles.getPropertyValue('--margin-mobile')) || 0
           : parseFloat(rootStyles.getPropertyValue('--grid-margin-left')) || 0;
-        const endOffset = isMobile
+        const endOffset = isCompact
           ? Math.max(0, lastArticle.offsetLeft + lastArticle.offsetWidth - window.innerWidth + contentLeft)
           : Math.max(0, lastArticle.offsetLeft - contentLeft);
         const trackMax = lastArticle ? endOffset : 0;
