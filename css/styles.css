@@ -627,8 +627,8 @@ img { display: block; max-width: 100%; }
 }
 
 .button-arrow::after {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-image: url('../assets/Icons/button-arrow-20.svg');
   opacity: 0;
 }
@@ -1844,31 +1844,6 @@ img { display: block; max-width: 100%; }
   .site-header .btn-contact__label {
     font-size: var(--text-btn-m);
     line-height: var(--lh-btn-m);
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1499px) {
-  .sw-title,
-  .home-about-title,
-  .articles-header .sw-title,
-  .sw-title.closing-title,
-  .section-closing .closing-title {
-    font-size: var(--text-title-l);
-    line-height: var(--lh-title-l);
-  }
-
-  .sw-case-title,
-  .article-title {
-    font-size: var(--text-title-s);
-    line-height: var(--lh-title-s);
-  }
-
-  .sw-body,
-  .article-body,
-  .home-about-copy,
-  .closing-body {
-    font-size: var(--text-body-l);
-    line-height: 28px;
   }
 }
 

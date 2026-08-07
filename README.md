@@ -25,6 +25,7 @@ The current public experience includes:
 
 - A redesigned Home with fixed navigation, an animated hero scroll indicator, selected work, About me, articles, and contact sections.
 - The latest Home polish from Figma, including the `#222324` main background, updated arrow button component, and the redesigned My articles carousel with final-card left alignment.
+- Home typography uses the Figma reduced scale for non-hero text at widths up to `1499px`, and arrow-button hover states use the corrected `15px` `#A689FF` Figma asset.
 - Responsive mobile layouts for Home, the two public case studies, and the first article page.
 - A mobile burger menu with language toggle, contact CTA, footer, and scroll locking.
 - The first article page, “Por qué Mercado Libre fue el primer lugar del que no quise irme?”, implemented from the Figma editorial design.
