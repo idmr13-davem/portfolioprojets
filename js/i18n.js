@@ -104,6 +104,7 @@
   es.set("What I've learned from my other passion, music, about a good experience",'Lo que mi otra pasión, la música, me enseñó sobre una buena experiencia');
   es.set('When I was a teenager I used to practice guitar, and also…','Cuando era adolescente, practicaba guitarra y también…');
   es.set("I'm looking for a place where the drive to challenge myself, grow, and solve problems I'm passionate about is just part of the job.",'Busco un lugar donde desafiarme, crecer y resolver problemas que me apasionan sea parte natural del trabajo.');
+  es.set('Website created with','Sitio web creado con');
   // About — complete long-form story translation.
   es.set('Some things that shaped how I think about design.','Algunas experiencias que moldearon mi forma de pensar sobre el diseño.');
   es.set("Each one started with a question I didn't expect.",'Cada una comenzó con una pregunta que no esperaba.');

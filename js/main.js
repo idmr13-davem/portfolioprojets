@@ -183,6 +183,11 @@ const scrollFill = document.getElementById('scrollProgressFill');
     footer.innerHTML = `
       <div class="site-footer__bottom">
         <span class="site-footer__copy">© David Montealegre 2026</span>
+        <span class="site-footer__credit">
+          <span>Sitio web creado con</span>
+          <img class="site-footer__brand-icon" src="${rootPath}assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
+          <span>ChatGPT Work</span>
+        </span>
       </div>`;
   });
 })();

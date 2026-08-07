@@ -2181,7 +2181,7 @@
   .case-study-registro-ml .cs-meta-inline {
     gap: var(--space-xs);
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -2244,7 +2244,7 @@
   .case-study-registro-ml .cs-achievement-label {
     margin: 0;
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -2278,7 +2278,7 @@
   .case-study-registro-ml .cs-callout .cs-callout-body,
   .case-study-registro-ml .cs-final-result-copy p {
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -3128,7 +3128,7 @@
   .case-study-motion-level.has-mobile-layout .cs-meta-inline {
     gap: var(--space-xs);
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -3217,7 +3217,7 @@
   .case-study-motion-level.has-mobile-layout .cs-achievement-label {
     margin: 0;
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -3244,7 +3244,7 @@
   .case-study-motion-level.has-mobile-layout .cs-challenges-list li,
   .case-study-motion-level.has-mobile-layout .cs-final-result-copy p {
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 

@@ -452,7 +452,7 @@
     width: 100%;
     gap: var(--space-xs);
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
     white-space: normal;
   }
@@ -473,7 +473,7 @@
 
   .article-page.has-mobile-layout .article-summary p {
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -579,7 +579,7 @@
   .article-page.has-mobile-layout .article-prose p,
   .article-page.has-mobile-layout .article-prose li {
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
@@ -634,7 +634,7 @@
     width: 100%;
     gap: var(--space-ss);
     font-size: var(--text-body-s);
-    font-weight: 400;
+    font-weight: var(--font-weight-body);
     line-height: var(--lh-body-s);
   }
 
