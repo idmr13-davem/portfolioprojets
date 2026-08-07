@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon/favicon-16x16.png" />
   <link rel="icon" href="assets/Favicon/favicon.ico" />
   <link rel="manifest" href="assets/Favicon/site.webmanifest" />
-  <meta name="theme-color" content="#242422" />
+  <meta name="theme-color" content="#222324" />
   <script>
     document.documentElement.classList.add('motion-enabled');
     window.setTimeout(() => document.documentElement.classList.add('motion-entered'), 700);
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260803-figma-tokens" />
+  <link rel="stylesheet" href="css/styles.css?v=20260807-no-scroll-reveal" />
 </head>
 
 <body class="home-page">
@@ -115,7 +115,7 @@
 
     <!-- Scroll hint — se oculta al hacer scroll -->
     <a href="#work" class="hero-scroll-hint" id="heroScrollHint" aria-label="Scroll to see projects">
-      <span>Scroll to see my projects</span>
+      <span>Scroll down</span>
       <span class="hero-scroll-arrow" aria-hidden="true">
         <img src="assets/Icons/chevron-accordion.svg" alt="" />
       </span>
@@ -141,9 +141,9 @@
             <button class="sw-header sw-accordion-trigger" type="button" id="projectTriggerRegistro" aria-expanded="true" aria-controls="projectPanelRegistro">
               <div class="sw-heading">
                 <span class="sw-eyebrow">Case study 1</span>
-                <h3 class="sw-case-title">Mercado Libre Sign-up</h3>
+                <h3 class="sw-case-title">Registro Mercado Libre</h3>
               </div>
-              <span class="sw-chevron" aria-hidden="true"><img src="assets/Icons/chevron-accordion.svg" alt="" /></span>
+              <span class="button-arrow button-arrow--mute button-arrow--small sw-chevron" aria-hidden="true"></span>
             </button>
             <div class="sw-panel" id="projectPanelRegistro" role="region" aria-labelledby="projectTriggerRegistro">
               <div class="sw-body">
@@ -170,7 +170,7 @@
                 <span class="sw-eyebrow">Case study 2</span>
                 <h3 class="sw-case-title">Motion Design System</h3>
               </div>
-              <span class="sw-chevron" aria-hidden="true"><img src="assets/Icons/chevron-accordion.svg" alt="" /></span>
+              <span class="button-arrow button-arrow--mute button-arrow--small sw-chevron" aria-hidden="true"></span>
             </button>
             <div class="sw-panel" id="projectPanelMotion" role="region" aria-labelledby="projectTriggerMotion" inert>
               <div class="sw-body">
@@ -229,7 +229,6 @@
       <div class="container">
         <div class="articles-header">
           <h2 class="sw-title">My articles</h2>
-          <p class="articles-subtitle">Design isn't just a job, it's a passion I see in details every day.</p>
         </div>
       </div>
 
@@ -272,12 +271,8 @@
       </div>
 
       <div class="articles-carousel-controls" aria-label="Article carousel controls">
-        <button class="articles-carousel-arrow articles-carousel-arrow--prev" type="button" data-article-prev aria-label="Previous article">‹</button>
-        <button class="articles-carousel-pill is-active" type="button" data-article-index="0" aria-pressed="true">Article 1</button>
-        <button class="articles-carousel-pill" type="button" data-article-index="1" aria-pressed="false">Article 2</button>
-        <button class="articles-carousel-pill" type="button" data-article-index="2" aria-pressed="false">Article 3</button>
-        <button class="articles-carousel-arrow articles-carousel-arrow--next" type="button" data-article-next aria-label="Next article">›</button>
-        <span class="articles-carousel-line" aria-hidden="true"></span>
+        <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--prev" type="button" data-article-prev aria-label="Previous article"></button>
+        <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--next" type="button" data-article-next aria-label="Next article"></button>
       </div>
 
     </div>
@@ -328,8 +323,8 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/i18n.js?v=20260726-contact"></script>
-  <script src="js/main.js?v=20260726-contact"></script>
+  <script src="js/i18n.js?v=20260807-home-final"></script>
+  <script src="js/main.js?v=20260807-no-scroll-reveal"></script>
   <script>
     (function () {
       const contactBtn = document.getElementById('headerContact');
@@ -364,21 +359,6 @@
 
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
-    })();
-
-    // Scroll reveal — casos de estudio
-    (function () {
-      const items = document.querySelectorAll('.sw-reveal');
-      if (!items.length) return;
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => entry.target.classList.add('is-visible'), i * 120);
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.15 });
-      items.forEach(el => observer.observe(el));
     })();
 
     // ── Articles carousel controls ──

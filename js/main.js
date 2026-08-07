@@ -188,56 +188,6 @@ const scrollFill = document.getElementById('scrollProgressFill');
 })();
 
 // ─────────────────────────────────────────
-//  Sections — scroll-driven entrance choreography
-// ─────────────────────────────────────────
-(function initScrollChoreography() {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const initialSections = '.hero, .about-hero, .cs-hero, .error-main';
-  const excludedTitles = '.sw-case-title, .cs-change-title';
-  const titles = Array.from(document.querySelectorAll('section h2, section h3'))
-    .filter(title => !title.closest(initialSections) && !title.matches(excludedTitles));
-
-  if (!titles.length) return;
-
-  const targets = [];
-  titles.forEach(title => {
-    title.classList.add('scroll-motion-title');
-    targets.push(title);
-
-    const supportingContent = title.nextElementSibling;
-    if (supportingContent && !supportingContent.matches('h2, h3, script')) {
-      supportingContent.classList.add('scroll-motion-content');
-      supportingContent.style.setProperty('--scroll-motion-delay', '55ms');
-      targets.push(supportingContent);
-    }
-  });
-
-  document.querySelectorAll('.cs-objectives-eyebrow, .cs-achievement-label, .story-kicker').forEach(label => {
-    if (targets.includes(label)) return;
-    label.classList.add('scroll-motion-content');
-    targets.push(label);
-  });
-
-  if (reducedMotion || !('IntersectionObserver' in window)) {
-    targets.forEach(target => target.classList.add('is-scroll-visible'));
-    return;
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-scroll-visible');
-      observer.unobserve(entry.target);
-    });
-  }, {
-    threshold: 0.05,
-    rootMargin: '0px 0px -18% 0px'
-  });
-
-  targets.forEach(target => observer.observe(target));
-})();
-
-// ─────────────────────────────────────────
 //  Language toggle — shared state across pages
 // ─────────────────────────────────────────
 (function initLanguageToggle() {
@@ -297,20 +247,6 @@ window.addEventListener('scroll', () => {
     scrollFill.style.width = pct + '%';
   }
 }, { passive: true });
-
-// ─────────────────────────────────────────
-//  Scroll reveal
-// ─────────────────────────────────────────
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-reveals.forEach(el => observer.observe(el));
 
 // ─────────────────────────────────────────
 //  Selected work — exclusive accordion

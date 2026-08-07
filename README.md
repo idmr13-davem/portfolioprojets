@@ -24,6 +24,7 @@ Internal strategy, drafts, source research, unapproved metrics, and compliance n
 The current public experience includes:
 
 - A redesigned Home with fixed navigation, an animated hero scroll indicator, selected work, About me, articles, and contact sections.
+- The latest Home polish from Figma, including the `#222324` main background, updated arrow button component, and the redesigned My articles carousel with final-card left alignment.
 - Responsive mobile layouts for Home, the two public case studies, and the first article page.
 - A mobile burger menu with language toggle, contact CTA, footer, and scroll locking.
 - The first article page, “Por qué Mercado Libre fue el primer lugar del que no quise irme?”, implemented from the Figma editorial design.
@@ -35,6 +36,7 @@ The current public experience includes:
 - A simplified copyright-only footer across pages.
 - The Registro Mercado Libre “Our compounding changes” section converted from scroll disclosure to exclusive accordions.
 - Header contact buttons that navigate to the closing contact section on the current page.
+- Content is visible by default while scrolling; the previous scroll-triggered reveal animation has been removed.
 
 ## Next backlog
 
