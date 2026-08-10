@@ -290,7 +290,7 @@
     height: 84px;
     padding: var(--space-ss) 39px var(--space-ss) 20px;
     background: var(--color-bg-main);
-    border-bottom: 1px solid var(--color-brand-25);
+    border-bottom: 0;
   }
 
   .article-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open {

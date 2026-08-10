@@ -1692,21 +1692,27 @@
 }
 
 .cs-change-body {
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
   overflow: hidden;
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-l);
   transition:
-    max-height var(--dur-page) var(--ease-in-out),
+    grid-template-rows var(--dur-page) var(--ease-in-out),
     opacity var(--dur-mid) var(--ease-in-out),
     visibility 0s var(--dur-page);
 }
 
+.cs-change-body-inner {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
 .cs-change-item.is-active .cs-change-body {
-  max-height: 2400px;
+  grid-template-rows: 1fr;
   opacity: 1;
   visibility: visible;
   padding-top: var(--space-s);
@@ -2105,11 +2111,14 @@
 
   .case-study-page.has-mobile-layout .cs-topbar {
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 1001;
     height: 84px;
     padding: var(--space-ss) 39px var(--space-ss) 20px;
     background: var(--color-bg-main);
-    border-bottom: 1px solid var(--color-brand-25);
+    border-bottom: 0;
   }
 
   .case-study-page.has-mobile-layout .cs-topbar.is-mobile-drawer-open {
@@ -3310,5 +3319,698 @@
     font-size: var(--text-cap-s);
     font-weight: 400;
     line-height: var(--lh-cap-s);
+  }
+}
+
+/* ═══════════════════════════════════════
+   CASE STUDIES — Figma responsive system refresh
+   Breakpoints mirror Home:
+   Desktop base, ≤1499px type scale, tablet ≤1024px, mobile ≤767px.
+═══════════════════════════════════════ */
+.case-study-registro-ml {
+  background: var(--color-bg-main);
+}
+
+.case-study-registro-ml .cs-hero,
+.case-study-registro-ml .cs-objectives,
+.case-study-registro-ml .cs-achievement,
+.case-study-registro-ml .cs-section,
+.case-study-registro-ml .cs-final-result {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.case-study-registro-ml .cs-hero {
+  padding-top: var(--space-hero);
+  padding-bottom: var(--space-m);
+  overflow: visible;
+}
+
+.case-study-registro-ml .cs-hero .container,
+.case-study-registro-ml .cs-objectives .container,
+.case-study-registro-ml .cs-achievement .container,
+.case-study-registro-ml .cs-section .container,
+.case-study-registro-ml .cs-final-result .container {
+  width: 100%;
+  max-width: none;
+  padding-right: var(--margin-desktop);
+  padding-left: var(--margin-desktop);
+}
+
+.case-study-registro-ml .cs-hero-layout {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-l) var(--space-m);
+}
+
+.case-study-registro-ml .cs-hero-left {
+  width: 407px;
+  flex: 0 0 407px;
+}
+
+.case-study-registro-ml .cs-title {
+  margin: 0;
+  color: var(--color-text-main);
+  font-size: var(--text-title-xl);
+  line-height: var(--lh-title-xl);
+}
+
+.case-study-registro-ml .cs-hero-meta-panel {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: var(--space-m);
+}
+
+.case-study-registro-ml .cs-hero-meta-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  background: var(--color-brand-25);
+}
+
+.case-study-registro-ml .cs-hero-metadata {
+  gap: var(--space-s);
+  margin: 0 0 var(--space-s);
+}
+
+.case-study-registro-ml .cs-meta-inline {
+  gap: var(--space-xs);
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-registro-ml .cs-meta-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+
+.case-study-registro-ml .cs-hero-ctas {
+  gap: var(--space-s);
+}
+
+.case-study-registro-ml .cs-badge-live {
+  min-height: 36px;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-l);
+  background: #66cc99;
+  color: var(--color-bg-main);
+  font-size: var(--text-btn-m);
+  line-height: var(--lh-btn-m);
+}
+
+.case-study-registro-ml .cs-btn-visit {
+  padding: 0;
+  min-height: 36px;
+  align-items: center;
+  background: transparent;
+  color: var(--color-text-main);
+  font-size: var(--text-btn-m);
+  font-weight: 700;
+  line-height: var(--lh-btn-m);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.case-study-registro-ml .cs-btn-visit:hover {
+  background: transparent;
+  color: var(--color-accent-secondary);
+  transform: none;
+}
+
+.case-study-registro-ml .cs-hero-right {
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+  margin: 0;
+  border: 1px solid var(--color-text-main);
+  border-radius: var(--radius-l);
+  overflow: hidden;
+}
+
+.case-study-registro-ml .cs-mockups-img {
+  width: 100%;
+  aspect-ratio: 2000 / 980;
+  height: auto;
+  object-fit: cover;
+}
+
+.case-study-registro-ml .cs-objectives,
+.case-study-registro-ml .cs-achievement,
+.case-study-registro-ml .cs-section,
+.case-study-registro-ml .cs-final-result {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.case-study-registro-ml .cs-objectives .container,
+.case-study-registro-ml .cs-achievement .container,
+.case-study-registro-ml .cs-section .container,
+.case-study-registro-ml .cs-final-result .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.case-study-registro-ml .cs-objectives-eyebrow,
+.case-study-registro-ml .cs-achievement-label {
+  margin: 0;
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-registro-ml .cs-objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.case-study-registro-ml .cs-obj-statement,
+.case-study-registro-ml .cs-achievement-stat {
+  color: var(--color-text-main);
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
+}
+
+.case-study-registro-ml .cs-obj-statement::first-letter {
+  color: inherit;
+}
+
+.case-study-registro-ml .cs-obj-statement {
+  margin: 0;
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before {
+  content: "Increase ";
+  color: var(--color-accent-secondary);
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement {
+  font-size: 0;
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after {
+  content: "flow conversion";
+  color: var(--color-text-main);
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before,
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after {
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement {
+  font-size: 0;
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before {
+  content: "Reduce ";
+  color: var(--color-accent-secondary);
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after {
+  content: "completion time";
+  color: var(--color-text-main);
+}
+
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before,
+.case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after {
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
+}
+
+.case-study-registro-ml .cs-section-heading {
+  margin: 0;
+  color: var(--color-text-main);
+  font-size: var(--text-title-m);
+  line-height: var(--lh-title-m);
+}
+
+.case-study-registro-ml .cs-prose,
+.case-study-registro-ml .cs-prose p,
+.case-study-registro-ml .cs-challenges-list li,
+.case-study-registro-ml .cs-final-result-copy p {
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-registro-ml .cs-prose {
+  gap: 18px;
+}
+
+.case-study-registro-ml .cs-challenges-list {
+  gap: var(--space-xxs);
+  padding-left: 27px;
+}
+
+.case-study-registro-ml .cs-change-disclosure {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.case-study-registro-ml .cs-change-item {
+  grid-template-columns: 44px minmax(0, 1fr);
+  min-height: 0;
+}
+
+.case-study-registro-ml .cs-change-diamond {
+  background: #bfb7c5;
+}
+
+.case-study-registro-ml .cs-change-item.is-active .cs-change-diamond {
+  background: var(--color-accent-secondary);
+}
+
+.case-study-registro-ml .cs-change-content {
+  padding-bottom: var(--space-xl);
+}
+
+.case-study-registro-ml .cs-change-header {
+  min-height: 49px;
+}
+
+.case-study-registro-ml .cs-change-header .sw-chevron {
+  width: 36px;
+  height: 36px;
+}
+
+.case-study-registro-ml .cs-change-eyebrow {
+  font-size: var(--text-cap-m);
+  line-height: var(--lh-cap-m);
+}
+
+.case-study-registro-ml .cs-change-title,
+.case-study-registro-ml .cs-impact-label {
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
+}
+
+.case-study-registro-ml .cs-change-body-inner {
+  gap: var(--space-s);
+}
+
+.case-study-registro-ml .cs-change-item.is-active .cs-change-body {
+  padding-top: var(--space-s);
+}
+
+.case-study-registro-ml .cs-impact-accent {
+  font-weight: var(--font-weight-body);
+}
+
+.case-study-registro-ml .cs-change-body p,
+.case-study-registro-ml .cs-impact-line,
+.case-study-registro-ml .cs-callout-body {
+  font-size: var(--text-body-l);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-registro-ml .cs-section--evidences {
+  padding-top: var(--space-xxl);
+  padding-bottom: 0;
+}
+
+.case-study-registro-ml .cs-section--evidences + .cs-section--evidences {
+  padding-top: var(--space-xxl);
+}
+
+.case-study-registro-ml .cs-section--evidences + .cs-section--evidences .container {
+  gap: var(--space-m);
+}
+
+.case-study-registro-ml .cs-evidence-stack {
+  gap: 0;
+}
+
+.case-study-registro-ml .cs-evidence-img {
+  width: 100%;
+  aspect-ratio: 2000 / 980;
+  height: auto;
+  object-fit: cover;
+}
+
+.case-study-registro-ml .cs-evidence-img--top {
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+}
+
+.case-study-registro-ml .cs-evidence-img--bottom {
+  border-radius: 0 0 var(--radius-l) var(--radius-l);
+}
+
+.case-study-registro-ml .cs-final-result {
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+}
+
+.case-study-registro-ml .cs-final-result-inner,
+.case-study-registro-ml .cs-final-result-block {
+  width: 100%;
+  gap: 20px;
+}
+
+.case-study-registro-ml .cs-final-result-list {
+  margin: 0;
+  padding-left: 27px;
+}
+
+.case-study-registro-ml .cs-final-result-list li {
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-body-l);
+}
+
+@media (max-width: 1499px) {
+  .case-study-registro-ml .cs-meta-inline,
+  .case-study-registro-ml .cs-objectives-eyebrow,
+  .case-study-registro-ml .cs-achievement-label,
+  .case-study-registro-ml .cs-prose,
+  .case-study-registro-ml .cs-prose p,
+  .case-study-registro-ml .cs-challenges-list li,
+  .case-study-registro-ml .cs-change-body p,
+  .case-study-registro-ml .cs-impact-line,
+  .case-study-registro-ml .cs-callout-body,
+  .case-study-registro-ml .cs-final-result-copy p,
+  .case-study-registro-ml .cs-final-result-list li {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-study-registro-ml .cs-hero .container,
+  .case-study-registro-ml .cs-objectives .container,
+  .case-study-registro-ml .cs-achievement .container,
+  .case-study-registro-ml .cs-section .container,
+  .case-study-registro-ml .cs-final-result .container {
+    padding-right: var(--margin-tablet);
+    padding-left: var(--margin-tablet);
+  }
+
+  .case-study-registro-ml .cs-hero {
+    padding-top: var(--space-mega);
+  }
+
+  .case-study-registro-ml .cs-title {
+    font-size: var(--text-title-l);
+    line-height: var(--lh-title-l);
+  }
+
+  .case-study-registro-ml .cs-hero-left {
+    width: 317px;
+    flex-basis: 317px;
+  }
+
+  .case-study-registro-ml .cs-hero-meta-panel {
+    padding-left: var(--space-m);
+  }
+
+  .case-study-registro-ml .cs-meta-inline {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+
+  .case-study-registro-ml .cs-badge-live,
+  .case-study-registro-ml .cs-btn-visit {
+    font-size: var(--text-btn-s);
+    line-height: var(--lh-btn-s);
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-registro-ml .cs-hero .container,
+  .case-study-registro-ml .cs-objectives .container,
+  .case-study-registro-ml .cs-achievement .container,
+  .case-study-registro-ml .cs-section .container,
+  .case-study-registro-ml .cs-final-result .container {
+    padding-right: var(--margin-mobile);
+    padding-left: var(--margin-mobile);
+  }
+
+  .case-study-registro-ml .cs-hero {
+    padding-top: calc(84px + var(--space-l));
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-hero-layout {
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-hero-left,
+  .case-study-registro-ml .cs-hero-meta-panel,
+  .case-study-registro-ml .cs-hero-right {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .case-study-registro-ml .cs-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-registro-ml .cs-hero-meta-panel {
+    padding-left: 0;
+  }
+
+  .case-study-registro-ml .cs-hero-meta-panel::before {
+    display: none;
+  }
+
+  .case-study-registro-ml .cs-hero-metadata {
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-meta-inline {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-registro-ml .cs-meta-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-study-registro-ml .cs-badge-live {
+    min-height: 28px;
+    padding: var(--space-xxs) var(--space-ss);
+    font-size: var(--text-cap-m);
+    font-weight: 400;
+    line-height: var(--lh-cap-m);
+  }
+
+  .case-study-registro-ml .cs-hero-right {
+    height: auto;
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-registro-ml .cs-mockups-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .case-study-registro-ml .cs-objectives,
+  .case-study-registro-ml .cs-achievement,
+  .case-study-registro-ml .cs-section,
+  .case-study-registro-ml .cs-final-result {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-objectives .container {
+    gap: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-objectives-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .case-study-registro-ml .cs-objectives-eyebrow,
+  .case-study-registro-ml .cs-achievement-label,
+  .case-study-registro-ml .cs-prose,
+  .case-study-registro-ml .cs-prose p,
+  .case-study-registro-ml .cs-challenges-list li,
+  .case-study-registro-ml .cs-change-body p,
+  .case-study-registro-ml .cs-impact-line,
+  .case-study-registro-ml .cs-callout-body,
+  .case-study-registro-ml .cs-final-result-copy p,
+  .case-study-registro-ml .cs-final-result-list li {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after,
+  .case-study-registro-ml .cs-achievement-stat,
+  .case-study-registro-ml .cs-impact-label {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-registro-ml .cs-section-heading {
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
+  .case-study-registro-ml .cs-prose {
+    gap: var(--space-ss);
+  }
+
+  .case-study-registro-ml .cs-challenges-list {
+    padding-left: 18px;
+  }
+
+  .case-study-registro-ml .cs-change-disclosure {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+
+  .case-study-registro-ml .cs-change-item {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+
+  .case-study-registro-ml .cs-change-item.is-active .cs-change-diamond {
+    background: var(--color-accent-secondary);
+  }
+
+  .case-study-registro-ml .cs-change-content {
+    padding-left: var(--space-xs);
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-registro-ml .cs-change-diamond {
+    width: 16px;
+    height: 16px;
+    top: 14px;
+  }
+
+  .case-study-registro-ml .cs-change-line {
+    top: 34px;
+    left: 7px;
+  }
+
+  .case-study-registro-ml .cs-change-eyebrow {
+    font-size: var(--text-cap-s);
+    line-height: var(--lh-cap-s);
+  }
+
+  .case-study-registro-ml .cs-change-title {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-registro-ml .cs-section--evidences {
+    padding-top: var(--space-xl);
+  }
+
+  .case-study-registro-ml .cs-section--evidences + .cs-section--evidences {
+    padding-top: var(--space-xl);
+  }
+
+  .case-study-registro-ml .cs-section--evidences + .cs-section--evidences .container {
+    gap: var(--space-m);
+  }
+
+  .case-study-registro-ml .cs-evidence-img--top {
+    border-radius: var(--radius-s) var(--radius-s) 0 0;
+  }
+
+  .case-study-registro-ml .cs-evidence-img--bottom {
+    border-radius: 0 0 var(--radius-s) var(--radius-s);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .case-study-page.has-mobile-layout .section-closing {
+    padding: var(--space-xl) 0 var(--space-mega);
+  }
+
+  .case-study-page.has-mobile-layout .section-closing .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    padding-right: var(--margin-tablet);
+    padding-left: var(--margin-tablet);
+  }
+
+  .case-study-page.has-mobile-layout .section-closing .closing-title {
+    margin: 0;
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-page.has-mobile-layout .section-closing .closing-body {
+    gap: 14.4px;
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+
+  .case-study-page.has-mobile-layout .section-closing .closing-actions {
+    flex-direction: row;
+    gap: var(--space-s);
+  }
+
+  .case-study-page.has-mobile-layout .section-closing .contact-action {
+    min-height: 46px;
+    padding: var(--space-xs) var(--space-s) var(--space-xs) var(--space-xs);
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero {
+    padding-top: var(--space-mega);
+    padding-bottom: var(--space-m);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-l) var(--space-m);
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-left {
+    width: 317px;
+    height: auto;
+    flex: 0 0 auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel {
+    width: auto;
+    flex: 1 1 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: var(--space-m);
+    text-align: left;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel::before {
+    display: block;
+  }
+
+  .case-study-registro-ml.has-mobile-layout .cs-hero-right {
+    width: 100%;
+    flex: 0 0 100%;
   }
 }
