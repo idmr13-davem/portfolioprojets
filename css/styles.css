@@ -2897,6 +2897,177 @@ img { display: block; max-width: 100%; }
 }
 .site-footer__item--disabled { cursor: default; }
 
+/* ─────────────────────────────────────────
+   PAGE UNDER WORK
+───────────────────────────────────────── */
+.under-work-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 140px minmax(0, 1fr) 45px;
+  background: var(--color-bg-main);
+}
+
+.under-work-header {
+  position: relative;
+  grid-row: 1;
+  padding: var(--space-m);
+}
+
+.under-work-header .logotype {
+  width: 100px;
+  height: 88px;
+}
+
+.under-work-main {
+  grid-row: 2;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--space-huge) var(--grid-margin-right) var(--space-huge) var(--grid-margin-left);
+}
+
+.under-work-copy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-ss);
+}
+
+.under-work-title {
+  width: 100%;
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 100px;
+  font-weight: 100;
+  line-height: 100px;
+  color: var(--color-text-main);
+}
+
+.under-work-message {
+  min-width: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-s);
+}
+
+.under-work-message p {
+  width: 100%;
+  margin: 0;
+  font-size: var(--text-body-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-body-l);
+  color: var(--color-text-main);
+}
+
+.under-work-home {
+  width: 200px;
+  min-height: 43px;
+  justify-content: center;
+}
+
+.under-work-footer {
+  grid-row: 3;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .under-work-page {
+    grid-template-rows: 84px minmax(0, 1fr) 45px;
+  }
+
+  .under-work-header {
+    min-height: 84px;
+    padding: 12px 39px 12px 20px;
+  }
+
+  .under-work-header .logotype {
+    width: 68px;
+    height: 60px;
+  }
+
+  .under-work-main {
+    padding: var(--space-huge) var(--margin-tablet);
+  }
+
+  .under-work-title {
+    width: 100%;
+    flex-basis: auto;
+    font-size: 80px;
+    line-height: 80px;
+  }
+
+  .under-work-message p {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+}
+
+@media (max-width: 767px) {
+  body.has-mobile-layout > .under-work-main {
+    display: flex !important;
+  }
+
+  .under-work-page {
+    display: grid;
+    grid-template-rows: 84px minmax(0, 1fr) 62px;
+  }
+
+  .under-work-header {
+    min-height: 84px;
+    padding: 12px 39px 12px 20px;
+  }
+
+  .under-work-header .logotype {
+    width: 68px;
+    height: 60px;
+  }
+
+  .under-work-main {
+    padding: var(--space-hero) var(--space-s);
+    align-items: flex-start;
+  }
+
+  .under-work-copy {
+    align-items: flex-start;
+    gap: var(--space-s);
+  }
+
+  .under-work-title {
+    min-width: 100%;
+    width: min-content;
+    flex: 0 0 auto;
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  html[lang="es"] .under-work-title {
+    width: min-content;
+    flex-basis: auto;
+  }
+
+  .under-work-message {
+    width: 100%;
+    gap: var(--space-s);
+  }
+
+  .under-work-message p {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-body-s);
+  }
+
+  .under-work-home {
+    width: 110px;
+    min-height: 30px;
+    padding: var(--space-xs) var(--space-s);
+    font-size: var(--text-btn-s);
+    line-height: var(--lh-btn-s);
+  }
+}
+
 /* Temporary responsive page, based on Figma nodes 88:1212 and 88:1420 */
 .mobile-construction { display: none; }
 
@@ -2905,7 +3076,11 @@ img { display: block; max-width: 100%; }
   body.has-mobile-layout > .site-header,
   body.has-mobile-layout > .mobile-home-drawer { display: flex !important; }
   body.has-mobile-layout > section,
+  body.has-mobile-layout > main,
   body.has-mobile-layout > footer { display: block !important; }
+  body.under-work-page.has-mobile-layout > .under-work-header { display: flex !important; }
+  body.under-work-page.has-mobile-layout > .under-work-main { display: flex !important; }
+  body.under-work-page.has-mobile-layout > .under-work-footer { display: block !important; }
   body.has-mobile-layout > .mobile-construction { display: none !important; }
   .mobile-construction {
     display: flex;

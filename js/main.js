@@ -184,7 +184,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
       <div class="site-footer__bottom">
         <span class="site-footer__copy">© David Montealegre 2026</span>
         <span class="site-footer__credit">
-          <span>Sitio web creado con</span>
+          <span>Website created with</span>
           <img class="site-footer__brand-icon" src="${rootPath}assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
           <span>ChatGPT Work</span>
         </span>
@@ -197,8 +197,6 @@ const scrollFill = document.getElementById('scrollProgressFill');
 // ─────────────────────────────────────────
 (function initLanguageToggle() {
   const toggles = document.querySelectorAll('.language-toggle');
-  if (!toggles.length) return;
-
   const supportedLanguages = ['en', 'es'];
   const storedLanguage = localStorage.getItem('portfolio-language');
   let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : 'en';
@@ -215,6 +213,12 @@ const scrollFill = document.getElementById('scrollProgressFill');
         option.setAttribute('aria-pressed', String(option.dataset.language === language));
       });
     });
+  }
+
+  if (!toggles.length) {
+    renderLanguage(currentLanguage);
+    document.documentElement.classList.add('language-entered');
+    return;
   }
 
   toggles.forEach(toggle => {
