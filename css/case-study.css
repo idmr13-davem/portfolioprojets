@@ -4014,3 +4014,581 @@
     flex: 0 0 100%;
   }
 }
+
+/* Motion Design System — final responsive overrides aligned to Figma nodes 190:3948, 4277, 4432, 4664, 4685, 4706, 4727, 4747, 4766 */
+.case-study-motion-level .cs-hero,
+.case-study-motion-level .cs-objectives,
+.case-study-motion-level .cs-achievement,
+.case-study-motion-level .cs-section,
+.case-study-motion-level .cs-final-result,
+.case-study-motion-level .motion-evidence {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.case-study-motion-level .cs-hero {
+  padding-top: var(--space-hero);
+  padding-bottom: var(--space-m);
+  overflow: visible;
+}
+
+.case-study-motion-level .cs-hero .container,
+.case-study-motion-level .cs-objectives .container,
+.case-study-motion-level .cs-achievement .container,
+.case-study-motion-level .cs-section .container,
+.case-study-motion-level .cs-final-result .container,
+.case-study-motion-level .motion-evidence .container {
+  width: 100%;
+  max-width: none;
+  padding-right: var(--margin-desktop);
+  padding-left: var(--margin-desktop);
+}
+
+.case-study-motion-level .cs-hero-layout {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-l) var(--space-m);
+}
+
+.case-study-motion-level .cs-hero-left {
+  width: 407px;
+  flex: 0 0 407px;
+}
+
+.case-study-motion-level .cs-title {
+  margin: 0;
+  color: var(--color-text-main);
+  font-size: var(--text-title-xl);
+  line-height: var(--lh-title-xl);
+}
+
+.case-study-motion-level .cs-hero-meta-panel {
+  position: relative;
+  width: auto;
+  flex: 1 1 0;
+  min-width: 0;
+  gap: var(--space-s);
+  padding-left: var(--space-m);
+}
+
+.case-study-motion-level .cs-hero-meta-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  background: var(--color-brand-25);
+}
+
+.case-study-motion-level .cs-hero-metadata {
+  gap: var(--space-s);
+  margin: 0 0 var(--space-s);
+}
+
+.case-study-motion-level .cs-meta-inline {
+  width: auto;
+  gap: var(--space-xs);
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-motion-level .cs-meta-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+}
+
+.case-study-motion-level .cs-badge-live {
+  min-height: 36px;
+  padding: var(--space-xs) var(--space-s);
+  border-radius: var(--radius-l);
+  background: #66cc99;
+  color: var(--color-bg-main);
+  font-size: var(--text-btn-m);
+  line-height: var(--lh-btn-m);
+}
+
+.case-study-motion-level .cs-hero-right {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+.case-study-motion-level .motion-hero-media {
+  display: flex;
+  width: 100%;
+  height: 560px;
+  min-height: 0;
+  margin: 0;
+  padding: 50px var(--space-huge) 0;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-huge);
+  overflow: hidden;
+  background: #cad4e1;
+  border: 0;
+  border-radius: var(--radius-l);
+  box-shadow: inset 0 0 0 2px var(--color-text-main);
+  clip-path: none;
+}
+
+.case-study-motion-level .motion-hero-media::after {
+  display: none;
+}
+
+.case-study-motion-level .motion-hero-item {
+  display: flex;
+  width: 388px;
+  max-width: 388px;
+  flex: 1 1 0;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+}
+
+.case-study-motion-level .motion-hero-item video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 216 / 480;
+  height: auto;
+  max-height: none;
+  object-fit: cover;
+  object-position: top;
+}
+
+.case-study-motion-level .cs-objectives,
+.case-study-motion-level .cs-achievement,
+.case-study-motion-level .cs-section,
+.case-study-motion-level .cs-final-result {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.case-study-motion-level .cs-objectives .container,
+.case-study-motion-level .cs-achievement .container,
+.case-study-motion-level .cs-section .container,
+.case-study-motion-level .cs-final-result .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+}
+
+.case-study-motion-level .cs-objectives-eyebrow,
+.case-study-motion-level .cs-achievement-label,
+.case-study-motion-level .cs-prose,
+.case-study-motion-level .cs-prose p,
+.case-study-motion-level .cs-challenges-list li,
+.case-study-motion-level .cs-final-result-copy p {
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-body-l);
+}
+
+.case-study-motion-level .cs-obj-statement,
+.case-study-motion-level .cs-achievement-stat {
+  margin: 0;
+  color: var(--color-text-main);
+  font-size: var(--text-title-s);
+  line-height: var(--lh-title-s);
+}
+
+.case-study-motion-level .cs-section-heading {
+  margin: 0;
+  font-size: var(--text-title-m);
+  line-height: var(--lh-title-m);
+}
+
+.case-study-motion-level .cs-prose {
+  gap: 18px;
+}
+
+.case-study-motion-level .cs-challenges-list {
+  gap: var(--space-xxs);
+  padding-left: 27px;
+}
+
+.case-study-motion-level .cs-timeline-h {
+  width: 100%;
+  padding-top: 0;
+}
+
+.case-study-motion-level .cs-timeline-h-line {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: block;
+  background: var(--color-brand-25);
+}
+
+.case-study-motion-level .cs-timeline-h-steps {
+  flex-direction: row;
+  gap: 0;
+}
+
+.case-study-motion-level .cs-timeline-h-step {
+  width: 25%;
+  align-items: flex-start;
+  gap: var(--space-s);
+}
+
+.case-study-motion-level .cs-timeline-h-diamond {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #bfb7c5;
+  border: 0;
+}
+
+.case-study-motion-level .cs-timeline-h-label {
+  max-width: 212px;
+  color: var(--color-text-main);
+  font-size: var(--text-body-l);
+  font-weight: 700;
+  line-height: var(--lh-btn-l);
+  text-align: left;
+}
+
+.case-study-motion-level .motion-evidence {
+  padding-top: 0;
+  padding-bottom: var(--space-xl);
+}
+
+.case-study-motion-level .motion-evidence-figure {
+  gap: var(--space-m);
+}
+
+.case-study-motion-level .motion-evidence-figure img {
+  width: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-l);
+}
+
+.case-study-motion-level .motion-evidence-figure:not(.motion-evidence-figure--tall) img {
+  aspect-ratio: 2000 / 980;
+}
+
+.case-study-motion-level .motion-evidence-figure--tall img {
+  aspect-ratio: 3143 / 2107;
+  object-fit: cover;
+}
+
+.case-study-motion-level .motion-evidence-figure figcaption,
+.case-study-motion-level .motion-evidence-figure figcaption span {
+  color: var(--color-text-main);
+  font-size: var(--text-cap-l);
+  font-weight: var(--font-weight-body);
+  line-height: var(--lh-cap-l);
+}
+
+@media (min-width: 1920px) {
+  .case-study-motion-level .motion-hero-item {
+    flex: 0 0 388px;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1919px) {
+  .case-study-motion-level .motion-hero-item {
+    min-width: 248px;
+  }
+}
+
+@media (max-width: 1499px) {
+  .case-study-motion-level .cs-title {
+    font-size: var(--text-title-l);
+    line-height: var(--lh-title-l);
+  }
+
+  .case-study-motion-level .motion-hero-media {
+    height: 456px;
+    gap: var(--space-m);
+  }
+
+  .case-study-motion-level .motion-hero-item {
+    min-width: 0;
+  }
+
+  .case-study-motion-level .cs-meta-inline,
+  .case-study-motion-level .cs-objectives-eyebrow,
+  .case-study-motion-level .cs-achievement-label,
+  .case-study-motion-level .cs-prose,
+  .case-study-motion-level .cs-prose p,
+  .case-study-motion-level .cs-challenges-list li,
+  .case-study-motion-level .cs-final-result-copy p {
+    font-size: var(--text-body-m);
+    line-height: var(--lh-body-m);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1239px) {
+  .case-study-motion-level .motion-hero-item {
+    min-width: 202px;
+  }
+
+  .case-study-motion-level .motion-hero-item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .case-study-motion-level .cs-hero .container,
+  .case-study-motion-level .cs-objectives .container,
+  .case-study-motion-level .cs-achievement .container,
+  .case-study-motion-level .cs-section .container,
+  .case-study-motion-level .cs-final-result .container,
+  .case-study-motion-level .motion-evidence .container {
+    padding-right: var(--margin-tablet);
+    padding-left: var(--margin-tablet);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero {
+    padding-top: var(--space-mega);
+    padding-bottom: var(--space-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-layout {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-l) var(--space-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-left {
+    width: 317px;
+    flex: 0 0 317px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel {
+    width: auto;
+    flex: 1 1 0;
+    gap: var(--space-ss);
+    padding-left: var(--space-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel::before {
+    display: block;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-media {
+    height: 456px;
+    min-height: 0;
+    margin-top: 0;
+    padding: 50px var(--space-huge) 0;
+    display: flex;
+    gap: var(--space-m);
+    justify-content: center;
+    border-radius: var(--radius-l);
+    clip-path: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item {
+    display: flex;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    flex: 0 1 calc((100% - var(--space-m)) / 2);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item:not(:first-child) {
+    display: flex;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item:nth-child(3) {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item video {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-motion-level .cs-hero .container,
+  .case-study-motion-level .cs-objectives .container,
+  .case-study-motion-level .cs-achievement .container,
+  .case-study-motion-level .cs-section .container,
+  .case-study-motion-level .cs-final-result .container,
+  .case-study-motion-level .motion-evidence .container {
+    padding-right: var(--margin-mobile);
+    padding-left: var(--margin-mobile);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero {
+    padding-top: calc(84px + var(--space-l));
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-layout {
+    flex-direction: column;
+    gap: var(--space-l);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-left,
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel,
+  .case-study-motion-level.has-mobile-layout .cs-hero-right {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .case-study-motion-level .cs-title {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel {
+    padding-left: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel::before {
+    display: none;
+  }
+
+  .case-study-motion-level .cs-meta-inline {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-motion-level .cs-meta-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .case-study-motion-level .cs-badge-live {
+    min-height: 28px;
+    padding: var(--space-xxs) var(--space-ss);
+    font-size: var(--text-cap-m);
+    font-weight: 400;
+    line-height: var(--lh-cap-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-media {
+    width: 100%;
+    height: 456px;
+    padding: 50px var(--space-xl) 0;
+    justify-content: center;
+    border-radius: var(--radius-l);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item {
+    min-width: 232px;
+    max-width: 300px;
+    flex: 1 1 232px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-hero-item:not(:first-child) {
+    display: none;
+  }
+
+  .case-study-motion-level .cs-objectives,
+  .case-study-motion-level .cs-achievement,
+  .case-study-motion-level .cs-section,
+  .case-study-motion-level .cs-final-result {
+    padding-top: var(--space-l);
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-motion-level .cs-objectives-eyebrow,
+  .case-study-motion-level .cs-achievement-label,
+  .case-study-motion-level .cs-prose,
+  .case-study-motion-level .cs-prose p,
+  .case-study-motion-level .cs-challenges-list li,
+  .case-study-motion-level .cs-final-result-copy p {
+    font-size: var(--text-body-s);
+    line-height: var(--lh-body-s);
+  }
+
+  .case-study-motion-level .cs-obj-statement,
+  .case-study-motion-level .cs-achievement-stat {
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-motion-level .cs-section-heading {
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
+  .case-study-motion-level .cs-challenges-list {
+    gap: var(--space-nano);
+    padding-left: 18px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-line {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-steps {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step {
+    position: relative;
+    width: 100%;
+    padding-left: 28px;
+    padding-bottom: var(--space-l);
+    align-items: flex-start;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 0;
+    left: 7px;
+    width: 1px;
+    background: var(--color-brand-25);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step:last-child {
+    padding-bottom: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step:last-child::before {
+    display: none;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-diamond {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-label {
+    max-width: none;
+    font-size: var(--text-title-xs);
+    line-height: var(--lh-title-xs);
+  }
+
+  .case-study-motion-level .motion-evidence {
+    padding-bottom: var(--space-l);
+  }
+
+  .case-study-motion-level .motion-evidence-figure {
+    gap: var(--space-ss);
+  }
+
+  .case-study-motion-level .motion-evidence-figure img {
+    border-radius: var(--radius-s);
+  }
+
+  .case-study-motion-level .motion-evidence-figure figcaption,
+  .case-study-motion-level .motion-evidence-figure figcaption span {
+    font-size: var(--text-cap-s);
+    line-height: var(--lh-cap-s);
+  }
+}
