@@ -72,6 +72,7 @@
 
 /* Title */
 .cs-title {
+  max-width: 550px;
   font-size: var(--text-title-hero);
   font-weight: 700;
   line-height: var(--lh-title-hero);
@@ -640,7 +641,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
-  margin-top: var(--space-xl);
+  margin-top: 0;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -2540,6 +2541,10 @@
   margin-top: var(--space-m);
 }
 
+.case-study-motion-level .cs-prose--after-list {
+  margin-top: 0;
+}
+
 .case-study-motion-level .cs-section a {
   color: var(--color-accent-secondary);
   text-decoration: underline;
@@ -3215,7 +3220,7 @@
   }
 
   .case-study-motion-level.has-mobile-layout .cs-objectives .container {
-    gap: var(--space-l);
+    gap: var(--space-m);
   }
 
   .case-study-motion-level.has-mobile-layout .cs-achievement .container {
@@ -3382,6 +3387,7 @@
   position: relative;
   flex: 1 1 0;
   min-width: 0;
+  gap: var(--space-s);
   padding-left: var(--space-m);
 }
 
@@ -3397,7 +3403,7 @@
 
 .case-study-registro-ml .cs-hero-metadata {
   gap: var(--space-s);
-  margin: 0 0 var(--space-s);
+  margin: 0;
 }
 
 .case-study-registro-ml .cs-meta-inline {
@@ -3734,6 +3740,7 @@
   }
 
   .case-study-registro-ml .cs-hero-meta-panel {
+    gap: var(--space-ss);
     padding-left: var(--space-m);
   }
 
@@ -3782,6 +3789,7 @@
   }
 
   .case-study-registro-ml .cs-hero-meta-panel {
+    gap: var(--space-xs);
     padding-left: 0;
   }
 
@@ -4087,7 +4095,7 @@
 
 .case-study-motion-level .cs-hero-metadata {
   gap: var(--space-s);
-  margin: 0 0 var(--space-s);
+  margin: 0;
 }
 
 .case-study-motion-level .cs-meta-inline {
@@ -4191,6 +4199,11 @@
   font-size: var(--text-body-l);
   font-weight: var(--font-weight-body);
   line-height: var(--lh-body-l);
+}
+
+.case-study-motion-level .cs-objectives-eyebrow,
+.case-study-motion-level .cs-achievement-label {
+  margin: 0;
 }
 
 .case-study-motion-level .cs-obj-statement,
@@ -4328,6 +4341,12 @@
     font-size: var(--text-body-m);
     line-height: var(--lh-body-m);
   }
+
+  .case-study-motion-level .motion-evidence-figure figcaption,
+  .case-study-motion-level .motion-evidence-figure figcaption span {
+    font-size: var(--text-cap-m);
+    line-height: var(--lh-cap-m);
+  }
 }
 
 @media (min-width: 1025px) and (max-width: 1239px) {
@@ -4373,6 +4392,11 @@
     flex: 1 1 0;
     gap: var(--space-ss);
     padding-left: var(--space-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-metadata {
+    gap: var(--space-ss);
+    margin-bottom: 0;
   }
 
   .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel::before {
@@ -4449,6 +4473,7 @@
 
   .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel {
     padding-left: 0;
+    gap: var(--space-xs);
   }
 
   .case-study-motion-level.has-mobile-layout .cs-hero-meta-panel::before {
@@ -4463,6 +4488,11 @@
   .case-study-motion-level .cs-meta-icon {
     width: 20px;
     height: 20px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-hero-metadata {
+    gap: var(--space-xs);
+    margin-bottom: 0;
   }
 
   .case-study-motion-level .cs-badge-live {
@@ -4590,5 +4620,123 @@
   .case-study-motion-level .motion-evidence-figure figcaption span {
     font-size: var(--text-cap-s);
     line-height: var(--lh-cap-s);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .case-study-motion-level.has-mobile-layout .cs-objectives-eyebrow,
+  .case-study-motion-level.has-mobile-layout .cs-achievement-label,
+  .case-study-motion-level.has-mobile-layout .cs-prose,
+  .case-study-motion-level.has-mobile-layout .cs-prose p,
+  .case-study-motion-level.has-mobile-layout .cs-challenges-list li,
+  .case-study-motion-level.has-mobile-layout .cs-final-result-copy p {
+    font-size: var(--text-body-m);
+    font-weight: var(--font-weight-body);
+    line-height: var(--lh-body-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-obj-statement,
+  .case-study-motion-level.has-mobile-layout .cs-achievement-stat {
+    font-size: var(--text-title-s);
+    line-height: var(--lh-title-s);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-section-heading,
+  .case-study-motion-level.has-mobile-layout .cs-final-result-block .cs-section-heading {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-line,
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-diamond {
+    display: block;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-line {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-steps {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-step {
+    width: 25%;
+    align-items: flex-start;
+  }
+
+  .case-study-motion-level.has-mobile-layout .cs-timeline-h-label {
+    max-width: 212px;
+    font-size: var(--text-body-m);
+    line-height: var(--lh-btn-m);
+  }
+
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure figcaption,
+  .case-study-motion-level.has-mobile-layout .motion-evidence-figure figcaption span {
+    font-size: var(--text-cap-m);
+    font-weight: var(--font-weight-body);
+    line-height: var(--lh-cap-m);
+  }
+}
+
+.case-study-page .cs-title {
+  width: max-content;
+  max-width: min(550px, 100%);
+}
+
+@media (min-width: 768px) {
+  .case-study-page .cs-hero-left,
+  .case-study-page.has-mobile-layout .cs-hero-left {
+    width: max-content;
+    max-width: 550px;
+    flex: 0 1 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1499px) {
+  .case-study-page .cs-title,
+  .case-study-page.has-mobile-layout .cs-title {
+    font-size: var(--text-title-l);
+    line-height: var(--lh-title-l);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel {
+    gap: var(--space-ss);
+  }
+}
+
+@media (max-width: 767px) {
+  .case-study-registro-ml.has-mobile-layout .cs-hero-meta-panel {
+    gap: var(--space-xs);
+  }
+}
+
+@media (min-width: 1500px) {
+  .case-study-registro-ml .cs-section-heading,
+  .case-study-registro-ml .cs-final-result-block .cs-section-heading,
+  .case-study-motion-level .cs-section-heading,
+  .case-study-motion-level .cs-final-result-block .cs-section-heading {
+    font-size: var(--text-title-l);
+    line-height: var(--lh-title-l);
+  }
+
+  .case-study-registro-ml .cs-obj-statement,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before,
+  .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after,
+  .case-study-registro-ml .cs-achievement-stat,
+  .case-study-registro-ml .cs-change-title,
+  .case-study-registro-ml .cs-impact-label,
+  .case-study-registro-ml .cs-callout .cs-callout-title,
+  .case-study-motion-level .cs-obj-statement,
+  .case-study-motion-level .cs-achievement-stat {
+    font-size: var(--text-title-m);
+    line-height: var(--lh-title-m);
   }
 }
