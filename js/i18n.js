@@ -4,6 +4,8 @@
   }));
   [
     ['Page not found','Página no encontrada'],
+    ['Page not found,','Página no encontrada,'],
+    ['the page you’re looking for may have moved or never existed, let’s go back.','la página que estás buscando pudo moverse o nunca existió, volvamos a la home.'],
     ['The page you’re looking for may have moved or never existed, let’s go back.','La página que buscas pudo haberse movido o quizá nunca existió. Volvamos al inicio.'],
     ['Page under work','Página en construcción'],
     ['This page is under work','Esta página está en construcción'],

@@ -15,69 +15,39 @@
   </script>
   <meta name="robots" content="noindex" />
   <title>Page not found — David Montealegre</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260807-no-scroll-reveal" />
+  <link rel="stylesheet" href="css/styles.css?v=20260811-error-404" />
 </head>
-<body class="error-page">
+<body class="error-page has-mobile-layout">
   <div class="cursor-dot" id="cursorDot"></div>
 
   <header class="site-header error-header">
     <a class="logotype" href="index.html" aria-label="David Montealegre — Home">
       <img class="isotipo" src="assets/Home/logo/isotipo.svg" alt="" />
     </a>
-    <a href="mailto:idmr13@gmail.com" class="btn-contact">
-      <div class="btn-contact__thumb">
-        <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
-      </div>
-      <span class="btn-contact__label">Get in touch</span>
-    </a>
   </header>
-
-  <aside class="site-sidenav error-sidenav" aria-label="Error page navigation">
-    <a href="index.html" class="text-link error-return" id="errorReturn">Return</a>
-    <div class="language-toggle" role="group" aria-label="Language selection">
-      <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
-      <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
-    </div>
-  </aside>
 
   <main class="error-main">
     <div class="error-content">
-      <h1 class="error-title">Page not found</h1>
-      <p class="error-description">The page you’re looking for may have moved or never existed, let’s go back.</p>
-      <a href="index.html" class="btn btn--loud error-home">Go home</a>
+      <h1 class="error-title">404</h1>
+      <div class="error-copy">
+        <p class="error-description"><strong>Page not found,</strong> <span>the page you’re looking for may have moved or never existed, let’s go back.</span></p>
+        <a href="index.html" class="btn btn--loud error-home">Go home</a>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer error-footer">
-    <div class="site-footer__top">
-      <a href="mailto:idmr13@gmail.com" class="site-footer__item">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm2 2v.2l7 5.25 7-5.25V7H5Zm14 10V9.7l-7 5.25-7-5.25V17h14Z" fill="currentColor"/></svg>
-        <span>idmr13@gmail.com</span>
-      </a>
-      <a href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" class="site-footer__item">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM4.75 10.5h3.5V19h-3.5v-8.5Zm5.25 0h3.35v1.2c.55-.8 1.5-1.45 2.95-1.45 2.45 0 3.95 1.55 3.95 4.35V19h-3.5v-4c0-1.15-.45-1.8-1.45-1.8-1.1 0-1.8.8-1.8 2.05V19H10v-8.5Z" fill="currentColor"/></svg>
-        <span>David Montealegre Rey</span>
-      </a>
-      <span class="site-footer__item site-footer__item--disabled site-footer__resume" aria-disabled="true">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l4 4v16H6V2Zm8 1.8V7h3.2L14 3.8ZM8 11h8v2H8v-2Zm0 4h8v2H8v-2Z" fill="currentColor"/></svg>
-        <span>Resume</span>
-      </span>
-    </div>
-    <div class="site-footer__divider"></div>
     <div class="site-footer__bottom">
       <span class="site-footer__copy">© David Montealegre 2026</span>
+      <span class="site-footer__credit">
+        <span>Website created with</span>
+        <img class="site-footer__brand-icon" src="assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
+        <span>ChatGPT Work</span>
+      </span>
     </div>
   </footer>
 
-  <script src="js/i18n.js?v=20260726-contact"></script>
-  <script src="js/main.js?v=20260807-no-scroll-reveal"></script>
-  <script>
-    const returnLink = document.getElementById('errorReturn');
-    returnLink.addEventListener('click', event => {
-      if (window.history.length <= 1 || document.referrer === '') return;
-      event.preventDefault();
-      window.history.back();
-    });
-  </script>
+  <script src="js/i18n.js?v=20260811-error-404"></script>
+  <script src="js/main.js?v=20260811-shared-footer"></script>
 </body>
 </html>
