@@ -4153,6 +4153,7 @@
 }
 
 .case-study-motion-level .motion-hero-item {
+  position: relative;
   display: flex;
   width: 388px;
   max-width: 388px;
@@ -4163,6 +4164,8 @@
 }
 
 .case-study-motion-level .motion-hero-item video {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   aspect-ratio: 216 / 480;
@@ -4170,6 +4173,22 @@
   max-height: none;
   object-fit: cover;
   object-position: top;
+}
+
+.case-study-motion-level .motion-hero-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 216 / 480;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+}
+
+.case-study-motion-level .motion-hero-item--fallback video {
+  visibility: hidden;
 }
 
 .case-study-motion-level .cs-objectives,

@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/styles.css?v=20260807-no-scroll-reveal" />
-  <link rel="stylesheet" href="../css/case-study.css?v=20260810-motion-tablet" />
+  <link rel="stylesheet" href="../css/case-study.css?v=20260811-motion-video-fallback" />
 </head>
 
 <body class="case-study-page case-study-motion-level has-mobile-layout">
@@ -107,21 +107,24 @@
         <div class="cs-hero-right">
           <div class="motion-hero-media" aria-label="Three examples showing fast, medium, and slow motion levels">
             <figure class="motion-hero-item">
-              <video id="motionFast" muted playsinline preload="auto" aria-label="Fast motion example">
+              <video id="motionFast" muted playsinline preload="auto" poster="../assets/Motion DS/Videos/Fast-poster.png" aria-label="Fast motion example">
                 <source src="../assets/Motion DS/Videos/Fast.mp4" type="video/mp4" />
               </video>
+              <img class="motion-hero-fallback" src="../assets/Motion DS/Videos/Fast-poster.png" alt="" aria-hidden="true" loading="eager" />
               <figcaption>Fast</figcaption>
             </figure>
             <figure class="motion-hero-item">
-              <video id="motionMedium" muted playsinline preload="auto" aria-label="Medium motion example">
+              <video id="motionMedium" muted playsinline preload="auto" poster="../assets/Motion DS/Videos/Medium-poster.png" aria-label="Medium motion example">
                 <source src="../assets/Motion DS/Videos/Medium.mp4" type="video/mp4" />
               </video>
+              <img class="motion-hero-fallback" src="../assets/Motion DS/Videos/Medium-poster.png" alt="" aria-hidden="true" loading="eager" />
               <figcaption>Medium</figcaption>
             </figure>
             <figure class="motion-hero-item">
-              <video id="motionSlow" muted playsinline preload="auto" aria-label="Slow motion example">
+              <video id="motionSlow" muted playsinline preload="auto" poster="../assets/Motion DS/Videos/Slow-poster.png" aria-label="Slow motion example">
                 <source src="../assets/Motion DS/Videos/Slow.mp4" type="video/mp4" />
               </video>
+              <img class="motion-hero-fallback" src="../assets/Motion DS/Videos/Slow-poster.png" alt="" aria-hidden="true" loading="eager" />
               <figcaption>Slow</figcaption>
             </figure>
           </div>
@@ -353,6 +356,15 @@
 
         motionExamples.forEach((video, index) => {
           video.loop = false;
+          const item = video.closest('.motion-hero-item');
+          const showFallback = () => item?.classList.add('motion-hero-item--fallback');
+
+          video.addEventListener('error', showFallback);
+          video.querySelectorAll('source').forEach(source => source.addEventListener('error', showFallback));
+          window.setTimeout(() => {
+            if (video.readyState === 0) showFallback();
+          }, 2500);
+
           video.addEventListener('ended', () => {
             if (index !== activeExample) return;
             activeExample += 1;
