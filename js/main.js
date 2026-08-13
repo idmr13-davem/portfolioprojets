@@ -190,6 +190,16 @@ const scrollFill = document.getElementById('scrollProgressFill');
         </span>
       </div>`;
   });
+
+  document.querySelectorAll('.mobile-home-drawer__footer').forEach(footer => {
+    footer.innerHTML = `
+      <small class="mobile-home-drawer__copy">© David Montealegre 2026</small>
+      <span class="mobile-home-drawer__credit">
+        <span>Website created with</span>
+        <img class="site-footer__brand-icon" src="${rootPath}assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
+        <span>ChatGPT Work</span>
+      </span>`;
+  });
 })();
 
 // ─────────────────────────────────────────

@@ -3709,6 +3709,117 @@ html[lang="es"] .error-description strong {
   .mobile-construction__menu span { transition: none; }
 }
 
+/* Home mobile menu — opening motion from Figma node 209:1803 */
+@media (max-width: 767px) {
+  .home-header .mobile-menu-toggle {
+    position: relative;
+    display: block;
+  }
+
+  .home-header .mobile-menu-toggle span {
+    position: absolute;
+    left: 4px;
+    width: 20px;
+    height: 2.429px;
+    transform-origin: 0 50%;
+    transition:
+      width 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      transform 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  .home-header .mobile-menu-toggle span:nth-child(1) { top: 5px; }
+  .home-header .mobile-menu-toggle span:nth-child(2) { top: 12.29px; }
+  .home-header .mobile-menu-toggle span:nth-child(3) { top: 19.57px; }
+
+  .home-header.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(1) {
+    width: 28.001px;
+    transform: translateY(-1.214px) rotate(45deg);
+  }
+
+  .home-header.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .home-header.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(3) {
+    width: 28.019px;
+    transform: translateY(3.864px) rotate(-45deg);
+  }
+
+  .home-header .mobile-home-drawer {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition:
+      opacity 500ms linear,
+      transform 500ms cubic-bezier(0, 0, 0.2, 1),
+      visibility 0s linear 500ms;
+  }
+
+  .home-header .mobile-home-drawer > * {
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.002, 0, 0.2, 1);
+  }
+
+  .home-header .mobile-home-drawer.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+  }
+
+  .home-header .mobile-home-drawer.is-open > * {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  .home-header .mobile-menu-toggle span,
+  .home-header .mobile-home-drawer,
+  .home-header .mobile-home-drawer > * {
+    transition: none;
+  }
+}
+
+/* Mobile drawer footer — shared footer pattern from the Figma reference */
+@media (max-width: 1024px) {
+  .mobile-home-drawer__footer {
+    display: flex;
+    min-height: 62px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+    border-top: 0;
+    background: var(--color-clic-background);
+  }
+
+  .mobile-home-drawer__footer small.mobile-home-drawer__copy {
+    display: block;
+    padding: 0;
+    color: #bfb7c5;
+    font-size: var(--text-cap-m);
+    font-weight: var(--font-weight-body);
+    line-height: var(--lh-cap-m);
+  }
+
+  .mobile-home-drawer__credit {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: #bfb7c5;
+    font-size: var(--text-cap-m);
+    font-weight: var(--font-weight-body);
+    line-height: var(--lh-cap-m);
+    white-space: nowrap;
+  }
+
+  .mobile-home-drawer__credit .site-footer__brand-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
 @media (max-width: 1024px) {
   .error-page {
     grid-template-rows: minmax(0, 1fr) 45px;
