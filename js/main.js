@@ -95,6 +95,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
   const header = document.querySelector('.home-header');
   const menu = header?.querySelector('.mobile-menu-toggle');
   const drawer = document.getElementById('homeMobileDrawer');
+  const dimmer = document.getElementById('homeMobileDimmer');
   if (!header || !menu || !drawer) return;
 
   function setDrawer(open) {
@@ -110,6 +111,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => setDrawer(false));
   });
+  dimmer?.addEventListener('click', () => setDrawer(false));
 })();
 
 // ─────────────────────────────────────────
