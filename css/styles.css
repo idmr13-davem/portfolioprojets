@@ -258,12 +258,16 @@ img { display: block; max-width: 100%; }
   display: block;
 }
 .language-toggle {
+  --language-toggle-option-width: 54px;
   display: inline-flex;
   align-items: center;
+  position: relative;
+  width: calc(var(--language-toggle-option-width) * 2);
+  height: 31px;
   padding: 0;
   background: var(--color-text-secondary);
   border: 1px solid var(--color-text-main);
-  border-radius: 20px;
+  border-radius: var(--radius-s);
   overflow: hidden;
   color: var(--color-bg-main);
 }
@@ -271,24 +275,50 @@ img { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 50px;
-  padding: var(--space-xs) var(--space-s);
+  position: relative;
+  z-index: 1;
+  width: var(--language-toggle-option-width);
+  min-width: var(--language-toggle-option-width);
+  height: 100%;
+  padding: 0 var(--space-s);
   border: 0;
-  border-radius: 20px;
+  border-radius: var(--radius-s);
   background: transparent;
   color: inherit;
   font: 700 var(--text-btn-m)/var(--lh-btn-m) var(--font-body);
   cursor: pointer;
-  transition: background-color var(--dur-micro) var(--ease-in-out),
-              color var(--dur-micro) var(--ease-in-out);
 }
-.language-toggle__option[aria-pressed="true"] {
+.language-toggle__active-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, var(--language-toggle-option-width));
   background: var(--color-accent-clic);
   color: var(--color-text-main);
+  clip-path: inset(0 var(--language-toggle-option-width) 0 0 round var(--radius-s));
+  pointer-events: none;
+  transition: clip-path 500ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+.language-toggle[data-active-language="es"] .language-toggle__active-labels {
+  clip-path: inset(0 1px 0 53px round var(--radius-s));
+}
+.language-toggle__active-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 700 var(--text-btn-m)/var(--lh-btn-m) var(--font-body);
 }
 .language-toggle__option:focus-visible {
+  z-index: 3;
   outline: 2px solid var(--color-accent-secondary);
   outline-offset: -2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .language-toggle__active-labels {
+    transition: none;
+  }
 }
 /* Estado activo — sección actual */
 .home-sidenav__link.is-active {

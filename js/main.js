@@ -213,8 +213,24 @@ const scrollFill = document.getElementById('scrollProgressFill');
   const storedLanguage = localStorage.getItem('portfolio-language');
   let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : 'en';
 
+  function updateToggleVisuals(language) {
+    toggles.forEach(toggle => {
+      toggle.dataset.activeLanguage = language;
+      if (!toggle.querySelector('.language-toggle__active-labels')) {
+        const activeLabels = document.createElement('span');
+        activeLabels.className = 'language-toggle__active-labels';
+        activeLabels.setAttribute('aria-hidden', 'true');
+        activeLabels.innerHTML = supportedLanguages
+          .map(code => `<span class="language-toggle__active-label">${code.toUpperCase()}</span>`)
+          .join('');
+        toggle.append(activeLabels);
+      }
+    });
+  }
+
   function renderLanguage(language) {
     currentLanguage = language;
+    updateToggleVisuals(language);
     window.PortfolioI18n?.apply(language);
     document.querySelectorAll('[data-cv-link]').forEach(link => {
       const cvPath = language === 'es' ? link.dataset.cvEs : link.dataset.cvEn;
@@ -238,6 +254,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
       const option = event.target.closest('.language-toggle__option');
       if (!option || option.dataset.language === currentLanguage) return;
       const language = option.dataset.language;
+      updateToggleVisuals(language);
       localStorage.setItem('portfolio-language', language);
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (reducedMotion) renderLanguage(language);
