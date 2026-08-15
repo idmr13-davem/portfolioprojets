@@ -3521,6 +3521,10 @@
   color: var(--color-accent-secondary);
 }
 
+html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before {
+  content: "Aumentar ";
+}
+
 .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement {
   font-size: 0;
 }
@@ -3528,6 +3532,10 @@
 .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after {
   content: "flow conversion";
   color: var(--color-text-main);
+}
+
+html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::after {
+  content: "la conversión del flujo";
 }
 
 .case-study-registro-ml .cs-objectives-grid .cs-obj-col:first-child .cs-obj-statement::before,
@@ -3545,9 +3553,17 @@
   color: var(--color-accent-secondary);
 }
 
+html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before {
+  content: "Reducir ";
+}
+
 .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after {
   content: "completion time";
   color: var(--color-text-main);
+}
+
+html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::after {
+  content: "el tiempo de finalización";
 }
 
 .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-child(2) .cs-obj-statement::before,

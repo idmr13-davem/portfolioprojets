@@ -10,6 +10,10 @@ Run a static web server from this directory and open `index.html`. The site is b
 
 This repository is intended for GitHub Pages and the custom domain `davidmontealegreux.com`.
 
+## Architecture and growth
+
+The project intentionally uses plain HTML, CSS, and JavaScript while that remains proportional to its size. CSS ownership, case-study separation criteria, publishing checks, and thresholds for introducing templates, structured content, or other tooling are documented in [`docs/architecture-and-growth.md`](docs/architecture-and-growth.md).
+
 ## Content
 
 The public site contains exactly two case studies:

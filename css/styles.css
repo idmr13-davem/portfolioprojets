@@ -3743,7 +3743,7 @@ html[lang="es"] .error-description strong {
   .mobile-construction__menu span { transition: none; }
 }
 
-/* Home mobile menu — opening motion from Figma node 209:1803 */
+/* Mobile menu motion — Figma node 4450:2168 */
 @media (max-width: 767px) {
   .home-header .mobile-menu-toggle {
     position: relative;
@@ -3782,35 +3782,135 @@ html[lang="es"] .error-description strong {
     transform: translateY(3.864px) rotate(-45deg);
   }
 
-  .home-header .mobile-home-drawer {
+  body.home-page > .mobile-home-drawer {
     opacity: 0;
     transform: translateY(-200px);
     transition:
-      opacity 500ms linear,
-      transform 500ms cubic-bezier(0, 0, 0.2, 1),
+      opacity 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      transform 500ms cubic-bezier(0.8, 0, 1, 1),
       visibility 0s linear 500ms;
   }
 
-  .home-header .mobile-home-drawer > * {
+  body.home-page > .mobile-home-drawer > * {
     opacity: 0;
-    transition: opacity 500ms cubic-bezier(0.002, 0, 0.2, 1);
+    transition: opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
   }
 
-  .home-header .mobile-home-drawer.is-open {
+  body.home-page > .mobile-home-drawer.is-open {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0s;
+    transition:
+      opacity 500ms linear,
+      transform 500ms cubic-bezier(0, 0, 0.2, 1),
+      visibility 0s linear 0s;
   }
 
-  .home-header .mobile-home-drawer.is-open > * {
+  body.home-page > .mobile-home-drawer.is-open > * {
     opacity: 1;
+    transition: opacity 500ms cubic-bezier(0.002, 0, 0.2, 1);
   }
 }
 
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
   .home-header .mobile-menu-toggle span,
-  .home-header .mobile-home-drawer,
-  .home-header .mobile-home-drawer > * {
+  body.home-page > .mobile-home-drawer,
+  body.home-page > .mobile-home-drawer > * {
+    transition: none;
+  }
+}
+
+/* Internal-page mobile menu — shared motion from Figma node 4450:2168. */
+@media (max-width: 767px) {
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle {
+    position: relative;
+    z-index: 1002;
+    display: block;
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle span {
+    position: absolute;
+    left: 4px;
+    width: 20px;
+    height: 2.429px;
+    transform-origin: 0 50%;
+    transition:
+      width 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      transform 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle span:nth-child(1) { top: 5px; }
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle span:nth-child(2) { top: 12.29px; }
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle span:nth-child(3) { top: 19.57px; }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(1) {
+    width: 28.001px;
+    transform: translateY(-1.214px) rotate(45deg);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar.is-mobile-drawer-open .mobile-menu-toggle span:nth-child(3) {
+    width: 28.019px;
+    transform: translateY(3.864px) rotate(-45deg);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer {
+    display: flex !important;
+    top: 84px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 0;
+    padding: 0;
+    border-bottom: 0;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition:
+      opacity 500ms cubic-bezier(0.5, 0, 0.5, 1),
+      transform 500ms cubic-bezier(0.8, 0, 1, 1),
+      visibility 0s linear 500ms;
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer > * {
+    opacity: 0;
+    transition: opacity 500ms cubic-bezier(0.5, 0, 0.5, 1);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 500ms linear,
+      transform 500ms cubic-bezier(0, 0, 0.2, 1),
+      visibility 0s linear 0s;
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer.is-open > * {
+    opacity: 1;
+    transition: opacity 500ms cubic-bezier(0.002, 0, 0.2, 1);
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer .mobile-home-drawer__footer {
+    min-height: 62px;
+    gap: 10px;
+    padding: 10px 20px;
+    border-top: 0;
+  }
+
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer .mobile-home-drawer__footer small.mobile-home-drawer__copy {
+    padding: 0;
+    font-weight: var(--font-weight-body);
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  body.has-mobile-layout:is(.case-study-page, .article-page) .cs-topbar .mobile-menu-toggle span,
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer,
+  body.has-mobile-layout:is(.case-study-page, .article-page) > .internal-mobile-drawer > * {
     transition: none;
   }
 }
@@ -3854,7 +3954,7 @@ html[lang="es"] .error-description strong {
     transform: translateY(3.864px) rotate(-45deg);
   }
 
-  .home-header .mobile-home-drawer {
+  body.home-page > .mobile-home-drawer {
     top: 3px;
     border-left: 0;
     opacity: 0;
@@ -3866,17 +3966,17 @@ html[lang="es"] .error-description strong {
       visibility 0s linear 500ms;
   }
 
-  .home-header .mobile-home-drawer.is-open {
+  body.home-page > .mobile-home-drawer.is-open {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0s;
   }
 
-  .home-header .mobile-home-drawer nav {
+  body.home-page > .mobile-home-drawer nav {
     padding-top: calc(84px + var(--space-xs));
   }
 
-  .home-header .mobile-menu-dimmer {
+  body.home-page > .mobile-menu-dimmer {
     position: fixed;
     z-index: 999;
     inset: 0;
@@ -3890,7 +3990,7 @@ html[lang="es"] .error-description strong {
       visibility 0s linear 500ms;
   }
 
-  .home-header.is-mobile-drawer-open .mobile-menu-dimmer {
+  body.home-page.is-mobile-menu-open > .mobile-menu-dimmer {
     opacity: 0.8;
     visibility: visible;
     pointer-events: auto;
@@ -3900,8 +4000,8 @@ html[lang="es"] .error-description strong {
 
 @media (min-width: 768px) and (max-width: 1024px) and (prefers-reduced-motion: reduce) {
   .home-header .mobile-menu-toggle span,
-  .home-header .mobile-home-drawer,
-  .home-header .mobile-menu-dimmer {
+  body.home-page > .mobile-home-drawer,
+  body.home-page > .mobile-menu-dimmer {
     transition: none;
   }
 }
