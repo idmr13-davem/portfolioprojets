@@ -1041,7 +1041,7 @@
 }
 .cs-impact-accent--alert {
   color: var(--color-alert);
-  font-weight: 600;
+  font-weight: inherit;
 }
 
 /* ═══════════════════════════════════════
@@ -3617,7 +3617,11 @@ html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-chil
 }
 
 .case-study-registro-ml .cs-change-content {
-  padding-bottom: var(--space-xl);
+  padding-bottom: var(--space-xxl);
+}
+
+.case-study-registro-ml .cs-change-item:last-child .cs-change-content {
+  padding-bottom: 0;
 }
 
 .case-study-registro-ml .cs-change-header {
@@ -3641,7 +3645,7 @@ html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-chil
 }
 
 .case-study-registro-ml .cs-change-body-inner {
-  gap: var(--space-s);
+  gap: var(--space-m);
 }
 
 .case-study-registro-ml .cs-change-item.is-active .cs-change-body {
@@ -3650,6 +3654,15 @@ html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-chil
 
 .case-study-registro-ml .cs-impact-accent {
   font-weight: var(--font-weight-body);
+}
+
+.case-study-registro-ml .cs-callout {
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
 .case-study-registro-ml .cs-change-body p,
@@ -4737,6 +4750,11 @@ html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-chil
     font-size: var(--text-title-l);
     line-height: var(--lh-title-l);
   }
+
+  .case-study-registro-ml .cs-callout .cs-callout-title {
+    font-size: var(--text-btn-m);
+    line-height: var(--lh-btn-m);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -4768,10 +4786,14 @@ html[lang="es"] .case-study-registro-ml .cs-objectives-grid .cs-obj-col:nth-chil
   .case-study-registro-ml .cs-achievement-stat,
   .case-study-registro-ml .cs-change-title,
   .case-study-registro-ml .cs-impact-label,
-  .case-study-registro-ml .cs-callout .cs-callout-title,
   .case-study-motion-level .cs-obj-statement,
   .case-study-motion-level .cs-achievement-stat {
     font-size: var(--text-title-m);
     line-height: var(--lh-title-m);
+  }
+
+  .case-study-registro-ml .cs-callout .cs-callout-title {
+    font-size: var(--text-btn-l);
+    line-height: var(--lh-btn-l);
   }
 }

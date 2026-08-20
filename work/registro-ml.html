@@ -20,7 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="../css/styles.css?v=20260814-mobile-menu-motion" />
-  <link rel="stylesheet" href="../css/case-study.css?v=20260803-figma-tokens" />
+  <link rel="stylesheet" href="../css/case-study.css?v=20260819-registro-alert-weight" />
 </head>
 
 <body class="case-study-page case-study-registro-ml has-mobile-layout">
@@ -135,7 +135,7 @@
   <!-- ───────── ACHIEVEMENT ───────── -->
   <section class="cs-achievement">
     <div class="container">
-      <p class="cs-achievement-label">Our most important achievement</p>
+      <p class="cs-achievement-label">My most important achievement</p>
       <p class="cs-achievement-stat">
         Reduced average completion time from
         <span class="cs-achievement-accent">3 minutes and 25 seconds</span>
@@ -162,7 +162,7 @@
     <div class="container">
       <h2 class="cs-section-heading">Faced challenges</h2>
       <ul class="cs-challenges-list">
-        <li>Create a complete new signup flow aligned with our new goal in Mercado Libre.</li>
+        <li>Create a complete new signup flow aligned with the new goal in Mercado Libre.</li>
         <li>Stop being a friction in middle of purchases.</li>
         <li>Unify the different kind of signup flows in one which operate modularly.</li>
       </ul>
@@ -172,7 +172,7 @@
   <!-- ───────── COMPOUNDING CHANGES ───────── -->
   <section class="cs-section cs-section--changes cs-change-disclosure" id="compounding-changes">
     <div class="container">
-      <h2 class="cs-section-heading">Our compounding changes</h2>
+      <h2 class="cs-section-heading">My compounding changes</h2>
 
       <div class="cs-change-list">
         <article class="cs-change-item is-active" data-change-accordion>
@@ -190,7 +190,7 @@
             </button>
             <div class="cs-change-body" id="changePanel1" role="region" aria-labelledby="changeTrigger1">
               <div class="cs-change-body-inner">
-                <p>Mercado Libre was asking buyers to choose between "personal" and "business" accounts — a bifurcation that existed only because fintech required it for regulatory reasons. The decision was to remove the account type selection from the Mercado Libre flow entirely. A buyer doesn't need to categorize themselves before they can shop. This was only possible because we had split the teams — the same change would have broken Mercado Pago's compliance requirements.</p>
+                <p>Mercado Libre was asking buyers to choose between "personal" and "business" accounts — a bifurcation that existed only because fintech required it for regulatory reasons. I decided to remove the account type selection from the Mercado Libre flow entirely because a buyer doesn't need to categorize themselves before purchasing on the platform. This was only possible after the teams were separated, since the same change would have violated Mercado Pago's regulatory requirements.</p>
 
                 <div class="cs-impact">
                   <span class="cs-impact-label">Impact</span>
@@ -216,7 +216,9 @@
             </button>
             <div class="cs-change-body" id="changePanel2" role="region" aria-labelledby="changeTrigger2" inert>
               <div class="cs-change-body-inner">
-                <p>The existing flow was linear by design: enter a piece of data, validate it via OTP or identity challenge, wait for the system, move to the next screen. Five steps, ten screens. The model was built around verification, not conversion. We separated declaration from validation: all required fields on a single screen, with only phone number validated via OTP afterward. <span class="cs-text-accent">This collapsed 5 steps and 10 screens into 2 steps and 3 screens.</span> Removing step-by-step validation meant rethinking abuse control. We implemented ReCaptcha at the form level and at the OTP screen — lower friction without losing the detection layer.</p>
+                <p>The existing flow was linear by design: enter a piece of data, validate it via OTP or complete an identity validation task, wait for the system, and move to the next screen; it took five steps and ten screens because the model was built around verification, not conversion. I separated declaration from validation: I brought all required fields together on a single screen and kept only the subsequent phone validation via OTP; <span class="cs-text-accent">this reduced 5 steps and 10 screens to 2 steps and 3 screens.</span></p>
+
+                <p>Removing step-by-step validation meant rethinking abuse control. I implemented ReCaptcha at the form level and at the OTP screen, reducing friction without losing the detection layer.</p>
 
                 <div class="cs-impact">
                   <span class="cs-impact-label">Impact</span>
@@ -242,16 +244,16 @@
             </button>
             <div class="cs-change-body" id="changePanel3" role="region" aria-labelledby="changeTrigger3" inert>
               <div class="cs-change-body-inner">
-                <p>Even with the form, users still had to manually type name, email, password, and phone. Manual data entry is inherently error-prone and friction-generating especially on mobile. The solution was to implement Google Identity Services: the Google button, One Tap, and Credential Manager. With a verified Google account we pre-fill name and email, eliminate the password field, and reduce the flow to a single OTP.</p>
+                <p>Even with the form, users still had to manually enter their name, email, password, and phone number; this made the experience prone to errors and created friction, especially on mobile. The solution was to implement Google Identity Services: the Google button, One Tap, and Credential Manager. With a verified Google account, name and email were pre-filled, the password field was removed, and the flow was reduced to a single OTP.</p>
 
                 <div class="cs-impact">
                   <span class="cs-impact-label">Impact</span>
-                  <p class="cs-impact-line">+0.6pp conversion vs form-only, <span class="cs-impact-accent">1:54 minutes → 50 seconds</span> completion time.</p>
+                  <p class="cs-impact-line">+0.6 percentage points in conversion compared with the traditional form; <span class="cs-impact-accent">completion time went from 1:54 minutes to 50 seconds.</span></p>
                 </div>
 
                 <div class="cs-callout">
-                  <p class="cs-callout-title">What we left on the table</p>
-                  <p class="cs-callout-body">We couldn't eliminate phone OTP because it was the only validated recovery data. With Google, the validated data point becomes email. If shipped, registration drops to ~10 seconds via One Tap.</p>
+                  <p class="cs-callout-title">What I left on the table</p>
+                  <p class="cs-callout-body">I couldn't eliminate phone OTP because it was the only validated recovery data. With Google, the validated data point becomes email. If shipped, registration drops to ~10 seconds via One Tap.</p>
                 </div>
               </div>
             </div>
@@ -273,17 +275,17 @@
             </button>
             <div class="cs-change-body" id="changePanel4" role="region" aria-labelledby="changeTrigger4" inert>
               <div class="cs-change-body-inner">
-                <p>As we reduced friction, drop rates fell, but transformed. The switch rate between registration and login jumped from 16% to 41.4% after social was introduced. Social made registration so fast that users tried it impulsively before checking which flow they were in.</p>
+                <p>As I reduced friction, drop-off rates decreased, but the problem changed. Switching between sign-up and login increased from 16% to 41.4% after social sign-up was introduced. This happened because the process was so fast and frictionless that users started it without realizing whether they were signing up or logging in.</p>
 
                 <div class="cs-impact">
                   <span class="cs-impact-label">The reframe</span>
-                  <p class="cs-impact-line">Users don't have a task of "registering" or "logging in." They have a task of accessing Mercado Libre. ML sessions last 6+ months on the same device. Many users hadn't typed credentials in so long they couldn't confidently identify which flow they needed.</p>
+                  <p class="cs-impact-line">That was when I realized that the users' task is not to "sign up" or "log in," but to access Mercado Libre. On the platform, sessions remain active for more than six months on the same device, and many users had gone so long without entering their credentials that they forgot them and ended up creating a second account because of friction or error.</p>
                 </div>
 
-                <p>The solution was to implement one screen that accepts an identifier (email or phone), <span class="cs-impact-accent">the screen logic determines whether an account exists, and routes accordingly to sign-in or sign-up.</span> The user never has to decide which path they're on.</p>
+                <p>The solution was to implement one screen that accepts an identifier (email or phone), <span class="cs-impact-accent--alert">the screen logic determines whether an account exists, and routes accordingly to sign-in or sign-up.</span> The user never has to decide which path they're on.</p>
 
                 <div class="cs-callout">
-                  <p class="cs-callout-title">The risk we designed around</p>
+                  <p class="cs-callout-title">The risk I designed around</p>
                   <p class="cs-callout-body">Typos could route a user to the wrong flow and accidentally create a duplicate account. Solution: a persistent pill displaying the entered identifier in subsequent screens — turning a passive input into an active confirmation point.</p>
                 </div>
               </div>
@@ -297,7 +299,7 @@
   <!-- ───────── UI EVIDENCES ───────── -->
   <section class="cs-section cs-section--evidences">
     <div class="container">
-      <h2 class="cs-section-heading">Last experience designed - sign up with email</h2>
+      <h2 class="cs-section-heading">Sign up with email</h2>
       <div class="cs-evidence-stack">
         <img src="../assets/Registro ML/UI evidences/Flow 1-1.png" alt="Sign up with email — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
         <img src="../assets/Registro ML/UI evidences/Flow 1-2.png" alt="Sign up with email — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
@@ -307,7 +309,7 @@
 
   <section class="cs-section cs-section--evidences">
     <div class="container">
-      <h2 class="cs-section-heading">Last experience designed - sign up with Google</h2>
+      <h2 class="cs-section-heading">Sign up with Google</h2>
       <div class="cs-evidence-stack">
         <img src="../assets/Registro ML/UI evidences/Flow 2-1.png" alt="Sign up with Google — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
         <img src="../assets/Registro ML/UI evidences/Flow 2-2.png" alt="Sign up with Google — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
@@ -317,7 +319,7 @@
 
   <section class="cs-section cs-section--evidences">
     <div class="container">
-      <h2 class="cs-section-heading">Last experience designed - sign up with phone number</h2>
+      <h2 class="cs-section-heading">Sign up with phone number</h2>
       <div class="cs-evidence-stack">
         <img src="../assets/Registro ML/UI evidences/Flow 3-1.png" alt="Sign up with phone — flow part 1" class="cs-evidence-img cs-evidence-img--top" />
         <img src="../assets/Registro ML/UI evidences/Flow 3-2.png" alt="Sign up with phone — flow part 2" class="cs-evidence-img cs-evidence-img--bottom" />
@@ -332,11 +334,11 @@
         <div class="cs-final-result-block">
           <h2 class="cs-section-heading">Final result</h2>
           <div class="cs-prose cs-final-result-copy">
-            <p>At the moment I left this project the new unification flow hadn't been implemented, I didn't get information about the performance of the new flow productively, but part of the result was:</p>
+            <p>These are some of the figures achieved as a result of the implemented iterations:</p>
           </div>
           <ul class="cs-final-result-list">
-            <li><span>Reduce the time completion significantly from 3:25 minutes to 50 seconds.</span></li>
-            <li><span>Increase flow conversion by 12.5% and 180k new users per month</span> when unification was implemented in specific sites like Brazil.</li>
+            <li><span>I reduced completion time from 3:25 minutes with the initial flow to 50 seconds with social sign-up</span> through the changes accumulated over the two years I worked on this project.</li>
+            <li><span>I increased flow conversion by 12.5% and added 180,000 new users per month</span> when unification was implemented in specific sites, such as Brazil. This conversion also affected the other countries where it was implemented, with smaller figures close to 100,000 users.</li>
           </ul>
         </div>
 
@@ -369,7 +371,7 @@
     </div>
   </footer>
 
-  <script src="../js/i18n.js?v=20260811-registro-es"></script>
+  <script src="../js/i18n.js?v=20260819-registro-result-highlight"></script>
   <script src="../js/main.js?v=20260813-language-toggle-motion"></script>
 
 </body>
