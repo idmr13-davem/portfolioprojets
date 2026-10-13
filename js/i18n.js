@@ -239,19 +239,219 @@
     ['Registro Mercado Libre — David Montealegre','Registro Mercado Libre — David Montealegre'],
     ['Motion Design System — David Montealegre','Sistema de Motion Design — David Montealegre']
   ]);
+  // Home v2 — public qualitative summaries and current project status.
+  [
+    ["Contact:", "Contacto:"],
+    ["Scroll down", "Desliza hacia abajo"],
+    ["8 years of experience in UI, UX, and product design.", "8 años de experiencia en UI, UX y diseño de producto."],
+    ["5 years designing at Mercado Libre, the Amazon of Latin America, and Mercado Pago.", "5 años diseñando en Mercado Libre, el Amazon de Latinoamérica, y Mercado Pago."],
+    ["1 year as a freelance product designer.", "1 año como diseñador de producto freelance."],
+    ["Entrepreneur at MH Support.", "Emprendedor en MH Support."],
+    ["Registro ML", "Registro ML"],
+    ["Role: Senior UX analyst / UI designer", "Rol: Senior UX analyst / UI designer"],
+    ["Role: UX / interaction analyst", "Rol: UX / interaction analyst"],
+    ["Outcome", "Resultado"],
+    ["Status", "Estado"],
+    ["See case study", "Ver caso de estudio"],
+    ["Download my resume", "Descargar mi curriculum"],
+    ["Accounts for minors in Mexico", "Cuentas para menores en México"],
+    ["Country switch", "Switch entre países"],
+    ["Play preview", "Reproducir vista previa"],
+    ["Case study not available yet", "Caso de estudio aún no disponible"],
+    ["This project’s case study requires validation and protected access before publication.", "Este caso de estudio requiere validación y acceso protegido antes de publicarse."],
+    ["Close", "Cerrar"],
+    ["Skip to content", "Ir al contenido"],
+    ["I redesigned sign-up for Mercado Libre, the Amazon of Latin America, to reduce friction during account creation.", "Rediseñé el registro para Mercado Libre, el Amazon de Latinoamérica, para reducir la fricción al crear una cuenta."],
+    ["A simpler registration experience reduced completion time and improved conversion across Latin America.", "Una experiencia de registro más simple redujo el tiempo de finalización y mejoró la conversión en Latinoamérica."],
+    ["I contributed to the foundations of the design system at Mercado Libre, the Amazon of Latin America, by creating the Motion Level framework.", "Contribuí a los fundamentos del design system en Mercado Libre, el Amazon de Latinoamérica, creando el framework Motion Level."],
+    ["A shared framework helps designers and developers choose how expressive an animation should be in its context.", "Un framework compartido ayuda a diseño y desarrollo a elegir qué tan expresiva debe ser una animación según su contexto."],
+    ["An active project exploring account creation for minors in Mexico.", "Un proyecto activo que explora la creación de cuentas para menores en México."],
+    ["In development. Production results are not available yet.", "En desarrollo. Aún no hay resultados de producción."],
+    ["I designed the account-switching animation for Mercado Libre, the Amazon of Latin America, and Mercado Pago.", "Diseñé la animación de cambio de cuenta para Mercado Libre, el Amazon de Latinoamérica, y Mercado Pago."],
+    ["An account-switching experience supported by animation specifications and implementation guidelines.", "Una experiencia de cambio de cuenta acompañada de especificaciones de animación y guías de implementación."],
+    ["My first UX role was as a web designer, back when the discipline was still taking shape. Since then, I’ve spent eight years designing digital products across marketplaces, fintech, and B2B services. I’ve worked in startups and established companies.", "Mi primer rol en UX fue como diseñador web, cuando la disciplina todavía estaba tomando forma. Desde entonces, llevo ocho años diseñando productos digitales para marketplaces, fintech y servicios B2B. He trabajado en startups y empresas consolidadas."],
+    ["A couple of years ago, an interviewer asked me: why have you stayed so long at the same…", "Hace un par de años, un entrevistador me preguntó: ¿por qué has permanecido tanto tiempo en la misma…"],
+    ["I'm not only a designer who likes to create interfaces, I’m also passionate about automotive UX…", "No solo soy un diseñador al que le gusta crear interfaces, también me apasiona el UX automotriz…"]
+  ].forEach(([source, translation]) => es.set(source, translation));
+  // Home final revision, October 13, 2026.
+  es.set("About me", "Acerca de mí");
+  es.set("Continue reading", "Continuar leyendo");
+  es.set("Why I\'ve worked with 4 different teams at Mercado Libre", "Por qué trabajé con cuatro equipos diferentes en Mercado Libre");
+  [["Case studies", "Casos de estudio"], ["Personal blog", "Blog personal"], ["Learn more about me", "Conoce más sobre mí"], ["Explore my case studies", "Revisa mis casos de estudio"], ["View my resume", "Revisa mi hoja de vida"], ["Explore my personal blog", "Revisa mi blog personal"], ["Schedule a call", "Agenda una llamada"], ["Intro", "Intro"], ["Case 1", "Caso 1"], ["Case 2", "Caso 2"], ["Case 3", "Caso 3"], ["Case 4", "Caso 4"], ["Blog", "Blog"], ["5 years designing at Mercado Libre / Mercado Pago for people across Latin America.", "5 años diseñando en Mercado Libre / Mercado Pago para personas en Latinoamérica."], ["Currently moving into design engineering.", "Actualmente en transición hacia el rol de design engineering."], ["Mentor at ADPlist and an active member of UX learning communities.", "Mentor en ADPlist y miembro activo de comunidades de educación y formación en UX."], ["Aspiring entrepreneur.", "Emprendedor en formación."], ["I’m a graphic designer with 10 years of experience, most of them in UX. Beyond design, my interests include:", "Soy un diseñador gráfico con 10 años de experiencia, la mayoría de ellos en UX, y entre otros de mis intereses además del diseño también están:"], ["Photography as an amateur landscape photographer.", "La fotografía como paisajista amateur."], ["Music as an amateur guitarist.", "La música como guitarrista aficionado."], ["Trekking and spending time in nature.", "El trekking como amante de la naturaleza."], ["Driving and the automotive industry.", "La conducción y la industria automotriz como entusiasta."], ["Building products as an aspiring entrepreneur.", "La construcción de productos como futuro emprendedor."], ["These passions shape my approach to design, the projects I love working on, and the knowledge I enjoy sharing on my personal blog.", "Todas estas pasiones dan forma a mi mentalidad de diseño y marcan los tipos de proyectos en los que amo trabajar y el conocimiento que disfruto compartir en mi blog personal."], ["Want to learn more about my professional experience? Take a look at my resume.", "¿Quieres conocer más sobre mí a nivel profesional? Puedes revisar mi hoja de vida."], ["Mercado Libre sign-up", "Registro ML en Mercado Libre"], ["Motion design system — Motion Level", "Motion design system — Motion Level"], ["Switching accounts across countries", "Switch de cuentas entre países"], ["I led the iteration of Mercado Libre’s sign-up model for people across Latin America.", "Lideré la iteración del modelo de registro de Mercado Libre para personas en Latinoamérica."], ["I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for Motion Level.", "Co-lideré la primera fase del motion design system de Mercado Libre, desarrollando el marco conceptual de Motion Level."], ["I designed the account creation flow for minors in Mexico, working within Mexican regulatory requirements.", "Diseñé el flujo de creación de cuentas para menores en México bajo la normativa mexicana."], ["I created an animated account-switching flow for people with accounts in different Latin American countries.", "Creé la experiencia de switch entre países, un flujo animado para personas con cuentas en varios países de Latinoamérica."], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["Now that you know a little more about me, what’s your next step?", "Y ya que sabes un poco más de mí, ¿cuál es tu siguiente paso?"], ["Whether it’s an exciting project or a role on your team, I want to work on product and experience challenges that inspire me. Could we work together?", "Ya sea para un proyecto apasionante o para una vacante dentro de tu gran equipo, lo que más quiero es trabajar en desafíos de experiencia y producto que me llenen de entusiasmo y pasión por resolver. ¿Crees que podemos trabajar juntos?"]].forEach(([source, translation]) => es.set(source, translation));
+  // Final case card content approved from Figma on October 13, 2026.
+  [["Mercado Libre sign-up", "Registro en Mercado Libre"], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["I led the iteration of Mercado Libre’s sign-up model, impacting 60 million users across 9 Latin American countries.", "Lideré la iteración del modelo de registro para Mercado Libre, impactando a 60 millones de usuarios en 9 países de América Latina."], ["I reduced average sign-up time from 3:25 minutes to 52 seconds", "Reduje el tiempo promedio de registro de 3:25 minutos a 52 segundos"], [" and increased conversion by more than 10%, depending on the country.", " y aumenté la conversión en más de un 10%, según el país."], ["Motion design system - Motion Level", "Motion design system - motion level"], ["Role: Senior UX analyst / UI designer", "Rol: Analista Senior de UX / Diseñador UI"], ["I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for the Motion Level framework.", "Co-lideré la primera fase de creación del motion design system de Mercado Libre, desarrollando el marco conceptual para el framework de motion level."], ["I created the conceptual framework that unifies how expressive motion is at Mercado Libre", "Creé el marco conceptual que unifica el nivel de expresividad del movimiento en Mercado Libre"], [", impacting more than 200 UX analysts and developers within the organization.", ", impactando a más de 200 analistas de UX y desarrolladores dentro de la organización."], ["Sign-up for minors in Mexico", "Registro para menores en México"], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["I designed Mercado Pago’s sign-up flow for minors in Mexico, working within Mexican regulations, among the most demanding in Latin America.", "Diseñé el flujo de registro para menores de Mercado Pago en México, un flujo regulado bajo la normativa mexicana, una de las más exigentes de Latinoamérica."], ["I iterated on the Mexico flow using insights from Argentina and Brazil, ", "Iteré el flujo de México usando insights de Argentina y Brasil, "], ["reducing identity verification time from 24 hours to 20 seconds", "reduje el tiempo de validación de identidad de 24 horas a 20 segundos"], [".", "."], ["Switching accounts across countries", "Switch de cuentas entre países"], ["Role: Senior UX analyst / UI designer", "Rol: Analista UX senior / Diseñador UI"], ["I created the cross-country account-switching experience, an animated flow that people with accounts in several Latin American countries see when switching between them.", "Creé la experiencia de switch entre países, un flujo animado visible para las personas con cuentas en varios países de Latinoamérica al momento de cambiar entre ellas."], ["I improved the experience for 200k people with multiple accounts across Brazil, Argentina and Uruguay,", "Impacté la experiencia de 200k personas con más de una cuenta entre Brasil, Argentina y Uruguay,"], [" a number that has continued to grow in recent quarters.", " un número que viene creciendo en los últimos quarters."]].forEach(([source, translation]) => es.set(source.trim(), translation.trim()));
   const en = new Map([...es].map(([a,b])=>[b,a]));
   const original = new WeakMap();
   const clean = s => s.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim();
+
+  // Home v2 accessibility and media descriptions from the October 9 Figma notes.
+  [
+  [
+    "Go to my LinkedIn profile",
+    "Ir a mi perfil en LinkedIn"
+  ],
+  [
+    "Go to my ADPlist profile",
+    "Ir a mi perfil en ADPlist"
+  ],
+  [
+    "Send me an email",
+    "Enviarme un email"
+  ],
+  [
+    "Send me a message on WhatsApp",
+    "Enviar un mensaje por WhatsApp"
+  ],
+  [
+    "Change language",
+    "Cambiar idioma"
+  ],
+  [
+    "David Montealegre, product designer. Back to introduction",
+    "David Montealegre, diseñador de producto. Volver a la presentación"
+  ],
+  [
+    "Scroll down to selected work",
+    "Desliza hacia abajo hasta mis proyectos"
+  ],
+  [
+    "Move left",
+    "Mover a la izquierda"
+  ],
+  [
+    "Move right",
+    "Mover a la derecha"
+  ],
+  [
+    "Article selection",
+    "Selección de artículos"
+  ],
+  [
+    "Article carousel",
+    "Carrusel de artículos"
+  ],
+  [
+    "Article carousel controls",
+    "Controles del carrusel de artículos"
+  ],
+  [
+    "Mobile navigation",
+    "Navegación móvil"
+  ],
+  [
+    "Main navigation",
+    "Navegación principal"
+  ],
+  [
+    "Entry into Mercado Libre’s unified sign-up flow.",
+    "Entrada al flujo de registro unificado en Mercado Libre."
+  ],
+  [
+    "Play preview: Registro ML",
+    "Reproducir vista previa: Registro ML"
+  ],
+  [
+    "See case study: Registro ML",
+    "Ver caso de estudio: Registro ML"
+  ],
+  [
+    "Easing tests for the motion design system at Mercado Libre.",
+    "Test de easings del motion design system en Mercado Libre."
+  ],
+  [
+    "Play preview: Motion Level",
+    "Reproducir vista previa: Motion Level"
+  ],
+  [
+    "See case study: Motion Level",
+    "Ver caso de estudio: Motion Level"
+  ],
+  [
+    "Account creation flow for minors in Mercado Pago in Mexico.",
+    "Flujo de creación de cuenta para menores de edad en Mercado Pago en México."
+  ],
+  [
+    "Play preview: Accounts for minors in Mexico",
+    "Reproducir vista previa: Cuentas para menores en México"
+  ],
+  [
+    "See case study: Accounts for minors in Mexico",
+    "Ver caso de estudio: Cuentas para menores en México"
+  ],
+  [
+    "Switching accounts between Argentina and Brazil in Mercado Pago.",
+    "Flujo de cambio de cuentas entre países en Mercado Pago entre Argentina y Brasil."
+  ],
+  [
+    "Play preview: Country switch",
+    "Reproducir vista previa: Switch entre países"
+  ],
+  [
+    "See case study: Country switch",
+    "Ver caso de estudio: Switch entre países"
+  ],
+  [
+    "Photograph of Mercado Libre’s offices.",
+    "Fotografía de las oficinas de Mercado Libre."
+  ],
+  [
+    "Photograph of the driver interface in a Mazda.",
+    "Fotografía de la interfaz del conductor de un Mazda."
+  ],
+  [
+    "Photograph of a guitar.",
+    "Fotografía de una guitarra."
+  ],
+  [
+    "Continue reading: Why I've worked with 4 different teams at Mercado Libre",
+    "Continuar leyendo: Por qué he trabajado con 4 equipos diferentes en Mercado Libre"
+  ],
+  [
+    "Continue reading: A bad interface not only creates a bad experience, it could be much worse",
+    "Continuar leyendo: Una mala interfaz no solo crea una mala experiencia: puede ser mucho peor"
+  ],
+  [
+    "Continue reading: What I've learned from my other passion, music, about a good experience",
+    "Continuar leyendo: Lo que mi otra pasión, la música, me enseñó sobre una buena experiencia"
+  ]
+].forEach(([source, translation]) => attributeTranslations.set(source, translation));
+
+  [
+  [
+    "Entry into Mercado Libre’s unified sign-up flow.",
+    "Entrada al flujo de registro unificado en Mercado Libre."
+  ],
+  [
+    "Easing tests for the motion design system at Mercado Libre.",
+    "Test de easings del motion design system en Mercado Libre."
+  ],
+  [
+    "Account creation flow for minors in Mercado Pago in Mexico.",
+    "Flujo de creación de cuenta para menores de edad en Mercado Pago en México."
+  ],
+  [
+    "Switching accounts between Argentina and Brazil in Mercado Pago.",
+    "Flujo de cambio de cuentas entre países en Mercado Pago entre Argentina y Brasil."
+  ],
+  [
+    "Article selection",
+    "Selección de artículos"
+  ]
+].forEach(([source, translation]) => es.set(source, translation));
+  attributeTranslations.set("Visit my profile on LinkedIn", "Visitar mi perfil en LinkedIn");
+  attributeTranslations.set("Schedule a call", "Agenda una llamada");
+  attributeTranslations.set("Learn more about me", "Conoce más sobre mí");
   function apply(language){
     const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),nodes=[];
     while(walker.nextNode())nodes.push(walker.currentNode);
     nodes.forEach(node=>{
-      if(node.parentElement?.closest('script,style'))return;
+      if(node.parentElement?.closest('script,style,[data-home-title],[data-case-role-es]'))return;
       if(!original.has(node))original.set(node,node.nodeValue);
       const raw=original.get(node),key=clean(raw); if(!key)return;
       const value=language==='es'?(es.get(key)||key):(en.get(key)||key);
       node.nodeValue=(raw.match(/^\s*/)?.[0]||'')+value+(raw.match(/\s*$/)?.[0]||'');
     });
+    document.querySelectorAll('[data-case-role-es]').forEach(el => { el.textContent = language === 'es' ? el.dataset.caseRoleEs : el.dataset.caseRoleEn; });
     document.querySelectorAll('[placeholder]').forEach(el=>{if(!el.dataset.placeholderEn)el.dataset.placeholderEn=el.placeholder;el.placeholder=language==='es'?'Yo habría…':el.dataset.placeholderEn;});
     document.querySelectorAll('[aria-label],[alt]').forEach(el=>{
       ['aria-label','alt'].forEach(attribute=>{
@@ -266,6 +466,7 @@
     const titleEn=document.documentElement.dataset.titleEn;
     document.title=language==='es'?(pageTitles.get(titleEn)||titleEn):titleEn;
     document.documentElement.lang=language;
+    document.dispatchEvent(new CustomEvent("portfolio:translated", {detail:{language}}));
   }
   window.PortfolioI18n={apply};
 })();

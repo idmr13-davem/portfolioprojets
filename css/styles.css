@@ -1,22 +1,24 @@
+@import url("tokens/figma.css?v=20261013-body-light");
+
 /* ─────────────────────────────────────────
    TOKENS — UI Kit
 ───────────────────────────────────────── */
 :root {
   /* Color styles — nombres alineados con Figma */
-  --color-main-brand-100:        rgba(218, 237, 237, 0.90);
-  --color-main-brand-75:         rgba(218, 237, 237, 0.75);
-  --color-main-brand-50:         rgba(218, 237, 237, 0.50);
-  --color-main-brand-25:         rgba(218, 237, 237, 0.25);
-  --color-main-text:             rgba(218, 237, 237, 0.90);
-  --color-secondary-text:        rgba(218, 237, 237, 0.90);
-  --color-main-accent:           #7755DE;
-  --color-secondary-accent:      #A689FF;
-  --color-clic-accent:           #5533BB;
-  --color-accent-positive:       #3ECF6E;
-  --color-accent-alert:          #F5A623;
-  --color-main-background:       #222324;
-  --color-secondary-background:  #262B31;
-  --color-clic-background:       #1A1A19;
+  --color-main-brand-100:        var(--brand-logo-main-100pct);
+  --color-main-brand-75:         var(--brand-logo-main-75pct);
+  --color-main-brand-50:         var(--brand-logo-main-50pct);
+  --color-main-brand-25:         var(--brand-logo-main-25pct);
+  --color-main-text:             var(--text-primary);
+  --color-secondary-text:        var(--text-secondary);
+  --color-main-accent:           var(--interactive-primary-idle);
+  --color-secondary-accent:      var(--interactive-primary-hover);
+  --color-clic-accent:           var(--interactive-primary-clic);
+  --color-accent-positive:       var(--feedback-positive);
+  --color-accent-alert:          var(--feedback-alert);
+  --color-main-background:       var(--background-primary);
+  --color-secondary-background:  var(--background-secondary);
+  --color-clic-background:       var(--background-deep);
 
   /* Color aliases — compatibilidad con componentes actuales */
   --color-bg-main:          var(--color-main-background);
@@ -53,29 +55,29 @@
   /* ── Type scale — valores exactos Figma ── */
 
   /* Títulos — Inter Bold (700) */
-  --text-title-hero: 72px;  --lh-title-hero: 80px;   /* H1 home */
-  --text-title-xl:   56px;  --lh-title-xl:   64px;   /* sección grande */
-  --text-title-l:    40px;  --lh-title-l:    50px;   /* H2 secciones */
-  --text-title-m:    32px;  --lh-title-m:    40px;   /* H3 / casos */
-  --text-title-s:    26px;  --lh-title-s:    32.5px; /* labels sección */
-  --text-title-xs:   20px;  --lh-title-xs:   25px;   /* headings compactos */
+  --text-title-hero: var(--text-title-hero-font-size);  --lh-title-hero: var(--text-title-hero-line-height);   /* H1 home */
+  --text-title-xl:   var(--text-title-xl-font-size);  --lh-title-xl:   var(--text-title-xl-line-height);   /* sección grande */
+  --text-title-l:    var(--text-title-l-font-size);  --lh-title-l:    var(--text-title-l-line-height);   /* H2 secciones */
+  --text-title-m:    var(--text-title-m-font-size);  --lh-title-m:    var(--text-title-m-line-height);   /* H3 / casos */
+  --text-title-s:    var(--text-title-s-font-size);  --lh-title-s:    var(--text-title-s-line-height); /* labels sección */
+  --text-title-xs:   var(--text-title-xs-font-size);  --lh-title-xs:   var(--text-title-xs-line-height);   /* headings compactos */
 
   /* Body — Inter Light (300) */
   --text-body-xl:   25px;  --lh-body-xl:   35px;
-  --text-body-l:    18px;  --lh-body-l:    25px;
-  --text-body-m:    16px;  --lh-body-m:    21.6px;
-  --text-body-s:    12px;  --lh-body-s:    16.2px;
-  --font-weight-body: 300;
+  --text-body-l:    var(--body-l-font-size);  --lh-body-l:    var(--body-l-line-height);
+  --text-body-m:    var(--body-m-font-size);  --lh-body-m:    var(--body-m-line-height);
+  --text-body-s:    var(--body-s-font-size);  --lh-body-s:    var(--body-s-line-height);
+  --font-weight-body: var(--body-m-font-weight);
 
   /* Botones — Inter Bold (700) */
-  --text-btn-l:     18px;  --lh-btn-l:     22px;
-  --text-btn-m:     16px;  --lh-btn-m:     19px;
-  --text-btn-s:     12px;  --lh-btn-s:     14px;
+  --text-btn-l:     var(--button-l-font-size);  --lh-btn-l:     var(--button-l-line-height);
+  --text-btn-m:     var(--button-m-font-size);  --lh-btn-m:     var(--button-m-line-height);
+  --text-btn-s:     var(--button-s-font-size);  --lh-btn-s:     var(--button-s-line-height);
 
-  /* Captions — Inter Light (300) */
-  --text-cap-l:     16px;  --lh-cap-l:     20px;
-  --text-cap-m:     12.8px; --lh-cap-m:    16px;
-  --text-cap-s:     10px;  --lh-cap-s:     12.5px;
+  /* Captions — Inter Regular (400) */
+  --text-cap-l:     var(--caption-l-font-size);  --lh-cap-l:     var(--caption-l-line-height);
+  --text-cap-m:     var(--caption-m-font-size); --lh-cap-m:    var(--caption-m-line-height);
+  --text-cap-s:     var(--caption-s-font-size);  --lh-cap-s:     var(--caption-s-line-height);
 
   /* ── Grid — Column-Desktop (Figma) ── */
   /* Márgenes fijos 218px · columnas fluidas · contenido crece con la pantalla */

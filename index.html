@@ -8,11 +8,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/Favicon/favicon-16x16.png" />
   <link rel="icon" href="assets/Favicon/favicon.ico" />
   <link rel="manifest" href="assets/Favicon/site.webmanifest" />
-  <meta name="theme-color" content="#222324" />
-  <script>
-    document.documentElement.classList.add('motion-enabled');
-    window.setTimeout(() => document.documentElement.classList.add('motion-entered'), 700);
-  </script>
+  <meta name="theme-color" content="#14191e" />
+
   <title>David Montealegre — Product Designer</title>
 
   <!-- Fonts -->
@@ -21,207 +18,73 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20260814-mobile-menu-motion" />
+  <link rel="stylesheet" href="css/styles.css?v=20261013-body-light" />
+  <link rel="stylesheet" href="css/components.css?v=20261013-colombia" />
+  <link rel="stylesheet" href="css/home-v2-motion.css?v=20261013-indicator-labels" />
+  <link rel="stylesheet" href="css/home-v2.css?v=20261013-body-light" />
+  <link rel="stylesheet" href="css/mobile-menu-v2.css?v=20261013-nav-hover" />
+  <link rel="stylesheet" href="css/home-v2-final.css?v=20261013-nav-dividers" />
 </head>
 
-<body class="home-page">
-
-  <!-- Global scroll progress -->
-  <div class="scroll-progress" aria-hidden="true">
-    <div class="scroll-progress-fill" id="scrollProgressFill"></div>
+<body class="home-page home-v2">
+<a class="v2-skip" href="#main">Skip to content</a>
+<header class="site-header home-header" id="homeHeader">
+  <button class="logotype" type="button" data-home-scroll="hero" aria-label="David Montealegre, product designer. Back to introduction"><picture><img class="isotipo" src="assets/Home/v2/header-logo.svg?v=20261013-header-library" alt="" aria-hidden="true" /></picture></button>
+  <nav class="v2-desktop-nav" aria-label="Page sections"><a class="v2-nav-link" href="#about">About me</a><a class="v2-nav-link" href="#work">Case studies</a><a class="v2-nav-link" href="#articles">Blog</a><a class="v2-nav-link" href="#contact">Contact</a></nav>
+  <div class="v2-header-language"><div data-header-toggle class="language-toggle" role="group" aria-label="Change language"><button class="language-toggle__option" type="button" data-language="en" aria-label="English" aria-pressed="true">EN</button><button class="language-toggle__option" type="button" data-language="es" aria-label="Español" aria-pressed="false">ES</button></div></div>
+  <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="homeMobileDrawer" aria-label="Open navigation"><span></span><span></span><span></span><img class="v2-header-burger" src="assets/Home/v2/header-burger.svg" alt="" aria-hidden="true" /></button>
+</header>
+<div class="mobile-home-drawer v2-mobile-menu" id="homeMobileDrawer" aria-hidden="true" inert>
+  <nav aria-label="Mobile navigation"><a class="v2-nav-link" href="#about">About me</a><a class="v2-nav-link" href="#work">Case studies</a><a class="v2-nav-link" href="#articles">Blog</a><a class="v2-nav-link" href="#contact">Contact</a></nav>
+<div class="v2-contact-bar v2-drawer-contact" aria-label="Contact options"><a class="v2-contact-link v2-contact-link--email" href="mailto:idmr13@gmail.com" aria-label="Send me an email"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/email-compact.svg"><img src="assets/Home/v2/email-idle.svg" alt="" /></picture><span class="v2-contact-label">Send me an email</span></a><a class="v2-contact-link v2-contact-link--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" aria-label="Visit my profile"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/linkedin-compact.svg"><img src="assets/Home/v2/linkedin-idle.svg" alt="" /></picture><span class="v2-contact-label">Visit my profile</span></a><a class="v2-contact-link v2-contact-link--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer" aria-label="Send me a message"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/whatsapp-small.svg"><img src="assets/Home/v2/whatsapp.svg" alt="" /></picture><span class="v2-contact-label">Send me a message</span></a><a class="v2-contact-link v2-contact-link--call" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer" aria-label="Schedule a call"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/call-small.svg"><img src="assets/Home/v2/call.svg" alt="" /></picture><span class="v2-contact-label">Schedule a call</span></a></div>
+  <div class="mobile-home-drawer__actions v2-mobile-menu__actions"><div class="language-toggle" role="group" aria-label="Change language"><button class="language-toggle__option" type="button" data-language="en" aria-label="English" aria-pressed="true">EN</button><button class="language-toggle__option" type="button" data-language="es" aria-label="Español" aria-pressed="false">ES</button></div></div>
+<nav class="v2-scroll-indicator v2-scroll-indicator--drawer" aria-label="Page progress"><img class="v2-scroll-track" src="assets/Home/v2/scroll-track.svg" alt="" aria-hidden="true" /><a href="#hero" class="v2-scroll-stop" style="--stop:18px"><span>Intro</span></a><a href="#about" class="v2-scroll-stop" style="--stop:77px"><span>About me</span></a><a href="#case-1" class="v2-scroll-stop" style="--stop:152px"><span>Case 1</span></a><a href="#case-2" class="v2-scroll-stop" style="--stop:219px"><span>Case 2</span></a><a href="#case-3" class="v2-scroll-stop" style="--stop:289px"><span>Case 3</span></a><a href="#case-4" class="v2-scroll-stop" style="--stop:359px"><span>Case 4</span></a><a href="#articles" class="v2-scroll-stop" style="--stop:429px"><span>Blog</span></a><a href="#contact" class="v2-scroll-stop" style="--stop:499px"><span>Contact</span></a><span class="v2-scroll-marker" aria-hidden="true"></span></nav>
+  <footer class="mobile-home-drawer__footer v2-mobile-menu__footer"><small>© David Montealegre 2026</small></footer>
+</div>
+<nav class="v2-scroll-indicator v2-scroll-indicator--fixed" aria-label="Page progress"><img class="v2-scroll-track" src="assets/Home/v2/scroll-track.svg" alt="" aria-hidden="true" /><a href="#hero" class="v2-scroll-stop" style="--stop:18px"><span>Intro</span></a><a href="#about" class="v2-scroll-stop" style="--stop:77px"><span>About me</span></a><a href="#case-1" class="v2-scroll-stop" style="--stop:152px"><span>Case 1</span></a><a href="#case-2" class="v2-scroll-stop" style="--stop:219px"><span>Case 2</span></a><a href="#case-3" class="v2-scroll-stop" style="--stop:289px"><span>Case 3</span></a><a href="#case-4" class="v2-scroll-stop" style="--stop:359px"><span>Case 4</span></a><a href="#articles" class="v2-scroll-stop" style="--stop:429px"><span>Blog</span></a><a href="#contact" class="v2-scroll-stop" style="--stop:499px"><span>Contact</span></a><span class="v2-scroll-marker" aria-hidden="true"></span></nav>
+<main id="main" tabindex="-1">
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1 class="hero-title" data-home-title><span>Hi, I'm David Montealegre, </span><span class="hero-title-accent">senior product designer</span><span>, </span><span class="hero-title-accent">ex-Mercado Libre</span><span>, </span><span class="hero-title-accent">consultant and freelance designer</span><span>, mentor at ADPlist</span></h1>
+    <div class="v2-contact-bar v2-hero-contact" aria-label="Contact options"><a class="v2-contact-link v2-contact-link--email" href="mailto:idmr13@gmail.com" aria-label="Send me an email"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/email-compact.svg"><img src="assets/Home/v2/email-idle.svg" alt="" /></picture><span class="v2-contact-label">Send me an email</span></a><a class="v2-contact-link v2-contact-link--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" aria-label="Visit my profile"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/linkedin-compact.svg"><img src="assets/Home/v2/linkedin-idle.svg" alt="" /></picture><span class="v2-contact-label">Visit my profile</span></a><a class="v2-contact-link v2-contact-link--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer" aria-label="Send me a message"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/whatsapp-small.svg"><img src="assets/Home/v2/whatsapp.svg" alt="" /></picture><span class="v2-contact-label">Send me a message</span></a><a class="v2-contact-link v2-contact-link--call" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer" aria-label="Schedule a call"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/call-small.svg"><img src="assets/Home/v2/call.svg" alt="" /></picture><span class="v2-contact-label">Schedule a call</span></a></div>
+    <ul class="v2-hero-facts"><li>8 years of experience in UI, UX, and product design.</li><li>5 years designing at Mercado Libre / Mercado Pago for people across Latin America.</li><li>1 year as a freelance product designer.</li><li>Currently moving into design engineering.</li><li>Mentor at ADPlist and an active member of UX learning communities.</li><li>Aspiring entrepreneur.</li></ul>
   </div>
-
-  <!-- Cursor dot -->
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <!-- ───────────── TOP HEADER ───────────── -->
-  <header class="site-header home-header" id="homeHeader">
-    <a class="logotype" href="#">
-      <img class="isotipo" src="assets/Home/logo/isotipo.svg" alt="David Montealegre" />
-    </a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="homeMobileDrawer" aria-label="Open navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <a href="#contact" class="btn-contact" id="headerContact">
-      <div class="btn-contact__thumb">
-        <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
-      </div>
-      <span class="btn-contact__label">Get in touch</span>
-    </a>
-  </header>
-  <div class="mobile-menu-dimmer" id="homeMobileDimmer" aria-hidden="true"></div>
-  <div class="mobile-home-drawer" id="homeMobileDrawer" aria-hidden="true">
-    <nav aria-label="Mobile navigation">
-      <a href="#work">Selected work</a>
-      <a href="#about">About me</a>
-      <a href="#articles">My articles</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="btn-contact mobile-home-drawer__contact">
-      <div class="btn-contact__thumb">
-        <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
-      </div>
-      <span class="btn-contact__label">Get in touch</span>
-    </a>
-    <div class="mobile-home-drawer__actions">
-      <div class="language-toggle" role="group" aria-label="Language selection">
-        <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
-        <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
-      </div>
-    </div>
-    <footer class="mobile-home-drawer__footer">
-      <small>© David Montealegre 2026</small>
-    </footer>
-  </div>
-
-  <!-- ───────────── HERO ───────────── -->
-  <section class="hero" id="hero">
-
-    <!-- Sidenav contextual — sticky, acompaña el scroll -->
-    <nav class="site-sidenav home-sidenav" id="homeSidenav" aria-label="Page sections">
-      <div class="site-sidenav__links">
-        <a href="#work"    class="text-link site-sidenav__link home-sidenav__link" data-section="work">Selected work</a>
-        <a href="#about"   class="text-link site-sidenav__link home-sidenav__link" data-section="about">About me</a>
-        <a href="#articles" class="text-link site-sidenav__link home-sidenav__link" data-section="articles">My articles</a>
-        <a href="#contact" class="text-link site-sidenav__link home-sidenav__link" data-section="contact">Contact</a>
-      </div>
-      <div class="language-toggle" role="group" aria-label="Language selection">
-        <button class="language-toggle__option" type="button" data-language="en" aria-pressed="true">EN</button>
-        <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
-      </div>
-    </nav>
-
-    <div class="hero-content">
-
-      <!-- Ubicación -->
-      <div class="hero-location">
-        <img src="assets/Icons/Icon.svg" alt="" aria-hidden="true" class="hero-location-icon" />
-        <span>Bogotá, Colombia</span>
-      </div>
-
-      <!-- Headline -->
-      <h1 class="hero-title">
-        <span class="hero-title-line"><span>I'm David, a product designer</span></span>
-        <span class="hero-title-line"><span class="hero-title-accent">who ships at scale</span></span>
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="hero-subtitle">
-        8 years designing for 60M+ users across Latam — from zero-to-one products to systems that moved the needle on business metrics. Currently at Mercado Libre, the largest tech company in Latin America.
-      </p>
-
-    </div>
-
-    <!-- Scroll hint — se oculta al hacer scroll -->
-    <a href="#work" class="hero-scroll-hint" id="heroScrollHint" aria-label="Scroll to see projects">
-      <span>Scroll down</span>
-      <span class="hero-scroll-arrow" aria-hidden="true">
-        <img src="assets/Icons/chevron-accordion.svg" alt="" />
-      </span>
-    </a>
-
-  </section>
-
-  <!-- ───────────── WORK ───────────── -->
-  <section class="section-work" id="work">
-    <div class="container">
-
-      <h2 class="sw-title">Selected work</h2>
-
-      <div class="sw-list">
-
-        <!-- Caso 01 -->
-        <div class="sw-item sw-reveal is-active" data-accordion>
-          <div class="sw-timeline">
-            <div class="sw-diamond"></div>
-            <div class="sw-line"></div>
-          </div>
-          <div class="sw-content">
-            <button class="sw-header sw-accordion-trigger" type="button" id="projectTriggerRegistro" aria-expanded="true" aria-controls="projectPanelRegistro">
-              <div class="sw-heading">
-                <span class="sw-eyebrow">Case study 1</span>
-                <h3 class="sw-case-title">Registro Mercado Libre</h3>
-              </div>
-              <span class="button-arrow button-arrow--mute button-arrow--small sw-chevron" aria-hidden="true"></span>
-            </button>
-            <div class="sw-panel" id="projectPanelRegistro" role="region" aria-labelledby="projectTriggerRegistro">
-              <div class="sw-body">
-                <span class="pill pill--secondary">Role: Senior UX analyst / Product Designer</span>
-                <p>Trabajé durante 2 años en este proyecto para 9 países de Latam bajo el objetivo de reducir la fricción y el tiempo de registro para entrar al marketplace más grande de la región.</p>
-                <ul>
-                  <li><span class="sw-highlight">Hitos logrados:</span> Se redujo el tiempo promedio de registro de 3:25 minutos a 52 segundos y aumentó la conversión más de 10% según el país.</li>
-                </ul>
-                <a href="work/registro-ml.html" class="btn btn--loud sw-project-button">View project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Caso 02 -->
-        <div class="sw-item sw-reveal" data-accordion>
-          <div class="sw-timeline">
-            <div class="sw-diamond"></div>
-            <div class="sw-line sw-line--end"></div>
-          </div>
-          <div class="sw-content">
-            <button class="sw-header sw-accordion-trigger" type="button" id="projectTriggerMotion" aria-expanded="false" aria-controls="projectPanelMotion">
-              <div class="sw-heading">
-                <span class="sw-eyebrow">Case study 2</span>
-                <h3 class="sw-case-title">Motion Design System</h3>
-              </div>
-              <span class="button-arrow button-arrow--mute button-arrow--small sw-chevron" aria-hidden="true"></span>
-            </button>
-            <div class="sw-panel" id="projectPanelMotion" role="region" aria-labelledby="projectTriggerMotion" inert>
-              <div class="sw-body">
-                <span class="pill pill--secondary">Role: Senior UI Designer / Researcher</span>
-                <p>I contributed to the early foundations of the motion design system at Mercado Libre, Latin America’s largest technology ecosystem, as part of a multidisciplinary UX and motion team supporting more than 80 designers and 700 developers.</p>
-                <ul>
-                  <li><span class="sw-highlight">Main contribution:</span> I created the initial Motion Level concept, a framework for defining how functional or expressive an animation should be according to its context.</li>
-                </ul>
-                <a href="work/motion-design-system.html" class="btn btn--loud sw-project-button">View project</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ───────────── ABOUT ME ───────────── -->
+</section>
   <section class="section-home-about" id="about" aria-labelledby="homeAboutTitle">
     <div class="container">
       <h2 class="sw-title home-about-title" id="homeAboutTitle">About me</h2>
 
       <div class="home-about-layout">
         <div class="home-about-image">
-          <img src="assets/Home/Imágenes/WhatsApp Image 2026-07-20 at 13.45.20.jpeg" alt="David Montealegre" />
+          <img src="assets/Home/v2/david.png" alt="David Montealegre" aria-hidden="true" />
         </div>
 
         <div class="home-about-content">
-          <div class="home-about-copy">
-            <p>I’m David, a product designer from Colombia with a background in graphic design. I began my career in marketing agencies, working across branding, advertising, and visual design before transitioning into UX.</p>
-            <p>My first UX role was as a web designer, back when the discipline was still taking shape. Since then, I’ve spent eight years designing digital products across marketplaces, fintech, and B2B services. I’ve worked in startups and established companies, including nearly five years at Mercado Libre, the biggest tech company in Latam.</p>
-            <p>That range of experience has shaped how I approach product design: combining visual craft, business thinking, and a deep understanding of context. You can find the full timeline in my CV.</p>
-          </div>
+          <div class="home-about-copy"><p>I’m a graphic designer with 10 years of experience, most of them in UX. Beyond design, my interests include:</p><ul><li>Photography as an amateur landscape photographer.</li><li>Music as an amateur guitarist.</li><li>Trekking and spending time in nature.</li><li>Driving and the automotive industry.</li><li>Building products as an aspiring entrepreneur.</li></ul><p>These passions shape my approach to design, the projects I love working on, and the knowledge I enjoy sharing on my personal blog.</p><p>Want to learn more about my professional experience? Take a look at my resume.</p></div>
 
           <div class="home-about-actions">
             <a
-              class="pill pill--accent home-about-action"
+              class="btn btn--loud home-about-action"
               href="assets/CV/DavidMontealegre-CV-EN.pdf"
               target="_blank"
               rel="noopener noreferrer"
               data-cv-link
               data-cv-en="assets/CV/DavidMontealegre-CV-EN.pdf"
               data-cv-es="assets/CV/DavidMontealegre-HV-ES.pdf"
-            >Download my CV</a>
+            >View my resume</a><a class="btn btn--mute" href="#articles">Explore my personal blog</a>
           </div>
         </div>
       </div>
     </div>
   </section>
+<section class="section-work" id="work" aria-labelledby="workTitle"><div class="container"><h2 class="sw-title" id="workTitle">Case studies</h2><div class="v2-projects">
+<article class="v2-project" data-project="1" id="case-1"><div class="v2-project-visual"><video muted playsinline preload="metadata" poster="assets/Videos/home-v2-poster-1.png" data-preview-video aria-label="Entry into Mercado Libre’s unified sign-up flow."><source src="assets/Videos/Flujo registro ML.mov" />Entry into Mercado Libre’s unified sign-up flow.</video><button type="button" class="v2-video-play btn btn--mute btn--small" data-video-play aria-label="Play preview: Registro ML">Play preview</button></div><div class="v2-project-context"><div class="v2-project-summary"><h3>Mercado Libre sign-up</h3><span class="pill" data-case-role-es="Rol: Analista senior de UX / Diseñador UI" data-case-role-en="Role: Senior UX analyst / UI designer">Role: Senior UX analyst / UI designer</span><p>I led the iteration of Mercado Libre’s sign-up model, impacting 60 million users across 9 Latin American countries.</p></div><div class="v2-project-outcome"><h4>Outcome</h4><p><span class="v2-impact">I reduced average sign-up time from 3:25 minutes to 52 seconds</span><span> and increased conversion by more than 10%, depending on the country.</span></p></div><a class="btn btn--loud" href="work/registro-ml.html" aria-label="See case study: Registro ML">See case study</a></div></article>
+<article class="v2-project" data-project="2" id="case-2"><div class="v2-project-visual"><video muted playsinline preload="metadata" poster="assets/Motion DS/Videos/Slow-poster.png" data-preview-video aria-label="Easing tests for the motion design system at Mercado Libre."><source src="assets/Motion DS/Videos/Slow.mp4" />Easing tests for the motion design system at Mercado Libre.</video><button type="button" class="v2-video-play btn btn--mute btn--small" data-video-play aria-label="Play preview: Motion Level">Play preview</button></div><div class="v2-project-context"><div class="v2-project-summary"><h3>Motion design system - Motion Level</h3><span class="pill" data-case-role-es="Rol: Analista Senior de UX / Diseñador UI" data-case-role-en="Role: Senior UX analyst / UI designer">Role: Senior UX analyst / UI designer</span><p>I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for the Motion Level framework.</p></div><div class="v2-project-outcome"><h4>Outcome</h4><p><span class="v2-impact">I created the conceptual framework that unifies how expressive motion is at Mercado Libre</span><span>, impacting more than 200 UX analysts and developers within the organization.</span></p></div><a class="btn btn--loud" href="work/motion-design-system.html" aria-label="See case study: Motion Level">See case study</a></div></article>
+<article class="v2-project" data-project="3" id="case-3"><div class="v2-project-visual"><video muted playsinline preload="metadata" poster="assets/Videos/home-v2-poster-3.png" data-preview-video aria-label="Account creation flow for minors in Mercado Pago in Mexico."><source src="assets/Videos/MenoresMLM.mov" />Account creation flow for minors in Mercado Pago in Mexico.</video><button type="button" class="v2-video-play btn btn--mute btn--small" data-video-play aria-label="Play preview: Accounts for minors in Mexico">Play preview</button></div><div class="v2-project-context"><div class="v2-project-summary"><h3>Sign-up for minors in Mexico</h3><span class="pill" data-case-role-es="Rol: Analista senior de UX / Diseñador UI" data-case-role-en="Role: Senior UX analyst / UI designer">Role: Senior UX analyst / UI designer</span><p>I designed Mercado Pago’s sign-up flow for minors in Mexico, working within Mexican regulations, among the most demanding in Latin America.</p></div><div class="v2-project-outcome"><h4>Outcome</h4><p><span>I iterated on the Mexico flow using insights from Argentina and Brazil, </span><span class="v2-impact">reducing identity verification time from 24 hours to 20 seconds</span><span>.</span></p></div><button class="btn btn--loud" type="button" data-case-pending aria-label="See case study: Accounts for minors in Mexico">See case study</button></div></article>
+<article class="v2-project" data-project="4" id="case-4"><div class="v2-project-visual"><video muted playsinline preload="metadata" poster="assets/Videos/home-v2-poster-4.png" data-preview-video aria-label="Switching accounts between Argentina and Brazil in Mercado Pago."><source src="assets/Videos/Switch entre países.mov" />Switching accounts between Argentina and Brazil in Mercado Pago.</video><button type="button" class="v2-video-play btn btn--mute btn--small" data-video-play aria-label="Play preview: Country switch">Play preview</button></div><div class="v2-project-context"><div class="v2-project-summary"><h3>Switching accounts across countries</h3><span class="pill" data-case-role-es="Rol: Analista UX senior / Diseñador UI" data-case-role-en="Role: Senior UX analyst / UI designer">Role: Senior UX analyst / UI designer</span><p>I created the cross-country account-switching experience, an animated flow that people with accounts in several Latin American countries see when switching between them.</p></div><div class="v2-project-outcome"><h4>Outcome</h4><p><span class="v2-impact">I improved the experience for 200k people with multiple accounts across Brazil, Argentina and Uruguay,</span><span> a number that has continued to grow in recent quarters.</span></p></div><button class="btn btn--loud" type="button" data-case-pending aria-label="See case study: Country switch">See case study</button></div></article>
+</div></div></section>
+  <!-- ───────────── ABOUT ME ───────────── -->
+
 
   <!-- ───────────── ARTICLES ───────────── -->
   <section class="section-articles" id="articles" aria-label="My articles">
@@ -229,52 +92,53 @@
 
       <div class="container">
         <div class="articles-header">
-          <h2 class="sw-title">My articles</h2>
+          <h2 class="sw-title">Personal blog</h2>
         </div>
       </div>
 
       <div class="articles-carousel-group">
+        <h3 class="v2-sr-only">Article selection</h3>
         <div class="articles-scroll-viewport">
           <div class="articles-scroll-track" id="articlesTrack">
 
             <article class="article-item">
               <div class="article-img">
-                <img src="assets/Home/Im%C3%A1genes/Img1.png" alt="Why Mercado Libre Was the First Place I Didn't Want to Leave" />
+                <img src="assets/Home/v2/article-career.png" alt="Photograph of Mercado Libre’s offices." aria-hidden="true" />
               </div>
               <div class="article-text">
-                <h3 class="article-title">Why Mercado Libre Was the First Place I Didn't Want to Leave</h3>
-                <p class="article-body">A reflection on professional growth, internal rotation, and how to find an environment that keeps challenging you. <a href="articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html" class="article-link">Continue reading →</a></p>
+                <h4 class="article-title">Why I've worked with 4 different teams at Mercado Libre</h4>
+                <p class="article-body">A couple of years ago, an interviewer asked me: why have you stayed so long at the same…</p><a href="articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html" class="article-link btn btn--mute" aria-label="Continue reading: Why I've worked with 4 different teams at Mercado Libre">Continue reading</a>
               </div>
             </article>
 
             <article class="article-item">
               <div class="article-img">
-                <img src="assets/Home/Im%C3%A1genes/Img2.png" alt="A bad interface not only creates a bad experience, it could be much worse" />
+                <img src="assets/Home/v2/article-automotive.png" alt="Photograph of the driver interface in a Mazda." aria-hidden="true" />
               </div>
               <div class="article-text">
-                <h3 class="article-title">A bad interface not only creates a bad experience, it could be much worse</h3>
-                <p class="article-body">I'm not only a designer who likes to create interfaces, I'm also a passionate of UX automotive… <a href="articles/page-under-work.html" class="article-link">Continue reading →</a></p>
+                <h4 class="article-title">A bad interface not only creates a bad experience, it could be much worse</h4>
+                <p class="article-body">I'm not only a designer who likes to create interfaces, I’m also passionate about automotive UX…</p><a href="articles/page-under-work.html" class="article-link btn btn--mute" aria-label="Continue reading: A bad interface not only creates a bad experience, it could be much worse">Continue reading</a>
               </div>
             </article>
 
             <article class="article-item">
               <div class="article-img">
-                <img src="assets/Home/Im%C3%A1genes/Img3.png" alt="What I've learned from my other passion, music, about a good experience" />
+                <img src="assets/Home/v2/article-music.png" alt="Photograph of a guitar." aria-hidden="true" />
               </div>
               <div class="article-text">
-                <h3 class="article-title">What I've learned from my other passion, music, about a good experience</h3>
-                <p class="article-body">When I was a teenager I used to practice guitar, and also… <a href="articles/page-under-work.html" class="article-link">Continue reading →</a></p>
+                <h4 class="article-title">What I've learned from my other passion, music, about a good experience</h4>
+                <p class="article-body">When I was a teenager I used to practice guitar, and also…</p><a href="articles/page-under-work.html" class="article-link btn btn--mute" aria-label="Continue reading: What I've learned from my other passion, music, about a good experience">Continue reading</a>
               </div>
             </article>
 
-            <div class="articles-track-spacer" aria-hidden="true"></div>
+
 
           </div>
         </div>
 
         <div class="articles-carousel-controls" aria-label="Article carousel controls">
-          <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--prev" type="button" data-article-prev aria-label="Previous article"></button>
-          <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--next" type="button" data-article-next aria-label="Next article"></button>
+          <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--prev" type="button" data-article-prev aria-label="Move left"></button>
+          <button class="button-arrow button-arrow--mute button-arrow--small articles-carousel-arrow articles-carousel-arrow--next" type="button" data-article-next aria-label="Move right"></button>
         </div>
       </div>
 
@@ -287,118 +151,27 @@
     <div class="container">
       <div class="closing-inner reveal">
         <div class="closing-header">
-          <h2 class="sw-title closing-title">Are you ready to connect?</h2>
-          <div class="closing-body">
-            <p>I'm looking for a place where the drive to challenge myself, grow, and solve problems I'm passionate about is just part of the job.</p>
-            <p>Shall we work together?</p>
-          </div>
+          <h2 class="sw-title closing-title">Now that you know a little more about me, what’s your next step?</h2>
+          <div class="closing-body"><p>Whether it’s an exciting project or a role on your team, I want to work on product and experience challenges that inspire me. Could we work together?</p></div>
         </div>
-        <a href="mailto:idmr13@gmail.com" class="btn-contact">
-          <div class="btn-contact__thumb">
-            <img src="assets/Home/Imágenes/Img contact.png" alt="David Montealegre" />
-          </div>
-          <span class="btn-contact__label">Get in touch</span>
-        </a>
+        <div class="v2-contact-bar" aria-label="Contact options"><a class="v2-contact-link v2-contact-link--email" href="mailto:idmr13@gmail.com" aria-label="Send me an email"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/email-compact.svg"><img src="assets/Home/v2/email-idle.svg" alt="" /></picture><span class="v2-contact-label">Send me an email</span></a><a class="v2-contact-link v2-contact-link--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer" aria-label="Visit my profile"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/linkedin-compact.svg"><img src="assets/Home/v2/linkedin-idle.svg" alt="" /></picture><span class="v2-contact-label">Visit my profile</span></a><a class="v2-contact-link v2-contact-link--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer" aria-label="Send me a message"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/whatsapp-small.svg"><img src="assets/Home/v2/whatsapp.svg" alt="" /></picture><span class="v2-contact-label">Send me a message</span></a><a class="v2-contact-link v2-contact-link--call" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer" aria-label="Schedule a call"><picture aria-hidden="true"><source media="(max-width:1279px)" srcset="assets/Home/v2/call-small.svg"><img src="assets/Home/v2/call.svg" alt="" /></picture><span class="v2-contact-label">Schedule a call</span></a></div>
       </div>
     </div>
   </section>
 
+</main>
   <!-- ───────────── FOOTER ───────────── -->
   <footer class="site-footer">
     <div class="site-footer__bottom">
       <span class="site-footer__copy">© David Montealegre 2026</span>
       <span class="site-footer__credit">
         <span>Website created with</span>
-        <img class="site-footer__brand-icon" src="assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
-        <span>ChatGPT Work</span>
+        <img class="site-footer__brand-icon" src="assets/Home/v2/codex.svg" alt="" aria-hidden="true" />
+        <span>Codex</span>
       </span>
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="js/i18n.js?v=20260811-home-article"></script>
-  <script src="js/main.js?v=20260813-language-toggle-motion"></script>
-  <script>
-    (function () {
-      const contactBtn = document.getElementById('headerContact');
-      const scrollHint = document.getElementById('heroScrollHint');
-      const navLinks   = document.querySelectorAll('.home-sidenav__link');
-      const sections   = ['work', 'about', 'articles', 'contact'].map(id => document.getElementById(id)).filter(Boolean);
-      const contactSection = document.getElementById('contact');
-
-      function onScroll() {
-        const y = window.scrollY;
-
-        // Btn contact: se mantiene visible y solo se oculta al llegar a Contact
-        if (contactBtn && contactSection) {
-          const contactTop = contactSection.getBoundingClientRect().top;
-          contactBtn.classList.toggle('is-hidden', contactTop <= window.innerHeight * 0.65);
-        }
-
-        // Scroll hint desaparece al primer scroll
-        scrollHint.classList.toggle('is-hidden', y > 10);
-
-        // Sidenav — marcar sección activa
-        let current = '';
-        sections.forEach(sec => {
-          if (y >= sec.offsetTop - 200) current = sec.id;
-        });
-        navLinks.forEach(link => {
-          const isActive = link.dataset.section === current;
-          link.classList.toggle('is-active', isActive);
-          link.classList.toggle('text-link--place', isActive);
-        });
-      }
-
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
-    })();
-
-    // ── Articles carousel controls ──
-    (function initArticles() {
-      const track = document.getElementById('articlesTrack');
-      const controls = document.querySelector('.articles-carousel-controls');
-      if (!track || !controls) return;
-
-      const articles = Array.from(track.querySelectorAll('.article-item'));
-      const pills = Array.from(controls.querySelectorAll('[data-article-index]'));
-      const prev = controls.querySelector('[data-article-prev]');
-      const next = controls.querySelector('[data-article-next]');
-      let current = 0;
-
-      function setActive(index) {
-        current = Math.max(0, Math.min(articles.length - 1, index));
-        pills.forEach((pill, i) => {
-          const active = i === current;
-          pill.classList.toggle('is-active', active);
-          pill.setAttribute('aria-pressed', String(active));
-        });
-      }
-
-      function scrollToArticle(index) {
-        setActive(index);
-        track.scrollTo({
-          left: articles[current].offsetLeft,
-          behavior: 'smooth'
-        });
-      }
-
-      pills.forEach((pill, index) => {
-        pill.addEventListener('click', () => scrollToArticle(index));
-      });
-      prev?.addEventListener('click', () => scrollToArticle(current - 1));
-      next?.addEventListener('click', () => scrollToArticle(current + 1));
-
-      track.addEventListener('scroll', () => {
-        const trackLeft = track.getBoundingClientRect().left;
-        const closest = articles.reduce((best, article, index) => {
-          const distance = Math.abs(article.getBoundingClientRect().left - trackLeft);
-          return distance < best.distance ? { index, distance } : best;
-        }, { index: current, distance: Infinity });
-        setActive(closest.index);
-      }, { passive: true });
-    })();
-  </script>
-
-</body>
-</html>
+<dialog class="v2-pending-dialog" aria-labelledby="pendingTitle"><h2 id="pendingTitle">Case study not available yet</h2><p>This project’s case study requires validation and protected access before publication.</p><form method="dialog"><button class="btn btn--loud">Close</button></form></dialog>
+<script src="js/i18n.js?v=20261013-final-copy"></script><script src="js/main.js?v=20261013-colombia"></script><script src="js/home-v2.js?v=20261013-no-scroll-hints"></script>
+</body></html>

@@ -1,0 +1,227 @@
+[
+  {
+    "name": "LinkedIn 28px",
+    "src": "assets/Components/icon-linkedin-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "LinkedIn 20px",
+    "src": "assets/Components/icon-linkedin-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "LinkedIn 12px",
+    "src": "assets/Components/icon-linkedin-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Email 28px",
+    "src": "assets/Components/icon-e-mail-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Email 20px",
+    "src": "assets/Components/icon-e-mail-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Email 12px",
+    "src": "assets/Components/icon-e-mail-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Phone 28px",
+    "src": "assets/Components/icon-phone-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Phone 20px",
+    "src": "assets/Components/icon-phone-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Phone 12px",
+    "src": "assets/Components/icon-phone-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Role 28px",
+    "src": "assets/Components/group11377.svg",
+    "size": 28
+  },
+  {
+    "name": "Role 20px",
+    "src": "assets/Components/group11378.svg",
+    "size": 20
+  },
+  {
+    "name": "Role 12px",
+    "src": "assets/Components/group11379.svg",
+    "size": 12
+  },
+  {
+    "name": "Burger menu 28px",
+    "src": "assets/Components/group11380.svg",
+    "size": 28
+  },
+  {
+    "name": "Burger menu 20px",
+    "src": "assets/Components/group11381.svg",
+    "size": 20
+  },
+  {
+    "name": "Burger menu 12px",
+    "src": "assets/Components/group11382.svg",
+    "size": 12
+  },
+  {
+    "name": "Position 28px",
+    "src": "assets/Components/icon-position-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Position 20px",
+    "src": "assets/Components/icon-position-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Position 12px",
+    "src": "assets/Components/icon-position-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Close 28px",
+    "src": "assets/Components/group11383.svg",
+    "size": 28
+  },
+  {
+    "name": "Close 20px",
+    "src": "assets/Components/group11384.svg",
+    "size": 20
+  },
+  {
+    "name": "Close 12px",
+    "src": "assets/Components/group11385.svg",
+    "size": 12
+  },
+  {
+    "name": "Calendar 28px",
+    "src": "assets/Components/icon-calendar-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Calendar 20px",
+    "src": "assets/Components/icon-calendar-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Calendar 12px",
+    "src": "assets/Components/icon-calendar-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Document 28px",
+    "src": "assets/Components/icon-document-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Document 20px",
+    "src": "assets/Components/icon-document-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Document 12px",
+    "src": "assets/Components/icon-document-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Link 28px",
+    "src": "assets/Components/icon-link-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Link 20px",
+    "src": "assets/Components/icon-link-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Link 12px",
+    "src": "assets/Components/icon-link-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Chevron 28px",
+    "src": "assets/Components/icon-chevron-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Chevron 20px",
+    "src": "assets/Components/icon-chevron-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Chevron 12px",
+    "src": "assets/Components/icon-chevron-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "WhatsApp 28px",
+    "src": "assets/Components/group11386.svg",
+    "size": 28
+  },
+  {
+    "name": "WhatsApp 20px",
+    "src": "assets/Components/group11387.svg",
+    "size": 20
+  },
+  {
+    "name": "WhatsApp 12px",
+    "src": "assets/Components/group11388.svg",
+    "size": 12
+  },
+  {
+    "name": "Clock 28px",
+    "src": "assets/Components/icon-clock-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Clock 20px",
+    "src": "assets/Components/icon-clock-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Clock 12px",
+    "src": "assets/Components/icon-clock-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Message 28px",
+    "src": "assets/Components/icon-chat-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Message 20px",
+    "src": "assets/Components/icon-chat-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Message 12px",
+    "src": "assets/Components/icon-chat-size12-px.svg",
+    "size": 12
+  },
+  {
+    "name": "Arrow 28px",
+    "src": "assets/Components/icon-arrow-size28-px.svg",
+    "size": 28
+  },
+  {
+    "name": "Arrow 20px",
+    "src": "assets/Components/icon-arrow-size20-px.svg",
+    "size": 20
+  },
+  {
+    "name": "Arrow 12px",
+    "src": "assets/Components/icon-arrow-size12-px.svg",
+    "size": 12
+  }
+]

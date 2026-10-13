@@ -34,3 +34,7 @@
   4. Improve SEO and social sharing metadata.
   5. Review a framework for faster new case-study publishing, likely via a new skill that asks for basic project information before shaping the storytelling.
   6. Apply that skill or framework to new cases such as "Familia de Empresas", "Ropstar", and other previous projects.
+
+- Home v2 review as of 2026-10-09: David explicitly authorized Country switch as a fourth case, replacing the earlier three-case limit for this Home. Implement in `codex/home-v2-review`, locally only. Keep qualitative results in Git and do not infer final production results for Accounts for minors in Mexico. Local videos under `assets/Videos/` and preview posters remain untracked; protected publication and employer validation are separate prerequisites.
+
+- Home copy authorization as of 2026-10-13: David explicitly revoked the rule requiring qualitative results only and keeping exact figures outside GitHub. The final Figma card titles, roles, contributions, numeric outcomes and selective highlights must be implemented in versionable HTML and bilingual translations. This instruction supersedes earlier qualitative-only Home notes. Copy the source figures without inventing or extrapolating outcomes. Publication and authenticated access requirements remain separate from this content authorization.

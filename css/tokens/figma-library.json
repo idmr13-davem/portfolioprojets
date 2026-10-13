@@ -1,0 +1,1641 @@
+{
+  "pages": [
+    {
+      "id": "0:1",
+      "name": "👋 Cover"
+    },
+    {
+      "id": "15:485",
+      "name": "Portafolio"
+    },
+    {
+      "id": "15:1483",
+      "name": "Apoyo"
+    }
+  ],
+  "variables": [
+    {
+      "name": "font-family",
+      "type": "STRING",
+      "values": {
+        "17:1": "Inter"
+      }
+    },
+    {
+      "name": "font-style",
+      "type": "STRING",
+      "values": {
+        "17:1": "Regular"
+      }
+    },
+    {
+      "name": "letter-spacing",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 0
+      }
+    },
+    {
+      "name": "Brand logo/Main-100pct",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.3529411852359772,
+          "b": 0.4313725531101227,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Brand logo/Main-75pct",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.75
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.3529411852359772,
+          "b": 0.4313725531101227,
+          "a": 0.75
+        }
+      }
+    },
+    {
+      "name": "Brand logo/Main-50pct",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.5
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.3529411852359772,
+          "b": 0.4313725531101227,
+          "a": 0.5
+        }
+      }
+    },
+    {
+      "name": "Brand logo/Main-25pct",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.25
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.3529411852359772,
+          "b": 0.4313725531101227,
+          "a": 0.25
+        }
+      }
+    },
+    {
+      "name": "Text/Primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text/Secondary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 0.75
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 0.75
+        }
+      }
+    },
+    {
+      "name": "Text/Accent-primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.11764705926179886,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.5098039507865906,
+          "b": 0.5882353186607361,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text/Accent-secondary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.27450981736183167,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.75
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.5098039507865906,
+          "b": 0.5882353186607361,
+          "a": 0.75
+        }
+      }
+    },
+    {
+      "name": "Interactive/Primary-Clic",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.11764705926179886,
+          "g": 0.6274510025978088,
+          "b": 0.6274510025978088,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.1568627506494522,
+          "b": 0.23529411852359772,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Feedback/Positive",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0,
+          "g": 0.8627451062202454,
+          "b": 0.5098039507865906,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0,
+          "g": 0.47058823704719543,
+          "b": 0.3921568691730499,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Feedback/Alert",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 1,
+          "g": 0.6274510025978088,
+          "b": 0,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.8235294222831726,
+          "g": 0.5490196347236633,
+          "b": 0,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Background/Primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.09019608050584793,
+          "g": 0.10588235408067703,
+          "b": 0.12156862765550613,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9215686321258545,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Background/Secondary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.03921568766236305,
+          "g": 0.13725490868091583,
+          "b": 0.13725490868091583,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.8627451062202454,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Background/Deep",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text-Title-Hero/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 72
+      }
+    },
+    {
+      "name": "Text-Title-Hero/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 80
+      }
+    },
+    {
+      "name": "Text-Title-XL/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 56
+      }
+    },
+    {
+      "name": "Text-Title-XL/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 64
+      }
+    },
+    {
+      "name": "Text-Title-L/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 40
+      }
+    },
+    {
+      "name": "Text-Title-L/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 50
+      }
+    },
+    {
+      "name": "Text-Title-M/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 32
+      }
+    },
+    {
+      "name": "Text-Title-M/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 40
+      }
+    },
+    {
+      "name": "Text-Title-S/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 26
+      }
+    },
+    {
+      "name": "Text-Title-S/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 32.5
+      }
+    },
+    {
+      "name": "Text-Title-XS/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 20
+      }
+    },
+    {
+      "name": "Text-Title-XS/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 25
+      }
+    },
+    {
+      "name": "Body L/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 18
+      }
+    },
+    {
+      "name": "Body L/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 25
+      }
+    },
+    {
+      "name": "Body M/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 16
+      }
+    },
+    {
+      "name": "Body M/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 21.600000381469727
+      }
+    },
+    {
+      "name": "Body S/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 12
+      }
+    },
+    {
+      "name": "Body S/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 16.200000762939453
+      }
+    },
+    {
+      "name": "Button L/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 18
+      }
+    },
+    {
+      "name": "Button L/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 22
+      }
+    },
+    {
+      "name": "Button M/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 16
+      }
+    },
+    {
+      "name": "Button M/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 19
+      }
+    },
+    {
+      "name": "Button S/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 12
+      }
+    },
+    {
+      "name": "Button S/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 14
+      }
+    },
+    {
+      "name": "Caption L/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 16
+      }
+    },
+    {
+      "name": "Caption L/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 20
+      }
+    },
+    {
+      "name": "Caption M/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 12.800000190734863
+      }
+    },
+    {
+      "name": "Caption M/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 16
+      }
+    },
+    {
+      "name": "Caption S/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 10
+      }
+    },
+    {
+      "name": "Caption S/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 12.5
+      }
+    },
+    {
+      "name": "Nombre CV/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 28
+      }
+    },
+    {
+      "name": "Nombre CV/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 32
+      }
+    },
+    {
+      "name": "Titulo CV/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 15
+      }
+    },
+    {
+      "name": "Titulo CV/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 20
+      }
+    },
+    {
+      "name": "Body CV/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 12
+      }
+    },
+    {
+      "name": "Body CV/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 18
+      }
+    },
+    {
+      "name": "Heading/font-size",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 11
+      }
+    },
+    {
+      "name": "Heading/line-height",
+      "type": "FLOAT",
+      "values": {
+        "17:1": 130
+      }
+    },
+    {
+      "name": "None",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 0
+      }
+    },
+    {
+      "name": "Micro",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 2
+      }
+    },
+    {
+      "name": "Nano",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 4
+      }
+    },
+    {
+      "name": "XXS",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 6
+      }
+    },
+    {
+      "name": "XS",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 8
+      }
+    },
+    {
+      "name": "SS",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 12
+      }
+    },
+    {
+      "name": "S",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 16
+      }
+    },
+    {
+      "name": "M",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 24
+      }
+    },
+    {
+      "name": "L",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 32
+      }
+    },
+    {
+      "name": "XL",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 48
+      }
+    },
+    {
+      "name": "XXL",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 64
+      }
+    },
+    {
+      "name": "Huge",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 80
+      }
+    },
+    {
+      "name": "Mega",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 120
+      }
+    },
+    {
+      "name": "Hero",
+      "type": "FLOAT",
+      "values": {
+        "19:0": 160
+      }
+    },
+    {
+      "name": "None",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 0
+      }
+    },
+    {
+      "name": "XS",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 8
+      }
+    },
+    {
+      "name": "S",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 16
+      }
+    },
+    {
+      "name": "M",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 20
+      }
+    },
+    {
+      "name": "L",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 32
+      }
+    },
+    {
+      "name": "XL",
+      "type": "FLOAT",
+      "values": {
+        "19:1": 40
+      }
+    },
+    {
+      "name": "Margin desktop",
+      "type": "FLOAT",
+      "values": {
+        "19:2": 218
+      }
+    },
+    {
+      "name": "Margin tablet",
+      "type": "FLOAT",
+      "values": {
+        "19:2": 80
+      }
+    },
+    {
+      "name": "Margin mobile",
+      "type": "FLOAT",
+      "values": {
+        "19:2": 16
+      }
+    },
+    {
+      "name": "Text-Title-Cover/font-family",
+      "type": "STRING",
+      "values": {
+        "21:0": "Inter"
+      }
+    },
+    {
+      "name": "Text-Title-Cover/font-style",
+      "type": "STRING",
+      "values": {
+        "21:0": "Bold"
+      }
+    },
+    {
+      "name": "Text-Title-Cover/font-size",
+      "type": "FLOAT",
+      "values": {
+        "21:0": 140
+      }
+    },
+    {
+      "name": "Text-Title-Cover/line-height",
+      "type": "FLOAT",
+      "values": {
+        "21:0": 140
+      }
+    },
+    {
+      "name": "Text-Title-Cover/letter-spacing",
+      "type": "FLOAT",
+      "values": {
+        "21:0": -4
+      }
+    },
+    {
+      "name": "Easing/Enter",
+      "type": "EASING",
+      "values": {
+        "41:0": {
+          "type": "CUSTOM_CUBIC_BEZIER",
+          "easingFunctionCubicBezier": {
+            "x1": 0.05000000074505806,
+            "y1": 0.699999988079071,
+            "x2": 0.10000000149011612,
+            "y2": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Interactive/Primary-Idle",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.11764705926179886,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.19607843458652496,
+          "b": 0.27450981736183167,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Primary-Hover",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.5882353186607361,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.3137255012989044,
+          "b": 0.3921568691730499,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Primary-Disabled",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.32549020648002625,
+          "g": 0.364705890417099,
+          "b": 0.3843137323856354,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.32549020648002625,
+          "g": 0.364705890417099,
+          "b": 0.3843137323856354,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text/Inverse",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Surface/Main",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.03921568766236305,
+          "g": 0.13725490868091583,
+          "b": 0.13725490868091583,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.8627451062202454,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Surface/Inverse",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.8627451062202454,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.03921568766236305,
+          "g": 0.13725490868091583,
+          "b": 0.13725490868091583,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Surface/Accent",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.11764705926179886,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.19607843458652496,
+          "b": 0.27450981736183167,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Stroke/Primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.5
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 0.5
+        }
+      }
+    },
+    {
+      "name": "Stroke/Secondary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.7450980544090271,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 0.25
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 0.25
+        }
+      }
+    },
+    {
+      "name": "Icon/primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Icon/Inverse",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Secondary-Idle",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.09019608050584793,
+          "g": 0.10588235408067703,
+          "b": 0.12156862765550613,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Secondary-Hover",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.03921568766236305,
+          "g": 0.13725490868091583,
+          "b": 0.13725490868091583,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.7490196228027344,
+          "g": 0.7921568751335144,
+          "b": 0.843137264251709,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Secondary-Clic",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Interactive/Secondary-Disabled",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.32549020648002625,
+          "g": 0.364705890417099,
+          "b": 0.3843137323856354,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.32549020648002625,
+          "g": 0.364705890417099,
+          "b": 0.3843137323856354,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Easing/OnScreen",
+      "type": "EASING",
+      "values": {
+        "41:0": {
+          "type": "CUSTOM_CUBIC_BEZIER",
+          "easingFunctionCubicBezier": {
+            "x1": 0.44999998807907104,
+            "y1": 0,
+            "x2": 0.10000000149011612,
+            "y2": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Easing/Exit",
+      "type": "EASING",
+      "values": {
+        "41:0": {
+          "type": "CUSTOM_CUBIC_BEZIER",
+          "easingFunctionCubicBezier": {
+            "x1": 0.8999999761581421,
+            "y1": 0,
+            "x2": 1,
+            "y2": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Easing/Linear",
+      "type": "EASING",
+      "values": {
+        "41:0": {
+          "type": "LINEAR",
+          "easingFunctionCubicBezier": {
+            "x1": 0,
+            "y1": 0,
+            "x2": 1,
+            "y2": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "Timing/Standard/Normal",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.5
+      }
+    },
+    {
+      "name": "Timing/Standard/Fast",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.4000000059604645
+      }
+    },
+    {
+      "name": "Timing/Standard/Slow",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.6000000238418579
+      }
+    },
+    {
+      "name": "Timing/Short/Fast",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.10000000149011612
+      }
+    },
+    {
+      "name": "Timing/Short/Normal",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.20000000298023224
+      }
+    },
+    {
+      "name": "Timing/Short/Slow",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.30000001192092896
+      }
+    },
+    {
+      "name": "Timing/Long/Fast",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.699999988079071
+      }
+    },
+    {
+      "name": "Timing/Long/Normal",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.800000011920929
+      }
+    },
+    {
+      "name": "Timing/Long/Slow",
+      "type": "TIMING",
+      "values": {
+        "41:0": 0.8999999761581421
+      }
+    },
+    {
+      "name": "Text/Static-primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Icon/Static-primary",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.9803921580314636,
+          "g": 0.9803921580314636,
+          "b": 0.9803921580314636,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Icon/Interactive",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.11764705926179886,
+          "g": 0.8235294222831726,
+          "b": 0.8235294222831726,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.019607843831181526,
+          "g": 0.19607843458652496,
+          "b": 0.27450981736183167,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text/Static-inverse",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Icon/Static-inverse",
+      "type": "COLOR",
+      "values": {
+        "17:0": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        },
+        "41:1": {
+          "r": 0.0784313753247261,
+          "g": 0.09803921729326248,
+          "b": 0.11764705926179886,
+          "a": 1
+        }
+      }
+    },
+    {
+      "name": "Text-Title-Hero/Font-style",
+      "type": "STRING",
+      "values": {
+        "17:1": "Bold"
+      }
+    }
+  ],
+  "collections": [
+    {
+      "id": "VariableCollectionId:17:21",
+      "name": "Colors",
+      "modes": [
+        {
+          "name": "Dark mode",
+          "modeId": "17:0"
+        },
+        {
+          "name": "Light mode",
+          "modeId": "41:1"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:17:22",
+      "name": "Tipografía · Inter Regular",
+      "modes": [
+        {
+          "name": "Base",
+          "modeId": "17:1"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:19:16",
+      "name": "Spacing tokens",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "19:0"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:19:31",
+      "name": "Border radius",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "19:1"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:19:38",
+      "name": "Margin tokens (only figma)",
+      "modes": [
+        {
+          "name": "Value",
+          "modeId": "19:2"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:21:8",
+      "name": "Tipografía · Display",
+      "modes": [
+        {
+          "name": "Base",
+          "modeId": "21:0"
+        }
+      ]
+    },
+    {
+      "id": "VariableCollectionId:41:30",
+      "name": "Motion",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "modeId": "41:0"
+        }
+      ]
+    }
+  ],
+  "textStyles": [
+    {
+      "name": "Text-Title/Cover",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 140,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 140
+      }
+    },
+    {
+      "name": "Text-Title/Hero",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 72,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 80
+      }
+    },
+    {
+      "name": "Text-Title/XL",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 56,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 64
+      }
+    },
+    {
+      "name": "Text-Title/L",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 40,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 50
+      }
+    },
+    {
+      "name": "Text-Title/M",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 32,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 40
+      }
+    },
+    {
+      "name": "Text-Title/S",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 26,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32.5
+      }
+    },
+    {
+      "name": "Text-Title/XS",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 20,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 25
+      }
+    },
+    {
+      "name": "Body/L",
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "variationSettings": {
+          "wght": 300,
+          "slnt": 0
+        }
+      },
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 25
+      }
+    },
+    {
+      "name": "Body/M",
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "variationSettings": {
+          "wght": 300,
+          "slnt": 0
+        }
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 21.600000381469727
+      }
+    },
+    {
+      "name": "Body/S",
+      "fontName": {
+        "family": "Inter",
+        "style": "Light",
+        "variationSettings": {
+          "wght": 300,
+          "slnt": 0
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16.200000762939453
+      }
+    },
+    {
+      "name": "Button/L",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 18,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 22
+      }
+    },
+    {
+      "name": "Button/M",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 19
+      }
+    },
+    {
+      "name": "Button/S",
+      "fontName": {
+        "family": "Inter",
+        "style": "Bold",
+        "variationSettings": {
+          "wght": 700,
+          "slnt": 0
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 14
+      }
+    },
+    {
+      "name": "Caption/L",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 16,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      }
+    },
+    {
+      "name": "Caption/M",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 12.800000190734863,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 16
+      }
+    },
+    {
+      "name": "Caption/S",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 10,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 12.5
+      }
+    },
+    {
+      "name": "CV/Nombre",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 28,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 32
+      }
+    },
+    {
+      "name": "CV/Titulo",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 15,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 20
+      }
+    },
+    {
+      "name": "CV/Body",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 12,
+      "lineHeight": {
+        "unit": "PIXELS",
+        "value": 18
+      }
+    },
+    {
+      "name": "CV/Heading",
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular",
+        "variationSettings": {
+          "wght": 400,
+          "slnt": 0
+        }
+      },
+      "fontSize": 11,
+      "lineHeight": {
+        "unit": "PERCENT",
+        "value": 129.99999523162842
+      }
+    }
+  ]
+}
