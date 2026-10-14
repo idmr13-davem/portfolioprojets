@@ -1,0 +1,139 @@
+/* Motion Level V2: Figma 4793:5268 / 4805:20325 / 4805:20726 / 4805:21226.
+   Shared case shell belongs to registro-v2.css; only Motion Level layout is extended here. */
+.motion-v2 {overflow-x:clip;}
+.motion-v2 .rml-headline h1 {flex:1;min-width:0;}
+.motion-v2 .rml-meta {flex:1;}
+.motion-v2 .rml-hero-divider {height:192px;background:url('../assets/Motion%20DS/v2/desktop-imgLine56.svg') center/contain no-repeat;}
+.motion-v2 .rml-hero-divider::before {display:none;}
+.motion-v2 .motion-status {background:var(--feedback-positive);color:var(--text-static-inverse);border:0;padding:8px 16px;border-radius:var(--radius-l);}
+.motion-v2 .rml-summary-divider {height:100%;min-height:146px;background:url('../assets/Motion%20DS/v2/desktop-imgLine57.svg') center/contain no-repeat;}
+.motion-v2 .case-copy-accent {color:var(--text-accent-primary);}
+.motion-v2 :is(.motion-roadmap,.motion-focus,.motion-level,.motion-axes,.motion-final) {display:flex;flex-direction:column;}
+.motion-v2 .motion-roadmap {gap:var(--space-m);padding-top:var(--space-m);padding-bottom:var(--space-xl);}
+.motion-v2 .motion-focus {gap:var(--space-xl);padding-block:var(--space-xl);}
+.motion-v2 :is(.motion-focus-grid,.motion-level-grid,.motion-axis-descriptions) {display:grid;gap:var(--space-l);grid-template-columns:repeat(3,minmax(0,1fr));}
+.motion-v2 .motion-focus-grid h3 {font-size:var(--text-title-xs-font-size);line-height:var(--text-title-xs-line-height);margin-bottom:10px;}
+.motion-v2 .motion-artwork {display:block;width:100%;overflow:hidden;border:1px solid var(--stroke-secondary);border-radius:var(--radius-l);background:var(--background-deep);}
+.motion-v2 .motion-artwork img {display:block;width:100%;height:auto;}
+.motion-v2 .motion-timeline {display:flex;align-items:center;gap:14px;list-style:none;padding:0;margin:0;flex-wrap:wrap;}
+.motion-v2 .motion-timeline li {display:flex;align-items:center;gap:14px;margin:0;}
+.motion-v2 .motion-timeline li+li::before {content:'';width:14px;height:8px;background:url('../assets/Motion%20DS/v2/desktop-imgLine48.svg') center no-repeat;}
+.motion-v2 .motion-timeline .pill {padding:6px 12px;border:1px solid var(--stroke-secondary);background:var(--surface-main);color:var(--text-primary);font:300 var(--caption-m-font-size)/var(--caption-m-line-height) var(--font-body);white-space:nowrap;}
+.motion-v2 .motion-hero-media {height:456px;border:2px solid var(--stroke-primary);border-radius:var(--radius-l);background:#cad4e1;overflow:hidden;position:relative;}
+.motion-v2 .motion-hero-videos {display:flex;align-items:flex-start;justify-content:center;gap:var(--space-m);padding:50px 80px 0;height:100%;}
+.motion-v2 .motion-hero-videos video {display:block;flex:1;width:0;min-width:0;height:auto;aspect-ratio:216/480;object-fit:cover;}
+.motion-v2 :is(.motion-internal-gallery,.motion-properties-grid,.motion-expressivity-gallery) {display:grid;border:1px solid var(--stroke-secondary);border-radius:var(--radius-l);overflow:hidden;background:var(--background-deep);}
+.motion-v2 .motion-internal-gallery {grid-template-columns:repeat(3,minmax(0,1fr));min-height:520px;}
+.motion-v2 :is(.motion-internal-gallery,.motion-properties-grid,.motion-expressivity-gallery) figure {display:flex;flex-direction:column;align-items:center;min-width:0;}
+.motion-v2 .motion-internal-gallery figure {justify-content:flex-start;gap:12px;padding:32px 16px;}
+.motion-v2 :is(.motion-internal-gallery,.motion-properties-grid,.motion-expressivity-gallery) figure+figure {border-left:1px solid var(--stroke-secondary);}
+.motion-v2 .motion-internal-gallery video {width:170px;height:380px;object-fit:cover;border-radius:var(--radius-xs);}
+.motion-v2 .motion-internal-gallery figcaption {width:170px;text-align:left;}
+.motion-v2 .motion-properties-grid {grid-template-columns:repeat(4,minmax(0,1fr));min-height:453px;}
+.motion-v2 .motion-properties-grid figure {gap:12px;padding:20px;}
+.motion-v2 .motion-properties-grid figcaption {width:auto;}
+.motion-v2 .motion-properties-grid video {width:120px;height:120px;object-fit:cover;border-radius:var(--radius-xs);}
+.motion-v2 .motion-level {gap:var(--space-m);padding-block:var(--space-xl);}
+.motion-v2 .motion-level-grid {grid-template-columns:minmax(0,1fr) 265px;gap:48px;margin-top:24px;}
+.motion-v2 :is(.motion-expressivity-copy,.motion-frequency) h3 {font:700 var(--text-title-xs-font-size)/var(--text-title-xs-line-height) var(--font-title);margin-bottom:10px;}
+.motion-v2 .motion-expressivity-gallery {grid-template-columns:repeat(2,minmax(0,1fr));margin-top:24px;height:360px;}
+.motion-v2 .motion-expressivity-gallery figure {justify-content:center;gap:4px;padding:0 12px;}
+.motion-v2 .motion-expressivity-gallery figcaption {width:133px;}
+.motion-v2 .motion-expressivity-gallery video {width:133px;height:300px;object-fit:cover;border-radius:var(--radius-xs);}
+.motion-v2 .motion-axes {gap:27px;padding-block:64px;}
+.motion-v2 .motion-axis {display:flex;flex-direction:column;gap:8px;}
+.motion-v2 .motion-axis>div:not(.motion-axis-line) {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;}
+.motion-v2 .motion-axis h3 {font-size:var(--text-title-xs-font-size);line-height:var(--text-title-xs-line-height);}
+.motion-v2 .motion-axis h3:last-child {text-align:right;}
+.motion-v2 .motion-axis-line {height:8px;background:url('../assets/Motion%20DS/v2/desktop-imgLine55.svg') center/100% auto no-repeat;}
+.motion-v2 .motion-axis-line img {display:none;}
+.motion-v2 .motion-axis-descriptions {grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;}
+.motion-v2 .motion-axis-descriptions>div:last-child {text-align:right;}
+.motion-v2 .motion-axis-descriptions>div:last-child ul {direction:rtl;padding-left:0;padding-right:24px;}
+.motion-v2 .motion-final {gap:20px;padding-block:64px;}
+.motion-v2 .motion-media-controls {display:flex;gap:12px;justify-content:flex-end;margin-top:12px;}
+.motion-v2 .motion-media-controls[hidden] {display:none;}
+.motion-v2 .motion-hero-media .motion-media-controls {position:absolute;bottom:8px;right:8px;margin:0;}
+@media (max-width:1279px) {
+ .motion-v2 .rml-hero-divider {height:150px;}
+ .motion-v2 .motion-properties-grid figure {padding-inline:12px;}
+ .motion-v2 .motion-level-grid {grid-template-columns:minmax(0,1fr) 235px;gap:48px;}
+}
+@media (max-width:999px) {
+ .motion-v2 .motion-hero-videos video:last-child {display:none;}
+ .motion-v2 .motion-focus-grid {grid-template-columns:1fr;gap:24px;}
+ .motion-v2 .motion-level-grid {grid-template-columns:minmax(0,1fr) 217px;gap:48px;}
+ .motion-v2 .motion-properties-grid figure {padding-inline:0;}
+ .motion-v2 .motion-expressivity-gallery figure {padding-inline:0;}
+}
+@media (max-width:767px) {
+ .motion-v2 .rml-headline h1 {flex:auto;}
+ .motion-v2 .motion-status {font-size:12.8px;line-height:16px;padding:6px 12px;}
+ .motion-v2 .motion-hero-videos {padding:50px 48px 0;}
+ .motion-v2 .motion-hero-videos video {flex:0 1 300px;min-width:232px;max-width:300px;}
+ .motion-v2 .motion-hero-videos video:not(:first-child) {display:none;}
+ .motion-v2 .motion-focus {padding-top:24px;}
+ .motion-v2 :is(.rml-step,.motion-level) {padding-top:24px;}
+ .motion-v2 .motion-focus-grid {gap:24px;}
+ .motion-v2 .motion-timeline {flex-direction:column;align-items:flex-start;gap:0;}
+ .motion-v2 .motion-timeline li {flex-direction:column;align-items:flex-start;gap:0;}
+ .motion-v2 .motion-timeline li+li::before {width:80px;height:14px;background:url('../assets/Motion%20DS/v2/mobile-imgFrame1171280065.svg') center no-repeat;}
+ .motion-v2 .motion-internal-gallery {grid-template-columns:1fr;}
+ .motion-v2 .motion-internal-gallery figure {padding:24px 0;}
+ .motion-v2 .motion-internal-gallery figure+figure {border-left:0;border-top:1px solid var(--stroke-secondary);}
+ .motion-v2 .motion-properties-grid {grid-template-columns:repeat(2,minmax(0,1fr));}
+ .motion-v2 .motion-properties-grid figure {padding:20px 0;}
+ .motion-v2 .motion-properties-grid figure:nth-child(odd) {border-left:0;}
+ .motion-v2 .motion-level-grid {grid-template-columns:1fr;gap:24px;}
+ .motion-v2 .motion-expressivity-gallery figcaption {font-size:12.8px;line-height:16px;}
+ .motion-v2 .motion-axes {padding-top:16px;padding-bottom:48px;gap:48px;}
+ .motion-v2 .motion-axis>div:not(.motion-axis-line) {gap:16px;}
+ .motion-v2 .motion-axis-descriptions {grid-template-columns:1fr;gap:32px;}
+ .motion-v2 .motion-axis-descriptions>div:last-child {text-align:left;}
+ .motion-v2 .motion-axis-descriptions>div:last-child ul {direction:ltr;padding-left:18px;padding-right:0;}
+ .motion-v2 .motion-final {padding:24px 12px 64px;}
+}
+
+/* Playback controls stay in the media panel without changing Figma section spacing. */
+.motion-v2 [data-media-group] {position:relative;}
+.motion-v2 .motion-media-controls {position:absolute;bottom:8px;right:8px;margin:0;opacity:0;}
+.motion-v2 [data-media-group]:is(:hover,:focus-within) .motion-media-controls {opacity:1;}
+@media (hover:none), (prefers-reduced-motion:reduce) {.motion-v2 .motion-media-controls {opacity:1;}}
+
+.motion-v2 [data-step]::before {content:attr(data-step) '. ';}
+@media (max-width:767px) {.motion-v2 [data-step]::before {display:none;}}
+.motion-v2 .rml-nav a {text-decoration:none;}
+.motion-v2 .rml-nav a:is(:hover,:focus-visible) {text-decoration:underline;}
+.motion-v2 .motion-artwork:has(img[data-copy-alt='benchmarkAlt']) {aspect-ratio:3297/2099;}
+.motion-v2 .motion-artwork img[data-copy-alt='benchmarkAlt'] {height:100%;object-fit:cover;}
+/* Original Figma vector exports for the comparison separators. */
+.motion-v2 :is(.motion-internal-gallery,.motion-properties-grid,.motion-expressivity-gallery) figure {position:relative;}
+.motion-v2 :is(.motion-internal-gallery,.motion-properties-grid,.motion-expressivity-gallery) figure+figure {border-left:0;}
+.motion-v2 .motion-internal-gallery figure+figure::before {content:'';position:absolute;left:0;top:50%;width:520px;height:1px;background:url('../assets/Motion%20DS/v2/desktop-imgLine52.svg') center no-repeat;transform:translate(-50%,-50%) rotate(90deg);}
+.motion-v2 .motion-properties-grid figure+figure::before {content:'';position:absolute;left:0;top:50%;width:453px;height:1px;background:url('../assets/Motion%20DS/v2/desktop-imgLine53.svg') center no-repeat;transform:translate(-50%,-50%) rotate(90deg);}
+.motion-v2 .motion-expressivity-gallery figure+figure::before {content:'';position:absolute;left:0;top:50%;width:360px;height:1px;background:url('../assets/Motion%20DS/v2/desktop-imgLine54.svg') center no-repeat;transform:translate(-50%,-50%) rotate(90deg);}
+@media (max-width:767px) {
+ .motion-v2 .motion-artwork:has(img[data-copy-alt='benchmarkAlt']) {aspect-ratio:1709/4096;}
+ .motion-v2 .motion-internal-gallery figure+figure::before {display:none;}
+ .motion-v2 .motion-properties-grid figure:nth-child(odd)::before {display:none;}
+}
+.motion-v2 .rml-meta-row {min-height:28px;}
+.motion-v2 .rml-profile-icon {width:28px;height:28px;}
+.motion-v2 .rml-calendar-icon {width:28px;height:28px;}
+@media (max-width:767px) {
+ .motion-v2 .rml-meta-row {min-height:20px;}
+ .motion-v2 :is(.rml-profile-icon,.rml-calendar-icon) {width:20px;height:20px;}
+}
+
+.motion-v2 .motion-media-controls .btn[hidden] {display:none;}
+.motion-v2 .motion-media-controls {max-width:calc(100% - 16px);flex-wrap:wrap;}
+
+/* Mobile direction labels for the vertically stacked axis explanations. */
+.motion-v2 .motion-axis-label {display:none;}
+@media (max-width:767px) {
+ .motion-v2 .motion-axis-descriptions {font-size:var(--body-m-font-size);line-height:var(--body-m-line-height);}
+ .motion-v2 .motion-axis-label {display:block;color:var(--text-accent-primary);margin-bottom:10.6px;}
+ .motion-v2 .motion-axis-descriptions .rml-copy p+ul {margin-top:10.6px;}
+ .motion-v2 .motion-axis-descriptions ul,.motion-v2 .motion-axis-descriptions>div:last-child ul {padding-left:24px;}
+ .motion-v2 .motion-axis-descriptions li+li {margin-top:5.3px;}
+}

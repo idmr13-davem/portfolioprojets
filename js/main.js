@@ -154,7 +154,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
   const rootPath = isNestedPage ? '../' : '';
   const closing = document.querySelector('.section-closing, .about-closing, .cs-cierre');
 
-  if (closing && !document.body.classList.contains('home-v2')) {
+  if (closing && !document.body.classList.contains('home-v2') && !document.body.classList.contains('article-v2')) {
     closing.id = 'contact';
     closing.className = 'section-closing';
     closing.innerHTML = `
@@ -218,7 +218,8 @@ const scrollFill = document.getElementById('scrollProgressFill');
 (function initLanguageToggle() {
   const toggles = document.querySelectorAll('.language-toggle');
   const supportedLanguages = ['en', 'es'];
-  const storedLanguage = localStorage.getItem('portfolio-language');
+  const articleLanguage = document.body.classList.contains('article-v2') ? new URLSearchParams(location.search).get('lang') : null;
+  const storedLanguage = ['en', 'es'].includes(articleLanguage) ? articleLanguage : localStorage.getItem('portfolio-language');
   let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : 'en';
 
   toggles.forEach(toggle => {
@@ -255,7 +256,10 @@ const scrollFill = document.getElementById('scrollProgressFill');
     });
     toggles.forEach(toggle => {
       toggle.querySelectorAll('.language-toggle__option').forEach(option => {
-        option.setAttribute('aria-pressed', String(option.dataset.language === language));
+        if (option.getAttribute('role') === 'radio') {
+          option.setAttribute('aria-checked', String(option.dataset.language === language));
+          option.tabIndex = option.dataset.language === language ? 0 : -1;
+        } else option.setAttribute('aria-pressed', String(option.dataset.language === language));
       });
     });
   }

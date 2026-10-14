@@ -134,3 +134,7 @@ All four Home header variants now follow library `15:736` and portfolio instance
 ### Drawer link hovers and separators — October 13, 2026
 
 Tablet and mobile drawer section links now use the desktop hover color token, with no inherited full-row background overlay. Removed the separators above and below the drawer contact section while preserving its spacing. Home content sections already have no section dividers in the final stylesheet.
+
+### Tablet header navigation spacing — October 13, 2026
+
+Updated the horizontal Home header navigation to Space XXL (64px) at 1000–1279px, following corrected instance `4776:2781`. Desktop retains Space Huge (80px).

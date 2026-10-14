@@ -10,3 +10,13 @@ assets/Registro ML/v2/
 
 # Motion Level v2: internal artwork, original media and review copy stay local.
 assets/Motion DS/v2/
+
+# Accounts for minors: local V2 review, pending authenticated publication.
+work/menores-mexico.html
+js/menores-v2.js
+assets/Menores/v2/
+
+# Cross-country account switching: local V2 review only.
+work/cambio-cuentas-paises.html
+js/country-v2.js
+assets/Country switch/v2/

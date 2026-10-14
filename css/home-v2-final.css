@@ -210,9 +210,9 @@
   .home-v2 section { scroll-margin-top:70px; }
   .home-v2 .v2-scroll-indicator--fixed { top:calc(50% + 35px); }
 }
-/* Keep navigation within the shared content columns at smaller desktop widths. */
-@media (min-width:1000px) and (max-width:1399px) {
-  .home-v2 .v2-desktop-nav { gap:var(--space-huge); }
+/* Home tablet navigation, Figma 4776:2781. */
+@media (min-width:1000px) and (max-width:1279px) {
+  .home-v2 .v2-desktop-nav { gap:var(--space-xxl); }
 }
 
 /* Match Figma's selective emphasis rather than coloring the entire outcome. */
@@ -252,3 +252,5 @@
     font:400 var(--text-cap-m)/var(--lh-cap-m) var(--font-body);
   }
 }
+
+.home-v2 [data-local-case][hidden] {display:none;}

@@ -158,33 +158,33 @@
   es.set("English and Spanish", "Inglés y Español");
   es.set("Photos from my visit to Mercado Libre’s offices in Buenos Aires, Argentina, in 2024.", "Fotografías de mi visita a las oficinas de Mercado Libre en Buenos Aires, Argentina, durante 2024.");
   es.set("A couple of years ago, during a job interview, I was asked an unexpected question: why have you stayed at the same company for so long? It caught me off guard, but the question stayed with me. What I discovered as I reflected on it became this article.", "Hace un par de años, durante una entrevista de trabajo, recibí una pregunta inesperada: ¿por qué has permanecido tanto tiempo en la misma empresa? La pregunta me tomó por sorpresa, pero se quedó conmigo. Lo que descubrí al reflexionar sobre ella se convirtió en este artículo.");
-  es.set("Early in my career, I changed jobs quickly. I would start with sky-high motivation, and as I got to know the ins and outs of each company, I would get caught up in a cycle of learning about the business and its approach that, after a couple of months, felt like it was draining my energy.", "Al inicio de mi carrera cambiaba de trabajo con rapidez. Empezaba con una motivación demasiado alta y, a medida que iba conociendo el detalle de cada empresa, me envolvía en una espiral de aprendizaje del negocio y del enfoque que, después de un par de meses, sentía que me drenaba la energía.");
+  es.set("Early in my career, I changed jobs quickly. I would start with sky-high motivation, and as I got to know the ins and outs of each company, I would get caught up in a cycle of learning about the business and its approach that, after a couple of months, felt like it was draining my energy.", "Al inicio de mi carrera cambiaba de trabajo con rapidez. Empezaba con una motivación demasiado alta y, a medida que iba conociendo el detalle de cada empresa, me envolvía en una espiral de aprendizaje del negocio y del enfoque que, después de un par de meses, sentía que me “drenaba” la energía.");
   es.set("Eventually, after a little over a year at a company, my energy would be so depleted that I would start looking for new opportunities again. In three years, I worked at three different companies in Colombia’s startup ecosystem, on projects ranging from video game design and on-demand interface design for Colombian clients to designing an MVP for the first marketplace for Venezuelan families, where relatives abroad could pay for groceries in dollars and have them delivered to their families’ homes. A preview of my future experience at Mercado Libre.", "Al final, después de algo más de un año trabajando en varias empresas, mi energía se había agotado tanto que salía de nuevo a la búsqueda de nuevas oportunidades laborales. En tres años pasé por tres empresas diferentes dentro del ecosistema de startups en Colombia, trabajando en proyectos que iban desde el diseño de videojuegos, pasando por diseño de interfaces on demand para clientes colombianos, hasta el diseño de un MVP del primer marketplace para familias venezolanas, donde sus familiares en el exterior compraban el mercado pagando en dólares y enviaban las compras a domicilio. Un preámbulo de mi futura experiencia en Mercado Libre.");
   es.set("After that experience, I joined Mercado Libre in 2021, and much of my approach changed.", "Después de esta experiencia entré a Mercado Libre en 2021 y gran parte de mi enfoque cambió.");
-  es.set("Unlike anywhere I had worked before, Mercado Libre was the first place where I found myself in a huge environment, surrounded by hundreds of designers. Many were among the most brilliant people I had ever met in my career. It was also a place where design was mature enough to give the profession the recognition it deserved, treating it as more than the ability to make screens look good, which is where so many of us start our careers.", "A diferencia de otros lugares donde trabajé antes, en Mercado Libre me encontré por primera vez en un entorno gigante donde no solamente estaba rodeado de cientos de diseñadores, muchos de ellos personas tan brillantes que nunca antes me había cruzado en mi trayectoria profesional, sino donde también la madurez del diseño le daba la importancia necesaria a la profesión para considerarla algo más que la habilidad de embellecer pantallas, con la que muchos iniciamos nuestra trayectoria profesional.");
+  es.set("Unlike anywhere I had worked before, Mercado Libre was the first place where I found myself in a huge environment, surrounded by hundreds of designers. Many were among the most brilliant people I had ever met in my career. It was also a place where design was mature enough to give the profession the recognition it deserved, treating it as more than the ability to make screens look good, which is where so many of us start our careers.", "A diferencia de otros lugares donde trabajé antes, en Mercado Libre me encontré por primera vez en un entorno gigante donde no solamente estaba rodeado de cientos de diseñadores, muchos de ellos personas tan brillantes que nunca antes me había cruzado en mi trayectoria profesional, sino donde también la madurez del diseño le daba la importancia necesaria a la profesión para considerarla algo más que “la habilidad de embellecer pantallas”, con la que muchos iniciamos nuestra trayectoria profesional.");
   es.set("This is where my professional growth expanded beyond the visual craft that had occupied so much of my time studying graphic design. In this environment, I learned about:", "Es aquí donde mi crecimiento profesional se expandió a más campos fuera del craft visual que tanto había ocupado mis años de estudio como diseñador gráfico. En este entorno aprendí de:");
   es.set("Design and its direct relationship with strategy.", "El diseño y su relación directa con la estrategia.");
   es.set("Clearly defining goals for the user experience.", "La definición clara de objetivos de experiencia hacia el usuario.");
   es.set("Qualitative and quantitative research as the foundation for understanding a problem and proposing a solution.", "La investigación, cualitativa y cuantitativa, como base del entendimiento de un problema y el planteamiento de una solución.");
   es.set("Framing the problem as the starting point for any project.", "La definición de un problem framing como punto de partida de cualquier proyecto.");
-  es.set("Storytelling and a story-first approach, where the UI is designed around the story, rather than the other way around.", "El storytelling y un enfoque story first, donde la UI se diseña alrededor de la historia y no al revés.");
+  es.set("Storytelling and a story-first approach, where the UI is designed around the story, rather than the other way around.", "El storytelling y un enfoque “story first”, donde la UI se diseña alrededor de la historia y no al revés.");
   es.set("The importance of metrics in products used at scale, where even the smallest changes can create friction that leads to financial losses for the business.", "La importancia de las métricas en productos masivos, donde cambios mínimos pueden significar fricciones con pérdidas financieras para el negocio.");
   es.set("The value of a culture built around giving and receiving feedback on details that often go unnoticed.", "Los aportes de una cultura intensiva en dar y recibir feedback sobre detalles que muchas veces son invisibles para el ojo.");
   es.set("There is a lot I could take away from my five years at this company, but I wanted to distill it into four key lessons. These are the lessons I’m taking with me after working across four teams and projects within the company.", "Hay muchos aprendizajes que podría extraer de mis 5 años en esta compañía, pero he querido sintetizarlos en 4 aprendizajes clave. Son las enseñanzas que me llevo después de haber pasado ya por 4 equipos y proyectos dentro de la compañía.");
   es.set("Lesson #1: Design is not an end in itself; it serves a larger purpose", "Aprendizaje #1: El diseño no es un fin en sí mismo, está al servicio de algo más");
   es.set("Before Mercado Libre, my mindset was that design was an end in itself. That is a common mistake among junior designers, and it is easy to spot in their work.", "Mi mindset anterior a Mercado Libre era que el diseño es un fin en sí mismo, y ese es un error común de los diseñadores junior que es fácilmente perceptible al mirar su trabajo.");
-  es.set("How many times have you seen a portfolio where a designer says “I created this app,” followed by a bunch of mockups showing how beautiful and polished the interface is? Maybe you’re one of them, and there’s nothing wrong with admitting it. I was one of them many years ago.", "¿Cuántas veces has visto un portafolio donde un diseñador dice creé esta aplicación, seguido de un montón de mockups de lo linda y pulida que es su interfaz? Quizá eres uno de ellos y no está mal admitirlo. Yo fui uno de ellos hace ya muchos años.");
+  es.set("How many times have you seen a portfolio where a designer says “I created this app,” followed by a bunch of mockups showing how beautiful and polished the interface is? Maybe you’re one of them, and there’s nothing wrong with admitting it. I was one of them many years ago.", "¿Cuántas veces has visto un portafolio donde un diseñador dice “creé esta aplicación”, seguido de un montón de mockups de lo linda y pulida que es su interfaz? Quizá eres uno de ellos y no está mal admitirlo. Yo fui uno de ellos hace ya muchos años.");
   es.set("The lesson is that a design should not be judged solely by its level of craft and attention to detail, but by the results it brings to the business. And how can you know the impact your design has on the business if you don’t understand the business or how its success is measured?", "La enseñanza final es que un diseño no debe juzgarse únicamente por su alto nivel de craft y enfoque en el detalle, sino por los resultados que trae al negocio. ¿Y cómo vas a saber el impacto que tu diseño trae al negocio si no entiendes el negocio y no sabes cómo se mide su éxito?");
   es.set("Lesson #2: Experience adapted to context defines seniority, not a list of requirements", "Aprendizaje #2: La experiencia adaptada al contexto define el seniority, no una lista de requisitos");
   es.set("For years, including my early days at Mercado Libre, I was obsessed with professional growth. I was always looking for something more to do, to learn, and to improve.", "Durante años, y también en las primeras etapas de mi experiencia laboral en Mercado Libre, fui un obsesionado con el crecimiento profesional. Siempre estaba buscando algo más por hacer, por aprender y por mejorar.");
   es.set("Along the way, I also met people who were pursuing growth for the wrong reasons. The question that kept coming up was: what am I missing to become a senior designer? Almost as if reaching a certain level of seniority meant checking off years of experience and knowledge acquired.", "Y así también me crucé con personas que perseguían el desarrollo con el fin equivocado. La pregunta que se repetía era: ¿qué me falta para ser senior? Casi como si lograr un seniority fuera completar un checklist de años de experiencia y conocimientos adquiridos.");
   es.set("The truth is, it doesn’t work that way. People reached high levels of seniority at very different stages of their lives, at different ages, in different contexts, and at different points in their development as designers. Today, I can tell you that the skills of a senior designer in 2020 are nowhere near the same as those of a senior designer in 2026.", "La verdad es que no es así; tanto así, que había personas que alcanzaban un alto nivel de seniority en etapas muy diferentes de su vida, edad, contexto y evolución dentro de la disciplina. Hoy en día te aseguro que un senior en 2020 no tiene ni de cerca las mismas skills que un senior en 2026.");
-  es.set("Lesson #3: Ownership is the extra mile that sets you apart", "Aprendizaje #3: El ownership es la milla extra que te diferencia de los demás");
-  es.set("It’s common for people to do what they’re asked without thinking about the best version of a product.", "Es una actitud común en muchas personas hacer lo que se les pide sin pensar en la mejor versión de un producto.");
-  es.set("Have you ever looked at a product and thought, “I’d change this if I could”? Being a product designer and looking at the experiences around you is like being a chef and trying dishes at a new restaurant every week. You’re bound to find things that catch your attention, things you don’t like, things that feel new, and things you can bring into your own work.", "¿No te ha pasado que has visto un producto y has pensado yo le cambiaría esto si pudiera? Ser diseñador de producto y ver experiencias a tu alrededor es como ser un chef y degustar platos de un nuevo restaurante cada semana. Seguro encontrarás cosas que te llamarán la atención, que no te gustarán, que te parecerán novedosas y que podrás traer a tu trabajo.");
-  es.set("That extra mile is what sets an excellent designer apart from an average one, and you can find inspiration anywhere.", "Esa milla extra diferencia a un diseñador común de uno excelente, y la inspiración puedes encontrarla en cualquier parte.");
-  es.set("Lesson #4: Design goes beyond the visual; every part of an experience is designed, consciously or unconsciously", "Aprendizaje #4: El diseño no solo es visual y cada factor de una experiencia se diseña, de forma consciente o inconsciente");
-  es.set("This was perhaps my most painful lesson, coming from a background in graphic design. To me, design used to mean the interface and attention to detail, but I soon realized that was only one part of it.", "Este es quizá mi aprendizaje más doloroso, viniendo de un background en diseño gráfico. Para mí, el diseño antes era la interfaz y el enfoque en el detalle, pero pronto entendí que esa es solo una parte del diseño.");
+  es.set("Lesson #3: Ownership is the extra mile that sets you apart", "Aprendizaje #3: El ownership es la “milla extra” que te diferencia de los demás");
+  es.set("It’s common for people to do what they’re asked without thinking about the best version of a product.", "Es una actitud común en muchas personas “hacer lo que se les pide” sin pensar en la mejor versión de un producto.");
+  es.set("Have you ever looked at a product and thought, “I’d change this if I could”? Being a product designer and looking at the experiences around you is like being a chef and trying dishes at a new restaurant every week. You’re bound to find things that catch your attention, things you don’t like, things that feel new, and things you can bring into your own work.", "¿No te ha pasado que has visto un producto y has pensado “yo le cambiaría esto si pudiera”? Ser diseñador de producto y ver experiencias a tu alrededor es como ser un chef y degustar platos de un nuevo restaurante cada semana. Seguro encontrarás cosas que te llamarán la atención, que no te gustarán, que te parecerán novedosas y que podrás traer a tu trabajo.");
+  es.set("That extra mile is what sets an excellent designer apart from an average one, and you can find inspiration anywhere.", "Esa “milla extra” diferencia a un diseñador común de uno excelente, y la inspiración puedes encontrarla en cualquier parte.");
+  es.set("Lesson #4: Design goes beyond the visual; every part of an experience is designed, consciously or unconsciously", "Aprendizaje #4: El diseño no solo es “visual” y cada factor de una experiencia se diseña, de forma consciente o inconsciente");
+  es.set("This was perhaps my most painful lesson, coming from a background in graphic design. To me, design used to mean the interface and attention to detail, but I soon realized that was only one part of it.", "Este es quizá mi aprendizaje más “doloroso”, viniendo de un background en diseño gráfico. Para mí, el diseño antes era “la interfaz y el enfoque en el detalle”, pero pronto entendí que esa es solo una parte del diseño.");
   es.set("The story, the words, the user journey, and the context of use are just as important as the interface itself, if not more so. To be a good product or UX designer, you need more than strong craft. You also need to be good at communicating ideas and telling stories, a skill that many of us who come from graphic design overlook.", "La historia, las palabras, el journey del usuario y el contexto de uso son tan o más importantes que la misma interfaz. Para ser un buen diseñador de producto o UX no solamente debes ser bueno en el craft, también debes ser bueno comunicando ideas y contando historias, una habilidad que muchos de los que venimos del mundo del diseño gráfico ignoramos.");
   es.set("These are four of the lessons I’ve learned during my time at Mercado Libre, beyond hard skills such as using AI, learning motion design, conducting research, and other skills typical of the profession.", "Estos son cuatro de los aprendizajes que he tenido en mi trayectoria en Mercado Libre, fuera de hard skills como el uso de IA, aprendizaje en motion, ejecución de research y otras skills típicas de la profesión.");
   es.set("Today, I understand that staying in one place doesn’t always mean standing still; sometimes it means finding an environment where the challenge changes before you have to go looking for it elsewhere", "Hoy entiendo que permanecer en un lugar no siempre significa quedarse quieto; a veces significa encontrar un entorno donde el reto cambia antes de que tengas que salir a buscarlo afuera");
@@ -280,6 +280,173 @@
   [["Case studies", "Casos de estudio"], ["Personal blog", "Blog personal"], ["Learn more about me", "Conoce más sobre mí"], ["Explore my case studies", "Revisa mis casos de estudio"], ["View my resume", "Revisa mi hoja de vida"], ["Explore my personal blog", "Revisa mi blog personal"], ["Schedule a call", "Agenda una llamada"], ["Intro", "Intro"], ["Case 1", "Caso 1"], ["Case 2", "Caso 2"], ["Case 3", "Caso 3"], ["Case 4", "Caso 4"], ["Blog", "Blog"], ["5 years designing at Mercado Libre / Mercado Pago for people across Latin America.", "5 años diseñando en Mercado Libre / Mercado Pago para personas en Latinoamérica."], ["Currently moving into design engineering.", "Actualmente en transición hacia el rol de design engineering."], ["Mentor at ADPlist and an active member of UX learning communities.", "Mentor en ADPlist y miembro activo de comunidades de educación y formación en UX."], ["Aspiring entrepreneur.", "Emprendedor en formación."], ["I’m a graphic designer with 10 years of experience, most of them in UX. Beyond design, my interests include:", "Soy un diseñador gráfico con 10 años de experiencia, la mayoría de ellos en UX, y entre otros de mis intereses además del diseño también están:"], ["Photography as an amateur landscape photographer.", "La fotografía como paisajista amateur."], ["Music as an amateur guitarist.", "La música como guitarrista aficionado."], ["Trekking and spending time in nature.", "El trekking como amante de la naturaleza."], ["Driving and the automotive industry.", "La conducción y la industria automotriz como entusiasta."], ["Building products as an aspiring entrepreneur.", "La construcción de productos como futuro emprendedor."], ["These passions shape my approach to design, the projects I love working on, and the knowledge I enjoy sharing on my personal blog.", "Todas estas pasiones dan forma a mi mentalidad de diseño y marcan los tipos de proyectos en los que amo trabajar y el conocimiento que disfruto compartir en mi blog personal."], ["Want to learn more about my professional experience? Take a look at my resume.", "¿Quieres conocer más sobre mí a nivel profesional? Puedes revisar mi hoja de vida."], ["Mercado Libre sign-up", "Registro ML en Mercado Libre"], ["Motion design system — Motion Level", "Motion design system — Motion Level"], ["Switching accounts across countries", "Switch de cuentas entre países"], ["I led the iteration of Mercado Libre’s sign-up model for people across Latin America.", "Lideré la iteración del modelo de registro de Mercado Libre para personas en Latinoamérica."], ["I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for Motion Level.", "Co-lideré la primera fase del motion design system de Mercado Libre, desarrollando el marco conceptual de Motion Level."], ["I designed the account creation flow for minors in Mexico, working within Mexican regulatory requirements.", "Diseñé el flujo de creación de cuentas para menores en México bajo la normativa mexicana."], ["I created an animated account-switching flow for people with accounts in different Latin American countries.", "Creé la experiencia de switch entre países, un flujo animado para personas con cuentas en varios países de Latinoamérica."], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["Now that you know a little more about me, what’s your next step?", "Y ya que sabes un poco más de mí, ¿cuál es tu siguiente paso?"], ["Whether it’s an exciting project or a role on your team, I want to work on product and experience challenges that inspire me. Could we work together?", "Ya sea para un proyecto apasionante o para una vacante dentro de tu gran equipo, lo que más quiero es trabajar en desafíos de experiencia y producto que me llenen de entusiasmo y pasión por resolver. ¿Crees que podemos trabajar juntos?"]].forEach(([source, translation]) => es.set(source, translation));
   // Final case card content approved from Figma on October 13, 2026.
   [["Mercado Libre sign-up", "Registro en Mercado Libre"], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["I led the iteration of Mercado Libre’s sign-up model, impacting 60 million users across 9 Latin American countries.", "Lideré la iteración del modelo de registro para Mercado Libre, impactando a 60 millones de usuarios en 9 países de América Latina."], ["I reduced average sign-up time from 3:25 minutes to 52 seconds", "Reduje el tiempo promedio de registro de 3:25 minutos a 52 segundos"], [" and increased conversion by more than 10%, depending on the country.", " y aumenté la conversión en más de un 10%, según el país."], ["Motion design system - Motion Level", "Motion design system - motion level"], ["Role: Senior UX analyst / UI designer", "Rol: Analista Senior de UX / Diseñador UI"], ["I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for the Motion Level framework.", "Co-lideré la primera fase de creación del motion design system de Mercado Libre, desarrollando el marco conceptual para el framework de motion level."], ["I created the conceptual framework that unifies how expressive motion is at Mercado Libre", "Creé el marco conceptual que unifica el nivel de expresividad del movimiento en Mercado Libre"], [", impacting more than 200 UX analysts and developers within the organization.", ", impactando a más de 200 analistas de UX y desarrolladores dentro de la organización."], ["Sign-up for minors in Mexico", "Registro para menores en México"], ["Role: Senior UX analyst / UI designer", "Rol: Analista senior de UX / Diseñador UI"], ["I designed Mercado Pago’s sign-up flow for minors in Mexico, working within Mexican regulations, among the most demanding in Latin America.", "Diseñé el flujo de registro para menores de Mercado Pago en México, un flujo regulado bajo la normativa mexicana, una de las más exigentes de Latinoamérica."], ["I iterated on the Mexico flow using insights from Argentina and Brazil, ", "Iteré el flujo de México usando insights de Argentina y Brasil, "], ["reducing identity verification time from 24 hours to 20 seconds", "reduje el tiempo de validación de identidad de 24 horas a 20 segundos"], [".", "."], ["Switching accounts across countries", "Switch de cuentas entre países"], ["Role: Senior UX analyst / UI designer", "Rol: Analista UX senior / Diseñador UI"], ["I created the cross-country account-switching experience, an animated flow that people with accounts in several Latin American countries see when switching between them.", "Creé la experiencia de switch entre países, un flujo animado visible para las personas con cuentas en varios países de Latinoamérica al momento de cambiar entre ellas."], ["I improved the experience for 200k people with multiple accounts across Brazil, Argentina and Uruguay,", "Impacté la experiencia de 200k personas con más de una cuenta entre Brasil, Argentina y Uruguay,"], [" a number that has continued to grow in recent quarters.", " un número que viene creciendo en los últimos quarters."]].forEach(([source, translation]) => es.set(source.trim(), translation.trim()));
+  // Article V2: approved Figma text, with natural English equivalents.
+  [
+    [
+      "What my passion for cars taught me about designing experiences",
+      "Lo que mi pasión por los autos me enseñó sobre diseñar experiencias"
+    ],
+    [
+      "A reflection on how my passion for cars led me to question UX rules and interpret them through the philosophy of each product.",
+      "Una reflexión sobre cómo mi pasión por los autos me llevó a cuestionar las reglas de UX y a interpretarlas desde la filosofía de cada producto."
+    ],
+    [
+      "One day, while sitting in traffic in my city, a question came to mind: what can I learn from one of my biggest interests, cars, and bring into my UX work? At first glance, they seem like very different worlds. But if you find experience design everywhere, you will probably understand why I ended up thinking about work while sitting in my car.",
+      "Un día, en medio del tráfico de mi ciudad, me surgió una pregunta: ¿Qué puedo aprender de uno de mis mayores intereses, los automóviles, para aplicar dentro del mundo del UX? A primera vista, parecen mundos bastante distintos. Pero si eres de esas personas que encuentran el diseño de experiencias en todas partes, seguramente entenderás por qué terminé pensando en mi trabajo mientras estaba sentado en mi carro."
+    ],
+    [
+      "Alongside my work in UX, I am passionate about vehicles and enjoy driving. That is why automotive UX is one of the fields that interests me most beyond my work in fintech. I am interested in what happens between a person and a vehicle: how they understand its controls, what they need to do, how much attention they can give an interaction, and what they expect from the experience. As vehicles become more technological, those questions become especially interesting. Although I had not made that connection at the time, years earlier I had already had my first encounter with some of them.",
+      "Además de trabajar en UX, me apasionan los vehículos y disfruto conducir. Por eso, una de las áreas que más me llaman la atención fuera de mi trabajo en fintech es el diseño de experiencias en el mundo automotriz o también conocido como UX automotive, me interesa lo que pasa entre una persona y un vehículo: cómo entiende sus controles, qué necesita hacer, cuánta atención puede dedicarle a una interacción y qué espera de la experiencia. Con máquinas cada vez más tecnológicas, esas preguntas se vuelven especialmente interesantes. Aunque no lo había conectado de esa forma, años antes ya había tenido una primera experiencia con algunas de ellas."
+    ],
+    [
+      "My first encounter with design inside a vehicle",
+      "Mi primer encuentro con el diseño dentro de un vehículo"
+    ],
+    [
+      "Before joining Mercado Libre, I worked in Colombia’s startup ecosystem. At one of those startups, I worked on Puntomóvil, a marketplace for people using premium mobility services. It was the only project from that stage of my career where I designed an application to be used inside a moving vehicle, with interaction conditions that changed because of the context:",
+      "Antes de entrar a Mercado Libre trabajé en el ecosistema de startups en Colombia, fue en una de estas startups donde trabajé en Puntomóvil, un marketplace para usuarios de servicios de movilidad premium. Este fue el único proyecto de esa etapa de mi carrera profesional en el que diseñé una aplicación que se usaría dentro de un vehículo en movimiento y en donde las condiciones de interacción cambiaban por el contexto de uso:"
+    ],
+    [
+      "The application ran natively on a tablet connected to a hardware device inside the vehicle.",
+      "La aplicación funcionaba de forma nativa en una tablet conectada a un dispositivo de hardware dentro del vehículo."
+    ],
+    [
+      "To complete the experience, the passenger had to make a digital payment during the journey.",
+      "Para completar la experiencia, el pasajero debía realizar un pago digital durante el trayecto."
+    ],
+    [
+      "The checkout could involve their personal device, such as scanning a QR code.",
+      "El checkout podía incluir una interacción con su dispositivo personal, como escanear un código QR."
+    ],
+    [
+      "Our first prototypes were not very successful. Initial user feedback suggested that the experience was difficult to use.",
+      "Nuestros primeros prototipos no fueron muy exitosos. El feedback inicial de los usuarios indicaba que la experiencia era difícil de usar."
+    ],
+    [
+      "Looking back today, one question matters much more to me than whether the screens looked good: how easy was it to complete that task in the real conditions of a journey?",
+      "Hoy, al mirar ese proyecto, hay una pregunta que me parece mucho más importante que si las pantallas se veían bien: ¿qué tan fácil era completar esa tarea en las condiciones reales del viaje?"
+    ],
+    [
+      "We had a tablet, a personal phone, and a payment to complete inside a moving vehicle. That context was part of the experience we were designing.",
+      "Teníamos una tablet, un teléfono personal y un pago por resolver dentro de un vehículo en movimiento. Ese contexto era parte de la experiencia que estábamos diseñando."
+    ],
+    [
+      "The context of use matters. A lot.",
+      "El contexto de uso importa, y mucho"
+    ],
+    [
+      "Think for a moment about using your phone while sitting on the sofa, then imagine doing the same task while walking along a sidewalk. The screen may be identical, but your attention, your movements, and what is happening around you change. What seemed simple a moment ago starts to require more effort. The same thing happens inside a vehicle: a passenger trying to complete a payment and someone driving have very different responsibilities and attention available.",
+      "Piensa por un momento en usar tu celular mientras estás sentado en el sofá y luego imagina intentar hacer la misma tarea mientras caminas por una acera, la pantalla puede ser exactamente la misma pero tu atención, tus movimientos y lo que ocurre alrededor cambian; lo que hace un momento parecía sencillo empieza a requerir más esfuerzo. Dentro de un vehículo pasa exactamente lo mismo, un pasajero que intenta completar un pago y una persona que conduce tienen responsabilidades y atención disponible muy diferentes."
+    ],
+    [
+      "For the driver, the main task is driving. Checking directions, adjusting the temperature, or changing a song are interactions that have to coexist with that responsibility.",
+      "En el caso de quien conduce la tarea principal es conducir, consultar una indicación, ajustar la temperatura o cambiar una canción son interacciones que deben convivir con esa responsabilidad;"
+    ],
+    [
+      "That is why automotive UX calls for more than asking whether an interface is intuitive. We also need to consider how much it demands looking at a screen, how precisely someone needs to touch a control, and what happens if they make a mistake.",
+      "por eso, cuando hablamos de UX automotriz, no basta con preguntarnos si una interfaz es intuitiva, también necesitamos pensar cuánto exige mirar una pantalla, qué precisión requiere tocar un control y qué pasa si la persona se equivoca."
+    ],
+    [
+      "Attention is limited in any experience. Behind the wheel, however, the stakes can extend far beyond an unfinished task or a frustrated user.",
+      "La atención es un recurso limitado en cualquier experiencia, pero al volante, además, lo que está en juego puede ir mucho más allá de una tarea incompleta o un usuario frustrado."
+    ],
+    [
+      "That is one reason I find this field so interesting: it forces us to look at design within the situation where it is actually used.",
+      "Esa es una de las razones por las que este campo me parece tan interesante: obliga a mirar el diseño dentro de la situación en la que realmente se usa."
+    ],
+    [
+      "We do not all expect the same thing from a vehicle",
+      "No todos esperamos lo mismo de un vehículo"
+    ],
+    [
+      "Context alone does not explain the whole experience. What someone expects from it matters too. As a car enthusiast, I find two approaches to mobility useful when thinking about these differences:",
+      "Pero el contexto no explica por sí solo toda la experiencia, también importa qué espera una persona de ella. Como fan de los vehículos, encuentro dos formas de acercarse a la movilidad que me ayudan a pensar en estas diferencias:"
+    ],
+    [
+      "Enjoying driving: for people who see being behind the wheel as part of a vehicle’s value.",
+      "Disfrutar conducir: para quienes estar al volante es parte del valor del vehículo."
+    ],
+    [
+      "Wanting to get somewhere: for people whose priority is reaching their destination comfortably and easily.",
+      "Querer transportarse: para quienes lo importante es llegar a su destino de forma cómoda y sencilla."
+    ],
+    [
+      "I do not see these as fixed categories. The same person can enjoy a weekend drive on an open road and want to forget about driving after an hour in Monday traffic. Even so, those different expectations change the design questions. When driving is part of the enjoyment, the response of the controls, the information the vehicle communicates, and the sense of connection with the machine matter. If you simply want to get somewhere, you will probably care more about how much effort it saves you and how comfortable it makes the journey.",
+      "No las veo como categorías cerradas, una misma persona puede disfrutar una carretera durante el fin de semana y querer olvidarse de conducir cuando lleva una hora atrapada en el tráfico del lunes. Aun así, esa diferencia de expectativas cambia las preguntas de diseño; si conducir es parte del disfrute, importan la respuesta de los controles, la información que transmite el vehículo y la sensación de conexión con la máquina; si lo que buscas es transportarte, probablemente valores más cuánto esfuerzo te ahorra y qué tan cómodo hace el trayecto."
+    ],
+    [
+      "That is why I like observing the decisions different brands make: which controls they keep within reach, which functions they move to a screen, and what role they give the person in the experience. A minimalist cabin can look attractive at first glance. The question that interests me comes next: how does it feel to use when you need to do something specific?",
+      "Por eso me llama la atención observar las decisiones de distintas marcas: qué controles mantienen a mano, qué funciones llevan a una pantalla y qué lugar le dan a la persona dentro de la experiencia, una cabina minimalista puede resultar atractiva a primera vista. La pregunta que me interesa viene después: ¿cómo se siente usarla cuando necesitas hacer algo concreto?"
+    ],
+    [
+      "What happens when the vehicle can drive for us?",
+      "¿Y qué pasa cuando el vehículo puede conducir por nosotros?"
+    ],
+    [
+      "Autonomous mobility adds another layer to this conversation. If some of the driving task moves to the vehicle, what the person can do and what they expect during the journey also change. I am especially interested in how that will coexist with the pleasure of driving. Would I want to hand over control when stuck in traffic? What about when I am on a road I enjoy? How should the experience change between those two moments?",
+      "La movilidad autónoma agrega otra capa a esta conversación, si parte de la tarea de conducir pasa al vehículo, también cambia lo que la persona puede hacer y lo que espera durante el trayecto. Personalmente, me apasiona pensar cómo convivirá eso con el placer de conducir. ¿Querré delegar la conducción cuando estoy atrapado en el tráfico? ¿Y cuando estoy recorriendo una carretera que disfruto? ¿Cómo debería cambiar la experiencia entre esos dos momentos?"
+    ],
+    [
+      "Rather than trying to predict which brands will stop investing in driving, I am interested in understanding how both possibilities could coexist.",
+      "Más que intentar adivinar qué marcas dejarán de apostar por la conducción, me interesa entender cómo podrían convivir ambas posibilidades."
+    ],
+    [
+      "For someone like me, who enjoys being behind the wheel, the challenge is preserving what makes driving special while also recognizing when it would be valuable to stop doing it.",
+      "Para alguien como yo, que disfruta estar al volante, el reto está en conservar aquello que hace especial conducir y, al mismo tiempo, reconocer cuándo sería valioso dejar de hacerlo."
+    ],
+    [
+      "That is a design problem I find fascinating.",
+      "Ahí hay un problema de diseño que me parece fascinante."
+    ],
+    [
+      "What I bring back to my UX work",
+      "Lo que me llevo a mi trabajo en UX"
+    ],
+    [
+      "Returning to the question I asked myself in traffic: what can I bring from my experience as a car enthusiast into UX?",
+      "Volviendo a la pregunta que me hice en el tráfico: ¿Qué aprendizaje llevarme de mi experiencia como fan de los automóviles al UX?"
+    ],
+    [
+      "My main lesson was to stop looking at product decisions through the lens of “this is the rule that applies.” As a UX designer, I used to think that applying heuristics, UX laws, or fixed rules without questioning them in a specific context made me a good professional. Seeing how an automotive brand’s design decisions follow its vision or its flagship product made me question whether the same logic was really ideal for every product. What would our world be like if every user experience were exactly the same?",
+      "Mi principal aprendizaje fue dejar de mirar las decisiones dentro de un producto bajo una óptica de “esta es la regla que aplica”. Como UX designer solía pensar que aplicar heurísticas, leyes de UX o normas fijas sin cuestionarlas dentro de un contexto especifico me hacía un buen profesional; luego al ver cómo las decisiones de diseño dentro de una marca automotriz se guían en torno a su norte o su producto de máxima me hicieron cuestionar si realmente para todos los productos lo ideal era aplicar la misma lógica ¿Qué sería de nuestro mundo si todas las experiencias de usuario fueran exactamente iguales?"
+    ],
+    [
+      "Who is our user, and what do they expect from our product? This seems obvious, yet we often fall back on generic descriptions. If you think a vehicle’s user is simply someone who needs transportation, you are taking an overly simple view. How would you explain the differences between the experience of a Toyota and a Mercedes? Bringing that into our daily work, what makes your brand different from another similar one?",
+      "¿Quién es nuestro usuario y qué espera de nuestro producto? Esto se ve obvio pero muchas veces caemos en descripciones genéricas, si crees que el usuario de un vehículo es alguien que necesita transportarse estás cayendo en un terreno simplista, en ese caso ¿Por qué han tanta diferencia entre la experiencia de un Toyota a un Mercedes? Llevado a nuestra cotidianidad, ¿Qué hace diferente tu marca a cualquier otra similar?"
+    ],
+    [
+      "An experience happens as much outside an interface as within it. As UX designers, we know this, but the automotive world helped me understand what it means in practice. Seeing how something as simple as interacting with a touchscreen can become complex while driving helped me grasp the scale of the idea that a user’s attention is the most precious resource for anyone designing interfaces.",
+      "Una experiencia ocurre más por fuera que dentro de una interfaz, para un UX designer esto es claro pero el mundo automotriz me ayudo a darme cuenta de la realidad de esta afirmación. El saber que algo tan simple como interactuar con una pantalla táctil se puede volver tan complejo en una situación como conducir un vehículo me ayudo a entender la escala de la afirmación “la atención del usuario es el bien más preciado para quien diseña interfaces”."
+    ],
+    [
+      "Looking at the automotive world helps me revisit these conclusions. What about you: has an interest of yours changed the way you think about the products you work on?",
+      "Mirar el mundo automotriz me ayuda a volver sobre estas conclusiones, y tú, ¿hay algún interés que haya cambiado tu forma de pensar en los productos en los que trabajas?"
+    ],
+    [
+      "I would love to hear about your experience. If you want to talk about design, UX, or vehicles, get in touch anytime.",
+      "Me parecería interesante leer tu experiencia. Si quieres conversar sobre diseño, UX o vehículos, contáctame cuando quieras."
+    ],
+    [
+      "Take care!",
+      "¡Saludos!"
+    ],
+    [
+      "September 6, 2026",
+      "6 de Septiembre de 2026"
+    ],
+    [
+      "Skip to content",
+      "Saltar al contenido"
+    ],
+    [
+      "Language",
+      "Idioma"
+    ],
+    [
+      "Home — David Montealegre",
+      "Inicio — David Montealegre"
+    ]
+  ].forEach(([english, spanish]) => es.set(english, spanish));
   const en = new Map([...es].map(([a,b])=>[b,a]));
   const original = new WeakMap();
   const clean = s => s.replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim();
@@ -441,6 +608,24 @@
   attributeTranslations.set("Visit my profile on LinkedIn", "Visitar mi perfil en LinkedIn");
   attributeTranslations.set("Schedule a call", "Agenda una llamada");
   attributeTranslations.set("Learn more about me", "Conoce más sobre mí");
+  [
+    [
+      "Black-and-white collage from a visit to Mercado Libre’s Buenos Aires offices in 2024: a laptop in the cafeteria, a 25th anniversary sign, and the author sitting on the stairs beside the MELI letters.",
+      "Collage en blanco y negro de una visita a las oficinas de Mercado Libre en Buenos Aires en 2024: un portátil en la cafetería, un cartel del 25.º aniversario y el autor sentado en las escaleras junto a las letras MELI."
+    ],
+    [
+      "Two black-and-white photographs of a car interior: the steering wheel and instrument cluster from the driver’s seat, and a side view of the dashboard, central screen, and gear selector.",
+      "Dos fotografías en blanco y negro del interior de un automóvil: vista del volante y el cuadro de instrumentos desde el asiento del conductor, y vista lateral del salpicadero, la pantalla central y la palanca de cambios."
+    ],
+    [
+      "Language",
+      "Idioma"
+    ],
+    [
+      "Home — David Montealegre",
+      "Inicio — David Montealegre"
+    ]
+  ].forEach(([english, spanish]) => attributeTranslations.set(english, spanish));
   function apply(language){
     const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),nodes=[];
     while(walker.nextNode())nodes.push(walker.currentNode);

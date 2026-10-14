@@ -1,54 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="language-entered">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/Favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/Favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/Favicon/favicon-16x16.png" />
-  <link rel="icon" href="../assets/Favicon/favicon.ico" />
-  <link rel="manifest" href="../assets/Favicon/site.webmanifest" />
-  <meta name="theme-color" content="#242422" />
-  <script>
-    document.documentElement.classList.add('motion-enabled');
-    window.setTimeout(() => document.documentElement.classList.add('motion-entered'), 700);
-  </script>
-  <meta name="robots" content="noindex" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#14191e">
   <title>This page is under work — David Montealegre</title>
-  <link rel="stylesheet" href="../css/styles.css?v=20261013-body-light" />
-  <link rel="stylesheet" href="../css/components.css?v=20261013-colombia" />
+  <link rel="icon" href="../assets/Favicon/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=20261013-body-light">
+  <link rel="stylesheet" href="../css/components.css?v=20261013-colombia">
+  <link rel="stylesheet" href="../css/status-v2.css?v=20261013">
+  <link rel="stylesheet" href="../css/status-v2-motion.css?v=20261013-staggered-reveal">
+  <script defer src="../js/status-v2.js?v=20261013"></script>
 </head>
-<body class="under-work-page has-mobile-layout">
-  <div class="cursor-dot" id="cursorDot"></div>
-
-  <header class="site-header under-work-header">
-    <a class="logotype" href="../index.html" aria-label="David Montealegre — Home">
-      <img class="isotipo" src="../assets/Home/logo/isotipo.svg" alt="" />
-    </a>
+<body class="status-v2 status-v2--construction">
+  <header class="status-header">
+    <a href="../index.html" data-status-home aria-label="David Montealegre — Home"><img src="../assets/Status/v2/header-logo.svg" width="59" height="52" alt=""></a>
   </header>
-
-  <main class="under-work-main">
-    <div class="under-work-copy">
-      <h1 class="under-work-title">Page under work</h1>
-      <div class="under-work-message">
-        <p>The content here isn’t available yet, please come back later.</p>
-        <a href="../index.html" class="btn btn--loud under-work-home">Go home</a>
+  <main class="status-main">
+    <div class="status-content">
+      <div class="status-illustration" aria-hidden="true"><img src="../assets/Status/v2/construction.png" width="160" height="125" alt=""></div>
+      <h1 class="status-title" data-status-copy="heading">Page under work</h1>
+      <div class="status-message">
+        <p data-status-copy="description">The content here isn’t available yet, please come back later.</p>
+        <a class="btn btn--loud" href="../index.html" data-status-home data-status-copy="home">Go home</a>
       </div>
     </div>
   </main>
-
-  <footer class="site-footer under-work-footer">
-    <div class="site-footer__bottom">
-      <span class="site-footer__copy">© David Montealegre 2026</span>
-      <span class="site-footer__credit">
-        <span>Website created with</span>
-        <img class="site-footer__brand-icon" src="../assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
-        <span>ChatGPT Work</span>
-      </span>
-    </div>
+  <footer class="status-footer">
+    <span>© David Montealegre 2026</span>
+    <span class="status-credit"><span data-status-copy="built">Website created with</span><picture><source media="(max-width:767px)" srcset="../assets/Status/v2/codex-small.svg"><img src="../assets/Home/v2/codex.svg" alt="" aria-hidden="true"></picture><span>Codex</span></span>
   </footer>
-
-  <script src="../js/i18n.js?v=20260811-under-work-lang"></script>
-  <script src="../js/main.js?v=20261013-colombia"></script>
 </body>
 </html>

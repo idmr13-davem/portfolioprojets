@@ -1,0 +1,39 @@
+/* Figma snippets, factored by identical tracks. Entrances run once; translation capped at 500ms per project guidance. */
+.country-v2 .rml-motion-ready:not(.is-visible) [data-motion] {opacity:0;}
+@keyframes country_kf_0 { 0% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 20% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_1 { 0% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 25% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:67841"] {animation: country_kf_0 2s linear, country_kf_1 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_2 { 0% { opacity: 0; } 10% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_3 { 0% { transform:translate(40px, 0px); } 10% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 35.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:67842"] {animation: country_kf_2 2s linear, country_kf_3 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_4 { 0% { opacity: 0; } 20% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_5 { 0% { transform:translate(40px, 0px); } 20% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 45.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:67850"] {animation: country_kf_4 2s linear, country_kf_5 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68008"] {animation: country_kf_0 2s linear, country_kf_1 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68011"] {animation: country_kf_2 2s linear, country_kf_3 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68015"] {animation: country_kf_4 2s linear, country_kf_5 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68016"] {animation: country_kf_4 2s linear, country_kf_5 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_6 { 0% { opacity: 0; } 30% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 50% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_7 { 0% { transform:translate(40px, 0px); } 29.994% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 54.994% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68018"] {animation: country_kf_6 2s linear, country_kf_7 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_8 { 0% { transform:translate(40px, 0px); } 30% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 55.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68019"] {animation: country_kf_6 2s linear, country_kf_8 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68102"] {animation: country_kf_0 2s linear, country_kf_1 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_9 { 0% { transform:translate(-40px, 0px); } 10% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(-40px, 0px); } 35.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68105"] {animation: country_kf_2 2s linear, country_kf_9 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_10 { 0% { opacity: 0; } 9.994% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 29.994% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_11 { 0% { transform:translate(40px, 0px); } 9.994% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 34.994% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68109"] {animation: country_kf_10 2s linear, country_kf_11 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68113"] {animation: country_kf_4 2s linear, country_kf_5 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_12 { 0% { opacity: 0; } 0.006% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 20.006% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_13 { 0% { transform:translate(40px, 0px); } 0.006% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 25.006% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68172"] {animation: country_kf_12 2s linear, country_kf_13 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68175"] {animation: country_kf_2 2s linear, country_kf_3 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68179"] {animation: country_kf_4 2s linear, country_kf_5 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68183"] {animation: country_kf_6 2s linear, country_kf_8 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@keyframes country_kf_14 { 0% { opacity: 0; } 40% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 60% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes country_kf_15 { 0% { transform:translate(40px, 0px); } 40% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 65.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68187"] {animation: country_kf_14 2s linear, country_kf_15 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68262"] {animation: country_kf_0 2s linear, country_kf_1 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+.country-v2 .rml-motion-ready.is-visible [data-motion="4903:68263"] {animation: country_kf_10 2s linear, country_kf_11 2s linear; animation-iteration-count: 1;  animation-fill-mode:both;}
+@media (prefers-reduced-motion:reduce) {.country-v2 [data-motion] {animation:none!important;opacity:1!important;transform:none!important;}}

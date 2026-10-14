@@ -178,3 +178,11 @@
     renderTitle(document.documentElement.lang, true);
   });
 })();
+
+// Local preview entry for the active, unpublished case.
+if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
+  document.querySelectorAll('[data-local-case]').forEach(link => {
+    link.closest('.v2-project-context')?.querySelector('[data-case-pending]')?.remove();
+    link.hidden = false;
+  });
+}
