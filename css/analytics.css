@@ -1,0 +1,117 @@
+/* Consent composition reuses Libreria_Q3-2026 typography, surfaces and Units buttons. */
+.analytics-consent,
+.analytics-settings {
+  --consent-title-size: var(--text-title-s);
+  --consent-title-line: var(--lh-title-s);
+  --consent-body-size: var(--text-body-l);
+  --consent-body-line: var(--lh-body-l);
+  --consent-button-size: var(--text-btn-m);
+  --consent-button-line: var(--lh-btn-m);
+  --consent-caption-size: var(--text-cap-m);
+  --consent-caption-line: var(--lh-cap-m);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+.analytics-consent {
+  position: fixed;
+  z-index: 10000;
+  inset: auto var(--space-m) var(--space-m) auto;
+  width: min(520px, calc(100% - var(--space-l)));
+  max-height: calc(100dvh - var(--space-l));
+  overflow-y: auto;
+  padding: var(--space-l);
+  box-sizing: border-box;
+  background: var(--background-deep);
+  border: 1px solid var(--stroke-primary);
+  border-radius: var(--radius-m);
+}
+.analytics-consent[hidden] { display: none; }
+/* Legacy internal-page mobile rules hide body children; keep privacy controls available. */
+#portfolio-analytics-consent:not([hidden]),
+#portfolio-analytics-settings { display: block !important; }
+.analytics-consent h2 {
+  margin: 0 0 var(--space-s);
+  font: 700 var(--consent-title-size)/var(--consent-title-line) var(--font-title);
+}
+.analytics-consent p {
+  margin: 0 0 var(--space-m);
+  font: 300 var(--consent-body-size)/var(--consent-body-line) var(--font-body);
+}
+.analytics-consent details { margin-bottom: var(--space-m); }
+.analytics-consent summary { cursor: pointer; width: fit-content; }
+.analytics-consent details p {
+  margin: var(--space-s) 0 0;
+  color: var(--text-secondary);
+  font: 300 var(--consent-caption-size)/var(--consent-caption-line) var(--font-body);
+  overflow-wrap: anywhere;
+}
+.analytics-consent details a { text-decoration: underline; }
+.analytics-consent .text-link,
+.analytics-settings .text-link,
+.analytics-consent__actions .btn {
+  font-size: var(--consent-button-size);
+  line-height: var(--consent-button-line);
+}
+.analytics-consent details p .text-link {
+  font-size: var(--consent-caption-size);
+  line-height: var(--consent-caption-line);
+}
+.analytics-consent__actions { display: flex; flex-wrap: wrap; gap: var(--space-s); }
+.analytics-consent__actions .btn {
+  flex: 1 1 200px;
+  min-height: 44px;
+}
+.analytics-settings {
+  padding: var(--space-ss) var(--space-s);
+  text-align: center;
+  background: var(--background-deep);
+}
+.analytics-settings .text-link {
+  min-height: 44px;
+  padding: var(--space-xs);
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.analytics-consent :focus-visible,
+.analytics-settings :focus-visible {
+  outline: 2px solid var(--interactive-primary-idle);
+  outline-offset: var(--space-nano);
+}
+@media (max-width: 1279px) {
+  .analytics-consent,
+  .analytics-settings {
+    --consent-title-size: var(--text-title-xs);
+    --consent-title-line: var(--lh-title-xs);
+    --consent-body-size: var(--text-body-m);
+    --consent-body-line: var(--lh-body-m);
+    --consent-button-size: var(--text-btn-s);
+    --consent-button-line: var(--lh-btn-s);
+  }
+}
+@media (max-width: 767px) {
+  .analytics-consent,
+  .analytics-settings {
+    --consent-body-size: var(--text-body-s);
+    --consent-body-line: var(--lh-body-s);
+    --consent-caption-size: var(--text-cap-s);
+    --consent-caption-line: var(--lh-cap-s);
+  }
+  .analytics-consent {
+    right: var(--space-s);
+    bottom: var(--space-s);
+    padding: var(--space-m);
+  }
+  .analytics-consent__actions { flex-wrap: nowrap; gap: var(--space-xs); }
+  .analytics-consent__actions .btn {
+    flex: 0 0 120px;
+    width: 120px;
+    padding-inline: var(--space-xs);
+  }
+  .analytics-consent__actions .btn--mute {
+    padding-inline: calc(var(--space-xs) - 1px);
+  }
+}
+@media (max-width: 359px) {
+  .analytics-consent { padding: var(--space-s); }
+}

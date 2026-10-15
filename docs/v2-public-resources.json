@@ -1,0 +1,731 @@
+{
+  "version": 1,
+  "scope": "Previously local V2 resources prepared for Git; not a deployment or content-clearance record.",
+  "files": [
+    {
+      "path": "assets/Menores/v2/calendar.svg",
+      "bytes": 790,
+      "sha256": "7d2c221d7fa825c79ce9b23d87c1b846a042b1c647a91a65362360dcbcb04675"
+    },
+    {
+      "path": "assets/Menores/v2/cuenta-menores-registro-app-mobile.webp",
+      "bytes": 521066,
+      "sha256": "d8119bdf0dbf838e1cd3ab03749cff258c0b2030c3afff0d63436cd526a6f3a6"
+    },
+    {
+      "path": "assets/Menores/v2/cuenta-menores-registro-app.webp",
+      "bytes": 521066,
+      "sha256": "d8119bdf0dbf838e1cd3ab03749cff258c0b2030c3afff0d63436cd526a6f3a6"
+    },
+    {
+      "path": "assets/Menores/v2/gallery-divider-last.svg",
+      "bytes": 278,
+      "sha256": "e3c07774389c13b7db4c98d1d49ab02eaf0bb3a5f84b21068adcabaa6f2bd65c"
+    },
+    {
+      "path": "assets/Menores/v2/gallery-divider.svg",
+      "bytes": 278,
+      "sha256": "e90dfb314e045a9b6a2410b79148e1d0b7c8f0c1dbf09856aaf7563e89baa32d"
+    },
+    {
+      "path": "assets/Menores/v2/hero-mobile.png",
+      "bytes": 1144897,
+      "sha256": "8f7c46497f9779f165911ad4a91e6d2349947d436451a7e946fa2611a1219d1e"
+    },
+    {
+      "path": "assets/Menores/v2/hero.png",
+      "bytes": 1144897,
+      "sha256": "8f7c46497f9779f165911ad4a91e6d2349947d436451a7e946fa2611a1219d1e"
+    },
+    {
+      "path": "assets/Menores/v2/logo.svg",
+      "bytes": 5325,
+      "sha256": "369d8f8f8f94209bd8f66094d5651aa98a1a09d9a911d2e3d655e3bd558ecd3f"
+    },
+    {
+      "path": "assets/Menores/v2/menu-high.svg",
+      "bytes": 431,
+      "sha256": "41a29c929908470ede89c6f1c71fca9ef769427e8deecd7ee21848fbcbd46131"
+    },
+    {
+      "path": "assets/Menores/v2/menu-low.svg",
+      "bytes": 431,
+      "sha256": "3decb27d8a7021587f3bec326521168bef822e54568823007fd6162e54aeb6e9"
+    },
+    {
+      "path": "assets/Menores/v2/menu-middle.svg",
+      "bytes": 433,
+      "sha256": "fb239e8d1df78ba2c201dec2e5e71c1ad22db27c3eed511876fd543d27f0e4d1"
+    },
+    {
+      "path": "assets/Menores/v2/profile.svg",
+      "bytes": 526,
+      "sha256": "f25abc9dbc4e7ec36bcf51b523b299fc0076ab1a303af578b87b1981d3d4beba"
+    },
+    {
+      "path": "assets/Menores/v2/step-next-desktop.svg",
+      "bytes": 617,
+      "sha256": "b3553825d799b051000ade4a20634981171d306b164f0c29a3a2047ee9873332"
+    },
+    {
+      "path": "assets/Menores/v2/step-next-last.svg",
+      "bytes": 617,
+      "sha256": "767dfdebb59b996cb744bc2bf3b569c1d22d710c7e94f91a1a34a95a127b0336"
+    },
+    {
+      "path": "assets/Menores/v2/step-next-mobile.svg",
+      "bytes": 617,
+      "sha256": "cf1b466b016a3ca0ca00f1ef10f8f748582c536db8d56e80ea32c533e11cce40"
+    },
+    {
+      "path": "assets/Menores/v2/step-turn-desktop.svg",
+      "bytes": 894,
+      "sha256": "48e21d02c10b79c721bd501496f43638d93f31c8861c2ff2cbd90d9250503005"
+    },
+    {
+      "path": "assets/Menores/v2/video-1-poster.png",
+      "bytes": 522019,
+      "sha256": "75f4b7d965c62f1b59c1628837398058590f926dc5a9f9c9d37f2c4b439e5917"
+    },
+    {
+      "path": "assets/Menores/v2/video-2-poster.png",
+      "bytes": 62061,
+      "sha256": "3eec04e42e716c8b6eebc9a3bbbc340ebc62f883b6e19fc768d140075e9490b7"
+    },
+    {
+      "path": "assets/Menores/v2/video-3-poster.png",
+      "bytes": 175676,
+      "sha256": "99c38b42e14d4f1c3e71388e92a41bf9b5cf03b378faa8bb52c65c3ef6959b40"
+    },
+    {
+      "path": "assets/Menores/v2/video-4-poster.png",
+      "bytes": 241603,
+      "sha256": "376898d803704454a9c7884f8433e81e45762e5cea0b6941c293a1bf75eb60ba"
+    },
+    {
+      "path": "assets/Motion DS/v2/collective-center-divider.svg",
+      "bytes": 279,
+      "sha256": "a2c60ff7ccacd562849c60a3846b328dd9b0b6a6761179ea27b8bde396c50504"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgBanderaEspanaEstadoUnselect.svg",
+      "bytes": 684,
+      "sha256": "27d851816a06680296eadf79fc223b8f3fe674137d92867c9a75333b3d0b15a1"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgDivider.svg",
+      "bytes": 274,
+      "sha256": "b43579e46769b06faf632fecb0e3fa500c87943e59bfb23fe72f1c3a7a7d79a7"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgDivider1.svg",
+      "bytes": 274,
+      "sha256": "d88298eb42780cc217729c902575518bb13f5eb7b712575cf598cfac14622786"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgFrame1171280030.svg",
+      "bytes": 1369,
+      "sha256": "4c6d354e9c3084936a38e2ecff207733be67122d738fb8235d9e7a6b3d4dc1e5"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgGroup11377.svg",
+      "bytes": 536,
+      "sha256": "644ce0348d0ce0b3abedd35e3ce1f2ef33174d3100e42df2b7a2d3e186ac7c0a"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgGroup11380.svg",
+      "bytes": 3300,
+      "sha256": "a9118f763da32d42e6cfc215e606d36fbf7031cddf467b8f82aed7033a2e2f07"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgIcon.svg",
+      "bytes": 671,
+      "sha256": "1a1db102770f075e32b0299c18f397888b99643fd3041302780be7883930d628"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgIcon1.svg",
+      "bytes": 636,
+      "sha256": "154be442dcf6278435ee5986ca9f3df92e60debed9729f996ad521a6c9c309e9"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgIcon2.svg",
+      "bytes": 1368,
+      "sha256": "dbfb9b8aca5b5efb4b2fafb7ed6b6a1e1ceb23acbcea136a43981adab56cfc50"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgImg4.png",
+      "bytes": 2049192,
+      "sha256": "3fccb18e61dc299929133543b07b772381fd6dd3f9efdcd3f45d11ae421d2b1b"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine48.svg",
+      "bytes": 628,
+      "sha256": "0e2fddb0f14df2de86351fb3e0b6a2e412841dd0a02758ec911e35f3e12b8a96"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine52.svg",
+      "bytes": 260,
+      "sha256": "0eea5e9408472ac530b766761d28c88117628bbe09d4bb0fb65f47f0c6559878"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine53.svg",
+      "bytes": 260,
+      "sha256": "2eb1029e488af5a198151edc1785ced2885ebea33f599a18caeba38b1154f276"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine54.svg",
+      "bytes": 260,
+      "sha256": "62399afdb68088a52deff1aefd05e04fc9c5359108fec2401e2743f3d2165da3"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine55.svg",
+      "bytes": 951,
+      "sha256": "319a39c82599260cf48bbd57d856174d74e6caf42ef2a3252eb50f2005abc755"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine56.svg",
+      "bytes": 267,
+      "sha256": "e1c8d52fcb1ab8f22d5f0d9bbfaca55b6e629e5f79ba7699e1351853bd6d6079"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLine57.svg",
+      "bytes": 267,
+      "sha256": "bb26551ba22e2157f903d372f996d79289e350ff6fb8e8cdff83c1e6d83a6919"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgLogo.svg",
+      "bytes": 5294,
+      "sha256": "24844db5c27c761bc50c27178efaf43e29620243b54b00387553f26f81366760"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgRoadmap1.png",
+      "bytes": 769301,
+      "sha256": "e443108470c4344c131fbed2c1c064b051fae56ff1e61310853bc7b97c72db44"
+    },
+    {
+      "path": "assets/Motion DS/v2/desktop-imgVector.svg",
+      "bytes": 2541,
+      "sha256": "307d26a440522cbdb0029885898446c56136c6f57eb310accabe1ae8f1a68c16"
+    },
+    {
+      "path": "assets/Motion DS/v2/expressivity-0.png",
+      "bytes": 11284,
+      "sha256": "27ad6a6983c822077d0433590feec3e889ecd9afe54771e0e113bfcea9cafa3e"
+    },
+    {
+      "path": "assets/Motion DS/v2/expressivity-1.png",
+      "bytes": 11223,
+      "sha256": "b8b388f286054cdced0e187dcbe763e734762fccb10c40cae5ab7bfb75dc1a8d"
+    },
+    {
+      "path": "assets/Motion DS/v2/header-logo.svg",
+      "bytes": 5325,
+      "sha256": "369d8f8f8f94209bd8f66094d5651aa98a1a09d9a911d2e3d655e3bd558ecd3f"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-0.mp4",
+      "bytes": 167292,
+      "sha256": "234b191987336b3ba1b1ec005681acad6b2b434fa877ec63b018bd50b23d7885"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-0.png",
+      "bytes": 18675,
+      "sha256": "08736aa7ee7963a8e2302c44daa066a5e44723cee2f6ea1a62b3ab2484dd5185"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-1.mp4",
+      "bytes": 232279,
+      "sha256": "a2208e4b70141f089107ec5ca79af787a719208d1195aea7cafe10f671796579"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-1.png",
+      "bytes": 18675,
+      "sha256": "08736aa7ee7963a8e2302c44daa066a5e44723cee2f6ea1a62b3ab2484dd5185"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-2.mp4",
+      "bytes": 283205,
+      "sha256": "75f27c9ba84f64290e5ac12e3e6d6d133feffc300dc56de94d12d9899bfa9c9c"
+    },
+    {
+      "path": "assets/Motion DS/v2/hero-2.png",
+      "bytes": 18675,
+      "sha256": "08736aa7ee7963a8e2302c44daa066a5e44723cee2f6ea1a62b3ab2484dd5185"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgDivider.svg",
+      "bytes": 274,
+      "sha256": "25d1f3017b3015cd8b6e667de4fc26fb6276bc2d301cc43c31f405634f367f68"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgDivider1.svg",
+      "bytes": 274,
+      "sha256": "40876d21758d65cfe8e3f0129cf936cebc748f9938f753d2cfebcbc8957ef8f7"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgDivider2.svg",
+      "bytes": 274,
+      "sha256": "d88298eb42780cc217729c902575518bb13f5eb7b712575cf598cfac14622786"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgFrame1171280065.svg",
+      "bytes": 662,
+      "sha256": "cd66c5508de18d3e685ade7aaa7b9f7c06f7762ffbce9438a6da9e6de63e41a7"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgGroup11377.svg",
+      "bytes": 526,
+      "sha256": "f25abc9dbc4e7ec36bcf51b523b299fc0076ab1a303af578b87b1981d3d4beba"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgGroup11378.svg",
+      "bytes": 986,
+      "sha256": "6b2e8ebbcbbb595651b595904f25bd102bfe06c79c627a1d8af8ad89127d0d96"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgGroup11380.svg",
+      "bytes": 3300,
+      "sha256": "a9118f763da32d42e6cfc215e606d36fbf7031cddf467b8f82aed7033a2e2f07"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgIcon.svg",
+      "bytes": 790,
+      "sha256": "7d2c221d7fa825c79ce9b23d87c1b846a042b1c647a91a65362360dcbcb04675"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgIcon1.svg",
+      "bytes": 636,
+      "sha256": "154be442dcf6278435ee5986ca9f3df92e60debed9729f996ad521a6c9c309e9"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgIcon2.svg",
+      "bytes": 1368,
+      "sha256": "dbfb9b8aca5b5efb4b2fafb7ed6b6a1e1ceb23acbcea136a43981adab56cfc50"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgImg021.png",
+      "bytes": 2480125,
+      "sha256": "be6aac0094842970612de227c425fdad653be97c1420c9aebc5904e5dff65b96"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLine52.svg",
+      "bytes": 260,
+      "sha256": "e0771e12c5b1d01a145e92488a5d31e64abafa95aff25e97567a1e78cc1df431"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLine53.svg",
+      "bytes": 260,
+      "sha256": "034f070fab6a199235ab9526a300e63160b746293d4411c47a72789a2c968f5a"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLine54.svg",
+      "bytes": 274,
+      "sha256": "1bde424bc0198346ba0d75482d48b25cf0d28eceaa56ee2c555f10642c588e5b"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLine55.svg",
+      "bytes": 260,
+      "sha256": "62399afdb68088a52deff1aefd05e04fc9c5359108fec2401e2743f3d2165da3"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLine56.svg",
+      "bytes": 946,
+      "sha256": "03a9af599069bffa9bffbb2ea5291653b6a44a1d42c3b3d083fc0b9862b583cf"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgLogo.svg",
+      "bytes": 5325,
+      "sha256": "d4de555767c01ae33c244e9a04d4a836f8e38c32b30d65f68fef0a015cc7eb52"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgRoadmap1.png",
+      "bytes": 769301,
+      "sha256": "e443108470c4344c131fbed2c1c064b051fae56ff1e61310853bc7b97c72db44"
+    },
+    {
+      "path": "assets/Motion DS/v2/mobile-imgVector.svg",
+      "bytes": 2528,
+      "sha256": "6dd6027535ee33cd5c0ab51388cd5eaf02faef50187bb090f57c4bda78c1a479"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5839.png",
+      "bytes": 30477,
+      "sha256": "20d7c846ae4bd876e5a343bc0cec4534585329834ae908704141f2a61767a688"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5868.png",
+      "bytes": 18323,
+      "sha256": "51feb9a478a388f9285e69f886fe17006a5dc8f6e896485a0721a9c41c30a617"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5879.png",
+      "bytes": 51515,
+      "sha256": "0ea85922fb5120d6ec6ee2acc73ad8a9641ab67b9992510bc97abdfb8778c340"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5915.png",
+      "bytes": 770,
+      "sha256": "4c93d2000d7270e0cc38395a730660d7ab63150d2cd4a8f17a859e81262de223"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5918.png",
+      "bytes": 770,
+      "sha256": "4c93d2000d7270e0cc38395a730660d7ab63150d2cd4a8f17a859e81262de223"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5921.png",
+      "bytes": 770,
+      "sha256": "4c93d2000d7270e0cc38395a730660d7ab63150d2cd4a8f17a859e81262de223"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5935.png",
+      "bytes": 1377,
+      "sha256": "da6402d0ce0c23fbac46950746e0667361cbb79145c10089f48f5e49cca19b73"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5937.png",
+      "bytes": 1377,
+      "sha256": "da6402d0ce0c23fbac46950746e0667361cbb79145c10089f48f5e49cca19b73"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5941.png",
+      "bytes": 1377,
+      "sha256": "da6402d0ce0c23fbac46950746e0667361cbb79145c10089f48f5e49cca19b73"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5943.png",
+      "bytes": 2346,
+      "sha256": "43146a3a4e07bbcd566ec45eaf3afb6f84bcf4313ba0d4f8e53bb173c4b8104d"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5945.png",
+      "bytes": 2346,
+      "sha256": "43146a3a4e07bbcd566ec45eaf3afb6f84bcf4313ba0d4f8e53bb173c4b8104d"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5947.png",
+      "bytes": 2346,
+      "sha256": "43146a3a4e07bbcd566ec45eaf3afb6f84bcf4313ba0d4f8e53bb173c4b8104d"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5949.png",
+      "bytes": 1366,
+      "sha256": "437a7b0e4f92a1d2d18b6619c0b16381fcc3bfa7fd4afbef5b109778f6ecc359"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5951.png",
+      "bytes": 1366,
+      "sha256": "437a7b0e4f92a1d2d18b6619c0b16381fcc3bfa7fd4afbef5b109778f6ecc359"
+    },
+    {
+      "path": "assets/Motion DS/v2/poster-4793-5953.png",
+      "bytes": 1366,
+      "sha256": "437a7b0e4f92a1d2d18b6619c0b16381fcc3bfa7fd4afbef5b109778f6ecc359"
+    },
+    {
+      "path": "assets/Motion DS/v2/review-copy.json",
+      "bytes": 11560,
+      "sha256": "6b4fb18a46d7252a05806495957ea776bba5be0b901a5f9c7e14f50b6e748b2a"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5839.mp4",
+      "bytes": 6354852,
+      "sha256": "7f9b09ef2031fc376f6340ee66b5e1cd7a9061ff099bb6ceb659104437009f52"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5868.mp4",
+      "bytes": 3247364,
+      "sha256": "b05d62f8052d8a096ac7770ea97f3238ad1a443bf2b61f2be954e627bb83cdc8"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5879.mov",
+      "bytes": 3591148,
+      "sha256": "833f6347b54e2382b155b15242f451548e5dcd5916e0ef89433ae0d09da47eb0"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5915.mp4",
+      "bytes": 42347,
+      "sha256": "984e20918aa7a65a4096a1bf4d151c4b0a5519695017242af94c9968f2bbcb31"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5918.mp4",
+      "bytes": 76116,
+      "sha256": "dc91594af715576d4f20fc0c373b06d84c2852ee1fe46d5317e5b3ca37eb21e3"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5921.mp4",
+      "bytes": 110406,
+      "sha256": "d2d954f60ca4d4bd5a212ad33eed5301d891d38804e8f2f009f9d114b50a2f52"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5935.mp4",
+      "bytes": 126454,
+      "sha256": "d8c1a4a75db84760bb615d50bb2388e32f0988e4cdefbf3852af3a7198aeb5e2"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5937.mp4",
+      "bytes": 193252,
+      "sha256": "a6f0178c3fd45f07393e024cd212276eec433814aa1a59da677ab2738e07a3e2"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5941.mp4",
+      "bytes": 226072,
+      "sha256": "4b19449231886e13b5d91cbfc138d1b6d7b03304ff79a1aa6b42d7611178a3fe"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5943.mp4",
+      "bytes": 37481,
+      "sha256": "3747796342dd21a7818d02ed511f72984096de233ffb3c5b8c9206bcbfd11d7a"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5945.mp4",
+      "bytes": 47112,
+      "sha256": "f4713fcc5a2810e8363f48c53d96fddb22830681c4c58a6316eddfcf63f25dfe"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5947.mp4",
+      "bytes": 67854,
+      "sha256": "179b91a6eb4f6cfe5d6ce2324dcaea645469000f0a620ec7a85a1373b3114f72"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5949.mp4",
+      "bytes": 76241,
+      "sha256": "e4ff90449478582c61d6d56d7eadb9b7aa3d47d40592f145e480ea8be50941a8"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5951.mp4",
+      "bytes": 163274,
+      "sha256": "1e7f9c70d524cd6d82bb91f0817fec733b6be5901e4792ff84fddaa201ec11d4"
+    },
+    {
+      "path": "assets/Motion DS/v2/video-4793-5953.mp4",
+      "bytes": 205822,
+      "sha256": "adc154100e901b341d9d95dede35af6e86ba731a8d34ab9b5bf01cd9387c1316"
+    },
+    {
+      "path": "assets/Registro ML/v2/agnostic.png",
+      "bytes": 59953,
+      "sha256": "0e768de7af602a1583dc991ac304ffaf076c9005f51304c994dcf8afada6b273"
+    },
+    {
+      "path": "assets/Registro ML/v2/calendar.svg",
+      "bytes": 705,
+      "sha256": "83570f190096bcb8fc09d623ef698a4f5364517c5271406fc7dec2a41611d99a"
+    },
+    {
+      "path": "assets/Registro ML/v2/codex-small.svg",
+      "bytes": 2528,
+      "sha256": "6dd6027535ee33cd5c0ab51388cd5eaf02faef50187bb090f57c4bda78c1a479"
+    },
+    {
+      "path": "assets/Registro ML/v2/codex.svg",
+      "bytes": 2537,
+      "sha256": "b85c7e62d8bc456cca9b0f95282c3802a19807384aed75a8155dadf832d501b6"
+    },
+    {
+      "path": "assets/Registro ML/v2/compare-center.svg",
+      "bytes": 248,
+      "sha256": "5562a7bcb59538859dc1167fdf50736d4220596d0c93e574331fd035302c719b"
+    },
+    {
+      "path": "assets/Registro ML/v2/compare-side.svg",
+      "bytes": 261,
+      "sha256": "5d610d8f250ab0cb41035f137fff88c1956fbca022c2a03830fe710d31bb23d3"
+    },
+    {
+      "path": "assets/Registro ML/v2/email.svg",
+      "bytes": 636,
+      "sha256": "154be442dcf6278435ee5986ca9f3df92e60debed9729f996ad521a6c9c309e9"
+    },
+    {
+      "path": "assets/Registro ML/v2/flag-en.svg",
+      "bytes": 1367,
+      "sha256": "f85762ba53ecaf70b401b7e7067ff6b15b8f7f78ae84c56688a4907eff6cec89"
+    },
+    {
+      "path": "assets/Registro ML/v2/flag-es.svg",
+      "bytes": 1524,
+      "sha256": "7e16ad16a7bdef5d9c9a14abb651af7cef39c06b97d16a3a40945d43ddfc0564"
+    },
+    {
+      "path": "assets/Registro ML/v2/form.png",
+      "bytes": 60226,
+      "sha256": "344bf29dc6efe132e456e87d1cd3f6c8426fcbaf138e99e7f8dc927e4de055b1"
+    },
+    {
+      "path": "assets/Registro ML/v2/google.png",
+      "bytes": 60051,
+      "sha256": "6621a402395380c920a4bdd529fb81a12bb2e99e6bcb09ba1c0d25370faaf0f8"
+    },
+    {
+      "path": "assets/Registro ML/v2/hero-desktop.png",
+      "bytes": 770802,
+      "sha256": "e94753799d1f9b2b1cf253c74a25c32a0ab05607aea6156aeb71e4e03e604fbf"
+    },
+    {
+      "path": "assets/Registro ML/v2/hero-divider.svg",
+      "bytes": 247,
+      "sha256": "2520ab7aa8a25a65f3dcc6b305633deaec803fd5eb978121a57a6b6340db8683"
+    },
+    {
+      "path": "assets/Registro ML/v2/hero-mobile.png",
+      "bytes": 770802,
+      "sha256": "e94753799d1f9b2b1cf253c74a25c32a0ab05607aea6156aeb71e4e03e604fbf"
+    },
+    {
+      "path": "assets/Registro ML/v2/legacy.png",
+      "bytes": 60626,
+      "sha256": "cb7dd2baf577bb48e21d14e5f98e8605469c4881fa2dc9a88618e9cec8b2a64a"
+    },
+    {
+      "path": "assets/Registro ML/v2/linkedin.svg",
+      "bytes": 1368,
+      "sha256": "dbfb9b8aca5b5efb4b2fafb7ed6b6a1e1ceb23acbcea136a43981adab56cfc50"
+    },
+    {
+      "path": "assets/Registro ML/v2/logo.svg",
+      "bytes": 5291,
+      "sha256": "dfb969eee17ba2f25f506ab9d6993fd28b8e5fd51f29e44c4471b96a02c40c63"
+    },
+    {
+      "path": "assets/Registro ML/v2/menu-high.svg",
+      "bytes": 431,
+      "sha256": "35270fe332d44818e6067bf703620b19950fd84f8142b8fa089994d5c6b75c74"
+    },
+    {
+      "path": "assets/Registro ML/v2/menu-low.svg",
+      "bytes": 431,
+      "sha256": "c281f2a978a5010794dc3c3a9bfc704076795865338b4a8ac0711bd3716d3ec2"
+    },
+    {
+      "path": "assets/Registro ML/v2/menu-middle.svg",
+      "bytes": 433,
+      "sha256": "6cda4b4e85e194ad7827dc59e4f6cdd8e9111a11e42ab16113d07257f0978b59"
+    },
+    {
+      "path": "assets/Registro ML/v2/profile-small.svg",
+      "bytes": 526,
+      "sha256": "f25abc9dbc4e7ec36bcf51b523b299fc0076ab1a303af578b87b1981d3d4beba"
+    },
+    {
+      "path": "assets/Registro ML/v2/profile.svg",
+      "bytes": 536,
+      "sha256": "644ce0348d0ce0b3abedd35e3ce1f2ef33174d3100e42df2b7a2d3e186ac7c0a"
+    },
+    {
+      "path": "assets/Registro ML/v2/review-copy.json",
+      "bytes": 8775,
+      "sha256": "176150be4b9229b6879b3b2141311f71cfac8b9de7226f3e0c66b61a1aab7c38"
+    },
+    {
+      "path": "assets/Registro ML/v2/summary-divider.svg",
+      "bytes": 247,
+      "sha256": "1ed45a130c013917b9ff21ef837bcdd59349f2526e8334eceb8e984b277e3149"
+    },
+    {
+      "path": "assets/Registro ML/v2/unified.png",
+      "bytes": 56185,
+      "sha256": "2661987efeebf83b6daeef198ca6d942c6f0d0ffb5aeeda9c4a2c20cfab355f8"
+    },
+    {
+      "path": "assets/Registro ML/v2/whatsapp.svg",
+      "bytes": 3300,
+      "sha256": "1ab4f038301045dd56ec89622541825a7b8b12323843f43c3bb2c1067a66760e"
+    },
+    {
+      "path": "assets/Videos/Flujo registro ML.mov",
+      "bytes": 2957293,
+      "sha256": "0d52e801a4864c4c24a31e299c241495a2cae431296455b7b446bb8be22cd22a"
+    },
+    {
+      "path": "assets/Videos/Menores/Análisis IA.mov",
+      "bytes": 1640211,
+      "sha256": "2263a429cd9efa5eb1248ca45457c1a6f7b1f63c0faf7cd7291959dde450f7fc"
+    },
+    {
+      "path": "assets/Videos/Menores/Creación de cuenta.mov",
+      "bytes": 739175,
+      "sha256": "6c1830d3ba93b9dc5069bf20e1a54a0bcec5bff3f5fff97a703395e213650c25"
+    },
+    {
+      "path": "assets/Videos/Menores/Ingreso datos del adulto.mov",
+      "bytes": 10084998,
+      "sha256": "53c9a5aee48a9c02478a2ca053cdcb1c0bf240c57fedec9dbfa01553c4f3e7e9"
+    },
+    {
+      "path": "assets/Videos/Menores/Invitación al menor.mov",
+      "bytes": 1543750,
+      "sha256": "30fb954c6290d86ff4d2b0bd5e7914622d01b93b145db483b611d8c75aba3e4e"
+    },
+    {
+      "path": "assets/Videos/MenoresMLM.mov",
+      "bytes": 13735264,
+      "sha256": "2fc2c429d94408765cb1beae94a49e4dd7ab2377476de27af0200d543fa08ef7"
+    },
+    {
+      "path": "assets/Videos/Motion DS/Motion DS 01.mov",
+      "bytes": 260040,
+      "sha256": "06af95b074fc719b8b0b78483aa4efe0194686502751d9276b0c1dc8dbb33b2e"
+    },
+    {
+      "path": "assets/Videos/Motion DS/Motion DS 02.mov",
+      "bytes": 283404,
+      "sha256": "dac0515327c234864f4ce2ebba0559184429697973d043e3a7642a8c215cab63"
+    },
+    {
+      "path": "assets/Videos/Registro/Registro Google.mov",
+      "bytes": 5599099,
+      "sha256": "e4933a60f14022a3c31af455314cc01e9c525fa97b29a2efcf59a78907a88b22"
+    },
+    {
+      "path": "assets/Videos/Registro/Registro agnóstico.mov",
+      "bytes": 2470189,
+      "sha256": "a9967d62cc73db71b60c1b932fc60a18811285984e4782fe341f19bd4680ca35"
+    },
+    {
+      "path": "assets/Videos/Registro/Registro formulario.mov",
+      "bytes": 8534435,
+      "sha256": "f572d6e668890c2b2821caec27d622e6e9431e7e4598e148d31914bc823eaec0"
+    },
+    {
+      "path": "assets/Videos/Registro/Registro legacy.mov",
+      "bytes": 4314663,
+      "sha256": "916d23fe0903768c5b1d4e96df1afb421f3ee2db39f77062ca2eec3121e8da36"
+    },
+    {
+      "path": "assets/Videos/Registro/Registro unificado.mov",
+      "bytes": 11076722,
+      "sha256": "cf847c6a52c5dde00f3aa9d3f24c136bf1ee8d5d7da91ea0d6ffa53285fb428d"
+    },
+    {
+      "path": "assets/Videos/home-v2-poster-1.png",
+      "bytes": 575208,
+      "sha256": "f1641f9fc39721febdaf523550b40c5a9991875b4e520c42ce7bbf9f42673183"
+    },
+    {
+      "path": "assets/Videos/home-v2-poster-3.png",
+      "bytes": 527188,
+      "sha256": "ca6037798e5df15d128e879e789134aa194dab237db7f87be54d4b1b46d6a93e"
+    },
+    {
+      "path": "css/analytics.css",
+      "bytes": 3847,
+      "sha256": "2959f7578cd04d764c5bc5f9e686e92163a83d857a0bc86eb6247befaef249f7"
+    },
+    {
+      "path": "js/analytics.js",
+      "bytes": 12783,
+      "sha256": "efa6fc80d485cff5ce7ec8fb4ee4e69e79995c1bb542c09c43424c81ff77c1d6"
+    },
+    {
+      "path": "js/menores-v2.js",
+      "bytes": 14023,
+      "sha256": "5284a168208f8d8c37f468efc3cb6bcef8c9ef745fbe7a999c3c723734fe58ab"
+    },
+    {
+      "path": "work/menores-mexico.html",
+      "bytes": 19497,
+      "sha256": "7a7231e8c377fb2216206bbf86e7e229ae527abcff0401cc9c2f300163588d60"
+    }
+  ]
+}

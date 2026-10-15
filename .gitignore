@@ -2,21 +2,37 @@
 .claude/
 *.log
 
-# Local-only review media: validate content and add authenticated delivery before publication.
-assets/Videos/
+# Videos are local by default. Only the public V2 media below can enter Git.
+/assets/Videos/**
+!/assets/Videos/Menores/
+!/assets/Videos/Motion DS/
+!/assets/Videos/Registro/
+!/assets/Videos/Flujo registro ML.mov
+!/assets/Videos/Menores/Análisis IA.mov
+!/assets/Videos/Menores/Análisis IA.mov
+!/assets/Videos/Menores/Creación de cuenta.mov
+!/assets/Videos/Menores/Creación de cuenta.mov
+!/assets/Videos/Menores/Ingreso datos del adulto.mov
+!/assets/Videos/Menores/Invitación al menor.mov
+!/assets/Videos/Menores/Invitación al menor.mov
+!/assets/Videos/MenoresMLM.mov
+!/assets/Videos/Motion DS/Motion DS 01.mov
+!/assets/Videos/Motion DS/Motion DS 02.mov
+!/assets/Videos/Registro/Registro Google.mov
+!/assets/Videos/Registro/Registro agnóstico.mov
+!/assets/Videos/Registro/Registro agnóstico.mov
+!/assets/Videos/Registro/Registro formulario.mov
+!/assets/Videos/Registro/Registro legacy.mov
+!/assets/Videos/Registro/Registro unificado.mov
+!/assets/Videos/home-v2-poster-1.png
+!/assets/Videos/home-v2-poster-3.png
 
-# Registro ML v2: private Figma evidence and review copy, local preview only.
-assets/Registro ML/v2/
+# Public V2 case assets remain in their existing per-case folders:
+# assets/Registro ML/v2/, assets/Motion DS/v2/, assets/Menores/v2/.
+# Their presence in Git is preparation, not confirmation of content clearance.
 
-# Motion Level v2: internal artwork, original media and review copy stay local.
-assets/Motion DS/v2/
-
-# Accounts for minors: local V2 review, pending authenticated publication.
-work/menores-mexico.html
-js/menores-v2.js
-assets/Menores/v2/
-
-# Cross-country account switching: local V2 review only.
-work/cambio-cuentas-paises.html
-js/country-v2.js
-assets/Country switch/v2/
+# Switch: local only until authenticated delivery covers HTML, data and media.
+/work/cambio-cuentas-paises.html
+/js/country-v2.js
+/assets/Country switch/
+/assets/Switch países/

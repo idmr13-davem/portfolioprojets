@@ -1,0 +1,29 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="34" height="25" viewBox="0 0 34 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 1171280030">
+<g clip-path="url(#clip0_0_139)">
+<g id="Vector">
+<path d="M1 1H33V24H1V1Z" fill="#D9D9D9"/>
+<path d="M1 1H17V13.3846H1V1Z" fill="#383C69"/>
+<path d="M17 1H33L33 2.76923H17L17 1Z" fill="#AF2735"/>
+<path d="M17 4.53851H33V6.30774H17V4.53851Z" fill="#AF2735"/>
+<path d="M17 8.07679H33V9.84602H17V8.07679Z" fill="#AF2735"/>
+<path d="M17 11.6155H33V13.3848L17 13.3846L17 11.6155Z" fill="#AF2735"/>
+<path d="M17 2.76923H33V4.53851H17V2.76923Z" fill="#D9D9D9"/>
+<path d="M17 6.30774H33V8.07679H17V6.30774Z" fill="#D9D9D9"/>
+<path d="M17 9.84602H33V11.6155H17V9.84602Z" fill="#D9D9D9"/>
+<path d="M1 15.1538H33V16.923H1V15.1538Z" fill="#AF2735"/>
+<path d="M1 18.6923H33V20.4615H1V18.6923Z" fill="#AF2735"/>
+<path d="M1 22.2308H33V24H1V22.2308Z" fill="#AF2735"/>
+<path d="M1 13.3846L33 13.3848L33 15.1538H1V13.3846Z" fill="#D9D9D9"/>
+<path d="M1 16.923H33V18.6923H1V16.923Z" fill="#D9D9D9"/>
+<path d="M1 20.4615H33V22.2308H1V20.4615Z" fill="#D9D9D9"/>
+</g>
+</g>
+<rect x="0.5" y="0.5" width="33" height="24" rx="4.5" stroke="#BED2D2" stroke-opacity="0.5"/>
+</g>
+<defs>
+<clipPath id="clip0_0_139">
+<rect x="1" y="1" width="32" height="23" rx="4" fill="white"/>
+</clipPath>
+</defs>
+</svg>
