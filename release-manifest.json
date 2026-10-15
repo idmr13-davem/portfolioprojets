@@ -1097,8 +1097,8 @@
     },
     {
       "path": "work/menores-mexico.html",
-      "bytes": 19695,
-      "sha256": "fff7efeefed4f8e1d9ea84030110468f91c68c0352abfd8c578f6f03f8bb990a"
+      "bytes": 19692,
+      "sha256": "a5f32244d2ec82f6849630a91d8367d7d6ee4963c2935cc804ba757e036d295e"
     },
     {
       "path": "work/motion-design-system.html",
@@ -1107,8 +1107,8 @@
     },
     {
       "path": "work/registro-ml.html",
-      "bytes": 17692,
-      "sha256": "0a9d0a1e605acfb6aba9189e63867aaa60997ba9b03c005b270a6181710aa6cf"
+      "bytes": 17690,
+      "sha256": "3ea3a175a498c6383ec5577c7ab2488172ea54650279a1419651c4c4103760ce"
     }
   ]
 }
