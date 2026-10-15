@@ -1,0 +1,53 @@
+/* Spacing only. Figma: Registro 4745:7146 / 4776:2596 / 4776:3436;
+   Motion 4793:5268 / 4805:20325 / 4805:21226;
+   Cuentas para menores 4875:14914 / 4899:4076 / 4899:5693. */
+body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) {
+  --case-section-space:var(--space-xl);
+}
+body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) :is(
+  .rml-summary,.rml-context-copy,.rml-challenges,.rml-step,.rml-final,
+  .motion-roadmap,.motion-focus,.motion-level,.motion-axes,.motion-final,
+  .menores-section
+) {
+  padding-block:var(--case-section-space);
+}
+body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) .rml-hero {
+  padding-top:var(--space-xl);
+  padding-bottom:var(--case-section-space);
+}
+body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) .rml-contact {
+  padding-top:var(--case-section-space);
+  padding-bottom:var(--space-mega);
+}
+/* The objectives/logros group uses 20px, independently of section padding. */
+body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) .rml-summary {gap:20px;}
+.motion-v2 .motion-focus-grid {gap:var(--space-m);}
+.menores-v2 #outcomes {gap:20px;}
+.menores-v2 #advantage .rml-copy {margin-top:0;}
+
+@media (min-width:768px) and (max-width:1279px) {
+  body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) {
+    --case-section-space:var(--space-l);
+  }
+}
+@media (max-width:767px) {
+  body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) {
+    --case-section-space:var(--space-m);
+  }
+  body:is(.registro-ml-v2,.motion-v2,.menores-v2,.country-v2) .v2-contact-bar {
+    margin-top:var(--space-xl);
+  }
+  .registro-ml-v2 .rml-comparison,
+  .registro-ml-v2 #agnostic .rml-comparison {padding-block:2px;}
+  .registro-ml-v2 #unification .rml-details {gap:var(--space-s);}
+  .motion-v2 .motion-level-grid {margin-top:0;}
+  .motion-v2 :is(.motion-internal-gallery,.motion-expressivity-gallery) {
+    gap:var(--space-m);
+    padding-block:0;
+  }
+  .motion-v2 .motion-internal-gallery figure {padding-block:0;}
+  /* Center the separator in the updated 24px gap. */
+  .motion-v2 .motion-expressivity-gallery figure+figure::before {top:-13px;}
+  .motion-v2 .motion-axis>div:last-child {gap:var(--space-xxl);}
+  .menores-v2 .menores-gallery {padding-block:0;}
+}

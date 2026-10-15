@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="30" viewBox="0 0 60 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Toggle pill">
+<path d="M0 15C0 6.71573 6.71573 0 15 0H45C53.2843 0 60 6.71573 60 15V15C60 23.2843 53.2843 30 45 30H15C6.71573 30 0 23.2843 0 15V15Z" fill="#0A2323"/>
+<g id="Vector">
+<path d="M14.5 8C14.5 5.79086 16.2909 4 18.5 4H41.5C43.7091 4 45.5 5.79086 45.5 8V14H14.5V8Z" fill="#FFD900"/>
+<path d="M14.5 14H45.5V20H14.5V14Z" fill="#0026E5"/>
+<path d="M14.5 20H45.5V22C45.5 24.2091 43.7091 26 41.5 26H18.5C16.2909 26 14.5 24.2091 14.5 22V20Z" fill="#C8141D"/>
+<path d="M41.5 3.5L41.7314 3.50586C44.1092 3.62632 46 5.59234 46 8V22C46 24.4853 43.9853 26.5 41.5 26.5H18.5C16.0147 26.5 14 24.4853 14 22V8C14 5.51472 16.0147 3.5 18.5 3.5H41.5Z" stroke="#BED2D2" stroke-opacity="0.5"/>
+</g>
+</g>
+</svg>

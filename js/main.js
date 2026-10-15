@@ -68,7 +68,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
           <button class="language-toggle__option" type="button" data-language="es" aria-pressed="false">ES</button>
         </div>
         <a href="mailto:idmr13@gmail.com" class="btn-contact">
-          <div class="btn-contact__thumb"><img src="${rootPath}assets/Home/Imágenes/Img contact.png" alt="David Montealegre"></div>
+          <div class="btn-contact__thumb"><img src="${rootPath}assets/Home/v2/contact.png" alt="David Montealegre"></div>
           <span class="btn-contact__label">Get in touch</span>
         </a>
       </div>
@@ -81,8 +81,10 @@ const scrollFill = document.getElementById('scrollProgressFill');
     drawer.classList.toggle('is-open', open);
     overlay.classList.toggle('is-drawer-open', open);
     drawer.setAttribute('aria-hidden', String(!open));
+    drawer.toggleAttribute('inert', !open);
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menu.setAttribute('aria-label', document.documentElement.lang === 'es' ? (open ? 'Cerrar navegación' : 'Abrir navegación') : (open ? 'Close navigation' : 'Open navigation'));
+    menu.dataset.ariaLabelEn = open ? 'Close navigation' : 'Open navigation';
   }
   menu.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
   close.addEventListener('click', () => setDrawer(false));
@@ -103,8 +105,10 @@ const scrollFill = document.getElementById('scrollProgressFill');
     drawer.classList.toggle('is-open', open);
     document.body.classList.toggle('is-mobile-menu-open', open);
     drawer.setAttribute('aria-hidden', String(!open));
+    drawer.toggleAttribute('inert', !open);
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menu.setAttribute('aria-label', document.documentElement.lang === 'es' ? (open ? 'Cerrar navegación' : 'Abrir navegación') : (open ? 'Close navigation' : 'Open navigation'));
+    menu.dataset.ariaLabelEn = open ? 'Close navigation' : 'Open navigation';
   }
 
   menu.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
@@ -112,6 +116,8 @@ const scrollFill = document.getElementById('scrollProgressFill');
     link.addEventListener('click', () => setDrawer(false));
   });
   dimmer?.addEventListener('click', () => setDrawer(false));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && drawer.classList.contains('is-open')) { setDrawer(false); menu.focus(); } });
+  window.addEventListener('resize', () => { if (window.innerWidth >= (document.body.classList.contains('home-v2') ? 1000 : 1025)) setDrawer(false); });
 })();
 
 // ─────────────────────────────────────────
@@ -128,8 +134,10 @@ const scrollFill = document.getElementById('scrollProgressFill');
     drawer.classList.toggle('is-open', open);
     document.body.classList.toggle('is-mobile-menu-open', open);
     drawer.setAttribute('aria-hidden', String(!open));
+    drawer.toggleAttribute('inert', !open);
     menu.setAttribute('aria-expanded', String(open));
-    menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    menu.setAttribute('aria-label', document.documentElement.lang === 'es' ? (open ? 'Cerrar navegación' : 'Abrir navegación') : (open ? 'Close navigation' : 'Open navigation'));
+    menu.dataset.ariaLabelEn = open ? 'Close navigation' : 'Open navigation';
   }
 
   menu.addEventListener('click', () => setDrawer(!drawer.classList.contains('is-open')));
@@ -146,7 +154,7 @@ const scrollFill = document.getElementById('scrollProgressFill');
   const rootPath = isNestedPage ? '../' : '';
   const closing = document.querySelector('.section-closing, .about-closing, .cs-cierre');
 
-  if (closing) {
+  if (closing && !document.body.classList.contains('home-v2') && !document.body.classList.contains('article-v2')) {
     closing.id = 'contact';
     closing.className = 'section-closing';
     closing.innerHTML = `
@@ -160,16 +168,16 @@ const scrollFill = document.getElementById('scrollProgressFill');
             </div>
           </div>
           <div class="closing-actions" aria-label="Contact options">
-            <a class="contact-action contact-action--email" href="mailto:idmr13@gmail.com">
-              <img src="${rootPath}assets/Icons/contact-email.svg" alt="" aria-hidden="true" />
+            <a class="contact-action contact-action--email" aria-label="Send me an email" href="mailto:idmr13@gmail.com">
+              <picture aria-hidden="true"><source media="(max-width:767px)" srcset="${rootPath}assets/Home/v2/email-small.svg"><img src="${rootPath}assets/Home/v2/email.svg" alt="" aria-hidden="true" /></picture>
               <span>Send me an email</span>
             </a>
-            <a class="contact-action contact-action--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">
-              <img src="${rootPath}assets/Icons/contact-linkedin.svg" alt="" aria-hidden="true" />
+            <a class="contact-action contact-action--linkedin" aria-label="Visit my profile on LinkedIn" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">
+              <picture aria-hidden="true"><source media="(max-width:767px)" srcset="${rootPath}assets/Home/v2/linkedin-small.svg"><img src="${rootPath}assets/Home/v2/linkedin.svg" alt="" aria-hidden="true" /></picture>
               <span>Visit my profile</span>
             </a>
-            <a class="contact-action contact-action--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">
-              <img src="${rootPath}assets/Icons/contact-whatsapp.svg" alt="" aria-hidden="true" />
+            <a class="contact-action contact-action--whatsapp" aria-label="Send me a message on WhatsApp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">
+              <picture aria-hidden="true"><source media="(max-width:767px)" srcset="${rootPath}assets/Home/v2/whatsapp-small.svg"><img src="${rootPath}assets/Home/v2/whatsapp.svg" alt="" aria-hidden="true" /></picture>
               <span>Send me a message</span>
             </a>
           </div>
@@ -187,8 +195,8 @@ const scrollFill = document.getElementById('scrollProgressFill');
         <span class="site-footer__copy">© David Montealegre 2026</span>
         <span class="site-footer__credit">
           <span>Website created with</span>
-          <img class="site-footer__brand-icon" src="${rootPath}assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
-          <span>ChatGPT Work</span>
+          <img class="site-footer__brand-icon" src="${rootPath}assets/Home/v2/codex.svg" alt="" aria-hidden="true" />
+          <span>Codex</span>
         </span>
       </div>`;
   });
@@ -198,8 +206,8 @@ const scrollFill = document.getElementById('scrollProgressFill');
       <small class="mobile-home-drawer__copy">© David Montealegre 2026</small>
       <span class="mobile-home-drawer__credit">
         <span>Website created with</span>
-        <img class="site-footer__brand-icon" src="${rootPath}assets/Home/Vectores/LogoChatGPT.png" alt="" aria-hidden="true" />
-        <span>ChatGPT Work</span>
+        <img class="site-footer__brand-icon" src="${rootPath}assets/Home/v2/codex.svg" alt="" aria-hidden="true" />
+        <span>Codex</span>
       </span>`;
   });
 })();
@@ -210,12 +218,22 @@ const scrollFill = document.getElementById('scrollProgressFill');
 (function initLanguageToggle() {
   const toggles = document.querySelectorAll('.language-toggle');
   const supportedLanguages = ['en', 'es'];
-  const storedLanguage = localStorage.getItem('portfolio-language');
+  const articleLanguage = document.body.classList.contains('article-v2') ? new URLSearchParams(location.search).get('lang') : null;
+  const storedLanguage = ['en', 'es'].includes(articleLanguage) ? articleLanguage : localStorage.getItem('portfolio-language');
   let currentLanguage = supportedLanguages.includes(storedLanguage) ? storedLanguage : 'en';
+
+  toggles.forEach(toggle => {
+    toggle.querySelectorAll('.language-toggle__option').forEach(option => {
+      option.setAttribute('aria-label', option.dataset.language === 'en' ? 'English' : 'Español');
+      option.innerHTML = `<img src="${window.location.pathname.includes('/work/') || window.location.pathname.includes('/articles/') ? '../' : ''}assets/Home/v2/${option.dataset.language === 'en' ? (toggle.hasAttribute('data-header-toggle') ? 'header-flag-en.svg' : 'flag-en.svg') : (toggle.hasAttribute('data-header-toggle') ? 'header-flag-es-unselected.svg' : 'flag-es-unselected.svg')}" alt="" />`;
+    });
+  });
 
   function updateToggleVisuals(language) {
     toggles.forEach(toggle => {
       toggle.dataset.activeLanguage = language;
+      const spanishFlag = toggle.querySelector('[data-language="es"] img');
+      if (spanishFlag) spanishFlag.src = `${window.location.pathname.includes('/work/') || window.location.pathname.includes('/articles/') ? '../' : ''}assets/Home/v2/${toggle.hasAttribute('data-header-toggle') && language !== 'es' ? 'header-' : ''}flag-es-${language === 'es' ? 'selected' : 'unselected'}.svg?v=20261013-colombia`;
       if (!toggle.querySelector('.language-toggle__active-labels')) {
         const activeLabels = document.createElement('span');
         activeLabels.className = 'language-toggle__active-labels';
@@ -238,7 +256,10 @@ const scrollFill = document.getElementById('scrollProgressFill');
     });
     toggles.forEach(toggle => {
       toggle.querySelectorAll('.language-toggle__option').forEach(option => {
-        option.setAttribute('aria-pressed', String(option.dataset.language === language));
+        if (option.getAttribute('role') === 'radio') {
+          option.setAttribute('aria-checked', String(option.dataset.language === language));
+          option.tabIndex = option.dataset.language === language ? 0 : -1;
+        } else option.setAttribute('aria-pressed', String(option.dataset.language === language));
       });
     });
   }
@@ -317,12 +338,13 @@ window.addEventListener('scroll', () => {
 // ─────────────────────────────────────────
 const dot = document.getElementById('cursorDot');
 document.addEventListener('mousemove', e => {
+  if (!dot) return;
   dot.style.left = e.clientX + 'px';
   dot.style.top  = e.clientY + 'px';
 });
 document.querySelectorAll('a, button, [role="link"]').forEach(el => {
-  el.addEventListener('mouseenter', () => dot.classList.add('over-link'));
-  el.addEventListener('mouseleave', () => dot.classList.remove('over-link'));
+  el.addEventListener('mouseenter', () => dot?.classList.add('over-link'));
+  el.addEventListener('mouseleave', () => dot?.classList.remove('over-link'));
 });
 
 // ─────────────────────────────────────────

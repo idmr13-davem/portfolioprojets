@@ -1,0 +1,139 @@
+/* Figma 4938:84736 / 84727 / 84709 / 84718; shared Units buttons and tokens. */
+.analytics-consent,
+.analytics-settings {
+  --consent-button-size: var(--text-btn-s);
+  --consent-button-line: var(--lh-btn-s);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+.analytics-consent {
+  position: fixed;
+  z-index: 10000;
+  inset: auto 20px 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-ss);
+  width: min(500px, calc(100% - 40px));
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  padding: var(--space-l);
+  box-sizing: border-box;
+  background: var(--background-secondary);
+  border: 0;
+  border-radius: var(--radius-s);
+  box-shadow: 0 2px 2px rgba(30, 210, 210, .06);
+}
+.analytics-consent[hidden] { display: none; }
+/* Keep the banner visible through legacy internal-page mobile rules. */
+#portfolio-analytics-consent:not([hidden]) { display: flex !important; }
+#portfolio-analytics-settings { display: block !important; }
+.analytics-consent h2 {
+  margin: 0;
+  color: #fff;
+  font: 700 var(--text-title-xs)/var(--lh-title-xs) var(--font-title);
+}
+.analytics-consent p {
+  margin: 0;
+  font: 300 var(--text-body-s)/var(--lh-body-s) var(--font-body);
+}
+.analytics-consent__actions .btn {
+  font-size: var(--consent-button-size);
+  line-height: var(--consent-button-line);
+}
+.analytics-consent__actions { display: flex; flex-wrap: nowrap; gap: var(--space-s); }
+.analytics-consent__actions .btn { flex: 1 1 0; min-height: 38px; }
+.analytics-settings {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-xs) var(--space-s);
+  border-top: 1px solid var(--stroke-secondary);
+  text-align: left;
+  background: var(--background-deep);
+  color: var(--brand-logo-main-75pct);
+  font: 400 var(--text-cap-m)/var(--lh-cap-m) var(--font-body);
+}
+.analytics-settings p { margin: 0; font: inherit; color: inherit; }
+.analytics-settings__link {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--interactive-primary-idle);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+@media (max-width: 1279px) {
+  .analytics-settings { font-size: var(--text-cap-s); line-height: var(--lh-cap-s); }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  body.home-page.home-v2 .site-footer__brand-icon { width: 16px; height: 15px; }
+}
+@media (max-width: 767px) {
+  body.home-page.home-v2 .site-footer__bottom {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-xxs);
+    min-height: 0;
+    padding: var(--space-xs) var(--space-s);
+  }
+  body.home-page.home-v2 .site-footer__copy,
+  body.home-page.home-v2 .site-footer__credit { font: 400 var(--text-cap-s)/var(--lh-cap-s) var(--font-body); }
+  body.home-page.home-v2 .site-footer__credit { gap: var(--space-nano); }
+  body.home-page.home-v2 .site-footer__brand-icon { width: 12px; height: 12px; }
+}
+/* Figma entrance: retain emitted timing/easing, play once per opening. */
+.analytics-consent:not([hidden]) {
+  animation: consent-opacity 1s linear both, consent-from-right 1s linear both;
+}
+@keyframes consent-opacity {
+  0% { animation-timing-function: cubic-bezier(.5, 0, .5, 1); opacity: 0; }
+  40%, 100% { opacity: 1; }
+}
+@keyframes consent-from-right {
+  0% { animation-timing-function: cubic-bezier(.05, .7, .1, 1); transform: translateX(40px); }
+  60%, 100% { transform: translateX(0); }
+}
+@keyframes consent-tablet-opacity {
+  0% { animation-timing-function: cubic-bezier(.5, 0, .5, 1); opacity: 0; }
+  16%, 100% { opacity: 1; }
+}
+@keyframes consent-tablet-from-right {
+  0% { animation-timing-function: cubic-bezier(.05, .7, .1, 1); transform: translateX(40px); }
+  24%, 100% { transform: translateX(0); }
+}
+@keyframes consent-from-bottom {
+  0% { animation-timing-function: cubic-bezier(.05, .7, .1, 1); transform: translateY(40px); }
+  60%, 100% { transform: translateY(0); }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .analytics-consent:not([hidden]) {
+    animation: consent-tablet-opacity 2.5s linear both, consent-tablet-from-right 2.5s linear both;
+  }
+}
+@media (max-width: 767px) {
+  .analytics-consent:not([hidden]) {
+    animation-name: consent-opacity, consent-from-bottom;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .analytics-consent:not([hidden]) { animation: none; opacity: 1; transform: none; }
+}
+.analytics-consent :focus-visible,
+.analytics-settings :focus-visible {
+  outline: 2px solid var(--interactive-primary-idle);
+  outline-offset: var(--space-nano);
+}
+@media (max-width: 767px) {
+  .analytics-consent {
+    right: 2.5vw;
+    bottom: 2.5vw;
+    width: min(500px, 95vw);
+    max-height: calc(100dvh - 5vw);
+  }
+}
+@media (max-width: 359px) {
+  .analytics-consent { padding: var(--space-s); }
+}

@@ -1,54 +1,11 @@
-# davidmontealegreux.com
+# Portfolio V2 — GitHub Pages
 
-Public source for David Montealegre's product design portfolio.
+Static release for davidmontealegreux.com, containing the three public case studies.
 
-## Local preview
+Copy this folder’s contents into the publishing branch root, with index.html, CNAME and .nojekyll at the root. In Settings > Pages, select Deploy from a branch and the root folder. Do not upload the ZIP itself or the outer releases folder. Replace the old publishing tree rather than overlaying files, so obsolete files do not survive. Preserve your repository Git history separately.
 
-Run a static web server from this directory and open `index.html`. The site is built with plain HTML, CSS, and JavaScript and requires no build step.
+No build or server is required. English is the default; Spanish is available. The custom domain and production analytics guards are retained. A repository-subpath deployment without the custom domain is not this release’s target.
 
-## Deployment
+Prepared from local working files; this package is not evidence of employer content approval. No deployment was performed.
 
-This repository is intended for GitHub Pages and the custom domain `davidmontealegreux.com`.
-
-## Architecture and growth
-
-The project intentionally uses plain HTML, CSS, and JavaScript while that remains proportional to its size. CSS ownership, case-study separation criteria, publishing checks, and thresholds for introducing templates, structured content, or other tooling are documented in [`docs/architecture-and-growth.md`](docs/architecture-and-growth.md).
-
-## Content
-
-The public site contains exactly two case studies:
-
-- Registro Mercado Libre
-- Motion Level Design System
-
-Internal strategy, drafts, source research, unapproved metrics, and compliance notes are maintained in a separate private repository.
-
-## Current implementation
-
-The current public experience includes:
-
-- A redesigned Home with fixed navigation, an animated hero scroll indicator, selected work, About me, articles, and contact sections.
-- The latest Home polish from Figma, including the `#222324` main background, updated arrow button component, and the redesigned My articles carousel with final-card left alignment.
-- Home typography uses the Figma reduced scale for non-hero text at widths up to `1499px`, and arrow-button hover states use the corrected `15px` `#A689FF` Figma asset.
-- Responsive mobile layouts for Home, the two public case studies, and the first article page.
-- A mobile burger menu with language toggle, contact CTA, footer, and scroll locking.
-- The first article page, “Por qué Mercado Libre fue el primer lugar del que no quise irme?”, implemented from the Figma editorial design.
-- Figma-aligned typography, color, spacing, margin, and border-radius tokens in `css/styles.css`.
-- Exclusive project accordions: the first item opens by default and only one item can remain open at a time.
-- Matching idle, hover, open, and open-hover states with reduced-motion support.
-- Localized English and Spanish content, including language-specific CV links.
-- A shared closing contact section across Home, About, the article, and both case studies, with email, LinkedIn, and WhatsApp actions.
-- A simplified copyright-only footer across pages.
-- The Registro Mercado Libre “Our compounding changes” section converted from scroll disclosure to exclusive accordions.
-- Header contact buttons that navigate to the closing contact section on the current page.
-- Content is visible by default while scrolling; the previous scroll-triggered reveal animation has been removed.
-
-## Next backlog
-
-- Run visual QA across desktop and mobile for Home, both case studies, and the first article.
-- Review and polish article/readings content in Spanish and English.
-- Improve SEO and social sharing metadata.
-- Optimize image and video performance.
-- Define a faster case-study publishing framework for future projects such as Familia de Empresas and Ropstar.
-
-© 2026 David Montealegre. All rights reserved.
+GitHub documentation: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site

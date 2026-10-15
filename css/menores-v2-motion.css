@@ -1,0 +1,44 @@
+/* Native Figma section entrance, once per cohort.
+   Transform replaces translate; movement capped at 500ms per AGENTS.md. */
+.menores-v2 .rml-motion-ready:not(.is-visible) [data-motion] {opacity:0;}
+@keyframes menores_kf_0 { 0% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 20% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_1 { 0% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 25.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_2 { 0% { opacity: 0; } 10% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_3 { 0% { transform:translate(40px, 0px); } 9.993% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 34.993% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_4 { 0% { opacity: 0; } 20% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_5 { 0% { transform:translate(40px, 0px); } 20% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 45.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_6 { 0% { transform:translate(40px, 0px); } 10% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 35.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_7 { 0% { transform:translate(40px, 0px); } 20.006% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 45.006% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_8 { 0% { opacity: 0; } 30% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 50% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_9 { 0% { transform:translate(40px, 0px); } 30% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 55.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_10 { 0% { transform:translate(40px, 0px); } 0.006% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 25.006% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_11 { 0% { opacity: 0; } 30.006% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 50.006% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_12 { 0% { transform:translate(40px, 0px); } 30.006% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 55.006% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_13 { 0% { transform:translate(-40px, 0px); } 10% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(-40px, 0px); } 35.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_14 { 0% { transform:translate(-40px, 0px); } 30% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(-40px, 0px); } 55.0% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+@keyframes menores_kf_15 { 0% { opacity: 0; } 10.103% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 30.103% { opacity: 1; } 100% { opacity: 1; } }
+@keyframes menores_kf_16 { 0% { transform:translate(40px, 0px); } 10.103% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translate(40px, 0px); } 35.103% { transform:translate(0px, 0px); } 100% { transform:translate(0px, 0px); } }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3371"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3372"] {animation: menores_kf_2 2s linear, menores_kf_3 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3380"] {animation: menores_kf_4 2s linear, menores_kf_5 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3480"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3483"] {animation: menores_kf_2 2s linear, menores_kf_6 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3487"] {animation: menores_kf_4 2s linear, menores_kf_7 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3488"] {animation: menores_kf_4 2s linear, menores_kf_5 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3490"] {animation: menores_kf_8 2s linear, menores_kf_9 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3491"] {animation: menores_kf_8 2s linear, menores_kf_9 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3599"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3600"] {animation: menores_kf_0 2s linear, menores_kf_10 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3602"] {animation: menores_kf_2 2s linear, menores_kf_6 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3611"] {animation: menores_kf_4 2s linear, menores_kf_5 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3613"] {animation: menores_kf_11 2s linear, menores_kf_12 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3703"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3707"] {animation: menores_kf_2 2s linear, menores_kf_13 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3711"] {animation: menores_kf_2 2s linear, menores_kf_6 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3717"] {animation: menores_kf_8 2s linear, menores_kf_14 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3721"] {animation: menores_kf_8 2s linear, menores_kf_9 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3804"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3805"] {animation: menores_kf_15 2s linear, menores_kf_16 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3808"] {animation: menores_kf_0 2s linear, menores_kf_1 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+.menores-v2 .rml-motion-ready.is-visible [data-motion="4899:3809"] {animation: menores_kf_2 2s linear, menores_kf_6 2s linear; animation-iteration-count: 1; animation-fill-mode:both; }
+@media (prefers-reduced-motion:reduce) { .menores-v2 [data-motion] {animation:none!important;opacity:1!important;transform:none!important;} .menores-v2 .rml-menu,.menores-v2 .rml-menu>*,.menores-v2 .rml-bar {transition:none!important;} }
