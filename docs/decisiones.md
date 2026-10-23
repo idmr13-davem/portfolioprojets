@@ -6,3 +6,10 @@
 - Decisión de Claude: **rechazado para la exploración**. David pidió las propuestas V3 "sin limitaciones en cuanto a interacción, uso de imágenes, motion…". Se mantiene reduced motion.
 - Escalado a David: si Statement pasa a V3 de producción, decidir si vuelve el límite de 500 ms o si V3 adopta duraciones nuevas para entradas.
 - Respuesta de David (23-oct-2026): mantener las duraciones actuales en la exploración V3; la decisión final se toma al pasar a producción.
+
+## 2026-10-23 — Pixel Perfect en Statement (3 iteraciones con Codex)
+
+- Skill nueva `pixel-perfect` en `.agents/skills/pixel-perfect/` (enlazada en `.claude/skills/`); fuera de Git como el resto de `.agents/`.
+- Revisiones: `intercambio/revisiones/2026-10-23_pixel-perfect-statement_v{1,2,3}_revision.md`. Las tres terminaron en "Requiere cambios"; los hallazgos aceptados se aplicaron. Tras la v3 se aplicó su parche propuesto para el script, con un ajuste: listas como texto y botones como controles que se alinean por un borde (sin ese ajuste, cada botón ajustado a su texto se reportaba como fuera de retícula).
+- Resultado final (`.pixel-perfect/final/`): 70 combinaciones (8 páginas EN + 2 ES, de 360 a 1500 px), 0 altos, 0 medios, 90 `inset` bajos (relleno interno de componentes).
+- Pendiente de David (hallazgo alto de Codex): el nombre del hero en móvil pasó de 17 vw a 16,4 vw para evitar 1 px de desborde a 360 px, un cambio tipográfico fuera del alcance. Con 17 vw "Montealegre" invade el margen derecho en todo móvil. Opciones: mantener 16,4 vw; ajustar la palabra exactamente al ancho de la retícula; o volver a 17 vw aceptando que ocupe el margen.
