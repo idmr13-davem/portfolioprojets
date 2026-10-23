@@ -57,7 +57,8 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-btn:active { background: var(--accent-press); }
 .a-btn:active { transform: scale(.97); }
 .a-btn--inverse { background: var(--inverse-ink); color: var(--inverse); }
-.a-btn--inverse:hover { background: var(--interactive-primary-clic); color: var(--text-static-primary); }
+.a-btn--inverse:hover { background: var(--accent-hover); color: var(--accent-ink); }
+.a-btn--inverse:active { background: var(--accent-press); color: var(--accent-ink); }
 .a-btn[disabled] { opacity: .6; cursor: progress; }
 
 /* ---------- hero: the name, margin to margin ---------- */
@@ -226,7 +227,7 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-ar__hero { padding: 0 var(--margin); }
 .a-ar__hero img { width: 100%; }
 .a-ar__hero figcaption { margin-top: .75rem; color: var(--muted); font-size: var(--step-small); }
-.a-ar__body { width: min(42rem, 100%); margin: 0 auto; padding: var(--section) var(--margin); box-sizing: content-box; }
+.a-ar__body { width: min(42rem, calc(100% - 2 * var(--margin))); margin: 0 auto; padding: var(--section) var(--margin); box-sizing: content-box; }
 .a-ar__body p, .a-ar__body li { font-size: 1.1875rem; line-height: 1.6; }
 .a-ar__body p + p { margin-top: 1.1em; }
 .a-ar__body h2 { font-size: clamp(1.75rem, 2.8vw, 2.5rem); margin: 3.5rem 0 1.25rem; line-height: 1.02; }
@@ -303,7 +304,7 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-cs__nextlink { justify-items: start; text-align: left; }
 }
 .a-race__foot p { color: var(--ink); }
-.a-field input::placeholder { color: var(--muted); }
+.a-field input::placeholder { color: var(--muted); opacity: 1; }
 
 /* Design-system details: language toggle and focus use the interactive accent. */
 .v3-lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
