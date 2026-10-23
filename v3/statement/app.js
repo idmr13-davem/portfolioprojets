@@ -201,7 +201,7 @@
         <h1 data-rise>${esc(t(a.title))}</h1>
         <p class="a-ar__meta" data-rise style="--i:1">${t(a.meta).map(esc).join(' · ')}</p>
         <p class="a-ar__summary" data-rise style="--i:2">${esc(t(a.summary))}</p>
-        <ul class="a-ar__tags" data-rise style="--i:3">${t(a.tags).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        <ul class="a-ar__tags" data-grid-ignore data-rise style="--i:3">${t(a.tags).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
       </header>
       <figure class="a-ar__hero" data-reveal>${media({ type: 'image', src: a.hero.src, mobile: a.hero.mobile, alt: a.hero.alt }, { eager: true })}<figcaption>${esc(t(a.hero.caption))}</figcaption></figure>
       <div class="a-ar__body">${articleBody(a)}</div>
