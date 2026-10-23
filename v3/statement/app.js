@@ -26,8 +26,8 @@
   const header = () => `
     <a class="v3-skip" href="#main">${ui('skip')}</a>
     <header class="a-top">
-      <a class="a-mark" href="${href.home()}">David Montealegre</a>
-      <nav class="a-nav" aria-label="${esc(t(S.nav.home))}">
+      <a class="a-mark" href="${href.home()}" aria-label="David Montealegre — ${esc(t(S.nav.home))}"><img src="${asset('assets/Home/v2/header-logo.svg')}" alt="" width="59" height="52"></a>
+      <nav class="a-nav" data-grid-ignore aria-label="${esc(t(S.nav.home))}">
         <a href="${href.home('#work')}">${esc(t(S.nav.work))}</a>
         <a href="${href.home('#blog')}">${esc(t(S.nav.blog))}</a>
         <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="a-foot__legal"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></div>
-      <p class="a-foot__name" aria-hidden="true">Montealegre</p>
+      <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
     </footer>`;
 
   const lines = (a, b) => `<span class="line"><span data-line style="--i:0">${esc(a)}</span></span><span class="line"><span data-line style="--i:1">${esc(b)}</span></span>`;
@@ -100,7 +100,7 @@
       <section class="a-case a-case--${i}" aria-labelledby="case-${c.id}">
         <div class="a-case__media" data-reveal data-video-wrap>
           ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video' })}
-          <button class="v3-play" type="button" data-video-toggle><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
         </div>
         <div class="a-case__copy">
           <h3 id="case-${c.id}" data-reveal>${esc(t(c.card.title))}</h3>
@@ -133,7 +133,7 @@
         <form class="a-field" data-reveal action="mailto:idmr13@gmail.com" data-mail>
           <label class="sr-only" for="a-message">${esc(t(copy.prompt1))}</label>
           <input id="a-message" name="message" autocomplete="off" placeholder="${esc(t(copy.placeholder))}">
-          <button type="submit" aria-label="${esc(t(copy.send))}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+          <button type="submit" data-grid-ignore aria-label="${esc(t(copy.send))}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
         </form>
         <p class="a-contact__note" data-reveal>${esc(t(copy.sendNote))}</p>
         <dl class="a-contact__rows" data-reveal>
@@ -246,7 +246,7 @@
     app.querySelectorAll('.a-ledger__row').forEach(row => {
       const show = () => {
         preview.src = row.dataset.preview;
-        preview.style.top = `${row.offsetTop - 40}px`;
+        preview.style.transform = `translateY(${row.offsetTop}px)`;
         app.querySelector('.a-ledger').classList.add('is-hovering');
         preview.classList.add('is-on');
       };

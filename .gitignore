@@ -57,3 +57,6 @@
 
 # Taste Skill working files (direction sheets, inspector screenshots).
 /.taste-skill/
+
+# Pixel Perfect audit output.
+/.pixel-perfect/

@@ -107,7 +107,7 @@
   }
   function figure(m, opts = {}) {
     const caption = t(m.caption);
-    const toggle = m.type === 'video' ? `<button class="v3-play" type="button" data-video-toggle><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>` : '';
+    const toggle = m.type === 'video' ? `<button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>` : '';
     return `<figure class="cs-figure cs-figure--${m.type}" data-reveal>${media(m, opts)}${toggle}${caption ? `<figcaption>${esc(caption)}</figcaption>` : ''}${m.description ? `<p class="cs-figure__note">${esc(t(m.description))}</p>` : ''}</figure>`;
   }
   const paras = list => (t(list) || []).map(p => `<p>${esc(p)}</p>`).join('');
