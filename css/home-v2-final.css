@@ -5,6 +5,9 @@
 .home-v2 .hero { padding:200px var(--home-margin) 80px; border:0; }
 .home-v2 .v2-hero-facts { font:var(--body-l-font-weight) var(--body-l-font-size)/var(--body-l-line-height) var(--font-body); padding-left:27px; }
 .home-v2 .v2-hero-facts li + li { margin-top:6px; }
+.home-v2 .v2-hero-case-link { display:inline-flex; align-items:center; align-self:flex-start; gap:var(--space-nano); color:var(--text-accent-primary); font:400 var(--caption-l-font-size)/var(--caption-l-line-height) var(--font-body); text-decoration:none; }
+.home-v2 .v2-hero-case-link img { display:block; flex:none; }
+.home-v2 .v2-hero-case-link:is(:hover,:focus-visible) { text-decoration:underline; text-underline-offset:4px; }
 .home-v2 :is(.section-home-about,.section-work,.section-articles) { background:var(--background-deep); }
 .home-v2 .section-home-about { padding:80px 0; }
 .home-v2 .section-home-about .container { gap:64px; }
@@ -16,10 +19,10 @@
 .home-v2 .home-about-copy :is(p,ul) + :is(p,ul) { margin-top:12px; }
 .home-v2 .home-about-copy ul { list-style:disc; padding-left:27px; }
 .home-v2 .home-about-copy li + li { margin-top:6px; }
-.home-v2 .home-about-actions { display:flex; flex-wrap:wrap; gap:32px; }
+.home-v2 .home-about-actions { display:flex; flex-wrap:wrap; gap:var(--space-s); }
 .home-v2 .v2-project { grid-template-columns:var(--home-visual) minmax(0,1fr); }
 .home-v2 .v2-project:nth-child(even) { grid-template-columns:minmax(0,1fr) var(--home-visual); }
-.home-v2 .v2-project-visual { height:444px; border-color:var(--stroke-secondary); padding:12px; }
+.home-v2 .v2-project-visual { height:444px; padding:12px; }
 .home-v2 .v2-project-visual video { width:188px; height:420px; max-width:none; object-fit:contain; flex:none; }
 .home-v2 .v2-project[data-project='2'] video,.home-v2 .v2-project[data-project='3'] video { width:187px; }
 .home-v2 .v2-project-context h3 { font:700 var(--text-title-l)/var(--lh-title-l) var(--font-title); }
@@ -68,6 +71,13 @@
 .home-v2 .v2-scroll-marker { position:absolute; left:61px; top:7px; width:10px; height:4px; border-radius:8px; background:var(--surface-accent); }
 .home-v2 .v2-scroll-indicator--drawer { display:none; }
 @media (max-width:1279px) {
+  .home-v2 .v2-hero-case-link { font-size:var(--caption-m-font-size); line-height:var(--caption-m-line-height); }
+  /* Figma Home tablet/mobile: Button S applies to text, preserving component padding. */
+  .home-v2 .btn,
+  body.home-page.home-v2 > .mobile-home-drawer nav a {
+    font-size:var(--text-btn-s);
+    line-height:var(--lh-btn-s);
+  }
   .home-v2 { --home-margin:80px; --home-visual:calc((100% - 70px) / 8 * 3 + 20px); font-size:16px; line-height:21.6px; }
   .home-v2 .hero { padding:200px 80px 80px; gap:32px; }
   .home-v2 .hero-title { font-size:var(--text-title-m); line-height:var(--lh-title-m); }
@@ -86,7 +96,7 @@
   .home-v2 .articles-scroll-track { gap:120px; }
   .home-v2 .articles-carousel-controls { padding-inline:80px; }
   .home-v2 .v2-contact-bar { height:42px; }
-  .home-v2 .v2-contact-link { font-size:12px; line-height:14px; }
+  .home-v2 .v2-contact-link { font-size:var(--text-btn-s); line-height:var(--lh-btn-s); }
   .home-v2 .v2-contact-link picture { width:20px; height:20px; }
   .home-v2 .v2-scroll-indicator--fixed { right:14px; }
   .home-v2 .v2-scroll-stop { font-size:10px; line-height:12.5px; }
@@ -121,6 +131,7 @@
   .home-v2 .v2-scroll-indicator--drawer { display:block; position:absolute; right:24px; top:110px; }
 }
 @media (max-width:767px) {
+  .home-v2 .v2-hero-case-link { font-size:var(--caption-s-font-size); line-height:var(--caption-s-line-height); }
   .home-v2 { --home-margin:16px; font-size:12px; line-height:16.2px; }
   .home-v2 .hero { padding:134px 16px 64px; gap:48px; }
   .home-v2 .hero-title { font-size:var(--text-title-s); line-height:var(--lh-title-s); }
@@ -136,7 +147,7 @@
   .home-v2 .home-about-copy :is(p,ul) + :is(p,ul) { margin-top:8px; }
   .home-v2 .home-about-copy ul { padding-left:18px; }
   .home-v2 .home-about-copy li + li { margin-top:4px; }
-  .home-v2 .home-about-actions { flex-direction:column; gap:8px; align-items:flex-start; }
+  .home-v2 .home-about-actions { flex-direction:column; gap:var(--space-s); align-items:flex-start; }
   .home-v2 .section-work .container { gap:32px; }
   .home-v2 .v2-projects { gap:80px; }
   .home-v2 .v2-project-visual { height:460px; border-radius:32px; padding:20px 12px; }

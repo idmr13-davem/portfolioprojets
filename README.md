@@ -4,11 +4,16 @@ Public source for David Montealegre's product design portfolio.
 
 ## Local preview
 
-Run a static web server from this directory and open `index.html`. The site is built with plain HTML, CSS, and JavaScript and requires no build step.
+The site is built with plain HTML, CSS, and JavaScript and requires no build step. Serve this directory locally:
+
+- `node server.js` — http://localhost:3456 (supports range requests for video playback), or
+- `./serve.sh` — Python static server on the same port.
 
 ## Deployment
 
-This repository is intended for GitHub Pages and the custom domain `davidmontealegreux.com`.
+Hosted on GitHub Pages from `main` (`idmr13-davem/portfolioprojets`) with the custom domain `davidmontealegreux.com`.
+
+Releases are not published from the working folder. `python3 scripts/prepare-github-pages.py` builds a self-contained tree in `releases/github-pages/` (plus a ZIP) that excludes protected work, private evidence, internal docs, and local tooling. `releases/` is ignored by Git. See [`docs/github-pages-release.md`](docs/github-pages-release.md).
 
 ## Architecture and growth
 
@@ -16,39 +21,32 @@ The project intentionally uses plain HTML, CSS, and JavaScript while that remain
 
 ## Content
 
-The public site contains exactly two case studies:
+The public V2 site (published October 15, 2026) contains three case studies:
 
 - Registro Mercado Libre
 - Motion Level Design System
+- Accounts for minors in Mexico
 
-Internal strategy, drafts, source research, unapproved metrics, and compliance notes are maintained in a separate private repository.
+A fourth case, Switching accounts across countries (`work/cambio-cuentas-paises.html`), exists only in the local working branch. It remains protected and is physically excluded from the published release.
 
-## Current implementation
+The site also includes About, two articles, and status pages. Internal strategy, drafts, source research, unapproved metrics, and compliance notes are maintained in a separate private repository.
 
-The current public experience includes:
+## Current implementation (V2)
 
-- A redesigned Home with fixed navigation, an animated hero scroll indicator, selected work, About me, articles, and contact sections.
-- The latest Home polish from Figma, including the `#222324` main background, updated arrow button component, and the redesigned My articles carousel with final-card left alignment.
-- Home typography uses the Figma reduced scale for non-hero text at widths up to `1499px`, and arrow-button hover states use the corrected `15px` `#A689FF` Figma asset.
-- Responsive mobile layouts for Home, the two public case studies, and the first article page.
-- A mobile burger menu with language toggle, contact CTA, footer, and scroll locking.
-- The first article page, “Por qué Mercado Libre fue el primer lugar del que no quise irme?”, implemented from the Figma editorial design.
-- Figma-aligned typography, color, spacing, margin, and border-radius tokens in `css/styles.css`.
-- Exclusive project accordions: the first item opens by default and only one item can remain open at a time.
-- Matching idle, hover, open, and open-hover states with reduced-motion support.
-- Localized English and Spanish content, including language-specific CV links.
-- A shared closing contact section across Home, About, the article, and both case studies, with email, LinkedIn, and WhatsApp actions.
-- A simplified copyright-only footer across pages.
-- The Registro Mercado Libre “Our compounding changes” section converted from scroll disclosure to exclusive accordions.
-- Header contact buttons that navigate to the closing contact section on the current page.
-- Content is visible by default while scrolling; the previous scroll-triggered reveal animation has been removed.
+- Home V2 with fixed navigation, hero, selected-work cards with bilingual roles, contributions, and outcomes copied from Figma, About, articles carousel, contact, and footer.
+- Case studies with per-page V2 stylesheets and controllers (`css/*-v2*.css`, `js/*-v2.js`), responsive across Desktop, Tablet, and Mobile, with video evidence and reduced-motion support.
+- Two articles: “Por qué Mercado Libre fue el primer lugar del que no quise irme?” and “Lo que mi pasión por los autos me enseñó sobre diseñar experiencias”, each in English and Spanish.
+- Figma-aligned tokens (`css/tokens/figma.css`, `css/styles.css`) and shared controls (`css/components.css`).
+- English by default with Spanish available (`js/i18n.js` and per-page bilingual configuration), including language-specific CV links.
+- Consent-based GA4 analytics (`js/analytics.js`): nothing loads before explicit opt-in, and only listed public paths are measured. See [`docs/analytics.md`](docs/analytics.md).
+- Per-page review notes for V2 in `docs/*-v2-review.md`.
 
 ## Next backlog
 
-- Run visual QA across desktop and mobile for Home, both case studies, and the first article.
-- Review and polish article/readings content in Spanish and English.
+- Verify real GA4 ingestion on production.
+- Improve video and asset performance (MOV files are about 64% of the published weight).
 - Improve SEO and social sharing metadata.
-- Optimize image and video performance.
+- Review and polish article content in Spanish and English.
 - Define a faster case-study publishing framework for future projects such as Familia de Empresas and Ropstar.
 
 © 2026 David Montealegre. All rights reserved.

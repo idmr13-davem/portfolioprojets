@@ -1,5 +1,15 @@
 # Home v2 — local design review
 
+## Direct access to case studies — October 15, 2026
+
+Responsive refinement approved by David: the hero case link uses Caption L (16/20) from 1280px, Caption M (12.8/16) at 768–1279px, and Caption S (10/12.5) below 768px. Sources: tablet `4941:86549`, mobile `4941:86559`. The 10×10px chevron and 4px gap are unchanged. Verified at 1480, 1280, 1279, 1000, 768, 767 and 360px. The earlier 16px implementation described below is superseded for tablet/mobile.
+
+Added David's Figma hero link from `4826:6586` / instance `4941:86544` below the experience list: “Revisa mis casos de estudio” / “Explore my case studies”. The native anchor points to `#work`, using the existing EN/ES translation, Caption L typography, accent color, 4px gap and exact 10×10px Figma chevron exported to `assets/Home/v2/hero-case-chevron.svg`. The section accepts focus on fragment navigation. Existing hero copy and motion are preserved; the new link has no animation in the supplied Figma motion context. Verified at 1480, 1000, 768 and 360px, including English translation, asset loading, keyboard Enter, focus on the work section and a 70px desktop header offset. Local only; no publication.
+
+## Video cards without strokes — October 15, 2026
+
+David requested removing the strokes around all four Home video cards at every resolution. Figma Home V2 already has empty stroke arrays on the sixteen responsive video containers and the four motion-reference containers. The site now uses `border:0` on `.v2-project-visual`, with obsolete responsive border-color declarations removed. Card layout and video sizing remain governed by the existing rules. Browser checks confirmed zero border width on all four cards at 1920, 1480, 1280, 1000, 768 and 360px, with each video still 420px tall. Local implementation only; no publication.
+
 Review branch: `codex/home-v2-review`. Preview: `http://127.0.0.1:3456`.
 
 ## Sources
@@ -138,3 +148,7 @@ Tablet and mobile drawer section links now use the desktop hover color token, wi
 ### Tablet header navigation spacing — October 13, 2026
 
 Updated the horizontal Home header navigation to Space XXL (64px) at 1000–1279px, following corrected instance `4776:2781`. Desktop retains Space Huge (80px).
+
+### Button S for tablet and mobile — October 15, 2026
+
+David updated Home frames `4627:2581` (tablet 1000–1279), `4717:15168` (tablet 768–999) and `4644:9440` (mobile). Text CTAs now use semantic Button S tokens (`--text-btn-s` / `--lh-btn-s`, Inter Bold 12/14) below 1280px, including CV/blog actions, case links, article links, preview buttons and drawer navigation. Existing contact text uses the same tokens rather than literal sizes. This updates typography only; component padding and assets are retained. Desktop CTA typography stays Button M. Computed sizes verified across 27 controls at 1440, 1280, 1279, 1024, 999, 768, 767, 390 and 320px.

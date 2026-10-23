@@ -36,3 +36,17 @@
 /js/country-v2.js
 /assets/Country switch/
 /assets/Switch países/
+
+# Independent generated release packages.
+/releases/
+
+# Local tooling, review captures and personal configuration (not part of the site).
+/.agents/
+/.impeccable/
+/docs/personal-and-corporate-workspaces.md
+
+# Unreferenced local assets.
+/assets/Imágenes craft projects/
+/assets/Procesos motion/
+/assets/CV/David-Montealegre, CV.pdf
+/assets/CV/David-Montealegre, HV.pdf

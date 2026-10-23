@@ -13,7 +13,7 @@ const config = {
       ],
       "achievementTitle": "Outcomes",
       "achievement": [
-        "Shorten the response process from 3 days to 20 seconds using artificial intelligence."
+        "Shorten the response process from 24 hours to 20 seconds using artificial intelligence."
       ],
       "contextTitle": "Context",
       "context": [
@@ -46,10 +46,10 @@ const config = {
       "advantageIntro": "In the other countries where the sign-up flow for minors already existed, minors had an identity document they could use. In Mexico, asking the adult for the birth certificate introduced two major sources of friction:",
       "advantageBullets": [
         "The adult needed to have the minor’s birth certificate available.",
-        "The document had to be analyzed internally to meet local regulation. This process took up to 3 business days.",
+        "The document had to be analyzed internally to meet local regulation. This process took up to 24 hours.",
         "Our experience with other flows showed that asking users to resume an abandoned journey could lead to a significant loss in conversion."
       ],
-      "advantageClosing": "To reduce this delay, I co-designed an AI-assisted analysis experience with product and engineering. It could review the minor’s birth certificate and compare it with the adult’s information in a maximum of 20 seconds. This changed an asynchronous process lasting 3 days into an invitation journey taking no more than 3 minutes, an advantage none of our competitors offered.",
+      "advantageClosing": "To reduce this delay, I co-designed an AI-assisted analysis experience with product and engineering. It could review the minor’s birth certificate and compare it with the adult’s information in a maximum of 20 seconds. This changed an asynchronous process lasting 24 hours into an invitation journey taking no more than 3 minutes, an advantage none of our competitors offered.",
       "finalTitle": "Final outcome",
       "finalBody": [
         "The launch aimed to capture between 10% and 15% of Mexico’s potential market: more than 1 million minors aged 13 to 17.",
@@ -94,7 +94,7 @@ const config = {
       ],
       "achievementTitle": "Logros",
       "achievement": [
-        "Acortar el proceso de respuesta de 3 días a 20 segundos utilizando inteligencia artificial."
+        "Acortar el proceso de respuesta de 24 horas a 20 segundos utilizando inteligencia artificial."
       ],
       "contextTitle": "Contexto",
       "context": [
@@ -127,10 +127,10 @@ const config = {
       "advantageIntro": "En los otros países donde ya existía el flujo de registro para menores, los menores sí tenían un documento de identidad que podían usar en el flujo. Para el caso de México, pedirle este dato al adulto significaba dos grandes fricciones:",
       "advantageBullets": [
         "El adulto debía tener el acta de nacimiento del menor a la mano.",
-        "El documento debía analizarse a nivel interno para cumplir la regulación del país, este proceso tomaba hasta 3 días hábiles.",
+        "El documento debía analizarse a nivel interno para cumplir la regulación del país, este proceso tomaba hasta 24 horas.",
         "Retomar un flujo previamente abandonado costaría un gran porcentaje de conversión por nuestra experiencia previa en otros flujos."
       ],
-      "advantageClosing": "Es así que, para reducir esta fricción por tiempo co-diseñé junto a producto y desarrollo la experiencia de análisis mediante IA, un flujo que permitía revisar el acta de nacimiento del menor y contrastarla con la información del adulto en un máximo de 20 segundos. Esto convirtió un flujo asincrónico de 3 días de duración a una invitación que tardaría como máximo 3 minutos, una ventaja con la que ninguno de nuestros competidores contaba.",
+      "advantageClosing": "Es así que, para reducir esta fricción por tiempo co-diseñé junto a producto y desarrollo la experiencia de análisis mediante IA, un flujo que permitía revisar el acta de nacimiento del menor y contrastarla con la información del adulto en un máximo de 20 segundos. Esto convirtió un flujo asincrónico de 24 horas de duración a una invitación que tardaría como máximo 3 minutos, una ventaja con la que ninguno de nuestros competidores contaba.",
       "finalTitle": "Resultado final",
       "finalBody": [
         "El lanzamiento del producto esperaba captar entre el 10% y el 15% del mercado potencial mexicano, más de 1M de menores entre 13 y 17 años de edad en ese país.",

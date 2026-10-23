@@ -170,20 +170,18 @@
 
   const copy = {
     en: {
-      title: 'Help improve this portfolio',
-      body: 'With your permission, Google Analytics uses cookies to measure visits, clicks and how people find this site. You can browse without accepting.',
-      accept: 'Accept analytics', reject: 'Reject analytics', settings: 'Privacy settings',
-      details: 'About this choice',
-      notice: 'David Montealegre uses Google Analytics to understand portfolio traffic. Your choice is saved for 180 days in this browser. You can change it here at any time. Advertising features stay off. Rejecting stops future collection; it does not erase data already sent. Questions: ',
-      google: 'How Google uses data'
+      title: 'Help me improve my portfolio',
+      body: 'This website uses cookies to measure page views, clicks and how people find this site. You can browse without accepting.',
+      accept: 'Accept cookies', reject: 'Reject cookies', settings: 'change your preferences',
+      footerBefore: 'I use cookies to understand which pages and projects attract the most interest. You can ',
+      footerAfter: ' at any time.',
     },
     es: {
-      title: 'Ayúdame a mejorar este portafolio',
-      body: 'Con tu permiso, Google Analytics usa cookies para medir las visitas, los clics y cómo las personas encuentran este sitio. Puedes navegar sin aceptar.',
-      accept: 'Aceptar analítica', reject: 'Rechazar analítica', settings: 'Preferencias de privacidad',
-      details: 'Sobre esta elección',
-      notice: 'David Montealegre usa Google Analytics para entender el tráfico del portafolio. Tu elección se guarda durante 180 días en este navegador. Puedes cambiarla aquí en cualquier momento. Las funciones publicitarias permanecen desactivadas. Rechazar detiene la recopilación futura; no borra datos ya enviados. Consultas: ',
-      google: 'Cómo usa Google los datos'
+      title: 'Ayúdame a mejorar mi portafolio',
+      body: 'Este sitio web usa cookies para medir las vistas, los clics y cómo las personas encuentran este sitio. Puedes navegar sin aceptar.',
+      accept: 'Aceptar cookies', reject: 'Rechazar cookies', settings: 'cambiar tus preferencias',
+      footerBefore: 'Uso cookies para entender qué páginas y proyectos generan más interés. Puedes ',
+      footerAfter: ' en cualquier momento.',
     }
   };
   const panel = document.createElement('section');
@@ -195,16 +193,21 @@
   panel.innerHTML = `
     <h2 id="analytics-consent-title" tabindex="-1"></h2>
     <p data-consent="body"></p>
-    <details><summary class="text-link" data-consent="details"></summary><p><span data-consent="notice"></span><a class="text-link" href="mailto:idmr13@gmail.com">idmr13@gmail.com</a>. <a class="text-link" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" data-consent="google"></a>.</p></details>
     <div class="analytics-consent__actions"><button type="button" class="btn btn--mute" data-consent="reject"></button><button type="button" class="btn btn--loud" data-consent="accept"></button></div>`;
   const settingsArea = document.createElement('div');
   settingsArea.id = 'portfolio-analytics-settings';
   settingsArea.className = 'analytics-settings';
   const settings = document.createElement('button');
   settings.type = 'button';
-  settings.className = 'text-link';
-  settingsArea.append(settings);
-  document.body.append(panel, settingsArea);
+  settings.className = 'analytics-settings__link';
+  settings.setAttribute('aria-controls', panel.id);
+  const footerCopy = document.createElement('p');
+  const before = document.createElement('span');
+  const after = document.createElement('span');
+  footerCopy.append(before, settings, after);
+  settingsArea.append(footerCopy);
+  document.body.append(panel);
+  (document.querySelector('body > .site-footer, body > footer') || document.body).append(settingsArea);
 
   function translate() {
     const language = document.documentElement.lang === 'es' ? 'es' : 'en';
@@ -214,6 +217,8 @@
     panel.querySelector('h2').textContent = text.title;
     panel.querySelectorAll('[data-consent]').forEach(el => { el.textContent = text[el.dataset.consent]; });
     settings.textContent = text.settings;
+    before.textContent = text.footerBefore;
+    after.textContent = text.footerAfter;
   }
   settings.addEventListener('click', () => {
     previousFocus = settings;
