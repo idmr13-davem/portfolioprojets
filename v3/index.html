@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Propuestas V3 — David Montealegre</title>
+<link rel="icon" href="../assets/Favicon/favicon.ico">
+<style>
+  :root { --bg: #f3f2ee; --ink: #161616; --muted: #555; --margin: clamp(1rem, 3vw, 2.5rem); }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.5 system-ui, -apple-system, sans-serif; }
+  header { padding: 3rem var(--margin) 2rem; max-width: 60rem; }
+  h1 { font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1; letter-spacing: -0.03em; margin: 0 0 1rem; }
+  header p { margin: 0; color: var(--muted); max-width: 52ch; }
+  main { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0 var(--margin) 3rem; }
+  article { display: grid; grid-template-rows: auto 1fr; background: #fff; }
+  .swatch { aspect-ratio: 4 / 3; display: grid; align-content: end; padding: 1.25rem; text-decoration: none; transition: transform 200ms cubic-bezier(.22,1,.36,1); }
+  .swatch:hover { transform: scale(.985); }
+  .swatch strong { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: .9; letter-spacing: -0.04em; }
+  .a { background: #ecebe7; color: #38450f; font-family: 'Cabinet Grotesk', system-ui; }
+  .b { background: #1a2039; color: #f9a3c0; font-family: Georgia, serif; }
+  .c { background: #9c1220; color: #fff; text-transform: uppercase; }
+  .body { padding: 1.25rem; display: grid; gap: .75rem; align-content: start; }
+  .body h2 { margin: 0; font-size: 1.25rem; }
+  .body p { margin: 0; }
+  .body ul { margin: 0; padding-left: 1.1em; color: var(--muted); font-size: .9375rem; }
+  .body a { color: inherit; }
+  nav { display: flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: .9375rem; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Tres propuestas para una V3</h1>
+  <p>Exploraciones locales del branch <code>exploration/v3-propuestas</code>. Mismo contenido, navegación, idiomas, enlaces y hojas de vida del sitio publicado; cada una con su propia dirección visual.</p>
+</header>
+<main>
+  <article>
+    <a class="swatch a" href="statement/index.html"><strong>Statement</strong></a>
+    <div class="body">
+      <h2>A · Statement</h2>
+      <p>Solo tipografía en el primer pantallazo, a la manera de Apple: tu nombre de margen a margen y tus resultados como titulares. Verde oliva sobre hueso, Cabinet Grotesk.</p>
+      <ul><li>Interactivo: carrera entre el registro anterior (3:25) y el actual (0:52).</li><li>Contacto: un solo campo que abre tu correo.</li></ul>
+      <nav><a href="statement/index.html">Home</a><a href="statement/work/registro-ml.html">Caso</a><a href="statement/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html">Artículo</a><a href="statement/404.html">404</a><a href="statement/articles/page-under-work.html">En construcción</a></nav>
+    </div>
+  </article>
+  <article>
+    <a class="swatch b" href="stage/index.html"><strong>Stage</strong></a>
+    <div class="body">
+      <h2>B · Stage</h2>
+      <p>Media pantalla nunca se mueve: un escenario donde se reproducen las pantallas que diseñaste, según lo que estás leyendo. Azul marino y rosa, Besley y Libre Franklin, cercano a Nu.</p>
+      <ul><li>Interactivo: el escenario cambia con cada caso y sección.</li><li>Franja tipo barra de progreso de registro como motivo.</li></ul>
+      <nav><a href="stage/index.html">Home</a><a href="stage/work/registro-ml.html">Caso</a><a href="stage/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html">Artículo</a><a href="stage/404.html">404</a><a href="stage/articles/page-under-work.html">En construcción</a></nav>
+    </div>
+  </article>
+  <article>
+    <a class="swatch c" href="poster/index.html"><strong>Poster</strong></a>
+    <div class="body">
+      <h2>C · Poster</h2>
+      <p>Cartel editorial: “Monte / alegre” en dos esquinas, casos en paneles a pantalla completa y tu correo como tipografía display. Carmín y Chivo, cercano a tasteskill.dev.</p>
+      <ul><li>Interactivo: escala de Motion Level que anima según el nivel de expresividad.</li><li>About con título fijo y tus fotos de intereses.</li></ul>
+      <nav><a href="poster/index.html">Home</a><a href="poster/work/motion-design-system.html">Caso</a><a href="poster/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html">Artículo</a><a href="poster/404.html">404</a><a href="poster/articles/page-under-work.html">En construcción</a></nav>
+    </div>
+  </article>
+</main>
+</body>
+</html>
