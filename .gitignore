@@ -34,6 +34,10 @@
 # Switch: local only until authenticated delivery covers HTML, data and media.
 /work/cambio-cuentas-paises.html
 /js/country-v2.js
+/js/country-v2-media.js
+/css/country-v2.css
+/css/country-v2-motion.css
+/docs/country-switch-v2-review.md
 /assets/Country switch/
 /assets/Switch países/
 
