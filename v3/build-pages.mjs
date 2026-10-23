@@ -6,8 +6,10 @@ import path from 'node:path';
 
 const proposals = {
   statement: {
-    fonts: '<link rel="preconnect" href="https://api.fontshare.com"><link rel="preconnect" href="https://cdn.fontshare.com" crossorigin><link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">',
-    theme: '#ecebe7'
+    // Colour, family, weights and radii come from the portfolio design system (css/tokens/figma.css).
+    fonts: '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">',
+    tokens: true,
+    theme: '#171b1f'
   },
   stage: {
     fonts: '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Besley:wght@500;700;800&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">',
@@ -46,7 +48,7 @@ for (const [name, p] of Object.entries(proposals)) {
 <link rel="icon" href="${root}assets/Favicon/favicon.ico">
 ${p.fonts}
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="${base}../shared/base.css">
+${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''}<link rel="stylesheet" href="${base}../shared/base.css">
 <link rel="stylesheet" href="${base}styles.css">
 </head>
 <body class="v3-${name}" data-page="${page.page}"${page.id ? ` data-id="${page.id}"` : ''}>
