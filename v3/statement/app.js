@@ -209,7 +209,10 @@
     ${footer()}`;
   }
 
+  let statusResizeHandler = null;
   function wire() {
+    if (statusResizeHandler) removeEventListener('resize', statusResizeHandler);
+    statusResizeHandler = null;
     const btn = app.querySelector('.a-menu-btn');
     const menu = app.querySelector('#a-menu');
     btn?.addEventListener('click', () => {
@@ -235,7 +238,11 @@
       const room = host.clientWidth - parseFloat(hs.paddingLeft) - parseFloat(hs.paddingRight);
       if (widest > room) big.style.fontSize = `${parseFloat(getComputedStyle(big).fontSize) * room / widest}px`;
     };
-    if (big) { document.fonts.ready.then(fitStatus); addEventListener('resize', fitStatus); }
+    if (big) {
+      document.fonts.ready.then(() => { if (big.isConnected) fitStatus(); });
+      statusResizeHandler = fitStatus;
+      addEventListener('resize', statusResizeHandler);
+    }
 
     app.querySelector('[data-mail]')?.addEventListener('submit', e => {
       e.preventDefault();

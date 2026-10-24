@@ -49,14 +49,14 @@ for (const [name, p] of Object.entries(proposals)) {
 ${p.fonts}
 <script>document.documentElement.classList.add('js')</script>
 ${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''}<link rel="stylesheet" href="${base}../shared/base.css">
-<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261023-grid-v10' : ''}">
+<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261024-grid-r2-review' : ''}">
 </head>
 <body class="v3-${name}" data-page="${page.page}"${page.id ? ` data-id="${page.id}"` : ''}>
 <div id="app"></div>
 <noscript><p style="padding:24px">This exploration renders with JavaScript. <a href="${root}index.html">Open the published portfolio</a>.</p></noscript>
 <script src="${base}../shared/content.js"></script>
 <script src="${base}../shared/site.js"></script>
-<script src="${base}app.js${name === 'statement' ? '?v=20261023-grid-v10' : ''}"></script>
+<script src="${base}app.js${name === 'statement' ? '?v=20261024-grid-r2-review' : ''}"></script>
 </body>
 </html>
 `;

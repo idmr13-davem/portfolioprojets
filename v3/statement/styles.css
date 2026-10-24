@@ -371,4 +371,4 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-case .a-case__media:hover::after { opacity: 1; }
   .a-case .a-case__media:hover .a-case__video { transform: scale(1.1); }
 }
-@media (prefers-reduced-motion: reduce) { .a-case .a-case__video { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .a-case .a-case__video, .a-case .a-case__media::after { transition: none; } }

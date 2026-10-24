@@ -14,3 +14,10 @@
 - Resultado final (`.pixel-perfect/final/`): 70 combinaciones (8 páginas EN + 2 ES, de 360 a 1500 px), 0 altos, 0 medios, 90 `inset` bajos (relleno interno de componentes).
 - Pendiente de David (hallazgo alto de Codex): el nombre del hero en móvil pasó de 17 vw a 16,4 vw para evitar 1 px de desborde a 360 px, un cambio tipográfico fuera del alcance. Con 17 vw "Montealegre" invade el margen derecho en todo móvil. Opciones: mantener 16,4 vw; ajustar la palabra exactamente al ancho de la retícula; o volver a 17 vw aceptando que ocupe el margen.
 - Decisión de David (24-oct-2026): ajustar "Montealegre" exactamente al ancho de la retícula en móvil, sin invadir el margen. Implementado con `container-type: inline-size` en el hero y `font-size: calc(100cqw / 5.6492)` (ancho de tinta medido con `measureText`); entre 320 y 767 px el último trazo termina a ≤0,05 px del margen. Los titulares de estado vuelven a 17 vw y se ajustan al ancho disponible solo si su línea más larga no cabe (por ejemplo, "construcción" en español).
+
+## 2026-10-24 — Revisión Codex de la segunda tanda (pixel-perfect-statement-r2)
+
+- Revisión: `intercambio/revisiones/2026-10-24_pixel-perfect-statement-r2_v1_revision.md` ("Requiere cambios", por parches propuestos al auditor y al generador).
+- Aplicados por Codex: reduced motion del velo del video, un solo listener de resize en los titulares de estado, caché `20261024-grid-r2-review`.
+- Aplicados por Claude a partir de sus parches exactos: `competing-hierarchy` solo para encabezado seguido de p/blockquote con peso idéntico; `inconsistent-repeat` excluye tarjetas hermanas en una fila y admite `data-grid-repeat` / `data-grid-repeat-ignore`; generador sincronizado con la caché.
+- Verificación posterior: el auditor sigue detectando los problemas de la versión anterior (commit `b57dd55`); Statement queda sin altos ni medios en 120 combinaciones (12 URLs EN/ES × 10 anchos de 320 a 1500, incluida la franja 768–1023). No se abrió una segunda iteración porque los únicos cambios pendientes eran los parches del propio revisor, ya verificados.
