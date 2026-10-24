@@ -7,12 +7,6 @@
   const roleTail = title => title.replace(/^.*?Montealegre,\s*/, '').replace(/^./, ch => ch.toUpperCase());
   const copy = {
     menu: { en: 'Menu', es: 'Menú' },
-    race: { en: 'Race the two sign-ups', es: 'Compara los dos registros' },
-    raceNote: { en: 'Real durations from the case study, played at 10× speed.', es: 'Duraciones reales del caso, reproducidas a 10× de velocidad.' },
-    before: { en: 'Previous sign-up', es: 'Registro anterior' },
-    after: { en: 'Current sign-up', es: 'Registro actual' },
-    start: { en: 'Start', es: 'Iniciar' },
-    again: { en: 'Run again', es: 'Repetir' },
     prompt1: { en: 'Write the first line.', es: 'Escribe la primera línea.' },
     placeholder: { en: 'Hi David, I’d like to talk about…', es: 'Hola David, me gustaría hablar sobre…' },
     send: { en: 'Open in your email app', es: 'Abrir en tu app de correo' },
@@ -90,14 +84,10 @@
 
       <section class="a-work" id="work" aria-labelledby="work-title">
         <h2 class="a-work__title" id="work-title">${esc(t(S.workTitle))}</h2>
-        <ol class="a-ledger">
-          ${cases.map(c => `<li><a class="a-ledger__row" href="${href.case(c)}" data-preview="${asset(c.card.poster)}"><span class="a-ledger__name">${esc(t(c.card.title))}</span><span class="a-ledger__kind">${esc(t(c.role))}</span><span class="a-ledger__year">${esc(t(c.period))}</span></a></li>`).join('')}
-        </ol>
-        <img class="a-ledger__preview" alt="" aria-hidden="true">
       </section>
 
-      ${cases.map((c, i) => `
-      <section class="a-case a-case--${i}" aria-labelledby="case-${c.id}">
+      ${cases.map(c => `
+      <section class="a-case" aria-labelledby="case-${c.id}">
         <div class="a-case__media" data-reveal data-video-wrap>
           ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video' })}
           <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
@@ -109,7 +99,6 @@
           <p class="a-case__role" data-reveal>${esc(t(c.card.role))}</p>
           <a class="a-btn" data-reveal href="${href.case(c)}">${esc(t(c.card.cta))}</a>
         </div>
-        ${c.id === 'registro' ? race() : ''}
       </section>`).join('')}
 
       <section class="a-about" aria-labelledby="about-title">
@@ -143,15 +132,6 @@
       </section>
     </main>
     ${footer()}`;
-  }
-
-  function race() {
-    return `<div class="a-race" data-reveal>
-      <p class="a-race__title">${esc(t(copy.race))}</p>
-      <div class="a-race__lane"><span>${esc(t(copy.before))}</span><span class="a-race__bar"><i data-bar="205" style="--rest:1"></i></span><output data-clock="205">3:25</output></div>
-      <div class="a-race__lane"><span>${esc(t(copy.after))}</span><span class="a-race__bar"><i data-bar="52" style="--rest:.254"></i></span><output data-clock="52">0:52</output></div>
-      <div class="a-race__foot"><button class="a-btn" type="button" data-race>${esc(t(copy.start))}</button><p>${esc(t(copy.raceNote))}</p></div>
-    </div>`;
   }
 
   function casePage(id) {
@@ -241,38 +221,21 @@
     });
     menu?.addEventListener('click', e => { if (e.target.closest('a')) btn.click(); });
 
-    // Ledger: hovered row shows its case poster beside the column.
-    const preview = app.querySelector('.a-ledger__preview');
-    app.querySelectorAll('.a-ledger__row').forEach(row => {
-      const show = () => {
-        preview.src = row.dataset.preview;
-        preview.style.transform = `translateY(${row.offsetTop}px)`;
-        app.querySelector('.a-ledger').classList.add('is-hovering');
-        preview.classList.add('is-on');
-      };
-      const hide = () => { app.querySelector('.a-ledger').classList.remove('is-hovering'); preview.classList.remove('is-on'); };
-      row.addEventListener('mouseenter', show); row.addEventListener('focus', show);
-      row.addEventListener('mouseleave', hide); row.addEventListener('blur', hide);
-    });
-
-    // The live thing: the two real sign-up durations, played side by side.
-    const raceBtn = app.querySelector('[data-race]');
-    raceBtn?.addEventListener('click', () => {
-      const bars = app.querySelectorAll('[data-bar]');
-      const clocks = app.querySelectorAll('[data-clock]');
-      const fmt = s => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
-      const start = performance.now();
-      raceBtn.disabled = true;
-      const tick = now => {
-        const elapsed = ((now - start) / 1000) * 10;
-        let running = false;
-        bars.forEach(bar => { const total = +bar.dataset.bar; bar.style.transform = `scaleX(${Math.min(elapsed / 205, total / 205)})`; });
-        clocks.forEach(clock => { const total = +clock.dataset.clock; clock.textContent = fmt(Math.min(elapsed, total)); if (elapsed < total) running = true; });
-        if (running && !V3.reduced) requestAnimationFrame(tick);
-        else { clocks.forEach(c => c.textContent = fmt(+c.dataset.clock)); bars.forEach(b => b.style.transform = `scaleX(${+b.dataset.bar / 205})`); raceBtn.disabled = false; raceBtn.textContent = t(copy.again); }
-      };
-      requestAnimationFrame(tick);
-    });
+    // Status headings: fit the longest line to the grid on phones (17vw at most), whatever the language.
+    // Measured once Inter has loaded (the fallback face is narrower) and again on resize.
+    const big = app.querySelector('.a-status__big');
+    const fitStatus = () => {
+      if (!big) return;
+      big.style.fontSize = '';
+      if (!matchMedia('(max-width: 767px)').matches) return;
+      const lines = [...big.querySelectorAll('[data-line]')];
+      const widest = Math.max(...lines.map(l => { const r = document.createRange(); r.selectNodeContents(l); return r.getBoundingClientRect().width; }));
+      // Available room is the parent's content box: the heading itself may already be stretched by the long word.
+      const host = big.parentElement, hs = getComputedStyle(host);
+      const room = host.clientWidth - parseFloat(hs.paddingLeft) - parseFloat(hs.paddingRight);
+      if (widest > room) big.style.fontSize = `${parseFloat(getComputedStyle(big).fontSize) * room / widest}px`;
+    };
+    if (big) { document.fonts.ready.then(fitStatus); addEventListener('resize', fitStatus); }
 
     app.querySelector('[data-mail]')?.addEventListener('submit', e => {
       e.preventDefault();
