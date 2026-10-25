@@ -12,9 +12,8 @@
     send: { en: 'Open in your email app', es: 'Abrir en tu app de correo' },
     sendNote: { en: 'Your email app opens with this message to idmr13@gmail.com. Nothing is sent from this page.', es: 'Tu app de correo se abre con este mensaje para idmr13@gmail.com. Esta página no envía nada.' },
     subject: { en: 'Hello from your portfolio', es: 'Hola desde tu portafolio' },
-    resumeEs: { en: 'Resume in Spanish', es: 'Hoja de vida en español' },
-    resumeEn: { en: 'Resume in English', es: 'Hoja de vida en inglés' },
-    soon: { en: 'Soon', es: 'Pronto' }
+    soon: { en: 'Soon', es: 'Pronto' },
+    aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' }
   };
 
   const header = () => `
@@ -45,11 +44,7 @@
       <div class="a-foot__top">
         <div class="a-foot__invite" data-reveal>
           <p class="a-foot__line">${esc(lastSentence(t(S.closingBody)))}</p>
-          <a class="a-btn a-btn--inverse" href="mailto:idmr13@gmail.com">${esc(t(S.contact[0].label))}</a>
-        </div>
-        <div class="a-foot__links" data-reveal>
-          ${contactLinks('a-foot__link')}
-          <a class="a-foot__link" href="${href.cv()}" target="_blank" rel="noopener">${esc(t(S.cvLabel))}</a>
+          <div class="a-foot__buttons">${S.contact.map(c => `<a class="a-btn a-btn--dark" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c.label))}</a>`).join('')}</div>
         </div>
       </div>
       <div class="a-foot__legal"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></div>
@@ -63,7 +58,9 @@
     const numeric = facts.map(f => f.match(/^(\d+)\s+(.*)$/)).filter(Boolean);
     const plain = facts.filter(f => !/^\d/.test(f));
     const about = t(S.about);
-    const highlights = about[1].map(i => `<mark>${esc(i.replace(/\.$/, ''))}</mark>`).join(', ');
+    // About (Figma 5061:424): a heading, the interests as a lowercase list that reads on from it, and the closing text.
+    const interests = about[1].map((i, n, all) => (n === all.length - 1 ? (V3.lang === 'es' ? 'y ' : 'and ') : '') + i.replace(/^./, ch => ch.toLowerCase()));
+    const cvLink = `<a class="a-about__cv" href="${href.cv()}" target="_blank" rel="noopener">${esc(about[3])}</a>`;
     return `${header()}
     <main id="main">
       <section class="a-hero">
@@ -102,11 +99,9 @@
       </section>`).join('')}
 
       <section class="a-about" aria-labelledby="about-title">
-        <h2 class="sr-only" id="about-title">${esc(t(S.aboutTitle))}</h2>
-        <div class="a-about__text" data-reveal>
-          <p><strong>David Montealegre.</strong> ${esc(about[0])} ${highlights}. ${esc(about[2])}</p>
-          <p class="a-about__end"><a href="${href.cv()}" target="_blank" rel="noopener"><mark class="is-strong">${esc(about[3])}</mark></a></p>
-        </div>
+        <h2 class="a-about__title" id="about-title" data-reveal>${esc(t(copy.aboutHeading))}</h2>
+        <ul class="a-about__list" data-reveal>${interests.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+        <div class="a-about__close" data-reveal><p>${esc(about[2])}</p><p>${cvLink}</p></div>
       </section>
 
       <section class="a-blog" id="blog" aria-labelledby="blog-title">
@@ -125,10 +120,6 @@
           <button type="submit" data-grid-ignore aria-label="${esc(t(copy.send))}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
         </form>
         <p class="a-contact__note" data-reveal>${esc(t(copy.sendNote))}</p>
-        <dl class="a-contact__rows" data-reveal>
-          ${S.contact.map(c => `<div><dt>${esc(t(c.label))}</dt><dd><a href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(c.value)}</a></dd></div>`).join('')}
-          <div><dt>${esc(t(S.cvLabel))}</dt><dd><a href="${asset(S.cv.en)}" target="_blank" rel="noopener">${esc(t(copy.resumeEn))}</a> · <a href="${asset(S.cv.es)}" target="_blank" rel="noopener">${esc(t(copy.resumeEs))}</a></dd></div>
-        </dl>
       </section>
     </main>
     ${footer()}`;

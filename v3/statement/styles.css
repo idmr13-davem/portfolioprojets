@@ -102,14 +102,11 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 
 /* ---------- about: two columns, highlighted facts ---------- */
 .a-about { padding: var(--section) var(--margin); }
-.a-about__text { columns: 2; column-gap: var(--gutter); font-size: clamp(1.375rem, 2.1vw, 2rem); line-height: 1.22; color: var(--muted); }
-.a-about__text p { max-width: none; }
-.a-about__text strong { color: var(--ink); font-weight: 700; }
-.a-about mark { color: var(--highlight-ink); background: var(--highlight); padding: 0 .1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-.a-about__end { margin-top: .9em; }
-.a-about__end a { text-decoration: none; }
-.a-about mark.is-strong { background: var(--inverse); color: var(--inverse-ink); transition: background-color var(--t-hover) ease; }
-.a-about__end a:hover mark { background: var(--accent-hover); }
+/* About: one size, one weight, one colour for every sentence; nothing is highlighted over the rest. */
+.a-about { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); font-size: var(--step-body); line-height: 1.6; color: var(--ink); }
+.a-about p { max-width: none; }
+.a-about__cv { color: inherit; text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .18em; transition: color var(--t-hover) ease, text-decoration-color var(--t-hover) ease; }
+.a-about__cv:hover { color: var(--accent); }
 
 /* ---------- blog: two-ended rows ---------- */
 .a-blog { padding: var(--section) var(--margin); background: var(--field); color: var(--field-ink); }
@@ -135,11 +132,6 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-field button { position: absolute; right: .5rem; top: .5rem; width: 3rem; height: 3rem; border-radius: var(--radius-control); background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; transition: transform var(--t-press) var(--ease-out); }
 .a-field button:hover { transform: translateX(2px); }
 .a-contact__note { margin-top: 1rem; color: var(--muted); font-size: var(--step-small); }
-.a-contact__rows { margin-top: 4.5rem; display: grid; gap: .75rem; font-size: .9375rem; }
-.a-contact__rows div { display: grid; grid-template-columns: 12rem 1fr; gap: 1rem; }
-.a-contact__rows dt { color: var(--muted); }
-.a-contact__rows dd { margin: 0; }
-.a-contact__rows a { text-underline-offset: .2em; }
 
 /* ---------- footer: invitation over a cropped name ---------- */
 .a-foot { position: relative; overflow: hidden; min-height: 100svh; background: var(--inverse); color: var(--inverse-ink); padding: clamp(4rem, 10vw, 8rem) var(--margin) 0; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: 1fr auto auto; }
@@ -147,9 +139,6 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-foot__top { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); align-items: start; }
 .a-foot__invite { grid-column: 1 / span 7; display: grid; gap: 2rem; justify-items: start; }
 .a-foot__line { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.5rem, 5vw, 5rem); line-height: .95; letter-spacing: -0.04em; max-width: 14ch; }
-.a-foot__links { grid-column: 10 / -1; display: grid; gap: .6rem; }
-.a-foot__link { text-decoration: none; justify-self: start; }
-.a-foot__link:hover { text-decoration: underline; text-underline-offset: .2em; }
 .a-foot__legal { display: flex; justify-content: space-between; gap: 1rem; font-size: var(--step-small); padding-bottom: .75rem; }
 .a-foot__name { font-family: var(--font-display); font-weight: 700; font-size: 25vw; line-height: .8; letter-spacing: -0.06em; white-space: nowrap; transform: translateY(18%); margin-left: -.04em; max-width: none; }
 
@@ -268,15 +257,11 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-facts__chip { grid-column: 1; width: 100%; }
   .a-facts__list { grid-column: 1; font-size: 1.5rem; line-height: 1.08; gap: .75rem; }
   .a-contact__prompt { font-size: 1.375rem; }
-  .a-about__text { columns: 1; text-align: left; font-size: 1.25rem; line-height: 1.25; }
   .a-row { grid-template-columns: 4rem 1fr; }
   .a-row img { width: 4rem; height: 4rem; }
   .a-row__value { grid-column: 2; }
-  .a-contact__rows div { grid-template-columns: 1fr; gap: .1rem; }
   .a-foot__top { grid-template-columns: 1fr; gap: 3rem; }
-  .a-foot__invite, .a-foot__links { grid-column: 1; }
   .a-foot__line { font-size: 11vw; }
-  .a-foot__links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem var(--gutter); }
   .a-foot__name { font-size: 34vw; }
   .a-foot__legal { flex-direction: column; font-size: .8125rem; }
   .a-cs__meta { grid-template-columns: 1fr; gap: 1rem; }
@@ -310,24 +295,18 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-row__name { grid-column: 2 / -2; }
 .a-row__value { grid-column: -2 / -1; justify-self: end; }
 /* Contact rows (columns 4–9): label on two columns, value on four. */
-.a-contact__rows { grid-template-columns: subgrid; column-gap: var(--gutter); }
-.a-contact__rows div { grid-column: 1 / -1; grid-template-columns: subgrid; column-gap: var(--gutter); }
-.a-contact__rows dt { grid-column: 1 / span 2; }
-.a-contact__rows dd { grid-column: 3 / -1; }
 
 @media (max-width: 1023px) {
   .a-row img { grid-column: 1 / span 2; }
   .a-row__name { grid-column: 3 / -3; }
   .a-row__value { grid-column: -3 / -1; }
-  .a-contact__rows dt { grid-column: 1 / span 4; }
-  .a-contact__rows dd { grid-column: 5 / -1; }
 }
+/* Phones: blog and contact span the full 12 columns; rows put the thumbnail on 3 and the text on 9. */
 @media (max-width: 767px) {
-  .a-row img { grid-column: 1 / span 4; }
-  .a-row__name { grid-column: 5 / -1; }
-  .a-row__value { grid-column: 5 / -1; justify-self: start; white-space: normal; }
-  .a-contact__rows div { grid-template-columns: 1fr; }
-  .a-contact__rows dt, .a-contact__rows dd { grid-column: 1 / -1; }
+  .a-blog__title, .a-rows, .a-contact > * { grid-column: 1 / -1; }
+  .a-row img { grid-column: 1 / span 3; }
+  .a-row__name { grid-column: 4 / -1; }
+  .a-row__value { grid-column: 4 / -1; justify-self: start; white-space: normal; }
 }
 
 @media (max-width: 1023px) {
@@ -359,16 +338,45 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-case .a-case__media, .a-case .a-case__copy { grid-column: 1 / -1; grid-row: auto; }
 }
 
-/* Case media in the manner of the Floria reference: large radius, tonal gradient ground,
-   a bottom-up veil that deepens on hover, an inner hairline ring and a slow zoom of the video. */
-.a-case .a-case__media { border-radius: var(--radius-xl); overflow: hidden; isolation: isolate; background: radial-gradient(120% 90% at 18% 0%, color-mix(in srgb, var(--surface-accent) 22%, var(--surface-main)) 0%, var(--surface-main) 42%, var(--background-deep) 100%); }
-.a-case .a-case__media::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to top, color-mix(in srgb, var(--background-deep) 60%, transparent), color-mix(in srgb, var(--background-deep) 10%, transparent) 45%, transparent 75%); opacity: .8; transition: opacity 500ms var(--ease-out); }
-.a-case .a-case__media::before { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; border-radius: inherit; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--text-primary) 10%, transparent); }
-/* The posters carry the old dark ground baked in; lighten lets the gradient show through it while the bright phone screen stays as is. */
-.a-case .a-case__video { background: transparent; mix-blend-mode: lighten; transition: transform 1000ms var(--ease-out); }
-.a-case .a-case__media .v3-play { z-index: 3; }
-@media (hover: hover) {
-  .a-case .a-case__media:hover::after { opacity: 1; }
-  .a-case .a-case__media:hover .a-case__video { transform: scale(1.1); }
+/* Case media as in Figma (5059:183): a flat Surface/Main ground with the XL radius, no hover zoom.
+   The posters carry the old dark ground baked in; lighten lets the flat ground show through it. */
+.a-case .a-case__media { border-radius: var(--radius-xl); overflow: hidden; isolation: isolate; background: var(--surface-main); }
+.a-case .a-case__video { background: transparent; mix-blend-mode: lighten; }
+.a-case .a-case__media .v3-play { z-index: 1; }
+
+/* ---------- Figma update: Home · Desktop XL (node 5059:155) ---------- */
+/* About: heading on columns 3–10, interests list on 3–6, closing text and resume link on 7–10. */
+.a-about { padding: var(--space-mega) var(--margin); row-gap: var(--space-l); align-items: start; }
+.a-about__title { grid-column: 3 / span 8; font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
+.a-about .a-about__list { grid-column: 3 / span 4; margin: 0; padding-left: 1.5em; list-style: disc; }
+.a-contact .a-contact__note { max-width: none; }
+.a-about__close { grid-column: 7 / span 4; display: grid; gap: 10px; }
+.a-about__cv { color: var(--text-accent-primary); }
+/* Blog and contact on columns 3–10; blog rows: thumbnail, text and reading time on 1 / 6 / 1 columns. */
+.a-blog { padding-block: calc(var(--section) / 2); }
+.a-blog__title, .a-rows { grid-column: 3 / span 8; }
+.a-contact > * { grid-column: 3 / span 8; }
+/* Case copy rhythm from Figma: a little more air before the summary and before the role. */
+.a-case .a-case__summary { margin-top: 1.05rem; }
+.a-case .a-case__role { margin-top: .8rem; }
+/* Footer: invitation, the four contact channels as buttons, legal row; the name sits behind at 25%. */
+.a-foot { min-height: 0; padding: 8rem var(--margin) 0; grid-template-rows: auto auto; isolation: isolate; }
+.a-foot__top, .a-foot__legal { position: relative; z-index: 1; }
+.a-foot__invite { grid-column: 1 / -1; gap: var(--space-l); }
+.a-foot__buttons { display: flex; flex-wrap: wrap; gap: var(--space-l); }
+.a-btn--dark { background: var(--inverse-ink); color: var(--text-primary); }
+.a-btn--dark:hover { background: var(--interactive-primary-clic); color: var(--text-static-primary); }
+.a-foot__legal { margin-top: 3rem; }
+.a-foot__name { position: absolute; z-index: 0; left: var(--margin); top: 11.4vw; transform: none; color: var(--brand-logo-main-25pct); pointer-events: none; }
+@media (max-width: 1023px) {
+  .a-about__title, .a-blog__title, .a-rows, .a-contact > * { grid-column: 1 / -1; }
+  .a-about .a-about__list { grid-column: 1 / span 6; }
+  .a-about__close { grid-column: 7 / -1; }
 }
-@media (prefers-reduced-motion: reduce) { .a-case .a-case__video, .a-case .a-case__media::after { transition: none; } }
+@media (max-width: 767px) {
+  .a-about .a-about__list, .a-about__close { grid-column: 1 / -1; }
+  .a-foot { padding-top: 5rem; }
+  .a-foot__buttons { gap: .75rem; }
+  .a-foot__buttons .a-btn { width: auto; }
+  .a-foot__name { top: auto; bottom: -8vw; }
+}
