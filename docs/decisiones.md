@@ -21,3 +21,10 @@
 - Aplicados por Codex: reduced motion del velo del video, un solo listener de resize en los titulares de estado, caché `20261024-grid-r2-review`.
 - Aplicados por Claude a partir de sus parches exactos: `competing-hierarchy` solo para encabezado seguido de p/blockquote con peso idéntico; `inconsistent-repeat` excluye tarjetas hermanas en una fila y admite `data-grid-repeat` / `data-grid-repeat-ignore`; generador sincronizado con la caché.
 - Verificación posterior: el auditor sigue detectando los problemas de la versión anterior (commit `b57dd55`); Statement queda sin altos ni medios en 120 combinaciones (12 URLs EN/ES × 10 anchos de 320 a 1500, incluida la franja 768–1023). No se abrió una segunda iteración porque los únicos cambios pendientes eran los parches del propio revisor, ya verificados.
+
+## 2026-10-25 — Actualización de Figma 5059:155 en Statement
+
+- Implementado Home · Desktop XL de Figma: Sobre mí con titular y lista (columnas 3–10), blog y contacto en columnas 3–10, pie con los cuatro canales como botones y el nombre al 25 %, casos con fondo plano `--surface-main` y sin zoom en hover (pedido de David). Se mantiene el logo productivo aunque el header de Figma no lo muestre.
+- Pendiente de validación de David: el titular de Sobre mí en español ("Además del diseño, mis intereses incluyen:") es traducción propia; Figma solo trae el inglés.
+- Revisión Codex `intercambio/revisiones/2026-10-25_figma-5059-statement_v1_revision.md` ("Requiere cambios"): Codex corrigió el contraste de hover/active de los botones del pie (3,05 → 5,55:1) y la caché; Claude aplicó sus parches exactos al generador, al auditor (la excepción de filas de botones exige fila flex horizontal y solapamiento vertical) y a `SKILL.md`. Tras aplicarlos: 0 altos y 0 medios en 64 combinaciones (8 URLs EN/ES × 1600–320). El supuesto borde del video no aparece en el navegador real con el fondo plano. Sin segunda iteración: lo pendiente eran los parches del propio revisor, verificados.
+- El commit base `2f5629d` incluyó cambios de móvil de blog/contacto (`20261024-mobile-blog`) hechos fuera de esta sesión el 24-oct que estaban sin commit.

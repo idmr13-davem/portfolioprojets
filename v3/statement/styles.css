@@ -365,7 +365,7 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-foot__invite { grid-column: 1 / -1; gap: var(--space-l); }
 .a-foot__buttons { display: flex; flex-wrap: wrap; gap: var(--space-l); }
 .a-btn--dark { background: var(--inverse-ink); color: var(--text-primary); }
-.a-btn--dark:hover { background: var(--interactive-primary-clic); color: var(--text-static-primary); }
+.a-btn--dark:hover, .a-btn--dark:active { background: var(--interactive-primary-clic); color: var(--text-static-inverse); }
 .a-foot__legal { margin-top: 3rem; }
 .a-foot__name { position: absolute; z-index: 0; left: var(--margin); top: 11.4vw; transform: none; color: var(--brand-logo-main-25pct); pointer-events: none; }
 @media (max-width: 1023px) {
