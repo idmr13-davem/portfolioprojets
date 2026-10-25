@@ -338,9 +338,9 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-case .a-case__media, .a-case .a-case__copy { grid-column: 1 / -1; grid-row: auto; }
 }
 
-/* Case media as in Figma (5059:183): a flat Surface/Main ground with the XL radius, no hover zoom.
+/* Case media as in Figma (5059:184): a flat Surface/Main ground with square corners, no hover zoom.
    The posters carry the old dark ground baked in; lighten lets the flat ground show through it. */
-.a-case .a-case__media { border-radius: var(--radius-xl); overflow: hidden; isolation: isolate; background: var(--surface-main); }
+.a-case .a-case__media { border-radius: 0; overflow: hidden; isolation: isolate; background: var(--surface-main); }
 .a-case .a-case__video { background: transparent; mix-blend-mode: lighten; }
 .a-case .a-case__media .v3-play { z-index: 1; }
 

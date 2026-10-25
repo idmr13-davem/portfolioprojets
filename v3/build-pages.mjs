@@ -49,7 +49,7 @@ for (const [name, p] of Object.entries(proposals)) {
 ${p.fonts}
 <script>document.documentElement.classList.add('js')</script>
 ${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''}<link rel="stylesheet" href="${base}../shared/base.css">
-<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261025-figma-5059-review' : ''}">
+<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261025-case-square' : ''}">
 </head>
 <body class="v3-${name}" data-page="${page.page}"${page.id ? ` data-id="${page.id}"` : ''}>
 <div id="app"></div>
