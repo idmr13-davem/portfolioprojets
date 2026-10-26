@@ -1,0 +1,37 @@
+{
+  "baseline": "9fdee20",
+  "rows": [
+    {
+      "id": "motion",
+      "lang": "en",
+      "markupEqual": true
+    },
+    {
+      "id": "motion",
+      "lang": "es",
+      "markupEqual": true
+    },
+    {
+      "id": "menores",
+      "lang": "en",
+      "markupEqual": true
+    },
+    {
+      "id": "menores",
+      "lang": "es",
+      "markupEqual": true
+    }
+  ],
+  "sharedCssBeforeTemplateUnchanged": true,
+  "sharedRuntimeAndContentUnchanged": true,
+  "snapshotEqualsCurrent": [
+    {
+      "file": "app.js",
+      "equal": true
+    },
+    {
+      "file": "styles.css",
+      "equal": true
+    }
+  ]
+}

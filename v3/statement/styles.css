@@ -381,39 +381,98 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-foot__name { top: auto; bottom: -8vw; }
 }
 
-/* ---------- Figma update: case 2 · Motion Level (section 5076:1275) ---------- */
+/* ---------- Figma case template: Motion Level (5076:1275) and Registro ML (5065:519) ---------- */
+/* Pages rendered by gridSection carry .a-cs--grid. Entrances stay within the 500 ms motion limit. */
+.a-cs--grid { --t-reveal: 500ms; }
+.a-cs--grid [data-reveal] { transition-duration: var(--t-reveal); }
+.a-cs--grid .lines [data-line] { animation-duration: var(--t-reveal); }
 /* Sections: title on columns 1–3 and its explanation on 4–12, stacked at block-gap (40); wide evidence
-   (roadmap, benchmark, example videos) follows on all twelve columns. */
-.a-cs--motion .cs-section { display: flex; flex-direction: column; gap: 2.5rem; }
-.a-cs--motion .cs-intro { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 2.5rem; align-items: start; }
-.a-cs--motion .cs-intro > .cs-title { grid-column: 1 / span 3; font-size: clamp(1.75rem, 2.9vw, 3rem); }
-.a-cs--motion .cs-content { grid-column: 4 / -1; display: flex; flex-direction: column; gap: 2.5rem; min-width: 0; }
+   (roadmap, benchmark, example videos, the context video) follows on columns 4–12 on desktop,
+   and all twelve columns on tablet and phones. */
+.a-cs--grid .cs-section { display: flex; flex-direction: column; gap: 2.5rem; }
+.a-cs--grid .cs-intro { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 2.5rem; align-items: start; }
+.a-cs--grid .cs-intro > .cs-title { grid-column: 1 / span 3; font-size: clamp(1.75rem, 2.9vw, 3rem); }
+.a-cs--grid .cs-content { grid-column: 4 / -1; display: flex; flex-direction: column; gap: 2.5rem; min-width: 0; }
+/* Sections with parts and one video (Registro ML): title 3 | parts 4 | video 5 columns, top-aligned. */
+.a-cs--grid .cs-section--split .cs-content { grid-column: 4 / span 4; }
+.a-cs--grid .cs-section--split .cs-intro > .cs-media { grid-column: 8 / -1; }
 /* Copy: paragraphs keep para-gap (p + p, .9em of Body); lists read as plain lines, full column width. */
-.a-cs--motion .cs-copy p + .cs-list { margin-top: .9em; }
-.a-cs--motion .cs-list { list-style: none; padding-left: 0; }
-.a-cs--motion .cs-list li, .a-cs--motion .cs-content p { max-width: none; }
+.a-cs--grid .cs-copy p + .cs-list { margin-top: .9em; }
+.a-cs--grid .cs-section .cs-list { list-style: none; padding-left: 0; }
+.a-cs--grid .cs-section .cs-list li, .a-cs--grid .cs-content p { max-width: none; }
 /* Parts: XL (48) between parts, SS (12) between a part's title, copy and media. */
-.a-cs--motion .cs-parts { display: flex; flex-direction: column; gap: 3rem; }
-.a-cs--motion .cs-part { display: flex; flex-direction: column; gap: .75rem; }
-.a-cs--motion .cs-part h3 { margin-bottom: 0; }
-.a-cs--motion .cs-part + .cs-part { margin-top: 0; }
+.a-cs--grid .cs-parts { display: flex; flex-direction: column; gap: var(--space-xl); }
+.a-cs--grid .cs-part { display: flex; flex-direction: column; gap: var(--space-ss); }
+.a-cs--grid .cs-part h3 { margin-bottom: 0; }
+.a-cs--grid .cs-part + .cs-part { margin-top: 0; }
+/* Final outcomes and case navigation share Background/Deep at section-half; outcomes keep their bullets. */
+.a-cs--grid .a-cs__final { background: var(--surface); padding: calc(var(--section) / 2) var(--margin); }
+.a-cs--grid .a-cs__final .cs-list { list-style: disc; padding-left: 1.5em; }
+/* Heading, intro and list fill the twelve columns (Figma 5074:474): no measured width caps. */
+.a-cs--grid .a-cs__final > p, .a-cs--grid .a-cs__final .cs-list li { max-width: none; }
+.a-cs--grid .a-cs__next { background: var(--surface); }
+/* Desktop: wide evidence below a section (Motion's roadmap, benchmark and examples, Registro's context
+   video) keeps the three title columns free and sits on columns 4–12 (Figma 5083:669, 5074:502 / 5074:678). */
+@media (min-width: 1024px) {
+  .a-cs--grid .cs-section > .cs-media { align-self: flex-end; width: calc((100% - 11 * var(--gutter)) / 12 * 9 + 8 * var(--gutter)); }
+}
+@media (max-width: 1023px) {
+  .a-cs--grid .cs-intro > .cs-title, .a-cs--grid .cs-content { grid-column: 1 / -1; }
+  /* Tablet: the title on its own row, then parts and video on 6 + 6 columns. */
+  .a-cs--grid .cs-section--split .cs-content { grid-column: 1 / span 6; }
+  .a-cs--grid .cs-section--split .cs-intro > .cs-media { grid-column: 7 / -1; }
+}
+@media (max-width: 767px) {
+  .a-cs--grid .cs-section--split .cs-content, .a-cs--grid .cs-section--split .cs-intro > .cs-media { grid-column: 1 / -1; }
+}
+
+/* Motion Level only. */
+.a-cs--motion .cs-steps li { min-height: 77px; }
+/* Final outcomes follows the last section directly: its section-half padding is the only space (Figma Body, no bottom padding). */
+.a-cs--motion .a-cs__final { margin-top: 0; }
 /* Expressivity videos keep three columns each (title-width) inside the nine-column content. */
 .a-cs--motion .cs-part .cs-media--2 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Example videos share one frame (example-height: 9:20 of the column, capped at 80svh) on
    Background/Secondary, so the three line up even when a recording has another ratio; images are fitted without a ground. */
 .a-cs--motion .cs-section--examples .cs-figure video { aspect-ratio: 9 / 20; background: var(--background-secondary); }
 .a-cs--motion .cs-section > .cs-media img { background: none; }
-/* Final outcomes and case navigation share Background/Deep at section-half; outcomes keep their bullets. */
-.a-cs--motion .a-cs__final { background: var(--surface); padding: calc(var(--section) / 2) var(--margin); }
-.a-cs--motion .a-cs__final .cs-list { list-style: disc; padding-left: 1.5em; }
-.a-cs--motion .a-cs__next { background: var(--surface); }
+/* Benchmark image sits on a Surface/Main ground (Figma 5110:4747); on desktop its frame keeps the
+   figure height (80svh: 720 / 640) and the image is fitted inside it. */
+.a-cs--motion .cs-section--benchmark .cs-figure img { background: var(--surface-main); }
+@media (min-width: 1024px) {
+  .a-cs--motion .cs-section--benchmark .cs-figure img { height: 80svh; }
+}
+/* Desktop (Figma 5083:669 / 5083:941): the roadmap steps read as a bulleted list right after the paragraph, and the
+   challenge and frequency lists are bulleted too. Tablet and phones keep the step cards and plain lists. */
+@media (min-width: 1024px) {
+  .a-cs--motion .cs-section--roadmap .cs-content { gap: 0; }
+  .a-cs--motion .cs-section--roadmap .cs-steps { gap: 0; padding-left: 1.5em; list-style: disc; }
+  .a-cs--motion .cs-section--roadmap .cs-steps li { min-height: 0; padding: 0; background: none; }
+  .a-cs--motion .cs-section--challenges .cs-list, .a-cs--motion .cs-part .cs-list { padding-left: 1.5em; list-style: disc; }
+}
+/* Desktop XL only (Figma 5083:669): more air between the roadmap list and its image (XXL), and between
+   the expressivity title, copy and videos (XL). The 1280 frame keeps block-gap and SS. */
+@media (min-width: 1500px) {
+  .a-cs--motion .cs-section--roadmap { gap: var(--space-xxl); }
+  .a-cs--motion .cs-section--level .cs-part:first-child { gap: var(--space-xl); }
+}
 @media (max-width: 1023px) {
-  .a-cs--motion .cs-intro > .cs-title, .a-cs--motion .cs-content { grid-column: 1 / -1; }
   .a-cs--motion .cs-part .cs-media--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 767px) {
   /* Property samples: two groups per row (six columns each), their three samples stacked. */
   .a-cs--motion .cs-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 2.5rem; }
   .a-cs--motion .cs-section > .cs-media, .a-cs--motion .cs-part .cs-media { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
-  .a-cs--motion .cs-axis__ends { row-gap: 1.5rem; }
+  .a-cs--motion .cs-axis__ends { row-gap: var(--space-m); }
+}
+
+/* Registro ML only. Tablet and desktop videos use the 16:10 height of the full body width, capped
+   at 80svh (720 / 640 / 460 at 1600 / 1280 / 768), fitted on Background/Secondary.
+   Phones use the explicit media height below. */
+.a-cs--registro .a-cs__body { container-type: inline-size; }
+.a-cs--registro .cs-figure video { height: min(62.5cqw, 80svh); max-height: none; aspect-ratio: auto; object-fit: contain; background: var(--background-secondary); }
+/* Phones (Figma 5074:1002): each example figure is 420 tall so the recordings read clearly:
+   388 of media + SS gap (12) + one caption line (20). */
+@media (max-width: 767px) {
+  .a-cs--registro .cs-figure video { height: 388px; }
 }

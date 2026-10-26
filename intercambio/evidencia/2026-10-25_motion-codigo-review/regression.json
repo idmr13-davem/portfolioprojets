@@ -1,0 +1,26 @@
+{
+  "rows": [
+    {
+      "id": "registro",
+      "lang": "en",
+      "equalAfterNormalizingMainClass": true
+    },
+    {
+      "id": "registro",
+      "lang": "es",
+      "equalAfterNormalizingMainClass": true
+    },
+    {
+      "id": "menores",
+      "lang": "en",
+      "equalAfterNormalizingMainClass": true
+    },
+    {
+      "id": "menores",
+      "lang": "es",
+      "equalAfterNormalizingMainClass": true
+    }
+  ],
+  "sharedCssUnchanged": true,
+  "sharedRuntimeAndContentUnchanged": true
+}
