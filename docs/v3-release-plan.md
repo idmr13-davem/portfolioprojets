@@ -17,14 +17,16 @@ Hecho: alcance en `AGENTS.md` y `CLAUDE.md`; `.gitignore` deja entrar los 14 med
 
 ## Qué entra en la release
 
-| Grupo | Origen | Peso aprox. |
-|---|---|---|
-| Shells HTML (11 páginas) | generados por `v3/build-pages.mjs` en modo release | <0,1 MB |
-| JS y CSS de Statement | `v3/statement/app.js`, `styles.css`, `v3/shared/content.js`, `site.js`, `base.css` | 0,3 MB |
-| Dependencias de raíz | `css/tokens/figma.css`, `css/analytics.css`, `js/analytics.js`, `assets/Favicon/favicon.ico`, `CNAME`, `.nojekyll`, `robots.txt`, `sitemap.xml` (regenerado) | <1 MB |
-| Assets referenciados | 138 archivos sacados de `content.js` y `app.js` | 122 MB hoy; ~60–70 MB tras optimizar los videos (estimado, sin medir) |
+Lo genera `python3 scripts/prepare-github-pages-v3.py` en `releases/github-pages-v3/` (+ `releases/portfolio-v3-github-pages.zip`). Primera generación, 27-oct-2026: **173 archivos, 38 MB**.
 
-No entran: `intercambio/`, `.pixel-perfect/`, `releases/`, `.impeccable/`, `.agents/`, `.taste-skill/`, `docs/`, `variants/`, `plantillas/`, `research/`, `server.js`, `serve.sh`, las páginas V2 ni los assets fuente de Ropstar/Winefast (`Hero/`, `Img hero/`, PNG sueltos de `v3/`).
+| Grupo | Origen |
+|---|---|
+| 12 páginas HTML en la raíz | `node v3/build-pages.mjs --release <dir>`: 11 páginas de Statement + `about.html` |
+| Renderizador | `v3/shared/base.css`, `content.js`, `site.js`, `v3/statement/app.js`, `styles.css` (servidos desde `/v3/`) |
+| Dependencias de raíz | `css/tokens/figma.css`, `css/analytics.css`, `js/analytics.js` (transformado), `assets/Favicon/favicon.ico`, `CNAME`, `robots.txt`, `.nojekyll` y `sitemap.xml` (generados) |
+| Assets | Solo los que referencian el renderizador y las páginas, incluidas las 9 imágenes de `assets/og/` |
+
+El script falla si falta un archivo, si entra un `.mov` o un `Img hero.png`, o si algo viene de `intercambio/`, `releases/`, `docs/`, `variants/`, `plantillas/`, `research/`, carpetas ocultas, `v3/stage/` o `v3/poster/`.
 
 ## Pasos
 
@@ -56,38 +58,42 @@ ffmpeg -i in.mov -map 0:v:0 -c:v libx264 -preset slow -crf 26 -profile:v high -p
   - Comprobado en Chrome: las 38 grabaciones de la Home y de los cuatro casos cargan sin errores.
 - El script de release solo copia lo que referencia `content.js`, así que los `.mov` no entran. Los originales de la V2 siguen en Git mientras la V2 publicada los use.
 
-### 3. Shells para producción
-Las páginas actuales viven en `/v3/statement/` con rutas `../../` y `noindex`. Hay que añadir un modo release a `v3/build-pages.mjs` (o un script nuevo) que:
-- Escriba solo Statement en la raíz de la release: `index.html`, `404.html`, `work/*.html` (6), `articles/*.html` (3).
-- Ponga `data-root` igual a `data-base` (así `asset()` resuelve desde la raíz) y sirva `app.js`, `styles.css` y `shared/` desde una carpeta fija (por ejemplo `/v3/`).
-- Cambie `noindex` por `index, follow`, salvo en 404 y en construcción.
-- Añada por página: `<link rel="canonical">`, `meta description`, Open Graph y Twitter card con imagen.
-- Mantenga los `?v=` de caché.
+### 3. Páginas para producción — hecho el 27-oct-2026
+`node v3/build-pages.mjs --release <dir>` escribe solo Statement en la raíz:
+- `data-root` igual a `data-base`; el renderizador se carga desde `v3/`. El 404 usa rutas absolutas (`/`) porque GitHub Pages lo sirve a cualquier profundidad.
+- Las 9 páginas indexables llevan `index, follow`, `canonical`, `description`, Open Graph (1200×630, `og:locale` en_US con alternativa es_LA) y `twitter:card`. La 404 y la página en construcción son `noindex`.
+- Descripciones: el texto del hero de la Home, `card.summary` de los casos, `lead` de Ropstar y Winefast y `summary` de los artículos, todo en inglés y tomado de `content.js`.
+- Las versiones de caché (`?v=`) son las mismas de la exploración y se definen en un solo lugar (`v` en `build-pages.mjs`).
+- Imágenes Open Graph: `python3 scripts/make-og-images.py [url del servidor local]` captura con Chrome headless la parte de arriba de cada página (sin el panel de cookies) y la guarda en `assets/og/`. Hay que volver a correrlo cuando cambie un título o un hero.
 
 Límite conocido: el contenido se dibuja con JavaScript. Los buscadores modernos lo leen, pero un HTML estático por página sería mejor para SEO. Queda como mejora posterior, no bloquea.
 
-### 4. Rutas que cambian
-- La V3 no tiene `about.html`. Publicar una página `about.html` mínima que redirija a `index.html#about` (meta refresh + enlace), porque la URL está en el sitemap actual y quizá en enlaces externos.
-- `work/cambio-cuentas-paises.html` pasa de 404 a página pública.
-- Nuevas: `work/ropstar.html`, `work/winefast.html`.
-- Regenerar `sitemap.xml` con las 9 URLs indexables.
+### 4. Rutas que cambian — hecho
+- `about.html` redirige, conservando `?lang=`, a `index.html#about-title`. Lleva `noindex` y `canonical` a la Home.
+- `work/cambio-cuentas-paises.html` deja de dar 404; `work/ropstar.html` y `work/winefast.html` son nuevas.
+- `sitemap.xml` tiene las 9 URLs indexables.
 
-### 5. Analítica
-- En `js/analytics.js`, añadir a `publicPaths` las seis páginas de caso. Añadir Ropstar y Winefast a `casePaths` y cambiar `site_version` a `'v3'`.
-- Comprobar que los enlaces internos de la V3 (`#work`, `#craft`, `#contact`) caigan en el mapa de secciones o añadirlos.
-- Mantener el consentimiento: no se pide nada a Google antes de que la persona acepte. El banner ya se carga en Statement.
+### 5. Analítica — hecho en la release
+El script transforma `js/analytics.js` solo dentro de la release; la copia de trabajo no cambia:
+- `publicPaths`: Home, las 6 páginas de caso, los 2 artículos y la página en construcción.
+- `casePaths`: se suman `ropstar_ui` y `winefast_concept`.
+- Secciones de la Home de la V3: `#main`, `#about-title`, `#work`, `#craft`, `#blog`, `#contact`.
+- Ubicación del clic: el menú `#a-menu`, las tarjetas `.a-case` y `.a-craft`, el blog `#blog`.
+- `site_version: 'v3'`.
+- El consentimiento no cambia: nada se pide a Google antes de aceptar, y solo en el dominio de producción.
 
-### 6. Script de release
-Crear `scripts/prepare-github-pages-v3.py`, con `prepare-github-pages.py` como base:
-- Salida en `releases/github-pages-v3/` + ZIP + `release-manifest.json`, con la misma salvaguarda `.portfolio-generated`.
-- Lista blanca: shells generados en el paso 3 + dependencias de raíz + assets referenciados por `content.js`/`app.js` (resueltos en NFC, como hizo el fix `c8f0e0e`).
-- Fallar si falta un archivo o si entra algo de `intercambio/`, `.pixel-perfect/`, `stage/`, `poster/` o un archivo fuente PNG.
-- Sin la regla `PRIVATE` de Switch.
+### 6. Script de release — hecho
+`scripts/prepare-github-pages-v3.py`, con la misma salvaguarda `.portfolio-generated`, manifest con SHA-256 y ZIP. Las rutas se escriben en NFC (fix `c8f0e0e`).
 
-### 7. Validación
-- Servir la release (no la carpeta de trabajo) con `node server.js` apuntando a `releases/github-pages-v3/`.
-- Probar a 360, 390, 768, 1280 y ≥1500, en EN y ES, las 11 páginas: sin desbordamiento horizontal, sin errores de consola, sin 404 de red, videos que cargan y reproducen (Chrome y Safari) y foco visible.
-- Comprobar `?lang=`, la persistencia de `portfolio-language`, los enlaces de CV y contacto, la redirección de `about.html` y el banner de analítica.
+### 7. Validación — hecho en Chrome el 27-oct-2026
+Servidor `release-v3` de `.claude/launch.json` (Node, raíz en `releases/github-pages-v3/`, puerto 4567):
+- Las 12 páginas a 1600, 1280, 768, 390 y 360: todas se dibujan, sin desbordamiento horizontal ni errores de JavaScript, y todas las imágenes, posters y videos del DOM responden 200.
+- Una URL inexistente muestra el 404 con estilos.
+- `about.html?lang=es` llega a `/index.html?lang=es#about-title` en español.
+- Responden 200: los `srcset` móviles, los dos CV y las imágenes Open Graph.
+- `robots.txt` y `CNAME` correctos.
+
+Pendiente: Safari, y la ingesta real de GA4, que solo se puede comprobar en producción.
 
 ### 8. Publicación (solo con OK explícito de David)
 - Revisar el manifest y el peso total.
@@ -95,6 +101,7 @@ Crear `scripts/prepare-github-pages-v3.py`, con `prepare-github-pages.py` como b
 - Commit, push y verificación en `https://davidmontealegreux.com/`: las 11 páginas, los videos y la ingesta real de GA4.
 - Registrar el estado publicado en `AGENTS.md` y en `docs/github-pages-release.md`.
 
-## Higiene de Git en la rama de trabajo (aparte de la release)
-- `intercambio/evidencia/` pesa 221 MB y ya tiene 20 MB versionados. Propuesta: ignorar `intercambio/evidencia/` y sacar del índice lo versionado (`git rm --cached`, sin borrar archivos), dejando `handoffs/` y `revisiones/`.
-- Antes del commit de la V3, añadir `assets/Ropstar/v3/case|home` y `assets/Winefast/V3/case|home`, pero no `Ropstar/Hero/`, `Winefast/Img hero/` ni los PNG sueltos (unos 15 MB). Hacen falta reglas de `.gitignore` para esos fuentes.
+## Higiene de Git en la rama de trabajo — hecho el 27-oct-2026
+- Desde el 27-oct-2026, `intercambio/evidencia/` ya no entra en Git; las carpetas que ya estaban versionadas se quedan. Los handoffs y las revisiones sí se versionan.
+- Los PNG fuente de Figma (`Img hero` y los PNG sueltos de Ropstar y Winefast) quedan fuera; se versionan solo los `.webp` que usa la web.
+- Las 5 imágenes borradas de `assets/Home/Imágenes/` siguen sin commit a propósito: `prepare-github-pages.py` (V2) todavía las recupera desde Git.
