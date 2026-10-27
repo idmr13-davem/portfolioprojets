@@ -27,6 +27,8 @@
   --step-display: clamp(5.25rem, 15vw, 15rem);
   --margin: clamp(1rem, 2vw, 1.75rem);
   --section: clamp(7.5rem, 14vw, 13.75rem);
+  /* Figma hero-top: the hero's top padding, also used above and below the craft entries. */
+  --hero-top: clamp(6rem, 15svh, 9rem);
   --radius: 0px;
 }
 
@@ -40,7 +42,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.035em; line-height: 0.95; }
 .a-mark img { display: block; width: 59px; height: 52px; background: none; transition: opacity var(--t-hover) ease; }
 .a-mark:hover img { opacity: .8; }
 /* Masked display lines: leave room for descenders (the g of Montealegre) at leading .86. */
-.a-hero__name .line, .a-status__big .line, .a-cs__title .line { padding-bottom: .24em; margin-bottom: -.24em; }
+.a-hero__name .line, .a-cs__title .line { padding-bottom: .24em; margin-bottom: -.24em; }
 .a-nav { display: flex; align-items: center; gap: 1.75rem; }
 .a-nav > a { text-decoration: none; position: relative; }
 .a-nav > a::after, .a-menu nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform var(--t-ui) var(--ease-out); }
@@ -66,14 +68,14 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-btn[disabled] { opacity: .6; cursor: progress; }
 
 /* ---------- hero: the name, margin to margin ---------- */
-.a-hero, .a-status { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding: clamp(6rem, 15svh, 9rem) var(--margin) 1.75rem; }
-.a-hero__name, .a-status__big { font-size: var(--step-display); line-height: 0.86; letter-spacing: -0.05em; font-weight: 700; }
+.a-hero { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding: var(--hero-top) var(--margin) 1.75rem; }
+.a-hero__name { font-size: var(--step-display); line-height: 0.86; letter-spacing: -0.05em; font-weight: 700; }
 .a-hero__name .line:last-child { text-align: right; }
 .a-hero__foot { display: flex; justify-content: space-between; align-items: end; gap: 2rem; padding-top: 3rem; }
 .a-hero__role { font-size: var(--step-lead); line-height: 1.25; max-width: 30ch; font-weight: 400; }
 
 /* ---------- facts: the numbers of a career, on an olive field ---------- */
-.a-facts { position: relative; background: var(--field); color: var(--field-ink); padding: var(--section) var(--margin); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); row-gap: 5rem; }
+.a-facts { position: relative; color: var(--ink); padding: var(--section) var(--margin); display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); row-gap: 5rem; }
 /* The numerals share the section's 12 columns so the portrait and the list line up with them. */
 .a-facts__nums { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); }
 .a-fact { grid-column: span 4; }
@@ -109,7 +111,7 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-about__cv:hover { color: var(--accent); }
 
 /* ---------- blog: two-ended rows ---------- */
-.a-blog { padding: var(--section) var(--margin); background: var(--field); color: var(--field-ink); }
+.a-blog { padding: var(--section) var(--margin); background: var(--bg); color: var(--ink); }
 .a-blog__title { grid-column: 4 / span 7; font-size: var(--step-head); margin: 0 0 2.5rem; }
 .a-rows { grid-column: 4 / span 7; display: grid; gap: 1.5rem; }
 .a-row { display: grid; grid-template-columns: 6rem 1fr auto; gap: 1.25rem; align-items: center; text-decoration: none; }
@@ -122,9 +124,10 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-row:hover strong { text-decoration: underline; text-underline-offset: .2em; }
 
 /* ---------- contact: one field ---------- */
-.a-contact { padding: calc(var(--section) * .9) var(--margin) var(--section); }
+.a-contact { padding: calc(var(--section) * .9) var(--margin) var(--section); background: var(--surface); }
 .a-contact > * { grid-column: 4 / span 6; }
-.a-contact__prompt { font-size: clamp(1.5rem, 2vw, 1.75rem); font-weight: 400; letter-spacing: -0.01em; line-height: 1.2; }
+/* Prompt at Statement/Section title (the case section titles): 700, .95, -0.035em. */
+.a-contact__prompt { font-size: clamp(1.75rem, 2.9vw, 3rem); font-weight: 700; letter-spacing: -0.035em; line-height: .95; }
 .a-contact__prompt span { color: var(--muted); }
 .a-field { position: relative; margin-top: 1.75rem; }
 .a-field input { width: 100%; height: 4rem; padding: 0 4.25rem 0 1.25rem; border: 0; border-radius: var(--radius-control); background: var(--input); color: var(--ink); font-size: 1.0625rem; }
@@ -199,17 +202,18 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 
 /* ---------- article ---------- */
 .a-ar__head { padding: 9rem var(--margin) 3rem; display: grid; gap: 1.5rem; }
-.a-ar__head h1 { font-size: clamp(2rem, 4.4vw, 4.5rem); line-height: 1; max-width: 22ch; }
+.a-ar__head h1 { font-size: clamp(2rem, 4.4vw, 4.5rem); line-height: 1; }
 .a-ar__meta { color: var(--muted); font-size: var(--step-small); }
-.a-ar__summary { font-size: var(--step-lead); line-height: 1.3; max-width: 40ch; }
+.a-ar__summary { font-size: var(--step-lead); line-height: 1.3; max-width: none; }
 .a-ar__tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; }
 .a-ar__tags li { background: var(--surface); padding: .35rem .8rem; font-size: var(--step-small); }
 .a-ar__hero { padding: 0 var(--margin); }
 .a-ar__hero img { width: 100%; }
 .a-ar__hero figcaption { margin-top: .75rem; color: var(--muted); font-size: var(--step-small); }
-/* Reading column on columns 4–9 (2–11 on tablet, full width on phones); % resolve against the page width. */
-.a-ar__body { --c: calc((100% - 2 * var(--margin) - 11 * var(--gutter)) / 12); box-sizing: border-box; width: calc(6 * var(--c) + 5 * var(--gutter)); margin: 0 0 0 calc(var(--margin) + 3 * (var(--c) + var(--gutter))); padding: var(--section) 0; }
-.a-ar__body p, .a-ar__body li { font-size: 1.1875rem; line-height: 1.6; }
+/* Reading column (Figma Blog 1/2): columns 3–10 on desktop, 2–11 on tablet, 1–12 on phones. The Body
+   frames keep 110 above and below at every breakpoint (section-half of the 1600 frame). */
+.a-ar__body { --c: calc((100% - 2 * var(--margin) - 11 * var(--gutter)) / 12); box-sizing: border-box; width: calc(8 * var(--c) + 7 * var(--gutter)); margin: 0 0 0 calc(var(--margin) + 2 * (var(--c) + var(--gutter))); padding: 6.875rem 0; }
+.a-ar__body p, .a-ar__body li { font-size: 1.1875rem; line-height: 1.6; max-width: none; }
 .a-ar__body p + p { margin-top: 1.1em; }
 .a-ar__body h2 { font-size: clamp(1.75rem, 2.8vw, 2.5rem); margin: 3.5rem 0 1.25rem; line-height: 1.02; }
 .a-ar__body h3 { font-size: 1.5rem; margin: 2.5rem 0 1rem; }
@@ -219,10 +223,25 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .ar-figure { margin: 2.5rem 0; }
 
 /* ---------- status pages ---------- */
-.a-status--underWork { grid-template-rows: auto auto auto; gap: 3rem; }
-/* Illustration on columns 1–6 (full width on phones). */
-.a-status__img img { width: calc((100% - 11 * var(--gutter)) / 12 * 6 + 5 * var(--gutter)); }
-@media (max-width: 767px) { .a-status__img img { width: 100%; } }
+/* Figma 5095:4266: one centred stack under the 84 px header — illustration at its native size, Title
+   72/80 (56/64 tablet, 40/50 phones), Body L (Body M below desktop) and a small button — with Mega (120)
+   above and below on desktop, XL (48) / Huge (80) on tablet and Huge on phones. Gap SS (12), S (16) on phones. */
+.a-status { display: flex; flex-direction: column; align-items: center; gap: var(--space-ss); padding: calc(5.25rem + var(--space-mega)) var(--margin) var(--space-mega); text-align: center; }
+.a-status__img { max-width: 100%; height: auto; mix-blend-mode: lighten; }
+/* The V2 illustrations carry a Background/Deep box; lighten lets the page ground show through it. */
+.a-status__title { font-size: 4.5rem; line-height: 5rem; font-weight: 700; letter-spacing: -0.02em; }
+.a-status__text { font-size: 1.125rem; line-height: 1.5625rem; font-weight: 300; max-width: none; }
+.a-status .a-status__btn { width: auto; min-height: 0; padding: var(--space-ss) var(--space-s); font-size: 1rem; line-height: 1.1875rem; }
+@media (max-width: 1023px) {
+  .a-status { padding: calc(5.25rem + var(--space-xl)) var(--margin) var(--space-huge); }
+  .a-status__title { font-size: 3.5rem; line-height: 4rem; }
+  .a-status__text { font-size: 1rem; line-height: 1.35rem; }
+}
+@media (max-width: 767px) {
+  .a-status { gap: var(--space-s); padding: calc(5.25rem + var(--space-huge)) var(--margin) var(--space-huge); }
+  .a-status__title { font-size: 2.5rem; line-height: 3.125rem; }
+  .a-status .a-status__btn { font-size: .75rem; line-height: .875rem; }
+}
 
 /* ---------- tablet ---------- */
 @media (max-width: 1023px) {
@@ -238,9 +257,10 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 @media (max-width: 767px) {
   .a-nav { display: none; }
   .a-menu-btn { display: block; }
-  .a-hero, .a-status { padding-top: 14svh; min-height: 88svh; }
+  :root { --hero-top: 14svh; }
+  .a-hero { padding-top: var(--hero-top); min-height: 88svh; }
   .a-hero__foot { padding-top: 2rem; }
-  .a-hero__name, .a-status__big { font-size: 17vw; line-height: .9; }
+  .a-hero__name { font-size: 17vw; line-height: .9; }
   /* "Montealegre" fitted to the grid: its ink measures 5.6492em (Inter 700, -0.05em tracking), so the
      hero's content box (viewport minus both margins) divided by that is the size that ends on the margin. */
   .a-hero { container-type: inline-size; }
@@ -256,7 +276,6 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-fact__n { font-size: 34vw; }
   .a-facts__chip { grid-column: 1; width: 100%; }
   .a-facts__list { grid-column: 1; font-size: 1.5rem; line-height: 1.08; gap: .75rem; }
-  .a-contact__prompt { font-size: 1.375rem; }
   .a-row { grid-template-columns: 4rem 1fr; }
   .a-row img { width: 4rem; height: 4rem; }
   .a-row__value { grid-column: 2; }
@@ -321,12 +340,27 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 @media (max-width: 767px) {
 }
 
-/* Footer legal row: copyright on column 1, credit on column 10 under the contact links. */
-.a-foot__legal { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); }
-.a-foot__legal > span:first-child { grid-column: 1 / span 9; }
-.a-foot__legal > span:last-child { grid-column: 10 / -1; }
+/* Footer legal row (Figma Footer 5120:1494): copyright above the credit (XXS, 6) on the left and the
+   analytics disclaimer on the right, bottom-aligned, with M (24) below. Tablet keeps both on one row
+   (the disclaimer fills what is left) and phones stack them, XL (48) apart: Figma uses an unbound 43. */
+.a-foot__legal { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; column-gap: var(--space-l); row-gap: var(--space-s); padding-bottom: var(--space-m); line-height: 1.5; }
+.a-foot__credits { display: flex; flex-direction: column; gap: var(--space-xxs); margin: 0; font: inherit; max-width: none; }
+.a-foot__consent:empty { display: none; }
+/* The V2 settings strip from css/analytics.css reads here as plain footer text with an underlined button. */
+.a-foot .analytics-settings { width: auto; padding: 0; border: 0; background: none; color: inherit; font: inherit; }
+.a-foot .analytics-settings p { max-width: none; }
+.a-foot .analytics-settings__link { color: inherit; font: inherit; text-decoration: underline; text-underline-offset: .15em; background: none; cursor: pointer; }
+/* Desktop XL (Figma Footer Device=Desktop XL): L (32) between the invitation and the legal row; below 1500 it stays XL (48). */
+@media (min-width: 1500px) {
+  .a-foot .a-foot__legal { margin-top: var(--space-l); }
+}
+@media (max-width: 1023px) {
+  .a-foot__legal { flex-wrap: nowrap; justify-content: flex-start; column-gap: var(--space-xl); }
+  .a-foot__consent { flex: 1 1 0; min-width: 0; }
+}
 @media (max-width: 767px) {
-  .a-foot__legal { display: flex; }
+  .a-foot__legal { flex-direction: column; align-items: flex-start; gap: var(--space-xl); }
+  .a-foot__consent { flex: none; }
 }
 
 /* The three case bands share one layout: video on columns 1–7 in a 4:3 container, copy on 9–12. */
@@ -338,23 +372,34 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-case .a-case__media, .a-case .a-case__copy { grid-column: 1 / -1; grid-row: auto; }
 }
 
-/* Case media as in Figma (5059:184): a flat Surface/Main ground with square corners, no hover zoom.
+/* Case media as in Figma (5059:184): a flat Background/Deep ground with square corners, no hover zoom.
    The posters carry the old dark ground baked in; lighten lets the flat ground show through it. */
-.a-case .a-case__media { border-radius: 0; overflow: hidden; isolation: isolate; background: var(--surface-main); }
+.a-case .a-case__media { border-radius: 0; overflow: hidden; isolation: isolate; background: var(--surface); }
 .a-case .a-case__video { background: transparent; mix-blend-mode: lighten; }
 .a-case .a-case__media .v3-play { z-index: 1; }
+/* Phones (Figma Home 5059:614): every case video sits in a frame 560 tall, the mobile media height
+   shared by all V3 pages, fitted inside it on Background/Deep (David, October 27, 2026: Motion included). */
+/* Tablet and phones (Figma 5223:11959, 5203:82753): the Switch entry's impact fills the copy column. */
+@media (max-width: 1023px) {
+  .a-case--switch .a-case__impact { max-width: none; }
+}
+@media (max-width: 767px) {
+  .a-case .a-case__video { aspect-ratio: auto; height: 560px; }
+}
 
-/* ---------- Figma update: Home · Desktop XL (node 5059:155) ---------- */
-/* About: heading on columns 3–10, interests list on 3–6, closing text and resume link on 7–10. */
+/* ---------- Figma update: Home · Desktop XL (node 5059:155, Home section 5065:518) ---------- */
+/* About: heading on columns 2–11, interests list on 2–6, closing text and resume link on 7–11. */
 .a-about { padding: var(--space-mega) var(--margin); row-gap: var(--space-l); align-items: start; }
-.a-about__title { grid-column: 3 / span 8; font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
-.a-about .a-about__list { grid-column: 3 / span 4; margin: 0; padding-left: 1.5em; list-style: disc; }
+.a-about__title { grid-column: 2 / span 10; font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
+.a-about .a-about__list { grid-column: 2 / span 5; margin: 0; padding-left: 1.5em; list-style: disc; }
 .a-contact .a-contact__note { max-width: none; }
-.a-about__close { grid-column: 7 / span 4; display: grid; gap: 10px; }
+.a-about__close { grid-column: 7 / span 5; display: grid; gap: 10px; }
 .a-about__cv { color: var(--text-accent-primary); }
-/* Blog and contact on columns 3–10; blog rows: thumbnail, text and reading time on 1 / 6 / 1 columns. */
+/* Blog on columns 2–11 over Background/Primary; rows: thumbnail, text and reading time on 1 / 8 / 1 columns.
+   Contact stays on columns 3–10 with Hero (160) above and below; Mega (120) below 1024. */
 .a-blog { padding-block: calc(var(--section) / 2); }
-.a-blog__title, .a-rows { grid-column: 3 / span 8; }
+.a-blog__title, .a-rows { grid-column: 2 / span 10; }
+.a-contact { padding: var(--space-hero) var(--margin); }
 .a-contact > * { grid-column: 3 / span 8; }
 /* Case copy rhythm from Figma: a little more air before the summary and before the role. */
 .a-case .a-case__summary { margin-top: 1.05rem; }
@@ -368,13 +413,13 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-btn--dark:hover, .a-btn--dark:active { background: var(--interactive-primary-clic); color: var(--text-static-inverse); }
 .a-foot__legal { margin-top: 3rem; }
 .a-foot__name { position: absolute; z-index: 0; left: var(--margin); top: 11.4vw; transform: none; color: var(--brand-logo-main-25pct); pointer-events: none; }
+/* Tablet (Figma 5059:461): Contact joins About and Blog on columns 2–11 (content-inset). */
 @media (max-width: 1023px) {
-  .a-about__title, .a-blog__title, .a-rows, .a-contact > * { grid-column: 1 / -1; }
-  .a-about .a-about__list { grid-column: 1 / span 6; }
-  .a-about__close { grid-column: 7 / -1; }
+  .a-contact { padding-block: var(--space-mega); }
+  .a-contact > * { grid-column: 2 / span 10; }
 }
 @media (max-width: 767px) {
-  .a-about .a-about__list, .a-about__close { grid-column: 1 / -1; }
+  .a-about__title, .a-about .a-about__list, .a-about__close, .a-blog__title, .a-rows, .a-contact > * { grid-column: 1 / -1; }
   .a-foot { padding-top: 5rem; }
   .a-foot__buttons { gap: .75rem; }
   .a-foot__buttons .a-btn { width: auto; }
@@ -418,6 +463,8 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-cs--grid .a-cs__final > p, .a-cs--grid .a-cs__final .cs-list li { max-width: none; }
 /* A closing note under the list reads at the intro size (Final intro, line-height 1.5) at 80%. */
 .a-cs--grid .a-cs__final .a-cs__note { font-size: var(--step-lead); line-height: 1.5; }
+/* Phones (Figma 5091:1498): the note drops to Body (17). */
+@media (max-width: 767px) { .a-cs--grid .a-cs__final .a-cs__note { font-size: 1.0625rem; } }
 .a-cs--grid .a-cs__next { background: var(--surface); }
 /* Desktop: wide evidence below a section (Motion's roadmap, benchmark and examples, Registro's context
    video) keeps the three title columns free and sits on columns 4–12 (Figma 5083:669, 5074:502 / 5074:678). */
@@ -483,15 +530,11 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 }
 
 /* Registro ML only. Tablet and desktop videos use the 16:10 height of the full body width, capped
-   at 80svh (720 / 640 / 460 at 1600 / 1280 / 768), fitted on Background/Secondary.
+   at 80svh (720 / 640 / 460 at 1600 / 1280 / 768), fitted on Background/Deep.
    Phones use the explicit media height below. */
 .a-cs--registro .a-cs__body { container-type: inline-size; }
-.a-cs--registro .cs-figure video { height: min(62.5cqw, 80svh); max-height: none; aspect-ratio: auto; object-fit: contain; background: var(--background-secondary); }
-/* Phones (Figma 5074:1002): each example figure is 420 tall so the recordings read clearly:
-   388 of media + SS gap (12) + one caption line (20). */
-@media (max-width: 767px) {
-  .a-cs--registro .cs-figure video { height: 388px; }
-}
+.a-cs--registro .cs-figure video { height: min(62.5cqw, 80svh); max-height: none; aspect-ratio: auto; object-fit: contain; background: var(--surface); }
+/* Phones: the recordings use the shared mobile media height (see the end of this file). */
 
 /* Menores only (Figma 5076:2434). The adult and minor journey uses all twelve columns: four recordings
    on three columns each on desktop, two per row on tablet (2 × 6) and one per row on phones, at gutter. */
@@ -509,19 +552,144 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 /* Case steps (Figma 5093:1306): stacked with no gap and no ground; each keeps its M (24) padding. */
 .a-cs--menores .cs-steps { gap: 0; }
 .a-cs--menores .cs-steps li { background: none; }
-/* Hero image (Figma Frame 8): a full-bleed band with L (32) above and below; the transparent phone
-   composition covers it at the heights Figma sets per breakpoint (660 / 536 / 356 / 256 at
-   1600 / 1280 / 768 / 390), interpolated linearly between those frames. */
-.a-cs--menores .a-cs__visual { padding: var(--space-l) 0; overflow: hidden; }
-.a-cs--menores .a-cs__visual img { height: calc(38.75vw + 40px); max-height: none; object-fit: cover; background: none; }
+/* Hero image (Figma Frame 8, Menores and Registro ML): a full-bleed band with L (32) above and below; the
+   transparent phone composition covers it at the heights Figma sets per breakpoint (660 / 536 / 356 / 256
+   at 1600 / 1280 / 768 / 390), interpolated linearly between those frames. */
+.a-cs--menores .a-cs__visual, .a-cs--registro .a-cs__visual, .a-cs--switch .a-cs__visual, .a-cs--ropstar .a-cs__visual, .a-cs--winefast .a-cs__visual { padding: var(--space-l) 0; overflow: hidden; }
+.a-cs--menores .a-cs__visual img, .a-cs--registro .a-cs__visual img, .a-cs--switch .a-cs__visual img, .a-cs--ropstar .a-cs__visual img, .a-cs--winefast .a-cs__visual img { height: calc(38.75vw + 40px); max-height: none; object-fit: cover; border-radius: 0; background: none; }
 /* Objectives and outcomes: Body strong lines (goal-list-gap kept at .6 of the lead size), tighter padding. */
-.a-cs--menores .a-cs__goals { padding: var(--space-mega) var(--margin) calc(var(--section) / 2); }
-.a-cs--menores .a-cs__goals .cs-list { gap: calc(var(--step-lead) * .6); font-size: var(--step-body); font-weight: 700; line-height: 1.5; }
-.a-cs--menores .a-cs__final { margin-top: 0; }
+.a-cs--menores .a-cs__goals, .a-cs--switch .a-cs__goals { padding: var(--space-mega) var(--margin) calc(var(--section) / 2); }
+.a-cs--menores .a-cs__goals .cs-list, .a-cs--switch .a-cs__goals .cs-list { gap: calc(var(--step-lead) * .6); font-size: var(--step-body); font-weight: 700; line-height: 1.5; }
+.a-cs--menores .a-cs__final, .a-cs--switch .a-cs__final { margin-top: 0; }
 @media (max-width: 1499px) {
-  .a-cs--menores .a-cs__goals { padding-block: var(--space-huge); }
+  .a-cs--menores .a-cs__goals, .a-cs--switch .a-cs__goals { padding-block: var(--space-huge); }
 }
 @media (max-width: 1023px) {
-  .a-cs--menores .a-cs__visual img { height: calc(26.455vw + 152.8px); }
-  .a-cs--menores .a-cs__goals { padding-block: var(--space-xxl); }
+  .a-cs--menores .a-cs__visual img, .a-cs--registro .a-cs__visual img, .a-cs--switch .a-cs__visual img { height: calc(26.455vw + 152.8px); }
+  .a-cs--menores .a-cs__goals, .a-cs--switch .a-cs__goals { padding-block: var(--space-xxl); }
+}
+
+/* Switch between countries only (Figma 5170:54941). Hero band, objectives and final outcome share the Menores
+   rules above. The recordings follow their copy at copy-block-gap (20) and fill three columns each on
+   desktop (columns 4–6, 7–9, 10–12), at their native ratio (718 × 1592 / 714 × 1594) with Radius XS (8)
+   and no ground; tablet shows the comparison on 6 + 6 and the three variants stacked on columns 4–9;
+   phones stack every recording on all twelve columns. */
+.a-cs--switch .cs-section--comparison, .a-cs--switch .cs-section--variants { gap: 1.25rem; }
+.a-cs--switch .cs-section--comparison > .cs-media, .a-cs--switch .cs-section--variants > .cs-media { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); }
+.a-cs--switch .cs-section--comparison .cs-figure video { aspect-ratio: 718 / 1592; }
+.a-cs--switch .cs-section--variants .cs-figure video { aspect-ratio: 714 / 1594; }
+.a-cs--switch .cs-section .cs-figure video { width: 100%; height: auto; max-height: none; object-fit: cover; border-radius: var(--radius-xs); background: none; }
+/* The variants list reads right after its intro (one text block in Figma), with bullets. */
+.a-cs--switch .cs-section--variants .cs-copy p + .cs-list { gap: 0; margin-top: 0; padding-left: 1.5em; list-style: disc; }
+@media (max-width: 1023px) {
+  .a-cs--switch .cs-section--comparison > .cs-media { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .a-cs--switch .cs-section--variants > .cs-media { grid-template-columns: repeat(12, minmax(0, 1fr)); row-gap: var(--space-s); }
+  .a-cs--switch .cs-section--variants > .cs-media > .cs-figure { grid-column: 4 / span 6; }
+}
+@media (max-width: 767px) {
+  .a-cs--switch .cs-section--comparison > .cs-media { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-s); }
+  .a-cs--switch .cs-section--variants > .cs-media > .cs-figure { grid-column: 1 / -1; }
+}
+
+/* Analytics consent (Figma 5095:4266, Home frames): the V2 banner from js/analytics.js and css/analytics.css,
+   with its two Button S controls drawn here (Mute on the page ground, Loud on the accent) and, on phones,
+   the twelve columns between the page margins (358 at 390). */
+.analytics-consent .btn { font-size: .75rem; line-height: .875rem; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; padding: var(--space-ss) var(--space-s); border: 0; border-radius: var(--radius-xs); font-weight: 700; cursor: pointer; }
+.analytics-consent .btn--mute { background: var(--bg); color: var(--ink); }
+.analytics-consent .btn--mute:hover { background: var(--surface); }
+.analytics-consent .btn--loud { background: var(--accent); color: var(--accent-ink); }
+.analytics-consent .btn--loud:hover { background: var(--accent-hover); }
+/* The "change your preferences" line V2 adds under the footer starts on the page margin. */
+.analytics-settings { padding-inline: var(--margin); }
+.analytics-consent h2 { font: 700 1.25rem/1.5625rem var(--font-display); color: var(--ink); }
+.analytics-consent p { font: 300 .75rem/1.0125rem var(--font-text); max-width: none; }
+@media (max-width: 767px) {
+  .analytics-consent { right: var(--margin); bottom: var(--margin); width: calc(100% - 2 * var(--margin)); }
+}
+
+/* Freelance and side projects (Figma 5280:91854 + 5280:91856): the heading on columns 2–11 (all twelve
+   below 1024), then two entries on six columns each, stacked below 1024 with L (32) between them.
+   Each entry centres its title, summary, collage and button with L between them and XL above and below. */
+.a-craft { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); padding: var(--section) var(--margin) 0; color: var(--ink); }
+.a-craft__title { grid-column: 2 / span 10; font-size: var(--step-head); }
+.a-craft__list { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; align-items: start; padding-block: var(--hero-top); }
+.a-craft__entry { grid-column: span 6; display: flex; flex-direction: column; align-items: center; gap: var(--space-l); padding-block: var(--space-xl); text-align: center; }
+.a-craft__copy { display: grid; gap: var(--space-s); width: 100%; }
+.a-craft__copy h3 { font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -0.035em; line-height: 1; }
+.a-craft__copy p { max-width: none; font-size: var(--step-body); line-height: 1.5; }
+/* The collage is the source composition (579×500, intrinsic): three captures that overlap on purpose,
+   scaled as one box. Side captures at 40% behind the main one, which carries the shadow. */
+.a-craft__art { position: relative; width: 100%; max-width: 579px; aspect-ratio: 579 / 500; margin: 0; filter: drop-shadow(0 2px 5px color-mix(in srgb, var(--accent) 20%, transparent)); }
+.a-craft__entry:nth-child(2) .a-craft__art { filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--accent) 20%, transparent)); }
+.a-craft__screen { position: absolute; width: auto; height: auto; max-width: none; object-fit: cover; }
+.a-craft__screen--main { inset: 0 30.05%; width: 39.9%; height: 100%; z-index: 1; box-shadow: 0 4px 8px rgb(56 56 56 / .5); }
+.a-craft__screen--left { inset: 8% 53.63% 8% 12.87%; width: 33.5%; height: 84%; opacity: .4; }
+.a-craft__screen--right { inset: 8% 12.69% 8% 53.8%; width: 33.51%; height: 84%; opacity: .4; }
+.a-craft .a-btn { width: auto; }
+@media (max-width: 1023px) {
+  .a-craft__title { grid-column: 1 / -1; }
+  .a-craft__list { row-gap: var(--space-l); }
+  .a-craft__entry { grid-column: 1 / -1; }
+}
+
+/* Mobile media height (Figma 5059:614, 5074:1002, 5083:1485, 5091:1498, 5203:74445; David, October 27,
+   2026): on phones every recording in the V3 pages sits in a frame 560 tall. Registro ML and Motion Level
+   fit theirs inside a 358 × 560 frame on their ground; Menores and Switch show the recording itself at
+   560 tall and its native width (≈251), centred, with the play control on the recording's corner. */
+@media (max-width: 767px) {
+  .a-cs--registro .cs-figure video,
+  .a-cs--motion .cs-section--examples .cs-figure video,
+  .a-cs--motion .cs-part .cs-figure video { height: 560px; max-height: none; aspect-ratio: auto; object-fit: contain; }
+  .a-cs--menores .cs-section--flows .cs-figure video { width: calc(560px * 716 / 1596); }
+  .a-cs--menores .cs-section--flows .cs-figure > .v3-play { margin-right: calc((100cqw - 560px * 716 / 1596) / 2 + .75rem); }
+  .a-cs--switch .cs-section .cs-figure { container-type: inline-size; }
+  .a-cs--switch .cs-section .cs-figure video { width: auto; height: 560px; justify-self: center; }
+  .a-cs--switch .cs-section--comparison .cs-figure > .v3-play { margin-right: calc((100cqw - 560px * 718 / 1592) / 2 + .75rem); }
+  .a-cs--switch .cs-section--variants .cs-figure > .v3-play { margin-right: calc((100cqw - 560px * 714 / 1594) / 2 + .75rem); }
+}
+
+/* ---------- Ropstar side project (Figma 5276:88289) ---------- */
+/* Hero: a lead (Regular, 1.25) between the title and the facts, at hero-gap (48) like the rest. */
+.a-cs__lead { font-size: var(--step-lead); font-weight: 400; line-height: 1.25; }
+@media (max-width: 767px) { .a-cs__lead { font-size: 1.0625rem; } }
+/* Hero band: Figma sets 356 at 768 and 256 at 390 for this collage (the shared formula gives 338 / 191),
+   so tablet and phones interpolate between those frames; desktop keeps the shared 660 / 536. */
+@media (max-width: 1023px) { .a-cs--ropstar .a-cs__visual img, .a-cs--winefast .a-cs__visual img { height: calc(35.156vw + 86px); } }
+@media (max-width: 767px) { .a-cs--ropstar .a-cs__visual img, .a-cs--winefast .a-cs__visual img { height: calc(26.455vw + 152.8px); } }
+/* Context: the three frictions are a numbered list, Body size, set at para-gap (.9em) after the copy
+   and with no gap between items. */
+.a-cs--grid .cs-section .cs-list--ordered { list-style: decimal; padding-left: 1.5em; gap: 0; font-size: var(--step-body); }
+.a-cs--grid .cs-copy p + .cs-list--ordered { margin-top: .9em; }
+/* Screens: native captures (375 × 812) at full column width, no ground. Desktop: three per row on
+   columns 4–12 (three columns each), beside the chapter title. Tablet: one per row on columns 4–9;
+   phones: columns 3–10; stacked at gutter (16). */
+.a-cs--ropstar .cs-figure img { width: 100%; height: auto; max-height: none; aspect-ratio: 375 / 812; object-fit: cover; background: none; }
+@media (max-width: 1023px) {
+  .a-cs--ropstar .cs-content .cs-media--3 { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--gutter); }
+  .a-cs--ropstar .cs-content .cs-media--3 > .cs-figure { grid-column: 4 / span 6; }
+}
+@media (max-width: 767px) {
+  .a-cs--ropstar .cs-content .cs-media--3 > .cs-figure { grid-column: 3 / span 8; }
+}
+/* Final outcome: two statements read as one block (no gap between items, as in Figma). */
+.a-cs--ropstar .a-cs__final .cs-list { gap: 0; }
+/* Final outcome: the brand links keep the list's type and read as links by their underline. */
+.a-cs__final .cs-list a { color: inherit; text-decoration: underline; text-underline-offset: .12em; text-decoration-thickness: .06em; }
+.a-cs__final .cs-list a:hover { color: var(--accent); }
+
+/* ---------- Winefast side project (Figma 5280:90729) ---------- */
+/* Same template as Ropstar: hero band, the concept with its numbered chapter list, then one chapter per row
+   of screens beside its title, and no final outcome. Screens are native 414 × 896 captures with Border
+   radius L (32). Desktop: three per row, three columns each, on columns 4–12 (Figma 1280; the 1600 frame
+   mixes 319 and 362 wide rows). Tablet: one per row on columns 4–9. Phones: 560 tall (the shared mobile
+   media height), centred. Rows sit at gutter. */
+.a-cs--winefast .cs-content .cs-media { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--gutter); }
+.a-cs--winefast .cs-figure img { width: 100%; height: auto; max-height: none; aspect-ratio: 414 / 896; object-fit: cover; border-radius: var(--radius-l); background: none; }
+@media (max-width: 1023px) {
+  .a-cs--winefast .cs-content .cs-media { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .a-cs--winefast .cs-content .cs-media > .cs-figure { grid-column: 4 / span 6; }
+}
+@media (max-width: 767px) {
+  .a-cs--winefast .cs-content .cs-media > .cs-figure { grid-column: 1 / -1; }
+  .a-cs--winefast .cs-figure img { width: auto; height: 560px; justify-self: center; }
 }

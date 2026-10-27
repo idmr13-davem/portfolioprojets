@@ -27,6 +27,10 @@ const pages = [
   { file: 'work/registro-ml.html', page: 'case', id: 'registro', title: 'Mercado Libre sign-up — David Montealegre' },
   { file: 'work/motion-design-system.html', page: 'case', id: 'motion', title: 'Motion Level — David Montealegre' },
   { file: 'work/menores-mexico.html', page: 'case', id: 'menores', title: 'Accounts for minors in Mexico — David Montealegre' },
+  { file: 'work/cambio-cuentas-paises.html', page: 'case', id: 'switch', title: 'Account switching between countries — David Montealegre' },
+  // Side project: built on the Statement case template only.
+  { file: 'work/ropstar.html', page: 'case', id: 'ropstar', title: 'Ropstar — David Montealegre', only: 'statement' },
+  { file: 'work/winefast.html', page: 'case', id: 'winefast', title: 'Winefast — David Montealegre', only: 'statement' },
   { file: 'articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html', page: 'article', id: 'por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme', title: 'Why Mercado Libre Was the First Place I Didn’t Want to Leave — David Montealegre' },
   { file: 'articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html', page: 'article', id: 'lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias', title: 'What My Passion for Cars Taught Me About Designing Experiences — David Montealegre' },
   { file: 'articles/page-under-work.html', page: 'status', id: 'underWork', title: 'Page under work — David Montealegre' }
@@ -34,6 +38,7 @@ const pages = [
 
 for (const [name, p] of Object.entries(proposals)) {
   for (const page of pages) {
+    if (page.only && page.only !== name) continue;
     const depth = page.file.split('/').length - 1;
     const base = '../'.repeat(depth);
     const root = '../../' + base;
@@ -48,15 +53,15 @@ for (const [name, p] of Object.entries(proposals)) {
 <link rel="icon" href="${root}assets/Favicon/favicon.ico">
 ${p.fonts}
 <script>document.documentElement.classList.add('js')</script>
-${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''}<link rel="stylesheet" href="${base}../shared/base.css">
-<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261026-motion-hero-v3' : name === 'poster' ? '?v=20261026-motion-curve-review' : ''}">
+${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''}${name === 'statement' ? `<link rel="stylesheet" href="${root}css/analytics.css">\n` : ''}<link rel="stylesheet" href="${base}../shared/base.css">
+<link rel="stylesheet" href="${base}styles.css${name === 'statement' ? '?v=20261027-winefast' : name === 'poster' ? '?v=20261026-motion-curve-review' : ''}">
 </head>
 <body class="v3-${name}" data-page="${page.page}"${page.id ? ` data-id="${page.id}"` : ''}>
 <div id="app"></div>
 <noscript><p style="padding:24px">This exploration renders with JavaScript. <a href="${root}index.html">Open the published portfolio</a>.</p></noscript>
 <script src="${base}../shared/content.js?v=20261027-videos-mp4"></script>
-<script src="${base}../shared/site.js"></script>
-<script src="${base}app.js${name === 'statement' ? '?v=20261026-motion-hero-sequence' : ''}"></script>
+<script src="${base}../shared/site.js?v=20261027-winefast"></script>
+<script src="${base}app.js${name === 'statement' ? '?v=20261027-winefast-nav' : ''}"></script>${name === 'statement' ? `\n<script src="${root}js/analytics.js" defer></script>` : ''}
 </body>
 </html>
 `;

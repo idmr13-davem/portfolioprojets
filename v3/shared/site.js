@@ -18,7 +18,8 @@
   const t = v => (v == null ? '' : isBilingual(v) ? (v[lang] ?? v.en) : v);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const asset = p => root + p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
-  const caseList = Object.entries(C.cases).map(([id, c]) => ({ id, ...c })).sort((a, b) => a.home - b.home);
+  // Side projects (Ropstar) have a case page but no band in the Home case list or the next-case cycle.
+  const caseList = Object.entries(C.cases).filter(([, c]) => !c.side).map(([id, c]) => ({ id, ...c })).sort((a, b) => a.home - b.home);
   const articleList = Object.entries(C.articles).map(([slug, a]) => ({ slug, ...a }));
 
   const href = {
@@ -111,7 +112,9 @@
     return `<figure class="cs-figure cs-figure--${m.type}" data-reveal>${media(m, opts)}${toggle}${caption ? `<figcaption>${esc(caption)}</figcaption>` : ''}${m.description ? `<p class="cs-figure__note">${esc(t(m.description))}</p>` : ''}</figure>`;
   }
   const paras = list => (t(list) || []).map(p => `<p>${esc(p)}</p>`).join('');
-  const bullets = list => { const items = t(list) || []; return items.length ? `<ul class="cs-list">${items.map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''; };
+  // A list item may be an array of text runs and links ({ text, href }), which open in a new tab.
+  const rich = item => Array.isArray(item) ? item.map(r => typeof r === 'string' ? esc(r) : `<a href="${esc(r.href)}" target="_blank" rel="noopener noreferrer">${esc(r.text)}</a>`).join('') : esc(item);
+  const bullets = (list, ordered = false) => { const items = t(list) || []; const tag = ordered ? 'ol' : 'ul'; return items.length ? `<${tag} class="cs-list${ordered ? ' cs-list--ordered' : ''}">${items.map(p => `<li>${rich(p)}</li>`).join('')}</${tag}>` : ''; };
 
   function caseSection(s) {
     const parts = (s.parts || []).map(p => `<div class="cs-part" data-reveal><h3>${esc(t(p.title))}</h3>${paras(p.body)}${bullets(p.list)}${p.media ? `<div class="cs-media cs-media--${p.media.length}">${p.media.map(m => figure(m)).join('')}</div>` : ''}</div>`).join('');

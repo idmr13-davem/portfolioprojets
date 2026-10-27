@@ -13,7 +13,9 @@
     sendNote: { en: 'Your email app opens with this message to idmr13@gmail.com. Nothing is sent from this page.', es: 'Tu app de correo se abre con este mensaje para idmr13@gmail.com. Esta página no envía nada.' },
     subject: { en: 'Hello from your portfolio', es: 'Hola desde tu portafolio' },
     soon: { en: 'Soon', es: 'Pronto' },
-    aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' }
+    aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' },
+    craftAll: { en: 'All craft projects', es: 'Todos los proyectos personales' },
+    craftMore: { en: 'Explore more craft', es: 'Más proyectos personales' }
   };
 
   const header = () => `
@@ -47,7 +49,7 @@
           <div class="a-foot__buttons">${S.contact.map(c => `<a class="a-btn a-btn--dark" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c.label))}</a>`).join('')}</div>
         </div>
       </div>
-      <div class="a-foot__legal"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></div>
+      <div class="a-foot__legal"><p class="a-foot__credits"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></p><div class="a-foot__consent" data-consent-slot></div></div>
       <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
     </footer>`;
 
@@ -84,7 +86,7 @@
       </section>
 
       ${cases.map(c => `
-      <section class="a-case" aria-labelledby="case-${c.id}">
+      <section class="a-case a-case--${c.id}" aria-labelledby="case-${c.id}">
         <div class="a-case__media" data-reveal data-video-wrap>
           ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video' })}
           <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
@@ -97,6 +99,18 @@
           <a class="a-btn" data-reveal href="${href.case(c)}">${esc(t(c.card.cta))}</a>
         </div>
       </section>`).join('')}
+
+      <section class="a-craft" id="craft" aria-labelledby="craft-title">
+        <h2 class="a-craft__title" id="craft-title" data-reveal>${esc(t(S.craftTitle))}</h2>
+        <div class="a-craft__list">
+          ${S.craft.map(p => `
+          <article class="a-craft__entry" data-reveal>
+            <div class="a-craft__copy"><h3>${esc(t(p.title))}</h3><p>${esc(t(p.summary))}</p></div>
+            <figure class="a-craft__art" role="img" aria-label="${esc(t(p.alt))}">${p.screens.map((src, n) => `<img class="a-craft__screen a-craft__screen--${['main', 'left', 'right'][n]}" src="${asset(src)}" alt="" loading="lazy" width="${n ? 388 : 462}" height="${n ? 840 : 1000}">`).join('')}</figure>
+            <a class="a-btn" href="${p.case ? href.case(C.cases[p.case]) : href.article('page-under-work')}">${esc(t(S.craftCta))}<span class="sr-only">: ${esc(t(p.title))}</span></a>
+          </article>`).join('')}
+        </div>
+      </section>
 
       <section class="a-about" aria-labelledby="about-title">
         <h2 class="a-about__title" id="about-title" data-reveal>${esc(t(copy.aboutHeading))}</h2>
@@ -125,65 +139,73 @@
     ${footer()}`;
   }
 
-  // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519, Menores 5076:2434): the title on columns 1–3, everything
+  // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519, Menores 5076:2434, Switch 5170:54941): the title on columns 1–3, everything
   // that explains it on 4–12, and wide evidence (images, example videos) below on columns 4–12
   // on desktop, or all twelve columns on tablet and phones.
   function gridSection(s) {
     const { paras, bullets, figure } = V3;
-    const row = (list, opts) => `<div class="cs-media cs-media--${list.length}">${list.map(m => figure(m, opts)).join('')}</div>`;
-    const text = (body, list, closing) => (t(body) || []).length || (t(list) || []).length || closing ? `<div class="cs-copy">${paras(body)}${bullets(list)}${closing ? `<p class="cs-closing">${esc(t(closing))}</p>` : ''}</div>` : '';
+    const row = (list, opts = {}) => `<div class="cs-media cs-media--${list.length}"${opts.autoplay === false && list === s.media ? ' data-sequence' : ''}>${list.map(m => figure(m, opts)).join('')}</div>`;
+    const text = (body, list, closing) => (t(body) || []).length || (t(list) || []).length || closing ? `<div class="cs-copy">${paras(body)}${bullets(list, s.ordered)}${closing ? `<p class="cs-closing">${esc(t(closing))}</p>` : ''}</div>` : '';
     const copy = text(s.body, s.list, s.closing).replace('class="cs-copy"', 'class="cs-copy" data-reveal');
     const steps = s.steps ? `<ol class="cs-steps">${s.steps.map(step => step.title ? `<li data-reveal><h3>${esc(t(step.title))}</h3><p>${esc(t(step.body))}</p></li>` : `<li data-reveal>${esc(t(step))}</li>`).join('')}</ol>` : '';
     const parts = s.parts ? `<div class="cs-parts">${s.parts.map(p => `<div class="cs-part" data-reveal><h3>${esc(t(p.title))}</h3>${text(p.body, p.list)}${p.media ? row(p.media) : ''}</div>`).join('')}</div>` : '';
     const groups = s.groups ? `<div class="cs-groups">${s.groups.map(g => `<div class="cs-group" data-reveal><h3>${esc(t(g.title))}</h3>${row(g.media, { autoplay: false })}</div>`).join('')}</div>` : '';
     const axis = s.axis ? `<div class="cs-axis" data-reveal><p>${esc(t(s.axis.intro))}</p><div class="cs-axis__labels">${s.axis.labels.map(l => `<span>${esc(t(l))}</span>`).join('')}</div><div class="cs-axis__ends"><div><h3>${esc(t(s.axis.left.label))}</h3>${bullets(s.axis.left.list)}</div><div><h3>${esc(t(s.axis.right.label))}</h3>${bullets(s.axis.right.list)}</div></div></div>` : '';
-    // Parts with their video (Registro ML) share one row: title | parts | video.
+    // Parts with their video (Registro ML) share one row: title | parts | video. Inline evidence
+    // (Ropstar screens) takes the content columns beside the title.
     const split = Boolean(s.parts && s.media);
+    const inline = Boolean(s.inline && s.media);
     return `<section class="cs-section cs-section--${s.id}${split ? ' cs-section--split' : ''}" id="${s.id}">
       <div class="cs-intro">
         <h2 class="cs-title" data-reveal>${esc(t(s.title))}</h2>
-        ${copy + steps + parts + groups + axis ? `<div class="cs-content">${copy}${steps}${parts}${groups}${axis}</div>` : ''}
+        ${copy + steps + parts + groups + axis || inline ? `<div class="cs-content">${copy}${steps}${parts}${groups}${axis}${inline ? row(s.media) : ''}</div>` : ''}
         ${split ? row(s.media) : ''}
       </div>
-      ${s.media && !split ? row(s.media) : ''}
+      ${s.media && !split && !inline ? row(s.media, { autoplay: !s.sequence }) : ''}
     </section>`;
   }
 
   function casePage(id) {
     const c = C.cases[id];
-    const grid = id === 'motion' || id === 'registro' || id === 'menores';
+    const grid = ['motion', 'registro', 'menores', 'switch', 'ropstar', 'winefast'].includes(id);
     const section = grid ? gridSection : caseSection;
     const i = cases.findIndex(x => x.id === id);
     const next = cases[(i + 1) % cases.length];
+    // Side projects (Figma Case navigation in 5280:90729) close with the Home craft section and the other side project.
+    const side = Object.entries(C.cases).filter(([, x]) => x.side).map(([k, x]) => ({ id: k, ...x }));
+    const sideNext = c.side ? side[(side.findIndex(x => x.id === id) + 1) % side.length] : null;
     const words = t(c.title).split(' ');
     const cut = Math.ceil(words.length / 2);
+    const [line1, line2] = c.titleLines ? t(c.titleLines) : [words.slice(0, cut).join(' '), words.slice(cut).join(' ')];
+    // Side projects (Ropstar, Figma 5276:88289) name their own facts and add a lead under the title.
+    const facts = c.facts ? c.facts.map(f => [t(f.label), t(f.value)]) : [[ui('role'), t(c.role).replace(/^(Role|Rol):\s*/, '')], [ui('period'), t(c.period)], [ui('status'), t(c.status)]];
     const hero = c.heroSet ? `<div class="a-cs__heroset">${c.heroSet.map(m => media({ ...m, caption: c.heroAlt }, { eager: true, autoplay: false })).join('')}</div>` : media(c.hero, { cls: 'a-cs__heroimg', eager: true });
     document.title = t(c.meta.title);
     return `${header()}
     <main id="main" class="a-cs a-cs--${id}${grid ? ' a-cs--grid' : ''}">
       <section class="a-cs__hero">
-        <h1 class="a-cs__title lines">${lines(words.slice(0, cut).join(' '), words.slice(cut).join(' '))}</h1>
+        <h1 class="a-cs__title lines">${lines(line1, line2)}</h1>
+        ${c.lead ? `<p class="a-cs__lead" data-rise style="--i:2">${esc(t(c.lead))}</p>` : ''}
         <dl class="a-cs__meta" data-rise style="--i:3">
-          <div><dt>${ui('role')}</dt><dd>${esc(t(c.role).replace(/^(Role|Rol):\s*/, ''))}</dd></div>
-          <div><dt>${ui('period')}</dt><dd>${esc(t(c.period))}</dd></div>
-          <div><dt>${ui('status')}</dt><dd>${esc(t(c.status))}</dd></div>
+          ${facts.map(([dt, dd]) => `<div><dt>${esc(dt)}</dt><dd>${esc(dd)}</dd></div>`).join('')}
         </dl>
       </section>
       <div class="a-cs__visual" data-reveal>${hero}</div>
-      <section class="a-cs__goals">
+      ${c.objectivesTitle ? `<section class="a-cs__goals">
         <div data-reveal><h2>${esc(t(c.objectivesTitle))}</h2>${V3.bullets(c.objectives)}</div>
         <div data-reveal><h2>${esc(t(c.outcomesTitle))}</h2>${V3.bullets(c.outcomes)}</div>
-      </section>
+      </section>` : ''}
       <div class="a-cs__body">${c.sections.map(section).join('')}</div>
-      <section class="a-cs__final">
+      ${c.final ? `<section class="a-cs__final">
         <h2 data-reveal>${esc(t(c.final.title))}</h2>
         ${c.final.intro ? `<p data-reveal>${esc(t(c.final.intro))}</p>` : ''}
         ${V3.bullets(c.final.list)}
         ${c.final.note ? `<p class="a-cs__note" data-reveal>${esc(t(c.final.note))}</p>` : ''}
-      </section>
+      </section>` : ''}
       <nav class="a-cs__next" aria-label="${ui('next')}">
-        <a href="${href.home('#work')}">${ui('back')}</a>
-        <a class="a-cs__nextlink" href="${href.case(next)}"><span>${ui('next')}</span><strong>${esc(t(next.card.title))}</strong></a>
+        ${sideNext ? `<a href="${href.home('#craft')}">${esc(t(copy.craftAll))}</a>
+        <a class="a-cs__nextlink" href="${href.case(sideNext)}"><span>${esc(t(copy.craftMore))}</span><strong>${esc(t(sideNext.titleLines)[0])}</strong></a>` : `<a href="${href.home('#work')}">${ui('back')}</a>
+        <a class="a-cs__nextlink" href="${href.case(next)}"><span>${ui('next')}</span><strong>${esc(t(next.card.title))}</strong></a>`}
       </nav>
     </main>
     ${footer()}`;
@@ -210,30 +232,30 @@
     ${footer()}`;
   }
 
+  // Status pages (Figma 5095:4266): illustration, title, description and the home button, centred on the
+  // twelve columns, between the header and the footer.
   function statusPage(id) {
     const s = t(S.status[id]);
     document.title = `${s.heading} — David Montealegre`;
-    const big = id === 'notFound' ? ['404', ''] : s.heading.split(' ').length > 2 ? [s.heading.split(' ').slice(0, -1).join(' '), s.heading.split(' ').slice(-1)[0]] : [s.heading, ''];
     return `${header()}
     <main id="main" class="a-status a-status--${id}">
-      <h1 class="a-status__big lines" aria-label="${esc(s.heading)}">${lines(big[0], big[1])}</h1>
-      <div class="a-hero__foot">
-        <p class="a-hero__role" data-rise style="--i:3">${esc(s.description)}</p>
-        <a class="a-btn" data-rise style="--i:4" href="${href.home()}">${esc(s.home)}</a>
-      </div>
-      ${id === 'underWork' ? `<figure class="a-status__img" data-reveal><img src="${asset(S.status.img.underWork)}" alt="" loading="lazy"></figure>` : ''}
+      <img class="a-status__img" src="${asset(S.status.img[id])}" alt="" data-rise style="--i:0">
+      <h1 class="a-status__title" data-rise style="--i:1">${esc(s.heading)}</h1>
+      <p class="a-status__text" data-rise style="--i:2">${esc(s.description)}</p>
+      <a class="a-btn a-status__btn" data-rise style="--i:3" href="${href.home()}">${esc(s.home)}</a>
     </main>
     ${footer()}`;
   }
 
-  // Property samples (Motion Level): each clip plays once, in reading order (row by row, left to right).
-  // The sequence starts over only when the section is scrolled out of view and back in.
-  let samplesCleanup = null;
+  // Clips that play one at a time (Motion Level property samples, Switch variants): each plays once, in
+  // reading order (row by row, left to right). The sequence starts over only when the block is scrolled
+  // out of view and back in.
+  let samplesCleanups = [];
   function sequenceSamples() {
-    samplesCleanup?.();
-    samplesCleanup = null;
-    const groups = app.querySelector('.cs-groups');
-    if (!groups) return;
+    samplesCleanups.forEach(cleanup => cleanup());
+    samplesCleanups = [...app.querySelectorAll('.cs-groups, .cs-section > .cs-media[data-sequence]')].map(sequence).filter(Boolean);
+  }
+  function sequence(groups) {
     const clips = [...groups.querySelectorAll('video')];
     clips.forEach(v => { v.loop = false; });
     if (V3.reduced || !('IntersectionObserver' in window)) return;
@@ -275,7 +297,7 @@
       clips.forEach(v => { if (v !== e.target) v.pause(); });
     };
     clips.forEach(v => v.addEventListener('play', takeOver));
-    samplesCleanup = () => {
+    return () => {
       disposed = true;
       observer.disconnect();
       clips.forEach(v => v.removeEventListener('play', takeOver));
@@ -325,6 +347,22 @@
   function wire() {
     sequenceSamples();
     playHeroOnce();
+    // Identify Switch controls in a screen-reader button list without adding visible captions.
+    // Keep the existing play/pause spans so their accessible names follow the playback state.
+    app.querySelectorAll('.a-cs--switch .cs-figure, .a-case[aria-labelledby="case-switch"] [data-video-wrap]').forEach((wrap, i) => {
+      const video = wrap.querySelector('video');
+      const button = wrap.querySelector('[data-video-toggle]');
+      const label = video?.getAttribute('aria-label');
+      if (!button || !label) return;
+      video.id = `switch-video-${i + 1}`;
+      button.setAttribute('aria-controls', video.id);
+      button.querySelectorAll('.v3-play__play, .v3-play__pause').forEach(state => {
+        const context = document.createElement('span');
+        context.className = 'sr-only';
+        context.textContent = `: ${label}`;
+        state.append(context);
+      });
+    });
     if (statusResizeHandler) removeEventListener('resize', statusResizeHandler);
     statusResizeHandler = null;
     const btn = app.querySelector('.a-menu-btn');
@@ -365,11 +403,20 @@
     });
   }
 
+  // Analytics disclaimer (Figma Footer 5120:1494): js/analytics.js builds the "change your preferences"
+  // text and button once; it lives in the footer's legal row and survives re-renders (language changes).
+  const consentSettings = () => document.getElementById('portfolio-analytics-settings');
+  const placeConsent = () => { const slot = app.querySelector('[data-consent-slot]'); const el = consentSettings(); if (slot && el && el.parentNode !== slot) slot.append(el); };
+  document.addEventListener('DOMContentLoaded', placeConsent);
+
   V3.onRender(() => {
     const p = V3.page;
+    const kept = consentSettings();
+    if (kept && app.contains(kept)) document.body.append(kept);
     app.innerHTML = p === 'home' ? home() : p === 'case' ? casePage(V3.id) : p === 'article' ? articlePage(V3.id) : statusPage(V3.id);
     if (p === 'home') document.title = t(S.pageTitle);
     wire();
+    placeConsent();
   });
   V3.start();
   if (location.hash) document.querySelector(location.hash)?.scrollIntoView();

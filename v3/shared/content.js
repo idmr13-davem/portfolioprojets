@@ -101,6 +101,32 @@ window.V3_CONTENT = {
    "en": "Case studies",
    "es": "Casos de estudio"
   },
+  "craftTitle": {
+   "en": "Freelance and side projects",
+   "es": "Freelance y proyectos personales"
+  },
+  "craft": [
+   {
+    "id": "ropstar",
+    "case": "ropstar",
+    "title": { "en": "Ropstar UI", "es": "Ropstar UI" },
+    "summary": { "en": "UI design for a circular fashion marketplace.", "es": "Diseño de UI para un marketplace de moda circular." },
+    "alt": { "en": "Three Ropstar screens: search by category, a product post for a blue hoodie, and a grid of liked garments.", "es": "Tres pantallas de Ropstar: búsqueda por categorías, la publicación de un buzo azul y una cuadrícula de prendas guardadas." },
+    "screens": ["assets/Ropstar/v3/home/main.webp", "assets/Ropstar/v3/home/left.webp", "assets/Ropstar/v3/home/right.webp"]
+   },
+   {
+    "id": "winefast",
+    "case": "winefast",
+    "title": { "en": "Winefast app concept", "es": "Concepto de app Winefast" },
+    "summary": { "en": "UI concept for discovering and buying wine.", "es": "Concepto de UI para descubrir y comprar vino." },
+    "alt": { "en": "Three Winefast screens: choosing favourite wine countries, a list of saved wines with prices, and a taster level screen.", "es": "Tres pantallas de Winefast: elegir los países de vino favoritos, una lista de vinos guardados con precios y una pantalla de nivel de catador." },
+    "screens": ["assets/Winefast/V3/home/main.webp", "assets/Winefast/V3/home/left.webp", "assets/Winefast/V3/home/right.webp"]
+   }
+  ],
+  "craftCta": {
+   "en": "See proposal",
+   "es": "Ver propuesta"
+  },
   "blogTitle": {
    "en": "Personal blog",
    "es": "Blog personal"
@@ -162,11 +188,11 @@ window.V3_CONTENT = {
   "footer": {
    "en": [
     "© David Montealegre 2026",
-    "Website created with Codex"
+    "Website created with Claude Code + Codex"
    ],
    "es": [
     "© David Montealegre 2026",
-    "Sitio web creado con Codex"
+    "Sitio web creado con Claude Code + Codex"
    ]
   },
   "status": {
@@ -310,13 +336,13 @@ window.V3_CONTENT = {
    },
    "hero": {
     "type": "image",
-    "src": "assets/Registro ML/v2/hero-desktop.png",
+    "src": "assets/Registro ML/v2/hero-v3.webp",
     "alt": {
      "en": "Collage of Mercado Libre mobile interfaces",
      "es": "Collage de interfaces móviles de Mercado Libre"
     },
     "caption": null,
-    "mobile": "assets/Registro ML/v2/hero-mobile.png"
+    "mobile": "assets/Registro ML/v2/hero-v3-mobile.webp"
    },
    "sections": [
     {
@@ -1247,8 +1273,8 @@ window.V3_CONTENT = {
      "en": "I created the conceptual framework that unifies how expressive motion is at Mercado Libre",
      "es": "Creé el marco conceptual que unifica el nivel de expresividad del movimiento en Mercado Libre"
     },
-    "video": "assets/Motion DS/Videos/Slow.mp4",
-    "poster": "assets/Motion DS/Videos/Slow-poster.png",
+    "video": "assets/Motion DS/v3/Motion curve 1.web.mp4",
+    "poster": "assets/Motion DS/v3/motion-curve-1-poster.png",
     "videoLabel": {
      "en": "Easing tests for the motion design system at Mercado Libre.",
      "es": "Test de easings del motion design system en Mercado Libre."
@@ -1563,6 +1589,688 @@ window.V3_CONTENT = {
     "cta": {
      "en": "See case study",
      "es": "Ver caso de estudio"
+    }
+   }
+  },
+  "switch": {
+   "slug": "cambio-cuentas-paises",
+   "home": 3,
+   "title": {
+    "en": "Account switching between countries",
+    "es": "Cambio de cuentas entre países"
+   },
+   "role": {
+    "en": "Role: UI designer, motion designer",
+    "es": "Rol: UI designer, motion designer"
+   },
+   "period": {
+    "en": "Q3 2026",
+    "es": "Q3 2026"
+   },
+   "status": {
+    "en": "On develop",
+    "es": "En proceso"
+   },
+   "objectivesTitle": {
+    "en": "Objectives",
+    "es": "Objetivos"
+   },
+   "objectives": {
+    "en": [
+     "Reduce switching between countries by logging out and logging in.",
+     "Increase multi-country sessions per person.",
+     "Reduce account duplication from logging in across countries."
+    ],
+    "es": [
+     "Reducir cambios entre países mediante logout/login.",
+     "Aumentar sesiones multi-país por persona.",
+     "Reducir duplicación de cuentas por login entre países."
+    ]
+   },
+   "outcomesTitle": {
+    "en": "Outcomes",
+    "es": "Logros"
+   },
+   "outcomes": {
+    "en": [
+     "Enable switching accounts between countries from the personal account manager."
+    ],
+    "es": [
+     "Habilitar el cambio de cuentas entre países desde el gestor de cuentas personales."
+    ]
+   },
+   "hero": {
+    "type": "image",
+    "src": "assets/Switch países/v3/hero-v3.webp",
+    "alt": {
+     "en": "Mobile app screens with a yellow interface showing an account switch between countries.",
+     "es": "Pantallas de una aplicación móvil con interfaz amarilla que muestran el cambio de cuentas entre países."
+    },
+    "caption": null,
+    "mobile": "assets/Switch países/v3/hero-v3-mobile.webp"
+   },
+   "sections": [
+    {
+     "id": "context",
+     "title": {
+      "en": "Context",
+      "es": "Contexto"
+     },
+     "body": {
+      "en": [
+       "On Mercado Libre and Mercado Pago, a person can have multiple accounts under the same identity. All these accounts can be managed through a personal identity panel and account switching widget. From there, a person can switch between multiple accounts as long as they are in the same country.",
+       "In recent quarters, we noticed that more users had accounts in more than one country, reaching a significant 2% of users with the panel active in Argentina, Brazil, and Uruguay. These users could not switch between their accounts via the identity panel and had to log out and log back in, adding friction to the switching experience; they also faced issues like forgetting their username and password, increasing difficulty and causing additional problems such as duplicate account creation."
+      ],
+      "es": [
+       "En Mercado Libre y Mercado Pago una persona puede tener múltiples cuentas bajo una misma identidad, todas estas cuentas se pueden gestionar en un panel de identidad personal y cambio entre cuentas llamado widget. Desde ahí una persona puede cambiar entre varias cuentas siempre que estén en un mismo país.",
+       "Durante los últimos quarters notamos que cada vez más usuarios solían tener cuentas en más de un país, alcanzando un porcentaje significativo del 2% de los usuarios con el panel activo en Argentina, Brasil y Uruguay. Estos usuarios no podían cambiar entre sus cuentas por el panel de identidad y debían cerrar sesión y volver a ingresar agregando fricción en la experiencia de cambio; además, podían encontrarse con problemas como olvidar su usuario y contraseña agregando más dificultad y creando problemas adicionales como la creación de cuentas duplicadas."
+      ]
+     }
+    },
+    {
+     "id": "challenges",
+     "title": {
+      "en": "Challenges Faced",
+      "es": "Desafíos enfrentados"
+     },
+     "list": {
+      "en": [
+       "Switching between accounts of the same identity already existed within the same country.",
+       "The experience does not scale for multiple countries because it does not allow identifying the destination country in the account list.",
+       "The experience must communicate the switch between accounts in terms of continuity and history, differentiating it from the use case of switching between accounts within the same country."
+      ],
+      "es": [
+       "El cambio entre cuentas de una misma identidad ya existía en un mismo país.",
+       "La experiencia no escala para múltiples países porque no permite identificar el país de destino en el listado de cuentas.",
+       "La experiencia debe comunicar el cambio entre cuentas a nivel continuidad e historia, diferenciando el caso de uso de un cambio entre cuentas en un mismo país."
+      ]
+     }
+    },
+    {
+     "id": "comparison",
+     "title": {
+      "en": "Comparative experiences",
+      "es": "Comparativas experiencias"
+     },
+     "body": {
+      "en": [
+       "The first step to identify the account was to add a visual identifier with the country's flag next to the account avatar. This avatar helps with identification in lists of more than two accounts and is only shown when there are three accounts in total (one active and two available on the panel)."
+      ],
+      "es": [
+       "El primer paso para identificar la cuenta consistió en agregar un identificador visual con la bandera del país al lado del avatar de la cuenta, este avatar facilita la identificación en listados de más de dos cuentas y solo se muestra con tres cuentas en total (una activa y dos disponibles en el panel)."
+      ]
+     },
+     "media": [
+      {
+       "type": "video",
+       "src": "assets/Videos/Switch/Switch productivo.web.mp4",
+       "poster": "assets/Switch países/v3/current-poster.jpg",
+       "alt": {
+        "en": "Previous account switch: the panel lets people choose from their available accounts.",
+        "es": "Cambio de cuentas previo: el panel permite elegir entre las cuentas disponibles."
+       }
+      },
+      {
+       "type": "video",
+       "src": "assets/Videos/Switch/Nuevo Switch.web.mp4",
+       "poster": "assets/Switch países/v3/proposed-poster.jpg",
+       "alt": {
+        "en": "New cross-country switch: a flag beside the avatar identifies the destination account’s country.",
+        "es": "Nuevo cambio entre países: una bandera junto al avatar permite reconocer el país de la cuenta de destino."
+       }
+      }
+     ]
+    },
+    {
+     "id": "variants",
+     "sequence": true,
+     "title": {
+      "en": "Change Animation and Variants",
+      "es": "Animación de cambio y variantes"
+     },
+     "body": {
+      "en": [
+       "The implementation of this animation includes three use cases with different solutions:"
+      ],
+      "es": [
+       "La implementación de esta animación incluye tres casos de uso con soluciones diferentes:"
+      ]
+     },
+     "list": {
+      "en": [
+       "Happy path, the experience without a request for an authentication factor and immediate change.",
+       "Technical error, in case the change cannot be completed due to an authentication failure.",
+       "Security factor request, applies if the person lost the active session in the chosen account."
+      ],
+      "es": [
+       "Happy path, la experiencia sin pedido de factor de autenticación y cambio inmediato.",
+       "Error técnico, en caso que no se pueda completar el cambio por un fallo en la autenticación.",
+       "Pedido de factor de seguridad, aplica si la persona perdió la sesión activa en la cuenta que eligió."
+      ]
+     },
+     "media": [
+      {
+       "type": "video",
+       "src": "assets/Videos/Switch/Happy path con SL.web.mp4",
+       "poster": "assets/Switch países/v3/happy-poster.jpg",
+       "alt": {
+        "en": "Happy path: the animation communicates the country change without requesting another authentication factor.",
+        "es": "Happy path: la animación comunica el cambio entre países sin pedir un factor de autenticación."
+       }
+      },
+      {
+       "type": "video",
+       "src": "assets/Videos/Switch/CDU error.web.mp4",
+       "poster": "assets/Switch países/v3/error-poster.jpg",
+       "alt": {
+        "en": "Technical error: the experience communicates that authentication failed and the switch could not be completed.",
+        "es": "Error técnico: la experiencia comunica que no se pudo completar el cambio por un fallo en la autenticación."
+       }
+      },
+      {
+       "type": "video",
+       "src": "assets/Videos/Switch/Paso a 2FA.web.mp4",
+       "poster": "assets/Switch países/v3/auth-poster.jpg",
+       "alt": {
+        "en": "Security factor request: a second authentication factor is requested when the selected account no longer has an active session.",
+        "es": "Pedido de factor de seguridad: se solicita un segundo factor cuando la cuenta elegida ya no tiene una sesión activa."
+       }
+      }
+     ]
+    }
+   ],
+   "final": {
+    "title": {
+     "en": "Final outcome",
+     "es": "Resultado final"
+    },
+    "list": {
+     "en": [
+      "It is estimated to reach 200k people with shared accounts among Argentina, Brazil, and Uruguay. At the time of my departure from the project, this change had not yet been implemented."
+     ],
+     "es": [
+      "Entre los impactos esperados se estimaba llegar a 200k personas con cuentas compartidas entre Argentina, Brasil y Uruguay, al momento de mi salida del proyecto este cambio aún no se había implementado."
+     ]
+    }
+   },
+   "meta": {
+    "title": {
+     "en": "Account switching between countries — David Montealegre",
+     "es": "Cambio de cuentas entre países — David Montealegre"
+    },
+    "description": {
+     "en": "Designing a cross-country account-switching experience for Mercado Libre, with visual country identifiers and motion for successful switches, errors and security verification.",
+     "es": "Diseño del cambio de cuentas entre países en Mercado Libre, con identificadores visuales y motion para el flujo exitoso, errores y verificación de seguridad."
+    }
+   },
+   "card": {
+    "title": {
+     "en": "Account switching between countries",
+     "es": "Cambio de cuentas entre países"
+    },
+    "role": {
+     "en": "Role: UI designer, motion designer",
+     "es": "Rol: UI designer, motion designer"
+    },
+    "summary": {
+     "en": "Created the country switch experience, an animated flow visible to people with accounts in multiple Latin American countries when switching between them.",
+     "es": "Creé la experiencia de switch entre países, un flujo animado visible para las personas con cuentas en varios países de Latinoamérica al momento de cambiar entre ellas."
+    },
+    "outcome": {
+     "en": "Designed an experience with an estimated reach of 200k people with more than one account across Brazil, Argentina, and Uruguay, a number that has been growing in recent quarters.",
+     "es": "Diseñé una experiencia con un alcance estimado de 200k personas con más de una cuenta entre Brasil, Argentina y Uruguay, un número que viene creciendo en los últimos quarters."
+    },
+    "impact": {
+     "en": "Designed an experience with an estimated reach of 200k people with more than one account across Brazil, Argentina, and Uruguay, a number that has been growing in recent quarters.",
+     "es": "Diseñé una experiencia con un alcance estimado de 200k personas con más de una cuenta entre Brasil, Argentina y Uruguay, un número que viene creciendo en los últimos quarters."
+    },
+    "video": "assets/Videos/Switch entre países.web.mp4",
+    "poster": "assets/Videos/home-v2-poster-4.png",
+    "videoLabel": {
+     "en": "Switching accounts between Argentina and Brazil in Mercado Pago.",
+     "es": "Cambio de cuentas entre Argentina y Brasil en Mercado Pago."
+    },
+    "cta": {
+     "en": "See case study",
+     "es": "Ver caso de estudio"
+    }
+   }
+  },
+  "ropstar": {
+   "slug": "ropstar",
+   "side": true,
+   "title": {
+    "en": "Ropstar Visual & UI execution",
+    "es": "Ropstar Visual y UI"
+   },
+   "titleLines": {
+    "en": ["Ropstar", "Visual & UI execution"],
+    "es": ["Ropstar", "Visual y UI"]
+   },
+   "lead": {
+    "en": "Selected visual and UI work for a fashion resale community.",
+    "es": "Trabajo visual y de UI seleccionado para una comunidad de reventa de moda."
+   },
+   "facts": [
+    { "label": { "en": "Contribution", "es": "Contribución" }, "value": { "en": "Visual & UI execution", "es": "Ejecución visual y de UI" } },
+    { "label": { "en": "Scope", "es": "Alcance" }, "value": { "en": "Selected interface work", "es": "Trabajo de interfaz seleccionado" } },
+    { "label": { "en": "Platform", "es": "Plataforma" }, "value": { "en": "Mobile", "es": "Móvil" } }
+   ],
+   "hero": {
+    "type": "image",
+    "src": "assets/Ropstar/v3/case/hero.webp",
+    "mobile": "assets/Ropstar/v3/case/hero-mobile.webp",
+    "alt": {
+     "en": "Collage of Ropstar app screens: product posts, search and the seller profile.",
+     "es": "Collage de pantallas de la app de Ropstar: publicaciones de prendas, búsqueda y perfil del vendedor."
+    },
+    "caption": null
+   },
+   "sections": [
+    {
+     "id": "context",
+     "title": { "en": "Context", "es": "Contexto" },
+     "body": {
+      "en": [
+       "Ropstar was an innovative circular-fashion and social-commerce marketplace in Colombia, launched in 2022, that set out to transform how people buy and sell second-hand clothing. My part in the project was designing the brand’s native mobile app from scratch, turning the existing web experience into an intuitive, secure and highly social mobile-first ecosystem, designed specifically for a community of young entrepreneurs and conscious shoppers in Latin America.",
+       "The main challenge was designing a dual-purpose product (B2C and C2C) within a single interface. The app had to solve three critical frictions of the second-hand market:"
+      ],
+      "es": [
+       "Ropstar fue un innovador marketplace de moda circular y social commerce en Colombia, lanzado en 2022, que buscaba transformar la compra y venta de ropa de segunda mano. Mi participación en el proyecto consistió en diseñar desde cero la aplicación móvil nativa de la marca, transformando la experiencia web existente en un ecosistema mobile-first intuitivo, seguro y altamente social, diseñado específicamente para una comunidad de jóvenes emprendedores y compradores conscientes en Latinoamérica.",
+       "El desafío principal fue diseñar un producto de doble funcionalidad (B2C y C2C) bajo una misma interfaz. La aplicación debía resolver tres fricciones críticas del mercado de segunda mano:"
+      ]
+     },
+     "ordered": true,
+     "list": {
+      "en": [
+       "Trust and safety: designing clear flows for curation, the payment gateway and shipment tracking.",
+       "Listing friction: simplifying the process so any user could photograph, catalogue and list a garment for sale in under two minutes (creating “virtual closets”).",
+       "Social commerce: bringing in visual dynamics inspired by social networks (such as personalised feeds, interaction and sharing) to drive the discovery of unique fashion."
+      ],
+      "es": [
+       "Confianza y Seguridad: Diseñar flujos claros de curaduría, pasarela de pagos y seguimiento de envíos.",
+       "Fricción de Publicación: Simplificar el proceso para que cualquier usuario pudiera fotografiar, catalogar y subir una prenda para la venta en menos de dos minutos (creación de \"clósets virtuales\").",
+       "Social Commerce: Integrar dinámicas visuales inspiradas en redes sociales (como feeds personalizados, interacción y compartidos) para impulsar el descubrimiento de moda única."
+      ]
+     }
+    },
+    {
+     "id": "access",
+     "inline": true,
+     "title": { "en": "Visuals, sign-in and sign-up", "es": "Visual, inicio de sesión y registro" },
+     "media": [
+      { "type": "image", "src": "assets/Ropstar/v3/case/perfildesconectadologin.webp", "alt": { "en": "Sign-in screen with email, password, and Facebook or Google access.", "es": "Pantalla de inicio de sesión con correo, contraseña y acceso con Facebook o Google." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/perfildesconectadoregistro.webp", "alt": { "en": "Sign-up screen inviting people to join the fashion community.", "es": "Pantalla de registro que invita a unirse a la comunidad de la moda." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/pantallacarga.webp", "alt": { "en": "Loading screen with the Ropstar logo and a welcome message.", "es": "Pantalla de carga con el logo de Ropstar y un mensaje de bienvenida." } }
+     ]
+    },
+    {
+     "id": "home",
+     "inline": true,
+     "title": { "en": "Home and product detail", "es": "Home y detalle" },
+     "media": [
+      { "type": "image", "src": "assets/Ropstar/v3/case/home.webp", "alt": { "en": "Post for a blue hoodie with price, description, and add to cart and buy now buttons.", "es": "Publicación de un buzo azul con precio, descripción y los botones agregar al carrito y comprar ahora." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/home-02.webp", "alt": { "en": "Second photo in the same hoodie post carousel.", "es": "Segunda foto del carrusel de la misma publicación del buzo." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/home-03.webp", "alt": { "en": "Third photo in the same hoodie post carousel.", "es": "Tercera foto del carrusel de la misma publicación del buzo." } }
+     ]
+    },
+    {
+     "id": "search",
+     "inline": true,
+     "title": { "en": "Search", "es": "Búsqueda" },
+     "media": [
+      { "type": "image", "src": "assets/Ropstar/v3/case/search01.webp", "alt": { "en": "Search home with categories, featured Ropstars and recent items.", "es": "Inicio de búsqueda con categorías, Ropstars destacados y prendas recientes." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/search05.webp", "alt": { "en": "Search suggestions for categories, Ropstars and garments while typing.", "es": "Sugerencias de búsqueda de categorías, Ropstars y prendas mientras se escribe." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/search03.webp", "alt": { "en": "Trousers category results as a grid of photos.", "es": "Resultados de la categoría pantalones en una cuadrícula de fotos." } }
+     ]
+    },
+    {
+     "id": "checkout",
+     "inline": true,
+     "title": { "en": "Cart and checkout", "es": "Carrito y checkout" },
+     "media": [
+      { "type": "image", "src": "assets/Ropstar/v3/case/comprainmediata.webp", "alt": { "en": "Purchase summary for one hoodie with shipping and total, paid with Mercado Pago.", "es": "Resumen de compra de un buzo con envío y total, pagado con Mercado Pago." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/carritocompras.webp", "alt": { "en": "Cart with three items and the total price.", "es": "Carrito con tres prendas y el precio total." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/recibopago01.webp", "alt": { "en": "Purchase receipt with dates, delivery address and the items bought.", "es": "Recibo de compra con fechas, dirección de entrega y las prendas compradas." } }
+     ]
+    },
+    {
+     "id": "social",
+     "inline": true,
+     "title": { "en": "Chat, notifications and seller profile", "es": "Chat, notificaciones y perfil vendedor" },
+     "media": [
+      { "type": "image", "src": "assets/Ropstar/v3/case/ropstarprofileclothes.webp", "alt": { "en": "Seller profile with rating, follow and chat buttons, and a grid of their garments.", "es": "Perfil de vendedor con calificación, botones seguir y conversar, y una cuadrícula de sus prendas." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/notificaciones.webp", "alt": { "en": "Notifications about followers, likes, comments and new items.", "es": "Notificaciones de seguidores, likes, comentarios y prendas nuevas." } },
+      { "type": "image", "src": "assets/Ropstar/v3/case/chat01.webp", "alt": { "en": "Chat list with three conversations.", "es": "Lista de chats con tres conversaciones." } }
+     ]
+    }
+   ],
+   "final": {
+    "title": { "en": "Final outcome", "es": "Resultado final" },
+    "list": {
+     "en": [
+      "Although the brand launched in 2022, the app never reached the market as planned.",
+      ["Visit the ", { "text": "brand’s Instagram", "href": "https://www.instagram.com/somosropstar/" }, " and its first ", { "text": "website", "href": "https://linktr.ee/somosropstar" }, "."]
+     ],
+     "es": [
+      "Aunque se llegó a lanzar la marca durante 2022, la aplicación nunca se lanzó al mercado como se había estimado.",
+      ["Visita el ", { "text": "instagram de la marca", "href": "https://www.instagram.com/somosropstar/" }, " y su primer ", { "text": "sitio web", "href": "https://linktr.ee/somosropstar" }, "."]
+     ]
+    }
+   },
+   "meta": {
+    "title": {
+     "en": "Ropstar — David Montealegre",
+     "es": "Ropstar — David Montealegre"
+    },
+    "description": {
+     "en": "Visual and UI design of the Ropstar mobile app, a circular-fashion and social-commerce marketplace in Colombia.",
+     "es": "Diseño visual y de UI de la app móvil de Ropstar, un marketplace de moda circular y social commerce en Colombia."
+    }
+   },
+   "card": {
+    "title": { "en": "Ropstar UI", "es": "Ropstar UI" }
+   }
+  },
+  "winefast": {
+   "slug": "winefast",
+   "side": true,
+   "title": {
+    "en": "Winefast App concept",
+    "es": "Winefast Concepto de app"
+   },
+   "titleLines": {
+    "en": [
+     "Winefast",
+     "App concept"
+    ],
+    "es": [
+     "Winefast",
+     "Concepto de app"
+    ]
+   },
+   "lead": {
+    "en": "A mobile concept for discovering wine, exploring pairings and ordering.",
+    "es": "Un concepto móvil para descubrir vino, explorar maridajes y hacer pedidos."
+   },
+   "facts": [
+    {
+     "label": {
+      "en": "Focus",
+      "es": "Enfoque"
+     },
+     "value": {
+      "en": "Visual & UI exploration",
+      "es": "Exploración visual y de UI"
+     }
+    },
+    {
+     "label": {
+      "en": "Scope",
+      "es": "Alcance"
+     },
+     "value": {
+      "en": "App concept",
+      "es": "Concepto de app"
+     }
+    },
+    {
+     "label": {
+      "en": "Platform",
+      "es": "Plataforma"
+     },
+     "value": {
+      "en": "Mobile",
+      "es": "Móvil"
+     }
+    }
+   ],
+   "hero": {
+    "type": "image",
+    "src": "assets/Winefast/V3/case/hero.webp",
+    "mobile": "assets/Winefast/V3/case/hero-mobile.webp",
+    "alt": {
+     "en": "Collage of five tilted Winefast app screens: splash, home, saved wines, search and wine-country preferences.",
+     "es": "Collage de cinco pantallas inclinadas de la app de Winefast: bienvenida, inicio, vinos guardados, búsqueda y preferencias de países productores."
+    },
+    "caption": null
+   },
+   "sections": [
+    {
+     "id": "context",
+     "title": {
+      "en": "The concept",
+      "es": "El concepto"
+     },
+     "body": {
+      "en": [
+       "This was one of my first projects to build an experience when I started my career as a UI designer. Winefast explores a mobile experience for choosing wine around personal tastes and occasions. The interface brings preference selection, discovery and product information into one visual language.",
+       "This craft selection focuses on the interface: a dark palette, wine photography and compact controls across the concept’s main screens."
+      ],
+      "es": [
+       "Este fue uno de mis primeros proyectos construyendo una experiencia, cuando empecé mi carrera como diseñador UI. Winefast explora una experiencia móvil para elegir vino según los gustos personales y las ocasiones. La interfaz reúne la selección de preferencias, el descubrimiento y la información de producto en un mismo lenguaje visual.",
+       "Esta selección se enfoca en la interfaz: una paleta oscura, fotografía de vino y controles compactos en las pantallas principales del concepto."
+      ]
+     },
+     "ordered": true,
+     "list": {
+      "en": [
+       "Onboarding and sign-up.",
+       "Login.",
+       "Discover a wine.",
+       "Filter, save and order.",
+       "Beyond the cart."
+      ],
+      "es": [
+       "Onboarding y registro.",
+       "Inicio de sesión.",
+       "Descubrir un vino.",
+       "Filtrar, guardar y pedir.",
+       "Más allá del carrito."
+      ]
+     }
+    },
+    {
+     "id": "onboarding",
+     "inline": true,
+     "title": {
+      "en": "Onboarding and sign-up",
+      "es": "Onboarding y registro"
+     },
+     "media": [
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-1.webp",
+       "alt": {
+        "en": "Complete your profile, step 1 of 6: answer a few questions to get a 20% discount on the next purchase.",
+        "es": "Completa tu perfil, paso 1 de 6: responde unas preguntas para obtener un bono del 20 % en la próxima compra."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-2.webp",
+       "alt": {
+        "en": "Step 2 of 6: how much you know about wine, from expert to nothing at all.",
+        "es": "Paso 2 de 6: cuánto sabes de vino, desde experto hasta nada."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-3.webp",
+       "alt": {
+        "en": "Step 3 of 6: favourite flavours as selectable tags.",
+        "es": "Paso 3 de 6: sabores favoritos como etiquetas seleccionables."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-4.webp",
+       "alt": {
+        "en": "Step 4 of 6: favourite wine-producing countries shown as flags.",
+        "es": "Paso 4 de 6: países productores preferidos representados con banderas."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-5.webp",
+       "alt": {
+        "en": "Step 5 of 6: reasons for drinking wine, such as food pairing or celebrations.",
+        "es": "Paso 5 de 6: razones para tomar vino, como acompañar comidas o celebraciones."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/onboarding-6.webp",
+       "alt": {
+        "en": "Step 6 of 6: create the account with name, phone, email and password, or with Facebook or Google.",
+        "es": "Paso 6 de 6: crear la cuenta con nombre, celular, correo y contraseña, o con Facebook o Google."
+       }
+      }
+     ]
+    },
+    {
+     "id": "login",
+     "inline": true,
+     "title": {
+      "en": "Login",
+      "es": "Inicio de sesión"
+     },
+     "media": [
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/login-1.webp",
+       "alt": {
+        "en": "Splash screen with the Winefast logo over a close-up photo of grapes and vine leaves.",
+        "es": "Pantalla de bienvenida con el logo de Winefast sobre una foto de uvas y hojas de vid en primer plano."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/login-2.webp",
+       "alt": {
+        "en": "Welcome back screen with email, password, and Facebook or Google sign-in.",
+        "es": "Pantalla de bienvenida de regreso con correo, contraseña e inicio con Facebook o Google."
+       }
+      }
+     ]
+    },
+    {
+     "id": "discover",
+     "inline": true,
+     "title": {
+      "en": "Discover a wine",
+      "es": "Descubrir un vino"
+     },
+     "media": [
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/discover-1.webp",
+       "alt": {
+        "en": "Home with a search bar, a recommend-me button and a featured winery promotion.",
+        "es": "Inicio con barra de búsqueda, botón de recomendación y una promoción destacada de una bodega."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/discover-2.webp",
+       "alt": {
+        "en": "Search results for wines to pair with meat, with prices and shipping.",
+        "es": "Resultados de búsqueda de vinos para acompañar carne, con precios y envío."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/discover-3.webp",
+       "alt": {
+        "en": "Wine detail for Frontera Cabernet Sauvignon with pairings and buttons to save or add to cart.",
+        "es": "Detalle del vino Frontera Cabernet Sauvignon con maridajes y botones para guardar o agregar al carrito."
+       }
+      }
+     ]
+    },
+    {
+     "id": "order",
+     "inline": true,
+     "title": {
+      "en": "Filter, save and order",
+      "es": "Filtrar, guardar y pedir"
+     },
+     "media": [
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/order-1.webp",
+       "alt": {
+        "en": "Filters by wine type, grape, vintage and country.",
+        "es": "Filtros por tipo de vino, cepa, cosecha y país."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/order-2.webp",
+       "alt": {
+        "en": "Saved wines list with prices and pairing tags.",
+        "es": "Lista de vinos guardados con precios y etiquetas de maridaje."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/order-3.webp",
+       "alt": {
+        "en": "Shopping cart with payment options, three wines and the total.",
+        "es": "Carrito de compras con opciones de pago, tres vinos y el total."
+       }
+      }
+     ]
+    },
+    {
+     "id": "cart",
+     "inline": true,
+     "title": {
+      "en": "Beyond the cart",
+      "es": "Más allá del carrito"
+     },
+     "media": [
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/cart-1.webp",
+       "alt": {
+        "en": "Home with a banner for an order in progress.",
+        "es": "Inicio con un aviso de un envío en proceso."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/cart-2.webp",
+       "alt": {
+        "en": "Order tracking: preparing, dispatch and delivery, with the payment summary.",
+        "es": "Seguimiento del envío: alistamiento, despacho y entrega, con el resumen de pago."
+       }
+      },
+      {
+       "type": "image",
+       "src": "assets/Winefast/V3/case/cart-3.webp",
+       "alt": {
+        "en": "Taster challenges: levels with tasks and a 30% discount reward.",
+        "es": "Retos de catador: niveles con tareas y una recompensa del 30 % de descuento."
+       }
+      }
+     ]
+    }
+   ],
+   "meta": {
+    "title": {
+     "en": "Winefast — David Montealegre",
+     "es": "Winefast — David Montealegre"
+    },
+    "description": {
+     "en": "Visual and UI concept for a mobile app to discover, pair and order wine.",
+     "es": "Concepto visual y de UI de una app móvil para descubrir, maridar y pedir vino."
+    }
+   },
+   "card": {
+    "title": {
+     "en": "Winefast app concept",
+     "es": "Concepto de app Winefast"
     }
    }
   }
