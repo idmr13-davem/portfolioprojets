@@ -26,12 +26,17 @@
 !/assets/Videos/Registro/Registro unificado.mov
 !/assets/Videos/home-v2-poster-1.png
 !/assets/Videos/home-v2-poster-3.png
+# V3 serves optimized H.264 copies (name.web.mp4, see docs/v3-release-plan.md), Switch included
+# (authorized October 27, 2026). Switch originals stay local; the V2 originals above stay while V2 is live.
+!/assets/Videos/Switch/
+!/assets/Videos/**/*.web.mp4
+!/assets/Videos/home-v2-poster-4.png
 
 # Public V2 case assets remain in their existing per-case folders:
 # assets/Registro ML/v2/, assets/Motion DS/v2/, assets/Menores/v2/.
 # Their presence in Git is preparation, not confirmation of content clearance.
 
-# Switch: local only until authenticated delivery covers HTML, data and media.
+# Switch V2 files stay local; V3 does not use them. Only the V3 web exports below may enter Git.
 /work/cambio-cuentas-paises.html
 /js/country-v2.js
 /js/country-v2-media.js
@@ -39,7 +44,11 @@
 /css/country-v2-motion.css
 /docs/country-switch-v2-review.md
 /assets/Country switch/
-/assets/Switch países/
+/assets/Switch países/*
+!/assets/Switch países/v3/
+/assets/Switch países/v3/*
+!/assets/Switch países/v3/*.webp
+!/assets/Switch países/v3/*.jpg
 
 # Independent generated release packages.
 /releases/

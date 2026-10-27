@@ -340,7 +340,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Registro/Registro legacy.mov",
+       "src": "assets/Videos/Registro/Registro legacy.web.mp4",
        "poster": "assets/Registro ML/v2/legacy-hd.jpg",
        "caption": {
         "en": "Previous sign-up",
@@ -409,7 +409,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Registro/Registro agnóstico.mov",
+       "src": "assets/Videos/Registro/Registro agnóstico.web.mp4",
        "poster": "assets/Registro ML/v2/agnostic-hd.jpg",
        "caption": {
         "en": "Agnostic sign-up",
@@ -465,7 +465,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Registro/Registro formulario.mov",
+       "src": "assets/Videos/Registro/Registro formulario.web.mp4",
        "poster": "assets/Registro ML/v2/form-hd.jpg",
        "caption": {
         "en": "Sign-up form",
@@ -531,7 +531,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Registro/Registro Google.mov",
+       "src": "assets/Videos/Registro/Registro Google.web.mp4",
        "poster": "assets/Registro ML/v2/google-hd.jpg",
        "caption": {
         "en": "Google sign-up",
@@ -597,7 +597,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Registro/Registro unificado.mov",
+       "src": "assets/Videos/Registro/Registro unificado.web.mp4",
        "poster": "assets/Registro ML/v2/unified-hd.jpg",
        "caption": {
         "en": "Unified sign-up / login",
@@ -660,7 +660,7 @@ window.V3_CONTENT = {
      "en": "I reduced average sign-up time from 3:25 minutes to 52 seconds",
      "es": "Reduje el tiempo promedio de registro de 3:25 minutos a 52 segundos"
     },
-    "video": "assets/Videos/Flujo registro ML.mov",
+    "video": "assets/Videos/Flujo registro ML.web.mp4",
     "poster": "assets/Videos/home-v2-poster-1.png",
     "videoLabel": {
      "en": "Entry into Mercado Libre’s unified sign-up flow.",
@@ -721,26 +721,26 @@ window.V3_CONTENT = {
    },
    "hero": {
     "type": "video",
-    "src": "assets/Motion DS/v3/Motion curve 1.mov",
+    "src": "assets/Motion DS/v3/Motion curve 1.web.mp4",
     "poster": "assets/Motion DS/v3/motion-curve-1-poster.png",
     "caption": null
    },
    "heroSet": [
     {
      "type": "video",
-     "src": "assets/Motion DS/v3/Motion curve 1.mov",
+     "src": "assets/Motion DS/v3/Motion curve 1.web.mp4",
      "poster": "assets/Motion DS/v3/motion-curve-1-poster.png",
      "caption": null
     },
     {
      "type": "video",
-     "src": "assets/Motion DS/v3/Motion curve 2.mov",
+     "src": "assets/Motion DS/v3/Motion curve 2.web.mp4",
      "poster": "assets/Motion DS/v3/motion-curve-2-poster.png",
      "caption": null
     },
     {
      "type": "video",
-     "src": "assets/Motion DS/v3/Motion curve 3.mov",
+     "src": "assets/Motion DS/v3/Motion curve 3.web.mp4",
      "poster": "assets/Motion DS/v3/motion-curve-3-poster.png",
      "caption": null
     }
@@ -918,7 +918,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Motion DS/v2/video-4793-5839.mp4",
+       "src": "assets/Motion DS/v2/video-4793-5839.web.mp4",
        "poster": "assets/Motion DS/v2/poster-4793-5839-hd.jpg",
        "caption": {
         "en": "The animation always uses the same timing, which feels rigid.",
@@ -927,7 +927,7 @@ window.V3_CONTENT = {
       },
       {
        "type": "video",
-       "src": "assets/Motion DS/v2/video-4793-5868.mp4",
+       "src": "assets/Motion DS/v2/video-4793-5868.web.mp4",
        "poster": "assets/Motion DS/v2/poster-4793-5868-hd.jpg",
        "caption": {
         "en": "An interaction proposed for Home with the design system update.",
@@ -936,7 +936,7 @@ window.V3_CONTENT = {
       },
       {
        "type": "video",
-       "src": "assets/Motion DS/v2/video-4793-5879.mov",
+       "src": "assets/Motion DS/v2/video-4793-5879.web.mp4",
        "poster": "assets/Motion DS/v2/poster-4793-5879-hd.jpg",
        "caption": {
         "en": "The animation is too fast and inconsistent with other uses in the design system.",
@@ -1097,7 +1097,7 @@ window.V3_CONTENT = {
        "media": [
         {
          "type": "video",
-         "src": "assets/Videos/Motion DS/Motion DS 01.mov",
+         "src": "assets/Videos/Motion DS/Motion DS 01.web.mp4",
          "poster": "assets/Motion DS/v2/expressivity-0-hd.jpg",
          "caption": {
           "en": "Less expressive",
@@ -1106,7 +1106,7 @@ window.V3_CONTENT = {
         },
         {
          "type": "video",
-         "src": "assets/Videos/Motion DS/Motion DS 02.mov",
+         "src": "assets/Videos/Motion DS/Motion DS 02.web.mp4",
          "poster": "assets/Motion DS/v2/expressivity-1-hd.jpg",
          "caption": {
           "en": "More expressive",
@@ -1419,7 +1419,7 @@ window.V3_CONTENT = {
      "media": [
       {
        "type": "video",
-       "src": "assets/Videos/Menores/Ingreso datos del adulto.mov",
+       "src": "assets/Videos/Menores/Ingreso datos del adulto.web.mp4",
        "poster": "assets/Menores/v2/video-1-poster.png",
        "caption": {
         "en": "Entering information, user: Adult",
@@ -1432,7 +1432,7 @@ window.V3_CONTENT = {
       },
       {
        "type": "video",
-       "src": "assets/Videos/Menores/Análisis IA.mov",
+       "src": "assets/Videos/Menores/Análisis IA.web.mp4",
        "poster": "assets/Menores/v2/video-2-poster.png",
        "caption": {
         "en": "AI analysis, user: Adult",
@@ -1445,7 +1445,7 @@ window.V3_CONTENT = {
       },
       {
        "type": "video",
-       "src": "assets/Videos/Menores/Invitación al menor.mov",
+       "src": "assets/Videos/Menores/Invitación al menor.web.mp4",
        "poster": "assets/Menores/v2/video-3-poster.png",
        "caption": {
         "en": "Sending the invitation, user: Adult",
@@ -1458,7 +1458,7 @@ window.V3_CONTENT = {
       },
       {
        "type": "video",
-       "src": "assets/Videos/Menores/Creación de cuenta.mov",
+       "src": "assets/Videos/Menores/Creación de cuenta.web.mp4",
        "poster": "assets/Menores/v2/video-4-poster.png",
        "caption": {
         "en": "Creating an account, user: Minor",
@@ -1554,7 +1554,7 @@ window.V3_CONTENT = {
      "en": "reducing identity verification time from 24 hours to 20 seconds",
      "es": "reduje el tiempo de validación de identidad de 24 horas a 20 segundos"
     },
-    "video": "assets/Videos/MenoresMLM.mov",
+    "video": "assets/Videos/MenoresMLM.web.mp4",
     "poster": "assets/Videos/home-v2-poster-3.png",
     "videoLabel": {
      "en": "Account creation flow for minors in Mercado Pago in Mexico.",

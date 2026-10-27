@@ -54,7 +54,7 @@ ${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''
 <body class="v3-${name}" data-page="${page.page}"${page.id ? ` data-id="${page.id}"` : ''}>
 <div id="app"></div>
 <noscript><p style="padding:24px">This exploration renders with JavaScript. <a href="${root}index.html">Open the published portfolio</a>.</p></noscript>
-<script src="${base}../shared/content.js?v=20261026-motion-hero-v3"></script>
+<script src="${base}../shared/content.js?v=20261027-videos-mp4"></script>
 <script src="${base}../shared/site.js"></script>
 <script src="${base}app.js${name === 'statement' ? '?v=20261026-motion-hero-sequence' : ''}"></script>
 </body>

@@ -29,7 +29,7 @@ Portafolio personal de diseño de producto dirigido a reclutadores, hiring manag
 
 ## Reglas de trabajo
 
-- **Alcance de publicación V2 (14-oct-2026):** solo *Switching accounts across countries* (`cambio-cuentas-paises`) permanece protegido/excluido. Registro ML, Motion Level y Accounts for minors in Mexico son públicos, sujetos a validación de contenido. Los botones "pending" no son autenticación.
+- **Alcance de publicación V3 (27-oct-2026):** David autorizó publicar *Switching accounts across countries* en la V3. Los cuatro casos (Registro ML, Motion Level, Menores, Switch) y los proyectos paralelos Ropstar y Winefast son públicos en la release V3 Statement, sujetos a validación de contenido. Los archivos de Switch de la V2 siguen locales. Plan: `docs/v3-release-plan.md`. (El alcance V2 del 14-oct, con Switch excluido, solo rige para la release V2.)
 - **Contenido y cifras:** copiar títulos, roles y resultados numéricos exactamente desde Figma/fuente aprobada, en HTML y en ambas traducciones. Nunca inventar ni extrapolar métricas; no presentar resultados finales de producción para Menores.
 - **Sistema de diseño:** usar tokens semánticos alineados con Figma (fuente de verdad), tipografía Inter, breakpoints existentes (mobile ≤767, tablet 768–1023/1024, desktop, ≥1500 escala grande). No hardcodear valores que ya existen como token.
 - **CSS:** reglas compartidas en el archivo compartido; reglas de un solo caso siempre bajo su clase de página (`.case-study-…`). No dividir hojas por número de líneas.

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Comparar videos MP4</title>
+<style>
+:root { --bg: #171b1f; --fg: #daeded; --muted: #8fa3a3; --line: #2c3338; --good: #7fd18b; --warn: #f0c36b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 300 15px/1.45 Inter, system-ui, sans-serif; }
+main { max-width: 1280px; margin: 0 auto; padding: 32px 16px 80px; }
+h1 { font-weight: 700; font-size: 28px; margin: 0 0 8px; }
+.lead { color: var(--muted); margin: 0 0 24px; max-width: 70ch; }
+.total { display: flex; flex-wrap: wrap; gap: 24px; margin-bottom: 32px; }
+.total b { display: block; font-size: 32px; font-weight: 700; }
+.total span { color: var(--muted); font-size: 13px; }
+.item { border-top: 1px solid var(--line); padding: 24px 0; }
+.item h2 { font-size: 16px; font-weight: 700; margin: 0 0 4px; word-break: break-word; }
+.meta { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+.meta .ok { color: var(--good); } .meta .warn { color: var(--warn); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+figure { margin: 0; }
+figcaption { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+video { width: 100%; max-height: 560px; background: #000; display: block; object-fit: contain; }
+button { margin-top: 12px; background: #5533bb; color: #fff; border: 0; border-radius: 16px; padding: 8px 16px; font: 700 13px Inter, system-ui, sans-serif; cursor: pointer; }
+button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+@media (max-width: 767px) { .pair { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Videos V3: original contra MP4 optimizado</h1>
+  <p class="lead">H.264, CRF 26, preset slow, alto máximo de 1200 px, 60 fps, sin audio, faststart. SSIM compara cada MP4 con su original a la misma resolución: 1,000 es idéntico y por encima de 0,98 la diferencia no suele notarse. "Reproducir ambos" arranca los dos videos desde el inicio al mismo tiempo.</p>
+  <div class="total" id="total"></div>
+  <div id="list"></div>
+</main>
+<script>
+const root = '../../../';
+const url = p => root + p.normalize('NFC').split('/').map(encodeURIComponent).join('/');
+const mb = b => (b / 1e6).toFixed(2).replace('.', ',') + ' MB';
+fetch('resultados.json').then(r => r.json()).then(rows => {
+  const before = rows.reduce((s, r) => s + r.before, 0), after = rows.reduce((s, r) => s + r.after, 0);
+  const minSsim = Math.min(...rows.map(r => r.ssim));
+  document.getElementById('total').innerHTML =
+    `<div><b>${mb(before)}</b><span>originales (${rows.length})</span></div>` +
+    `<div><b>${mb(after)}</b><span>MP4 optimizados</span></div>` +
+    `<div><b>${Math.round((1 - after / before) * 100)} %</b><span>menos peso</span></div>` +
+    `<div><b>${minSsim.toFixed(3).replace('.', ',')}</b><span>SSIM más bajo</span></div>`;
+  document.getElementById('list').innerHTML = rows.sort((a, b) => b.before - a.before).map((r, i) => `
+    <section class="item">
+      <h2>${r.src}</h2>
+      <p class="meta">${mb(r.before)} → ${mb(r.after)} (−${Math.round((1 - r.after / r.before) * 100)} %) · ${r.in} → ${r.out} ·
+        SSIM <span class="${r.ssim >= 0.98 ? 'ok' : 'warn'}">${r.ssim.toFixed(4).replace('.', ',')}</span></p>
+      <div class="pair">
+        <figure><figcaption>Original</figcaption><video data-pair="${i}" src="${url(r.src)}" muted loop playsinline preload="metadata" controls></video></figure>
+        <figure><figcaption>MP4 optimizado</figcaption><video data-pair="${i}" src="${url(r.dst)}" muted loop playsinline preload="metadata" controls></video></figure>
+      </div>
+      <button type="button" data-play="${i}">Reproducir ambos</button>
+    </section>`).join('');
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-play]'); if (!b) return;
+    document.querySelectorAll(`video[data-pair="${b.dataset.play}"]`).forEach(v => { v.currentTime = 0; v.play(); });
+  });
+});
+</script>
+</body>
+</html>
