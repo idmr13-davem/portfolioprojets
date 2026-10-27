@@ -56,7 +56,7 @@ ${p.tokens ? `<link rel="stylesheet" href="${root}css/tokens/figma.css">\n` : ''
 <noscript><p style="padding:24px">This exploration renders with JavaScript. <a href="${root}index.html">Open the published portfolio</a>.</p></noscript>
 <script src="${base}../shared/content.js?v=20261026-motion-hero-v3"></script>
 <script src="${base}../shared/site.js"></script>
-<script src="${base}app.js${name === 'statement' ? '?v=20261026-motion-hero-once-review' : ''}"></script>
+<script src="${base}app.js${name === 'statement' ? '?v=20261026-motion-hero-sequence' : ''}"></script>
 </body>
 </html>
 `;

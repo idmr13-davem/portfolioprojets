@@ -283,28 +283,41 @@
     };
   }
 
-  // Hero curves (Motion Level): each clip plays once and stays on its last frame. Leaving the view
-  // pauses an unfinished clip; coming back resumes it, but a finished clip never starts over.
+  // Hero curves (Motion Level): the clips play once, one after another (first, second, third), and each
+  // stays on its last frame. Leaving the view pauses the clip in progress; coming back resumes it, and
+  // finished clips never start over.
   let heroCleanup = null;
   function playHeroOnce() {
     heroCleanup?.();
     heroCleanup = null;
-    const clips = [...app.querySelectorAll('.a-cs__heroset video')];
+    const set = app.querySelector('.a-cs__heroset');
+    const clips = [...(set?.querySelectorAll('video') || [])];
     clips.forEach(v => { v.loop = false; });
     if (!clips.length || V3.reduced || !('IntersectionObserver' in window)) return;
     let disposed = false;
-    const observer = new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting, intersectionRatio }) => {
+    let visible = false;
+    let current = 0;
+    const playCurrent = () => {
+      if (!disposed && visible && current < clips.length) clips[current].play().catch(() => {});
+    };
+    const next = e => {
+      if (disposed || e.target !== clips[current]) return;
+      current += 1;
+      if (current >= clips.length) observer.disconnect();
+      else playCurrent();
+    };
+    const observer = new IntersectionObserver(([entry]) => {
       if (disposed) return;
-      if (target.ended) observer.unobserve(target);
-      else if (isIntersecting && intersectionRatio >= 0.35) target.play().catch(() => {});
-      else target.pause();
-    }), { threshold: 0.35 });
-    const done = e => observer.unobserve(e.target);
-    clips.forEach(v => { observer.observe(v); v.addEventListener('ended', done, { once: true }); });
+      visible = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+      if (visible) playCurrent();
+      else clips[current]?.pause();
+    }, { threshold: 0.35 });
+    observer.observe(set);
+    clips.forEach(v => v.addEventListener('ended', next));
     heroCleanup = () => {
       disposed = true;
       observer.disconnect();
-      clips.forEach(v => { v.pause(); v.removeEventListener('ended', done); });
+      clips.forEach(v => { v.pause(); v.removeEventListener('ended', next); });
     };
   }
 

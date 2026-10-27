@@ -1,0 +1,11 @@
+PASS umbral 0.35 y secuencia exclusiva 1→2→3, sin reinicio tras completar
+PASS pausa/continuación del clip 1 sin reiniciar
+PASS pausa/continuación del clip 2 sin reiniciar
+PASS pausa/continuación del clip 3 sin reiniciar
+PASS ended pendiente fuera de vista espera al reingreso
+PASS limpieza pausa y retira listeners; callbacks antiguos no reproducen
+PASS reinicialización limpia el observador anterior
+PASS fallback estático {"reduced":true}
+PASS fallback estático {"supported":false}
+PASS fallback estático {"count":0}
+10/10 PASS (simulación, sin navegador)
