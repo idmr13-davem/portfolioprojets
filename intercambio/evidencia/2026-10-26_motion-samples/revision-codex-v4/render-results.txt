@@ -1,0 +1,22 @@
+[
+  {
+    "id": "motion",
+    "total": 20,
+    "sharedLoopAutoplay": 8,
+    "sequenceSamples": 12
+  },
+  {
+    "id": "registro",
+    "total": 5,
+    "sharedLoopAutoplay": 5,
+    "sequenceSamples": 0
+  },
+  {
+    "id": "menores",
+    "total": 4,
+    "sharedLoopAutoplay": 4,
+    "sequenceSamples": 0
+  }
+]
+PASS actual render: hero/examples/expressivity retain shared loop+autoplay; Registro/Menores have no samples
+CONFIRMED shared manual Play does not coordinate with the automatic sequence (two clips may play)

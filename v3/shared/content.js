@@ -341,7 +341,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Videos/Registro/Registro legacy.mov",
-       "poster": "assets/Registro ML/v2/legacy.png",
+       "poster": "assets/Registro ML/v2/legacy-hd.jpg",
        "caption": {
         "en": "Previous sign-up",
         "es": "Registro anterior"
@@ -410,7 +410,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Videos/Registro/Registro agnóstico.mov",
-       "poster": "assets/Registro ML/v2/agnostic.png",
+       "poster": "assets/Registro ML/v2/agnostic-hd.jpg",
        "caption": {
         "en": "Agnostic sign-up",
         "es": "Registro agnóstico"
@@ -466,7 +466,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Videos/Registro/Registro formulario.mov",
-       "poster": "assets/Registro ML/v2/form.png",
+       "poster": "assets/Registro ML/v2/form-hd.jpg",
        "caption": {
         "en": "Sign-up form",
         "es": "Formulario de registro"
@@ -532,7 +532,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Videos/Registro/Registro Google.mov",
-       "poster": "assets/Registro ML/v2/google.png",
+       "poster": "assets/Registro ML/v2/google-hd.jpg",
        "caption": {
         "en": "Google sign-up",
         "es": "Registro con Google"
@@ -598,7 +598,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Videos/Registro/Registro unificado.mov",
-       "poster": "assets/Registro ML/v2/unified.png",
+       "poster": "assets/Registro ML/v2/unified-hd.jpg",
        "caption": {
         "en": "Unified sign-up / login",
         "es": "Registro / login unificado"
@@ -721,33 +721,33 @@ window.V3_CONTENT = {
    },
    "hero": {
     "type": "video",
-    "src": "assets/Motion DS/v2/hero-0.mp4",
-    "poster": "assets/Motion DS/v2/hero-0.png",
+    "src": "assets/Motion DS/v3/Motion curve 1.mov",
+    "poster": "assets/Motion DS/v3/motion-curve-1-poster.png",
     "caption": null
    },
    "heroSet": [
     {
      "type": "video",
-     "src": "assets/Motion DS/v2/hero-0.mp4",
-     "poster": "assets/Motion DS/v2/hero-0.png",
+     "src": "assets/Motion DS/v3/Motion curve 1.mov",
+     "poster": "assets/Motion DS/v3/motion-curve-1-poster.png",
      "caption": null
     },
     {
      "type": "video",
-     "src": "assets/Motion DS/v2/hero-1.mp4",
-     "poster": "assets/Motion DS/v2/hero-1.png",
+     "src": "assets/Motion DS/v3/Motion curve 2.mov",
+     "poster": "assets/Motion DS/v3/motion-curve-2-poster.png",
      "caption": null
     },
     {
      "type": "video",
-     "src": "assets/Motion DS/v2/hero-2.mp4",
-     "poster": "assets/Motion DS/v2/hero-2.png",
+     "src": "assets/Motion DS/v3/Motion curve 3.mov",
+     "poster": "assets/Motion DS/v3/motion-curve-3-poster.png",
      "caption": null
     }
    ],
    "heroAlt": {
-    "en": "Animated screens exploring easing and duration for Mercado Libre’s design system.",
-    "es": "Pantallas animadas para explorar easing y duration en el design system de Mercado Libre."
+    "en": "Animated easing curves explored for Mercado Libre’s motion design system.",
+    "es": "Curvas de easing animadas exploradas para el motion design system de Mercado Libre."
    },
    "sections": [
     {
@@ -820,18 +820,6 @@ window.V3_CONTENT = {
       {
        "en": "Expand the subsystem",
        "es": "Ampliación del subsistema"
-      }
-     ],
-     "media": [
-      {
-       "type": "image",
-       "src": "assets/Motion DS/v2/desktop-imgRoadmap1.png",
-       "alt": {
-        "en": "Gantt chart showing the project roadmap.",
-        "es": "Diagrama de Gantt con el roadmap del proyecto."
-       },
-       "caption": null,
-       "mobile": "assets/Motion DS/v2/mobile-imgRoadmap1.png"
       }
      ]
     },
@@ -931,7 +919,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Motion DS/v2/video-4793-5839.mp4",
-       "poster": "assets/Motion DS/v2/poster-4793-5839.png",
+       "poster": "assets/Motion DS/v2/poster-4793-5839-hd.jpg",
        "caption": {
         "en": "The animation always uses the same timing, which feels rigid.",
         "es": "Animación usa siempre los mismos timings, se mantiene rígida."
@@ -940,7 +928,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Motion DS/v2/video-4793-5868.mp4",
-       "poster": "assets/Motion DS/v2/poster-4793-5868.png",
+       "poster": "assets/Motion DS/v2/poster-4793-5868-hd.jpg",
        "caption": {
         "en": "An interaction proposed for Home with the design system update.",
         "es": "Interacción planteada en la home con el update del DS."
@@ -949,7 +937,7 @@ window.V3_CONTENT = {
       {
        "type": "video",
        "src": "assets/Motion DS/v2/video-4793-5879.mov",
-       "poster": "assets/Motion DS/v2/poster-4793-5879.png",
+       "poster": "assets/Motion DS/v2/poster-4793-5879-hd.jpg",
        "caption": {
         "en": "The animation is too fast and inconsistent with other uses in the design system.",
         "es": "Velocidad utilizada en la animación es muy rápida. inconsistente con otros usos del DS."
@@ -981,19 +969,19 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5915.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5915.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5915-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5918.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5918.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5918-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5921.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5921.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5921-hd.png",
          "caption": null
         }
        ]
@@ -1007,19 +995,19 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5935.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5935.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5935-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5937.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5937.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5937-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5941.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5941.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5941-hd.png",
          "caption": null
         }
        ]
@@ -1033,19 +1021,19 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5943.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5943.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5943-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5945.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5945.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5945-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5947.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5947.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5947-hd.png",
          "caption": null
         }
        ]
@@ -1059,19 +1047,19 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5949.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5949.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5949-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5951.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5951.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5951-hd.png",
          "caption": null
         },
         {
          "type": "video",
          "src": "assets/Motion DS/v2/video-4793-5953.mp4",
-         "poster": "assets/Motion DS/v2/poster-4793-5953.png",
+         "poster": "assets/Motion DS/v2/poster-4793-5953-hd.png",
          "caption": null
         }
        ]
@@ -1110,7 +1098,7 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Videos/Motion DS/Motion DS 01.mov",
-         "poster": "assets/Motion DS/v2/expressivity-0.png",
+         "poster": "assets/Motion DS/v2/expressivity-0-hd.jpg",
          "caption": {
           "en": "Less expressive",
           "es": "Menos expresiva"
@@ -1119,7 +1107,7 @@ window.V3_CONTENT = {
         {
          "type": "video",
          "src": "assets/Videos/Motion DS/Motion DS 02.mov",
-         "poster": "assets/Motion DS/v2/expressivity-1.png",
+         "poster": "assets/Motion DS/v2/expressivity-1-hd.jpg",
          "caption": {
           "en": "More expressive",
           "es": "Más expresiva"
@@ -1318,13 +1306,13 @@ window.V3_CONTENT = {
    },
    "hero": {
     "type": "image",
-    "src": "assets/Menores/v2/hero.png",
+    "src": "assets/Menores/v2/hero-v3.webp",
     "alt": {
      "en": "Mobile screens from a financial app showing an account promotion for minors and the child’s email registration.",
      "es": "Pantallas móviles de una app financiera que muestran la promoción de una cuenta para menores y el registro del correo del hijo o hija."
     },
     "caption": null,
-    "mobile": "assets/Menores/v2/hero-mobile.png"
+    "mobile": "assets/Menores/v2/hero-v3-mobile.webp"
    },
    "sections": [
     {
@@ -1419,18 +1407,6 @@ window.V3_CONTENT = {
         "en": "With the invitation, the minor can finish creating an account through a personalized experience.",
         "es": "Con la invitación, el menor puede completar la creación de su cuenta con una experiencia personalizada."
        }
-      }
-     ],
-     "media": [
-      {
-       "type": "image",
-       "src": "assets/Menores/v2/cuenta-menores-registro-app.webp",
-       "alt": {
-        "en": "Mobile screens from a financial app showing an account promotion for minors and the child’s email registration.",
-        "es": "Pantallas móviles de una app financiera que muestran la promoción de una cuenta para menores y el registro del correo del hijo o hija."
-       },
-       "caption": null,
-       "mobile": "assets/Menores/v2/cuenta-menores-registro-app-mobile.webp"
       }
      ]
     },

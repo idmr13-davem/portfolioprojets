@@ -396,8 +396,14 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 /* Sections with parts and one video (Registro ML): title 3 | parts 4 | video 5 columns, top-aligned. */
 .a-cs--grid .cs-section--split .cs-content { grid-column: 4 / span 4; }
 .a-cs--grid .cs-section--split .cs-intro > .cs-media { grid-column: 8 / -1; }
+/* Figures: the play control sits on the video's bottom-right corner (12 px in, as in Figma), whatever
+   the caption and note below it measure. */
+.a-cs--grid .cs-figure { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; }
+.a-cs--grid .cs-figure > video, .a-cs--grid .cs-figure > .v3-play { grid-row: 1; grid-column: 1; }
+.a-cs--grid .cs-figure > .v3-play { position: relative; inset: auto; align-self: end; justify-self: end; margin: 0 .75rem .75rem 0; }
 /* Copy: paragraphs keep para-gap (p + p, .9em of Body); lists read as plain lines, full column width. */
-.a-cs--grid .cs-copy p + .cs-list { margin-top: .9em; }
+/* A list after a paragraph, and the closing line after both, keep copy-block-gap (20). */
+.a-cs--grid .cs-copy p + .cs-list { margin-top: 1.25rem; }
 .a-cs--grid .cs-section .cs-list { list-style: none; padding-left: 0; }
 .a-cs--grid .cs-section .cs-list li, .a-cs--grid .cs-content p { max-width: none; }
 /* Parts: XL (48) between parts, SS (12) between a part's title, copy and media. */
@@ -410,6 +416,8 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-cs--grid .a-cs__final .cs-list { list-style: disc; padding-left: 1.5em; }
 /* Heading, intro and list fill the twelve columns (Figma 5074:474): no measured width caps. */
 .a-cs--grid .a-cs__final > p, .a-cs--grid .a-cs__final .cs-list li { max-width: none; }
+/* A closing note under the list reads at the intro size (Final intro, line-height 1.5) at 80%. */
+.a-cs--grid .a-cs__final .a-cs__note { font-size: var(--step-lead); line-height: 1.5; }
 .a-cs--grid .a-cs__next { background: var(--surface); }
 /* Desktop: wide evidence below a section (Motion's roadmap, benchmark and examples, Registro's context
    video) keeps the three title columns free and sits on columns 4–12 (Figma 5083:669, 5074:502 / 5074:678). */
@@ -427,7 +435,16 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 }
 
 /* Motion Level only. */
-.a-cs--motion .cs-steps li { min-height: 77px; }
+/* Hero (Figma 5083:684): three motion-curve clips, 850 × 860, four columns each with no ground; on phones
+   the three stay in one row, edge to edge, at gutter. */
+.a-cs--motion .a-cs__heroset { background: none; }
+.a-cs--motion .a-cs__heroset video { aspect-ratio: 850 / 860; max-height: none; background: none; }
+/* Objectives and outcomes: Body strong lines, goal-list-gap kept at .6 of the lead size. */
+.a-cs--motion .a-cs__goals .cs-list { gap: calc(var(--step-lead) * .6); font-size: var(--step-body); font-weight: 700; line-height: 1.5; }
+/* Roadmap: the steps are a bulleted list right after the paragraph, at every width. */
+.a-cs--motion .cs-section--roadmap .cs-content { gap: 0; }
+.a-cs--motion .cs-section--roadmap .cs-steps { gap: 0; padding-left: 1.5em; list-style: disc; }
+.a-cs--motion .cs-section--roadmap .cs-steps li { padding: 0; background: none; }
 /* Final outcomes follows the last section directly: its section-half padding is the only space (Figma Body, no bottom padding). */
 .a-cs--motion .a-cs__final { margin-top: 0; }
 /* Expressivity videos keep three columns each (title-width) inside the nine-column content. */
@@ -442,18 +459,13 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 @media (min-width: 1024px) {
   .a-cs--motion .cs-section--benchmark .cs-figure img { height: 80svh; }
 }
-/* Desktop (Figma 5083:669 / 5083:941): the roadmap steps read as a bulleted list right after the paragraph, and the
-   challenge and frequency lists are bulleted too. Tablet and phones keep the step cards and plain lists. */
+/* Desktop (Figma 5083:669 / 5083:941): the challenge and frequency lists are bulleted; tablet and phones keep plain lists. */
 @media (min-width: 1024px) {
-  .a-cs--motion .cs-section--roadmap .cs-content { gap: 0; }
-  .a-cs--motion .cs-section--roadmap .cs-steps { gap: 0; padding-left: 1.5em; list-style: disc; }
-  .a-cs--motion .cs-section--roadmap .cs-steps li { min-height: 0; padding: 0; background: none; }
   .a-cs--motion .cs-section--challenges .cs-list, .a-cs--motion .cs-part .cs-list { padding-left: 1.5em; list-style: disc; }
 }
-/* Desktop XL only (Figma 5083:669): more air between the roadmap list and its image (XXL), and between
-   the expressivity title, copy and videos (XL). The 1280 frame keeps block-gap and SS. */
+/* Desktop XL only (Figma 5083:669): more air between the expressivity title, copy and videos (XL).
+   The 1280 frame keeps SS. */
 @media (min-width: 1500px) {
-  .a-cs--motion .cs-section--roadmap { gap: var(--space-xxl); }
   .a-cs--motion .cs-section--level .cs-part:first-child { gap: var(--space-xl); }
 }
 @media (max-width: 1023px) {
@@ -464,6 +476,10 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
   .a-cs--motion .cs-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: 2.5rem; }
   .a-cs--motion .cs-section > .cs-media, .a-cs--motion .cs-part .cs-media { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
   .a-cs--motion .cs-axis__ends { row-gap: var(--space-m); }
+  .a-cs--motion .a-cs__visual { padding-inline: 0; }
+  .a-cs--motion .a-cs__heroset { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); }
+  .a-cs--motion .a-cs__heroset video { grid-column: auto; }
+  .a-cs--motion .a-cs__heroset video:not(:first-child) { display: block; }
 }
 
 /* Registro ML only. Tablet and desktop videos use the 16:10 height of the full body width, capped
@@ -475,4 +491,37 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
    388 of media + SS gap (12) + one caption line (20). */
 @media (max-width: 767px) {
   .a-cs--registro .cs-figure video { height: 388px; }
+}
+
+/* Menores only (Figma 5076:2434). The adult and minor journey uses all twelve columns: four recordings
+   on three columns each on desktop, two per row on tablet (2 × 6) and one per row on phones, at gutter. */
+@media (min-width: 1024px) {
+  .a-cs--menores .cs-section--flows > .cs-media { width: 100%; }
+}
+/* The four recordings share one frame (journey-video-height): the native 716 × 1596 of the screen
+   recordings, capped at 80svh, on Background/Deep, so the captions line up across the row; corners use
+   Border radius L (32) at every width. */
+.a-cs--menores .cs-section--flows .cs-figure { container-type: inline-size; }
+/* The video box is the recording itself (no side bands when 80svh caps the height), centred in its
+   columns, so the 32 radius rounds the recording; cover crops ≤1.2% of the native width per side. */
+.a-cs--menores .cs-section--flows .cs-figure video { width: min(100cqw, 80svh * 716 / 1596); max-height: none; aspect-ratio: 716 / 1596; justify-self: center; object-fit: cover; border-radius: var(--radius-l); }
+.a-cs--menores .cs-section--flows .cs-figure > .v3-play { margin-right: calc((100cqw - min(100cqw, 80svh * 716 / 1596)) / 2 + .75rem); }
+/* Case steps (Figma 5093:1306): stacked with no gap and no ground; each keeps its M (24) padding. */
+.a-cs--menores .cs-steps { gap: 0; }
+.a-cs--menores .cs-steps li { background: none; }
+/* Hero image (Figma Frame 8): a full-bleed band with L (32) above and below; the transparent phone
+   composition covers it at the heights Figma sets per breakpoint (660 / 536 / 356 / 256 at
+   1600 / 1280 / 768 / 390), interpolated linearly between those frames. */
+.a-cs--menores .a-cs__visual { padding: var(--space-l) 0; overflow: hidden; }
+.a-cs--menores .a-cs__visual img { height: calc(38.75vw + 40px); max-height: none; object-fit: cover; background: none; }
+/* Objectives and outcomes: Body strong lines (goal-list-gap kept at .6 of the lead size), tighter padding. */
+.a-cs--menores .a-cs__goals { padding: var(--space-mega) var(--margin) calc(var(--section) / 2); }
+.a-cs--menores .a-cs__goals .cs-list { gap: calc(var(--step-lead) * .6); font-size: var(--step-body); font-weight: 700; line-height: 1.5; }
+.a-cs--menores .a-cs__final { margin-top: 0; }
+@media (max-width: 1499px) {
+  .a-cs--menores .a-cs__goals { padding-block: var(--space-huge); }
+}
+@media (max-width: 1023px) {
+  .a-cs--menores .a-cs__visual img { height: calc(26.455vw + 152.8px); }
+  .a-cs--menores .a-cs__goals { padding-block: var(--space-xxl); }
 }

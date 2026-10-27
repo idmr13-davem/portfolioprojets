@@ -1,0 +1,776 @@
+[
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 1600,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-1600.jpg",
+  "vw": 1600,
+  "margin": 28,
+  "gutter": 32,
+  "colW": 99.3,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2863,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2892,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2997,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3026,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3130,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3159,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3263,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3292,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 1600,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-1600.jpg",
+  "vw": 1600,
+  "margin": 28,
+  "gutter": 32,
+  "colW": 99.3,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2892,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2921,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3025,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3054,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3159,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3187,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3292,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3321,
+    "detail": "left 446px (nearest column 4 start 422px, Δ24), right 1548px (nearest column 12 end 1572px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 1600,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-1600.jpg",
+  "vw": 1600,
+  "margin": 28,
+  "gutter": 32,
+  "colW": 99.3,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 1600,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-1600.jpg",
+  "vw": 1600,
+  "margin": 28,
+  "gutter": 32,
+  "colW": 99.3,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-intro > div.cs-content > div.cs-axis > p",
+    "top": 10240,
+    "detail": "left 470px (nearest column 4 start 422px, Δ48), right 1524px (nearest column 12 end 1572px, Δ-48); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 10293,
+    "detail": "left 470px (nearest column 4 start 422px, Δ48), right 981px (nearest column 8 end 1047px, Δ-66); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 10293,
+    "detail": "left 1013px (nearest column 9 start 1079px, Δ-66), right 1524px (nearest column 12 end 1572px, Δ-48); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 10337,
+    "detail": "left 470px (nearest column 4 start 422px, Δ48), right 981px (nearest column 8 end 1047px, Δ-66); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 10337,
+    "detail": "left 1013px (nearest column 9 start 1079px, Δ-66), right 1524px (nearest column 12 end 1572px, Δ-48); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 10397,
+    "detail": "left 470px (nearest column 4 start 422px, Δ48), right 981px (nearest column 8 end 1047px, Δ-66); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 10431,
+    "detail": "left 470px (nearest column 4 start 422px, Δ48), right 981px (nearest column 8 end 1047px, Δ-66); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 10397,
+    "detail": "left 1013px (nearest column 9 start 1079px, Δ-66), right 1524px (nearest column 12 end 1572px, Δ-48); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 10431,
+    "detail": "left 1013px (nearest column 9 start 1079px, Δ-66), right 1524px (nearest column 12 end 1572px, Δ-48); on the 48px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 1280,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-1280.jpg",
+  "vw": 1280,
+  "margin": 25.6,
+  "gutter": 25.6,
+  "colW": 78.9,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2574,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2603,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2708,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2737,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2870,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2899,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3003,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3032,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 1280,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-1280.jpg",
+  "vw": 1280,
+  "margin": 25.6,
+  "gutter": 25.6,
+  "colW": 78.9,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2603,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2632,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2736,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2765,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2870,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2899,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 3032,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 3060,
+    "detail": "left 363px (nearest column 4 start 339px, Δ24), right 1230px (nearest column 12 end 1254px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 1280,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-1280.jpg",
+  "vw": 1280,
+  "margin": 25.6,
+  "gutter": 25.6,
+  "colW": 78.9,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 1280,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-1280.jpg",
+  "vw": 1280,
+  "margin": 25.6,
+  "gutter": 25.6,
+  "colW": 78.9,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-intro > div.cs-content > div.cs-axis > p",
+    "top": 9062,
+    "detail": "left 378px (nearest column 4 start 339px, Δ38), right 1216px (nearest column 12 end 1254px, Δ-38); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 9114,
+    "detail": "left 378px (nearest column 4 start 339px, Δ38), right 784px (nearest column 7 end 732px, Δ52); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 9114,
+    "detail": "left 810px (nearest column 8 start 757px, Δ52), right 1216px (nearest column 12 end 1254px, Δ-38); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 9158,
+    "detail": "left 378px (nearest column 4 start 339px, Δ38), right 784px (nearest column 7 end 732px, Δ52); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 9158,
+    "detail": "left 810px (nearest column 8 start 757px, Δ52), right 1216px (nearest column 12 end 1254px, Δ-38); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 9218,
+    "detail": "left 378px (nearest column 4 start 339px, Δ38), right 784px (nearest column 7 end 732px, Δ52); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 9250,
+    "detail": "left 378px (nearest column 4 start 339px, Δ38), right 784px (nearest column 7 end 732px, Δ52); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 9218,
+    "detail": "left 810px (nearest column 8 start 757px, Δ52), right 1216px (nearest column 12 end 1254px, Δ-38); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 9250,
+    "detail": "left 810px (nearest column 8 start 757px, Δ52), right 1216px (nearest column 12 end 1254px, Δ-38); on the 38px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 1024,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-1024.jpg",
+  "vw": 1024,
+  "margin": 20.5,
+  "gutter": 20.5,
+  "colW": 63.2,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2293,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2322,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2454,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2483,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2615,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2643,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2775,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2804,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 1024,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-1024.jpg",
+  "vw": 1024,
+  "margin": 20.5,
+  "gutter": 20.5,
+  "colW": 63.2,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2326,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2355,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2486,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2515,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2647,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2676,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > h3",
+    "top": 2807,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > ol.cs-steps > li > p",
+    "top": 2836,
+    "detail": "left 295px (nearest column 4 start 271px, Δ24), right 980px (nearest column 12 end 1004px, Δ-24); on the 24px padding of div.cs-intro > div.cs-content > ol.cs-steps > li"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 1024,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-1024.jpg",
+  "vw": 1024,
+  "margin": 20.5,
+  "gutter": 20.5,
+  "colW": 63.2,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 1024,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-1024.jpg",
+  "vw": 1024,
+  "margin": 20.5,
+  "gutter": 20.5,
+  "colW": 63.2,
+  "findings": [
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-intro > div.cs-content > div.cs-axis > p",
+    "top": 8090,
+    "detail": "left 302px (nearest column 4 start 271px, Δ31), right 973px (nearest column 12 end 1004px, Δ-31); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 8142,
+    "detail": "left 302px (nearest column 4 start 271px, Δ31), right 627px (nearest column 7 end 585px, Δ42); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 8142,
+    "detail": "left 648px (nearest column 8 start 606px, Δ42), right 973px (nearest column 12 end 1004px, Δ-31); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 8186,
+    "detail": "left 302px (nearest column 4 start 271px, Δ31), right 627px (nearest column 7 end 585px, Δ42); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-content > div.cs-axis > div.cs-axis__labels > span",
+    "top": 8186,
+    "detail": "left 648px (nearest column 8 start 606px, Δ42), right 973px (nearest column 12 end 1004px, Δ-31); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 8246,
+    "detail": "left 302px (nearest column 4 start 271px, Δ31), right 627px (nearest column 7 end 585px, Δ42); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 8277,
+    "detail": "left 302px (nearest column 4 start 271px, Δ31), right 627px (nearest column 7 end 585px, Δ42); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > h3",
+    "top": 8246,
+    "detail": "left 648px (nearest column 8 start 606px, Δ42), right 973px (nearest column 12 end 1004px, Δ-31); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   },
+   {
+    "kind": "inset",
+    "severity": "low",
+    "el": "div.cs-axis > div.cs-axis__ends > div > ul.cs-list",
+    "top": 8277,
+    "detail": "left 648px (nearest column 8 start 606px, Δ42), right 973px (nearest column 12 end 1004px, Δ-31); on the 31px padding of section#level > div.cs-intro > div.cs-content > div.cs-axis"
+   }
+  ]
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 768,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-768.jpg",
+  "vw": 768,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 46.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 768,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-768.jpg",
+  "vw": 768,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 46.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 768,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-768.jpg",
+  "vw": 768,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 46.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 768,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-768.jpg",
+  "vw": 768,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 46.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 390,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-390.jpg",
+  "vw": 390,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 15.2,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 390,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-390.jpg",
+  "vw": 390,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 15.2,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 390,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-390.jpg",
+  "vw": 390,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 15.2,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 390,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-390.jpg",
+  "vw": 390,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 15.2,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html",
+  "width": 360,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-360.jpg",
+  "vw": 360,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 12.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/menores-mexico.html?lang=es",
+  "width": 360,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-menores-mexico-html-lang-es-360.jpg",
+  "vw": 360,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 12.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/registro-ml.html",
+  "width": 360,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-registro-ml-html-360.jpg",
+  "vw": 360,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 12.7,
+  "findings": []
+ },
+ {
+  "url": "http://127.0.0.1:3456/v3/statement/work/motion-design-system.html",
+  "width": 360,
+  "shot": "/Users/dave/Documents/Personal/davidmontealegreux-site/intercambio/evidencia/2026-10-26_menores-codigo/pixel-perfect/v3-statement-work-motion-design-system-html-360.jpg",
+  "vw": 360,
+  "margin": 16,
+  "gutter": 16,
+  "colW": 12.7,
+  "findings": []
+ }
+]

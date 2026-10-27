@@ -156,6 +156,8 @@ h1, h2, h3 { font-weight: 900; text-transform: uppercase; letter-spacing: -0.05e
 .c-cs__visual > picture img, .c-cs__visual > img { width: 100%; max-height: 90svh; object-fit: cover; }
 .c-cs__set { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); }
 .c-cs__set video { aspect-ratio: 9 / 16; object-fit: cover; width: 100%; }
+/* Motion's easing curves are almost square; preserve both ends of each curve. */
+.v3-poster[data-id="motion"] .c-cs__set video { aspect-ratio: 850 / 860; object-fit: contain; }
 .c-cs__goals { display: grid; grid-template-columns: repeat(12, 1fr); column-gap: var(--gutter); padding: var(--section) var(--margin) calc(var(--section) / 2); }
 .c-cs__goals > div:first-child { grid-column: 1 / span 5; }
 .c-cs__goals > div:last-child { grid-column: 7 / -1; }

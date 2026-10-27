@@ -1,0 +1,12 @@
+PASS 12 clips once, stop, exit/reentry
+PASS manual takeover stops chain, remains exclusive, reentry restores sequence
+FAIL queued play from paused previous run cannot cancel reentry stale play must not pause the new automatic clip
+
+true !== false
+
+PASS language cleanup removes manual listeners
+PASS partial visibility never restarts
+PASS reduced motion keeps manual playback non-looping
+PASS no IntersectionObserver keeps manual playback non-looping
+PASS language replacement cancels old run and queued callback
+PASS old ended callbacks cannot advance new run twice

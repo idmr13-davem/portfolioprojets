@@ -1,0 +1,9 @@
+PASS three clips lose loop and start only at 35% visibility
+PASS exit pauses; returning resumes without resetting time
+PASS ended clips unobserved and never replayed
+PASS language cleanup pauses old clips and ignores queued observer callbacks
+PASS reduced motion remains static
+PASS no observer remains static
+PASS all eight shells and generator use the new cache version
+PASS browser test reports failed assertions with nonzero status
+8/8 PASS (simulation/static only)

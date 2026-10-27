@@ -125,24 +125,24 @@
     ${footer()}`;
   }
 
-  // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519): the title on columns 1–3, everything
+  // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519, Menores 5076:2434): the title on columns 1–3, everything
   // that explains it on 4–12, and wide evidence (images, example videos) below on columns 4–12
   // on desktop, or all twelve columns on tablet and phones.
   function gridSection(s) {
     const { paras, bullets, figure } = V3;
-    const row = list => `<div class="cs-media cs-media--${list.length}">${list.map(m => figure(m)).join('')}</div>`;
+    const row = (list, opts) => `<div class="cs-media cs-media--${list.length}">${list.map(m => figure(m, opts)).join('')}</div>`;
     const text = (body, list, closing) => (t(body) || []).length || (t(list) || []).length || closing ? `<div class="cs-copy">${paras(body)}${bullets(list)}${closing ? `<p class="cs-closing">${esc(t(closing))}</p>` : ''}</div>` : '';
     const copy = text(s.body, s.list, s.closing).replace('class="cs-copy"', 'class="cs-copy" data-reveal');
     const steps = s.steps ? `<ol class="cs-steps">${s.steps.map(step => step.title ? `<li data-reveal><h3>${esc(t(step.title))}</h3><p>${esc(t(step.body))}</p></li>` : `<li data-reveal>${esc(t(step))}</li>`).join('')}</ol>` : '';
     const parts = s.parts ? `<div class="cs-parts">${s.parts.map(p => `<div class="cs-part" data-reveal><h3>${esc(t(p.title))}</h3>${text(p.body, p.list)}${p.media ? row(p.media) : ''}</div>`).join('')}</div>` : '';
-    const groups = s.groups ? `<div class="cs-groups">${s.groups.map(g => `<div class="cs-group" data-reveal><h3>${esc(t(g.title))}</h3>${row(g.media)}</div>`).join('')}</div>` : '';
+    const groups = s.groups ? `<div class="cs-groups">${s.groups.map(g => `<div class="cs-group" data-reveal><h3>${esc(t(g.title))}</h3>${row(g.media, { autoplay: false })}</div>`).join('')}</div>` : '';
     const axis = s.axis ? `<div class="cs-axis" data-reveal><p>${esc(t(s.axis.intro))}</p><div class="cs-axis__labels">${s.axis.labels.map(l => `<span>${esc(t(l))}</span>`).join('')}</div><div class="cs-axis__ends"><div><h3>${esc(t(s.axis.left.label))}</h3>${bullets(s.axis.left.list)}</div><div><h3>${esc(t(s.axis.right.label))}</h3>${bullets(s.axis.right.list)}</div></div></div>` : '';
     // Parts with their video (Registro ML) share one row: title | parts | video.
     const split = Boolean(s.parts && s.media);
     return `<section class="cs-section cs-section--${s.id}${split ? ' cs-section--split' : ''}" id="${s.id}">
       <div class="cs-intro">
         <h2 class="cs-title" data-reveal>${esc(t(s.title))}</h2>
-        <div class="cs-content">${copy}${steps}${parts}${groups}${axis}</div>
+        ${copy + steps + parts + groups + axis ? `<div class="cs-content">${copy}${steps}${parts}${groups}${axis}</div>` : ''}
         ${split ? row(s.media) : ''}
       </div>
       ${s.media && !split ? row(s.media) : ''}
@@ -151,13 +151,13 @@
 
   function casePage(id) {
     const c = C.cases[id];
-    const grid = id === 'motion' || id === 'registro';
+    const grid = id === 'motion' || id === 'registro' || id === 'menores';
     const section = grid ? gridSection : caseSection;
     const i = cases.findIndex(x => x.id === id);
     const next = cases[(i + 1) % cases.length];
     const words = t(c.title).split(' ');
     const cut = Math.ceil(words.length / 2);
-    const hero = c.heroSet ? `<div class="a-cs__heroset">${c.heroSet.map(m => media({ ...m, caption: c.heroAlt }, { eager: true })).join('')}</div>` : media(c.hero, { cls: 'a-cs__heroimg', eager: true });
+    const hero = c.heroSet ? `<div class="a-cs__heroset">${c.heroSet.map(m => media({ ...m, caption: c.heroAlt }, { eager: true, autoplay: false })).join('')}</div>` : media(c.hero, { cls: 'a-cs__heroimg', eager: true });
     document.title = t(c.meta.title);
     return `${header()}
     <main id="main" class="a-cs a-cs--${id}${grid ? ' a-cs--grid' : ''}">
@@ -226,8 +226,92 @@
     ${footer()}`;
   }
 
+  // Property samples (Motion Level): each clip plays once, in reading order (row by row, left to right).
+  // The sequence starts over only when the section is scrolled out of view and back in.
+  let samplesCleanup = null;
+  function sequenceSamples() {
+    samplesCleanup?.();
+    samplesCleanup = null;
+    const groups = app.querySelector('.cs-groups');
+    if (!groups) return;
+    const clips = [...groups.querySelectorAll('video')];
+    clips.forEach(v => { v.loop = false; });
+    if (V3.reduced || !('IntersectionObserver' in window)) return;
+    let run = 0;
+    let visible = false;
+    let disposed = false;
+    let removeEnded = () => {};
+    let current = -1;
+    const reset = () => {
+      run += 1;
+      current = -1;
+      removeEnded();
+      clips.forEach(v => { v.pause(); v.currentTime = 0; });
+    };
+    const play = (i, id) => {
+      if (id !== run || i >= clips.length) { current = -1; return; }
+      current = i;
+      removeEnded();
+      const ended = () => play(i + 1, id);
+      clips[i].addEventListener('ended', ended, { once: true });
+      removeEnded = () => clips[i].removeEventListener('ended', ended);
+      clips[i].play().catch(() => {});
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (disposed || entry.isIntersecting === visible) return;
+      visible = entry.isIntersecting;
+      reset();
+      if (visible) play(0, run);
+    }, { threshold: 0 });
+    observer.observe(groups);
+    // A sample started by hand takes over: the automatic chain stops and the other samples pause until
+    // the section is scrolled out and back in.
+    const takeOver = e => {
+      // A queued play event may arrive after reset has already paused its clip.
+      if (disposed || e.target.paused || clips.indexOf(e.target) === current) return;
+      run += 1;
+      current = -1;
+      removeEnded();
+      clips.forEach(v => { if (v !== e.target) v.pause(); });
+    };
+    clips.forEach(v => v.addEventListener('play', takeOver));
+    samplesCleanup = () => {
+      disposed = true;
+      observer.disconnect();
+      clips.forEach(v => v.removeEventListener('play', takeOver));
+      reset();
+    };
+  }
+
+  // Hero curves (Motion Level): each clip plays once and stays on its last frame. Leaving the view
+  // pauses an unfinished clip; coming back resumes it, but a finished clip never starts over.
+  let heroCleanup = null;
+  function playHeroOnce() {
+    heroCleanup?.();
+    heroCleanup = null;
+    const clips = [...app.querySelectorAll('.a-cs__heroset video')];
+    clips.forEach(v => { v.loop = false; });
+    if (!clips.length || V3.reduced || !('IntersectionObserver' in window)) return;
+    let disposed = false;
+    const observer = new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting, intersectionRatio }) => {
+      if (disposed) return;
+      if (target.ended) observer.unobserve(target);
+      else if (isIntersecting && intersectionRatio >= 0.35) target.play().catch(() => {});
+      else target.pause();
+    }), { threshold: 0.35 });
+    const done = e => observer.unobserve(e.target);
+    clips.forEach(v => { observer.observe(v); v.addEventListener('ended', done, { once: true }); });
+    heroCleanup = () => {
+      disposed = true;
+      observer.disconnect();
+      clips.forEach(v => { v.pause(); v.removeEventListener('ended', done); });
+    };
+  }
+
   let statusResizeHandler = null;
   function wire() {
+    sequenceSamples();
+    playHeroOnce();
     if (statusResizeHandler) removeEventListener('resize', statusResizeHandler);
     statusResizeHandler = null;
     const btn = app.querySelector('.a-menu-btn');
