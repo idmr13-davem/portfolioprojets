@@ -5,7 +5,9 @@
   const key = 'portfolio-analytics-consent-v1';
   const lifetime = 180 * 24 * 60 * 60 * 1000;
   const publicPaths = new Set([
-    '/', '/index.html', '/about.html', '/work/registro-ml.html', '/work/motion-design-system.html', '/work/menores-mexico.html', '/articles/page-under-work.html',
+    '/', '/index.html', '/articles/page-under-work.html',
+    '/work/registro-ml.html', '/work/motion-design-system.html', '/work/menores-mexico.html',
+    '/work/cambio-cuentas-paises.html', '/work/ropstar.html', '/work/winefast.html',
     '/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html',
     '/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html'
   ]);
@@ -54,11 +56,11 @@
       allow_google_signals: false,
       allow_ad_personalization_signals: false,
       page_location: cleanLocation(), page_referrer: referrer,
-      site_version: 'v2'
+      site_version: 'v3'
     });
     window.gtag('event', 'page_view', {
       page_location: cleanLocation(), page_referrer: referrer,
-      page_title: document.title, site_version: 'v2'
+      page_title: document.title, site_version: 'v3'
     });
     const script = document.createElement('script');
     script.async = true;
@@ -82,8 +84,11 @@
     '/work/registro-ml.html': 'registro_ml',
     '/work/motion-design-system.html': 'motion_level',
     '/work/menores-mexico.html': 'accounts_minors_mexico',
+    '/work/cambio-cuentas-paises.html': 'country_switch',
+    '/work/ropstar.html': 'ropstar_ui',
+    '/work/winefast.html': 'winefast_concept'
   };
-  const projectIds = { '1': 'registro_ml', '2': 'motion_level', '3': 'accounts_minors_mexico' };
+  const projectIds = { '1': 'registro_ml', '2': 'motion_level', '3': 'accounts_minors_mexico', '4': 'country_switch' };
   const articlePaths = {
     '/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html': 'mercado_libre_career',
     '/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html': 'automotive_ux',
@@ -91,13 +96,13 @@
   };
 
   function placementOf(element) {
-    if (element.closest('.v2-mobile-drawer, .v2-drawer-contact, .mobile-home-drawer, .mobile-construction__drawer')) return 'drawer';
+    if (element.closest('#a-menu')) return 'drawer';
     if (element.closest('#hero, .v2-hero-contact')) return 'hero';
     if (element.closest('#contact, .site-footer, footer')) return 'footer';
     if (element.closest('header, .site-header')) return 'header';
-    if (element.closest('.v2-project')) return 'project_card';
+    if (element.closest('.a-case, .a-craft')) return 'project_card';
     if (element.closest('#about')) return 'about';
-    if (element.closest('#articles')) return 'articles';
+    if (element.closest('#blog')) return 'articles';
     if (element.closest('nav')) return 'navigation';
     return 'content';
   }
@@ -137,7 +142,7 @@
       } else if (internal && articlePaths[url.pathname] && url.pathname !== location.pathname) {
         name = 'article_select'; details = { article_id: articlePaths[url.pathname] };
       } else if (internal && ['/', '/index.html', location.pathname].includes(url.pathname)) {
-        const sections = { '#hero': 'intro', '#about': 'about', '#work': 'work', '#articles': 'articles', '#contact': 'contact', '#case-1': 'registro_ml_preview', '#case-2': 'motion_level_preview', '#case-3': 'accounts_minors_mexico_preview' };
+        const sections = { '#main': 'intro', '#about-title': 'about', '#work': 'work', '#craft': 'side_projects', '#blog': 'articles', '#contact': 'contact' };
         if (!sections[url.hash]) return;
         name = 'navigation_click'; details = { section_id: sections[url.hash] };
       } else return;
@@ -145,7 +150,7 @@
     window.gtag('event', name, {
       send_to: id, ...details, placement: placementOf(element),
       content_language: document.documentElement.lang === 'es' ? 'es' : 'en',
-      page_path: location.pathname, site_version: 'v2'
+      page_path: location.pathname, site_version: 'v3'
     });
   }
   // Delegation also covers translated links and shared footers inserted by other scripts.

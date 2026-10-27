@@ -1,9 +1,0 @@
-.status-v2 .status-illustration { animation: kf_4854_11394_opacity_0 2s linear, kf_4854_11394_translate_0 2s linear; animation-iteration-count: 1; animation-fill-mode:both;  }
-@keyframes kf_4854_11394_opacity_0 { 0% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 20% { opacity: 1; } 100% { opacity: 1; } } @keyframes kf_4854_11394_translate_0 { 0% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translateY(-40px); } 30% { transform:translateY(0px); } 100% { transform:translateY(0px); } }
-.status-v2 .status-title { animation: kf_4851_9123_opacity_0 2s linear, kf_4851_9123_translate_0 2s linear; animation-iteration-count: 1; animation-fill-mode:both;  }
-@keyframes kf_4851_9123_opacity_0 { 0% { opacity: 0; } 10% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 30% { opacity: 1; } 100% { opacity: 1; } } @keyframes kf_4851_9123_translate_0 { 0% { transform:translateY(-40px); } 10% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translateY(-40px); } 40% { transform:translateY(0px); } 100% { transform:translateY(0px); } }
-.status-v2 .status-message { animation: kf_4851_9124_opacity_0 2s linear, kf_4851_9124_translate_0 2s linear; animation-iteration-count:1; animation-fill-mode:both; }
-@keyframes kf_4851_9124_opacity_0 { 0% { opacity: 0; } 20% { animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1); opacity: 0; } 40% { opacity: 1; } 100% { opacity: 1; } } @keyframes kf_4851_9124_translate_0 { 0% { transform:translateY(-40px); } 20% { animation-timing-function: cubic-bezier(0.05, 0.7, 0.1, 1); transform:translateY(-40px); } 50% { transform:translateY(0px); } 100% { transform:translateY(0px); } }
-@media (prefers-reduced-motion:reduce) {
- .status-v2 :is(.status-illustration,.status-title,.status-message) {animation:none;opacity:1;transform:none;}
-}

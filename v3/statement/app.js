@@ -1,0 +1,423 @@
+/* Proposal A — Statement. Type first, olive on bone; outcomes are the display type. */
+(() => {
+  const { C, t, esc, asset, href, ui, media, figure, caseSection, articleBody, langToggle, contactLinks, cases, articles } = V3;
+  const app = document.getElementById('app');
+  const S = C.site;
+  const lastSentence = s => { const parts = s.split(/(?<=[.!?])\s+/); return parts[parts.length - 1]; };
+  const roleTail = title => title.replace(/^.*?Montealegre,\s*/, '').replace(/^./, ch => ch.toUpperCase());
+  const copy = {
+    menu: { en: 'Menu', es: 'Menú' },
+    prompt1: { en: 'Write the first line.', es: 'Escribe la primera línea.' },
+    placeholder: { en: 'Hi David, I’d like to talk about…', es: 'Hola David, me gustaría hablar sobre…' },
+    send: { en: 'Open in your email app', es: 'Abrir en tu app de correo' },
+    sendNote: { en: 'Your email app opens with this message to idmr13@gmail.com. Nothing is sent from this page.', es: 'Tu app de correo se abre con este mensaje para idmr13@gmail.com. Esta página no envía nada.' },
+    subject: { en: 'Hello from your portfolio', es: 'Hola desde tu portafolio' },
+    soon: { en: 'Soon', es: 'Pronto' },
+    aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' },
+    craftAll: { en: 'All craft projects', es: 'Todos los proyectos personales' },
+    craftMore: { en: 'Explore more craft', es: 'Más proyectos personales' }
+  };
+
+  const header = () => `
+    <a class="v3-skip" href="#main">${ui('skip')}</a>
+    <header class="a-top">
+      <a class="a-mark" href="${href.home()}" aria-label="David Montealegre — ${esc(t(S.nav.home))}"><img src="${asset('assets/Home/v2/header-logo.svg')}" alt="" width="59" height="52"></a>
+      <nav class="a-nav" data-grid-ignore aria-label="${esc(t(S.nav.home))}">
+        <a href="${href.home('#work')}">${esc(t(S.nav.work))}</a>
+        <a href="${href.home('#blog')}">${esc(t(S.nav.blog))}</a>
+        <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
+        ${langToggle('a-lang')}
+      </nav>
+      <button class="a-menu-btn" type="button" aria-expanded="false" aria-controls="a-menu">${esc(t(copy.menu))}</button>
+    </header>
+    <div class="a-menu" id="a-menu" hidden>
+      <nav aria-label="${esc(t(copy.menu))}">
+        <a href="${href.home()}">${esc(t(S.nav.home))}</a>
+        <a href="${href.home('#work')}">${esc(t(S.nav.work))}</a>
+        <a href="${href.home('#blog')}">${esc(t(S.nav.blog))}</a>
+        <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
+      </nav>
+      ${langToggle('a-lang a-lang--menu')}
+      <div class="a-menu__links">${contactLinks('a-menu__link')}</div>
+    </div>`;
+
+  const footer = () => `
+    <footer class="a-foot" id="contact-close">
+      <div class="a-foot__top">
+        <div class="a-foot__invite" data-reveal>
+          <p class="a-foot__line">${esc(lastSentence(t(S.closingBody)))}</p>
+          <div class="a-foot__buttons">${S.contact.map(c => `<a class="a-btn a-btn--dark" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c.label))}</a>`).join('')}</div>
+        </div>
+      </div>
+      <div class="a-foot__legal"><p class="a-foot__credits"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></p><div class="a-foot__consent" data-consent-slot></div></div>
+      <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
+    </footer>`;
+
+  const lines = (a, b) => `<span class="line"><span data-line style="--i:0">${esc(a)}</span></span><span class="line"><span data-line style="--i:1">${esc(b)}</span></span>`;
+
+  function home() {
+    const facts = t(S.facts);
+    const numeric = facts.map(f => f.match(/^(\d+)\s+(.*)$/)).filter(Boolean);
+    const plain = facts.filter(f => !/^\d/.test(f));
+    const about = t(S.about);
+    // About (Figma 5061:424): a heading, the interests as a lowercase list that reads on from it, and the closing text.
+    const interests = about[1].map((i, n, all) => (n === all.length - 1 ? (V3.lang === 'es' ? 'y ' : 'and ') : '') + i.replace(/^./, ch => ch.toLowerCase()));
+    const cvLink = `<a class="a-about__cv" href="${href.cv()}" target="_blank" rel="noopener">${esc(about[3])}</a>`;
+    return `${header()}
+    <main id="main">
+      <section class="a-hero">
+        <h1 class="a-hero__name lines" aria-label="David Montealegre">${lines('David', 'Montealegre')}</h1>
+        <div class="a-hero__foot">
+          <p class="a-hero__role" data-rise style="--i:3">${esc(roleTail(t(S.heroTitle)))}</p>
+          <a class="a-btn" data-rise style="--i:4" href="#work">${esc(t(S.heroLink))}</a>
+        </div>
+      </section>
+
+      <section class="a-facts" aria-label="${esc(t(S.aboutTitle))}">
+        <div class="a-facts__nums">
+          ${numeric.map(([, n, rest]) => `<div class="a-fact" data-reveal><p class="a-fact__n">${n}</p><p class="a-fact__t">${esc(rest)}</p></div>`).join('')}
+        </div>
+        <figure class="a-facts__chip" data-reveal><img src="${asset(S.portrait)}" alt="David Montealegre" loading="lazy" width="600" height="750"></figure>
+        <ul class="a-facts__list">${plain.map(f => `<li data-reveal>${esc(f)}</li>`).join('')}</ul>
+      </section>
+
+      <section class="a-work" id="work" aria-labelledby="work-title">
+        <h2 class="a-work__title" id="work-title">${esc(t(S.workTitle))}</h2>
+      </section>
+
+      ${cases.map(c => `
+      <section class="a-case a-case--${c.id}" aria-labelledby="case-${c.id}">
+        <div class="a-case__media" data-reveal data-video-wrap>
+          ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video' })}
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
+        </div>
+        <div class="a-case__copy">
+          <h3 id="case-${c.id}" data-reveal>${esc(t(c.card.title))}</h3>
+          <p class="a-case__impact" data-reveal>${esc(t(c.card.impact).replace(/^./, ch => ch.toUpperCase()))}</p>
+          <p class="a-case__summary" data-reveal>${esc(t(c.card.summary))}</p>
+          <p class="a-case__role" data-reveal>${esc(t(c.card.role))}</p>
+          <a class="a-btn" data-reveal href="${href.case(c)}">${esc(t(c.card.cta))}</a>
+        </div>
+      </section>`).join('')}
+
+      <section class="a-craft" id="craft" aria-labelledby="craft-title">
+        <h2 class="a-craft__title" id="craft-title" data-reveal>${esc(t(S.craftTitle))}</h2>
+        <div class="a-craft__list">
+          ${S.craft.map(p => `
+          <article class="a-craft__entry" data-reveal>
+            <div class="a-craft__copy"><h3>${esc(t(p.title))}</h3><p>${esc(t(p.summary))}</p></div>
+            <figure class="a-craft__art" role="img" aria-label="${esc(t(p.alt))}">${p.screens.map((src, n) => `<img class="a-craft__screen a-craft__screen--${['main', 'left', 'right'][n]}" src="${asset(src)}" alt="" loading="lazy" width="${n ? 388 : 462}" height="${n ? 840 : 1000}">`).join('')}</figure>
+            <a class="a-btn" href="${p.case ? href.case(C.cases[p.case]) : href.article('page-under-work')}">${esc(t(S.craftCta))}<span class="sr-only">: ${esc(t(p.title))}</span></a>
+          </article>`).join('')}
+        </div>
+      </section>
+
+      <section class="a-about" aria-labelledby="about-title">
+        <h2 class="a-about__title" id="about-title" data-reveal>${esc(t(copy.aboutHeading))}</h2>
+        <ul class="a-about__list" data-reveal>${interests.map(i => `<li>${esc(i)}</li>`).join('')}</ul>
+        <div class="a-about__close" data-reveal><p>${esc(about[2])}</p><p>${cvLink}</p></div>
+      </section>
+
+      <section class="a-blog" id="blog" aria-labelledby="blog-title">
+        <h2 class="a-blog__title" id="blog-title" data-reveal>${esc(t(S.blogTitle))}</h2>
+        <ul class="a-rows">
+          ${articles.map(a => `<li data-reveal><a class="a-row" href="${href.article(a.slug)}"><img src="${asset(a.img)}" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>${esc(t(a.card).title)}</strong><span>${esc(t(a.card).body)}</span></span><span class="a-row__value">${a.underWork ? esc(t(copy.soon)) : esc(t(a.meta)[0])}</span></a></li>`).join('')}
+        </ul>
+      </section>
+
+      <section class="a-contact" id="contact" aria-labelledby="contact-title">
+        <h2 class="sr-only" id="contact-title">${esc(t(S.nav.contact))}</h2>
+        <p class="a-contact__prompt" data-reveal><span>${esc(t(S.closingTitle))}</span> ${esc(t(copy.prompt1))}</p>
+        <form class="a-field" data-reveal action="mailto:idmr13@gmail.com" data-mail>
+          <label class="sr-only" for="a-message">${esc(t(copy.prompt1))}</label>
+          <input id="a-message" name="message" autocomplete="off" placeholder="${esc(t(copy.placeholder))}">
+          <button type="submit" data-grid-ignore aria-label="${esc(t(copy.send))}"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+        </form>
+        <p class="a-contact__note" data-reveal>${esc(t(copy.sendNote))}</p>
+      </section>
+    </main>
+    ${footer()}`;
+  }
+
+  // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519, Menores 5076:2434, Switch 5170:54941): the title on columns 1–3, everything
+  // that explains it on 4–12, and wide evidence (images, example videos) below on columns 4–12
+  // on desktop, or all twelve columns on tablet and phones.
+  function gridSection(s) {
+    const { paras, bullets, figure } = V3;
+    const row = (list, opts = {}) => `<div class="cs-media cs-media--${list.length}"${opts.autoplay === false && list === s.media ? ' data-sequence' : ''}>${list.map(m => figure(m, opts)).join('')}</div>`;
+    const text = (body, list, closing) => (t(body) || []).length || (t(list) || []).length || closing ? `<div class="cs-copy">${paras(body)}${bullets(list, s.ordered)}${closing ? `<p class="cs-closing">${esc(t(closing))}</p>` : ''}</div>` : '';
+    const copy = text(s.body, s.list, s.closing).replace('class="cs-copy"', 'class="cs-copy" data-reveal');
+    const steps = s.steps ? `<ol class="cs-steps">${s.steps.map(step => step.title ? `<li data-reveal><h3>${esc(t(step.title))}</h3><p>${esc(t(step.body))}</p></li>` : `<li data-reveal>${esc(t(step))}</li>`).join('')}</ol>` : '';
+    const parts = s.parts ? `<div class="cs-parts">${s.parts.map(p => `<div class="cs-part" data-reveal><h3>${esc(t(p.title))}</h3>${text(p.body, p.list)}${p.media ? row(p.media) : ''}</div>`).join('')}</div>` : '';
+    const groups = s.groups ? `<div class="cs-groups">${s.groups.map(g => `<div class="cs-group" data-reveal><h3>${esc(t(g.title))}</h3>${row(g.media, { autoplay: false })}</div>`).join('')}</div>` : '';
+    const axis = s.axis ? `<div class="cs-axis" data-reveal><p>${esc(t(s.axis.intro))}</p><div class="cs-axis__labels">${s.axis.labels.map(l => `<span>${esc(t(l))}</span>`).join('')}</div><div class="cs-axis__ends"><div><h3>${esc(t(s.axis.left.label))}</h3>${bullets(s.axis.left.list)}</div><div><h3>${esc(t(s.axis.right.label))}</h3>${bullets(s.axis.right.list)}</div></div></div>` : '';
+    // Parts with their video (Registro ML) share one row: title | parts | video. Inline evidence
+    // (Ropstar screens) takes the content columns beside the title.
+    const split = Boolean(s.parts && s.media);
+    const inline = Boolean(s.inline && s.media);
+    return `<section class="cs-section cs-section--${s.id}${split ? ' cs-section--split' : ''}" id="${s.id}">
+      <div class="cs-intro">
+        <h2 class="cs-title" data-reveal>${esc(t(s.title))}</h2>
+        ${copy + steps + parts + groups + axis || inline ? `<div class="cs-content">${copy}${steps}${parts}${groups}${axis}${inline ? row(s.media) : ''}</div>` : ''}
+        ${split ? row(s.media) : ''}
+      </div>
+      ${s.media && !split && !inline ? row(s.media, { autoplay: !s.sequence }) : ''}
+    </section>`;
+  }
+
+  function casePage(id) {
+    const c = C.cases[id];
+    const grid = ['motion', 'registro', 'menores', 'switch', 'ropstar', 'winefast'].includes(id);
+    const section = grid ? gridSection : caseSection;
+    const i = cases.findIndex(x => x.id === id);
+    const next = cases[(i + 1) % cases.length];
+    // Side projects (Figma Case navigation in 5280:90729) close with the Home craft section and the other side project.
+    const side = Object.entries(C.cases).filter(([, x]) => x.side).map(([k, x]) => ({ id: k, ...x }));
+    const sideNext = c.side ? side[(side.findIndex(x => x.id === id) + 1) % side.length] : null;
+    const words = t(c.title).split(' ');
+    const cut = Math.ceil(words.length / 2);
+    const [line1, line2] = c.titleLines ? t(c.titleLines) : [words.slice(0, cut).join(' '), words.slice(cut).join(' ')];
+    // Side projects (Ropstar, Figma 5276:88289) name their own facts and add a lead under the title.
+    const facts = c.facts ? c.facts.map(f => [t(f.label), t(f.value)]) : [[ui('role'), t(c.role).replace(/^(Role|Rol):\s*/, '')], [ui('period'), t(c.period)], [ui('status'), t(c.status)]];
+    const hero = c.heroSet ? `<div class="a-cs__heroset">${c.heroSet.map(m => media({ ...m, caption: c.heroAlt }, { eager: true, autoplay: false })).join('')}</div>` : media(c.hero, { cls: 'a-cs__heroimg', eager: true });
+    document.title = t(c.meta.title);
+    return `${header()}
+    <main id="main" class="a-cs a-cs--${id}${grid ? ' a-cs--grid' : ''}">
+      <section class="a-cs__hero">
+        <h1 class="a-cs__title lines">${lines(line1, line2)}</h1>
+        ${c.lead ? `<p class="a-cs__lead" data-rise style="--i:2">${esc(t(c.lead))}</p>` : ''}
+        <dl class="a-cs__meta" data-rise style="--i:3">
+          ${facts.map(([dt, dd]) => `<div><dt>${esc(dt)}</dt><dd>${esc(dd)}</dd></div>`).join('')}
+        </dl>
+      </section>
+      <div class="a-cs__visual" data-reveal>${hero}</div>
+      ${c.objectivesTitle ? `<section class="a-cs__goals">
+        <div data-reveal><h2>${esc(t(c.objectivesTitle))}</h2>${V3.bullets(c.objectives)}</div>
+        <div data-reveal><h2>${esc(t(c.outcomesTitle))}</h2>${V3.bullets(c.outcomes)}</div>
+      </section>` : ''}
+      <div class="a-cs__body">${c.sections.map(section).join('')}</div>
+      ${c.final ? `<section class="a-cs__final">
+        <h2 data-reveal>${esc(t(c.final.title))}</h2>
+        ${c.final.intro ? `<p data-reveal>${esc(t(c.final.intro))}</p>` : ''}
+        ${V3.bullets(c.final.list)}
+        ${c.final.note ? `<p class="a-cs__note" data-reveal>${esc(t(c.final.note))}</p>` : ''}
+      </section>` : ''}
+      <nav class="a-cs__next" aria-label="${ui('next')}">
+        ${sideNext ? `<a href="${href.home('#craft')}">${esc(t(copy.craftAll))}</a>
+        <a class="a-cs__nextlink" href="${href.case(sideNext)}"><span>${esc(t(copy.craftMore))}</span><strong>${esc(t(sideNext.titleLines)[0])}</strong></a>` : `<a href="${href.home('#work')}">${ui('back')}</a>
+        <a class="a-cs__nextlink" href="${href.case(next)}"><span>${ui('next')}</span><strong>${esc(t(next.card.title))}</strong></a>`}
+      </nav>
+    </main>
+    ${footer()}`;
+  }
+
+  function articlePage(slug) {
+    const a = C.articles[slug];
+    document.title = `${t(a.title)} — David Montealegre`;
+    return `${header()}
+    <main id="main" class="a-ar">
+      <header class="a-ar__head">
+        <h1 data-rise>${esc(t(a.title))}</h1>
+        <p class="a-ar__meta" data-rise style="--i:1">${t(a.meta).map(esc).join(' · ')}</p>
+        <p class="a-ar__summary" data-rise style="--i:2">${esc(t(a.summary))}</p>
+        <ul class="a-ar__tags" data-grid-ignore data-rise style="--i:3">${t(a.tags).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </header>
+      <figure class="a-ar__hero" data-reveal>${media({ type: 'image', src: a.hero.src, mobile: a.hero.mobile, alt: a.hero.alt }, { eager: true })}<figcaption>${esc(t(a.hero.caption))}</figcaption></figure>
+      <div class="a-ar__body">${articleBody(a)}</div>
+      <nav class="a-cs__next" aria-label="${esc(t(S.blogTitle))}">
+        <a href="${href.home('#blog')}">${esc(t(S.blogTitle))}</a>
+        <a class="a-cs__nextlink" href="${href.home('#work')}"><span>${esc(t(S.nav.work))}</span><strong>${esc(t(cases[0].card.title))}</strong></a>
+      </nav>
+    </main>
+    ${footer()}`;
+  }
+
+  // Status pages (Figma 5095:4266): illustration, title, description and the home button, centred on the
+  // twelve columns, between the header and the footer.
+  function statusPage(id) {
+    const s = t(S.status[id]);
+    document.title = `${s.heading} — David Montealegre`;
+    return `${header()}
+    <main id="main" class="a-status a-status--${id}">
+      <img class="a-status__img" src="${asset(S.status.img[id])}" alt="" data-rise style="--i:0">
+      <h1 class="a-status__title" data-rise style="--i:1">${esc(s.heading)}</h1>
+      <p class="a-status__text" data-rise style="--i:2">${esc(s.description)}</p>
+      <a class="a-btn a-status__btn" data-rise style="--i:3" href="${href.home()}">${esc(s.home)}</a>
+    </main>
+    ${footer()}`;
+  }
+
+  // Clips that play one at a time (Motion Level property samples, Switch variants): each plays once, in
+  // reading order (row by row, left to right). The sequence starts over only when the block is scrolled
+  // out of view and back in.
+  let samplesCleanups = [];
+  function sequenceSamples() {
+    samplesCleanups.forEach(cleanup => cleanup());
+    samplesCleanups = [...app.querySelectorAll('.cs-groups, .cs-section > .cs-media[data-sequence]')].map(sequence).filter(Boolean);
+  }
+  function sequence(groups) {
+    const clips = [...groups.querySelectorAll('video')];
+    clips.forEach(v => { v.loop = false; });
+    if (V3.reduced || !('IntersectionObserver' in window)) return;
+    let run = 0;
+    let visible = false;
+    let disposed = false;
+    let removeEnded = () => {};
+    let current = -1;
+    const reset = () => {
+      run += 1;
+      current = -1;
+      removeEnded();
+      clips.forEach(v => { v.pause(); v.currentTime = 0; });
+    };
+    const play = (i, id) => {
+      if (id !== run || i >= clips.length) { current = -1; return; }
+      current = i;
+      removeEnded();
+      const ended = () => play(i + 1, id);
+      clips[i].addEventListener('ended', ended, { once: true });
+      removeEnded = () => clips[i].removeEventListener('ended', ended);
+      clips[i].play().catch(() => {});
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (disposed || entry.isIntersecting === visible) return;
+      visible = entry.isIntersecting;
+      reset();
+      if (visible) play(0, run);
+    }, { threshold: 0 });
+    observer.observe(groups);
+    // A sample started by hand takes over: the automatic chain stops and the other samples pause until
+    // the section is scrolled out and back in.
+    const takeOver = e => {
+      // A queued play event may arrive after reset has already paused its clip.
+      if (disposed || e.target.paused || clips.indexOf(e.target) === current) return;
+      run += 1;
+      current = -1;
+      removeEnded();
+      clips.forEach(v => { if (v !== e.target) v.pause(); });
+    };
+    clips.forEach(v => v.addEventListener('play', takeOver));
+    return () => {
+      disposed = true;
+      observer.disconnect();
+      clips.forEach(v => v.removeEventListener('play', takeOver));
+      reset();
+    };
+  }
+
+  // Hero curves (Motion Level): the clips play once, one after another (first, second, third), and each
+  // stays on its last frame. Leaving the view pauses the clip in progress; coming back resumes it, and
+  // finished clips never start over.
+  let heroCleanup = null;
+  function playHeroOnce() {
+    heroCleanup?.();
+    heroCleanup = null;
+    const set = app.querySelector('.a-cs__heroset');
+    const clips = [...(set?.querySelectorAll('video') || [])];
+    clips.forEach(v => { v.loop = false; });
+    if (!clips.length || V3.reduced || !('IntersectionObserver' in window)) return;
+    let disposed = false;
+    let visible = false;
+    let current = 0;
+    const playCurrent = () => {
+      if (!disposed && visible && current < clips.length) clips[current].play().catch(() => {});
+    };
+    const next = e => {
+      if (disposed || e.target !== clips[current]) return;
+      current += 1;
+      if (current >= clips.length) observer.disconnect();
+      else playCurrent();
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (disposed) return;
+      visible = entry.isIntersecting && entry.intersectionRatio >= 0.35;
+      if (visible) playCurrent();
+      else clips[current]?.pause();
+    }, { threshold: 0.35 });
+    observer.observe(set);
+    clips.forEach(v => v.addEventListener('ended', next));
+    heroCleanup = () => {
+      disposed = true;
+      observer.disconnect();
+      clips.forEach(v => { v.pause(); v.removeEventListener('ended', next); });
+    };
+  }
+
+  let statusResizeHandler = null;
+  function wire() {
+    sequenceSamples();
+    playHeroOnce();
+    // Identify Switch controls in a screen-reader button list without adding visible captions.
+    // Keep the existing play/pause spans so their accessible names follow the playback state.
+    app.querySelectorAll('.a-cs--switch .cs-figure, .a-case[aria-labelledby="case-switch"] [data-video-wrap]').forEach((wrap, i) => {
+      const video = wrap.querySelector('video');
+      const button = wrap.querySelector('[data-video-toggle]');
+      const label = video?.getAttribute('aria-label');
+      if (!button || !label) return;
+      video.id = `switch-video-${i + 1}`;
+      button.setAttribute('aria-controls', video.id);
+      button.querySelectorAll('.v3-play__play, .v3-play__pause').forEach(state => {
+        const context = document.createElement('span');
+        context.className = 'sr-only';
+        context.textContent = `: ${label}`;
+        state.append(context);
+      });
+    });
+    if (statusResizeHandler) removeEventListener('resize', statusResizeHandler);
+    statusResizeHandler = null;
+    const btn = app.querySelector('.a-menu-btn');
+    const menu = app.querySelector('#a-menu');
+    btn?.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? ui('close') : t(copy.menu);
+      menu.hidden = !open;
+      document.body.classList.toggle('is-locked', open);
+    });
+    menu?.addEventListener('click', e => { if (e.target.closest('a')) btn.click(); });
+
+    // Status headings: fit the longest line to the grid on phones (17vw at most), whatever the language.
+    // Measured once Inter has loaded (the fallback face is narrower) and again on resize.
+    const big = app.querySelector('.a-status__big');
+    const fitStatus = () => {
+      if (!big) return;
+      big.style.fontSize = '';
+      if (!matchMedia('(max-width: 767px)').matches) return;
+      const lines = [...big.querySelectorAll('[data-line]')];
+      const widest = Math.max(...lines.map(l => { const r = document.createRange(); r.selectNodeContents(l); return r.getBoundingClientRect().width; }));
+      // Available room is the parent's content box: the heading itself may already be stretched by the long word.
+      const host = big.parentElement, hs = getComputedStyle(host);
+      const room = host.clientWidth - parseFloat(hs.paddingLeft) - parseFloat(hs.paddingRight);
+      if (widest > room) big.style.fontSize = `${parseFloat(getComputedStyle(big).fontSize) * room / widest}px`;
+    };
+    if (big) {
+      document.fonts.ready.then(() => { if (big.isConnected) fitStatus(); });
+      statusResizeHandler = fitStatus;
+      addEventListener('resize', statusResizeHandler);
+    }
+
+    app.querySelector('[data-mail]')?.addEventListener('submit', e => {
+      e.preventDefault();
+      const body = e.target.message.value.trim();
+      location.href = `mailto:idmr13@gmail.com?subject=${encodeURIComponent(t(copy.subject))}&body=${encodeURIComponent(body)}`;
+    });
+  }
+
+  // Analytics disclaimer (Figma Footer 5120:1494): js/analytics.js builds the "change your preferences"
+  // text and button once; it lives in the footer's legal row and survives re-renders (language changes).
+  const consentSettings = () => document.getElementById('portfolio-analytics-settings');
+  const placeConsent = () => { const slot = app.querySelector('[data-consent-slot]'); const el = consentSettings(); if (slot && el && el.parentNode !== slot) slot.append(el); };
+  document.addEventListener('DOMContentLoaded', placeConsent);
+
+  V3.onRender(() => {
+    const p = V3.page;
+    const kept = consentSettings();
+    if (kept && app.contains(kept)) document.body.append(kept);
+    app.innerHTML = p === 'home' ? home() : p === 'case' ? casePage(V3.id) : p === 'article' ? articlePage(V3.id) : statusPage(V3.id);
+    if (p === 'home') document.title = t(S.pageTitle);
+    wire();
+    placeConsent();
+  });
+  V3.start();
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+})();
