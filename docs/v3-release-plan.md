@@ -95,7 +95,17 @@ Servidor `release-v3` de `.claude/launch.json` (Node, raíz en `releases/github-
 
 Pendiente: Safari, y la ingesta real de GA4, que solo se puede comprobar en producción.
 
-### 8. Publicación (solo con OK explícito de David)
+### 8. Publicación — hecho el 27-oct-2026
+David probó la release en Safari y autorizó publicarla. Se generó la release desde `826579b` (173 archivos, 38 MB). En un worktree aparte de `origin/main`, el árbol se reemplazó entero (122 archivos añadidos, 172 de la V2 eliminados, 13 modificados). Luego se hizo commit `78f919e` y push a `main` (`c8f0e0e..78f919e`). GitHub Pages terminó el build sin errores.
+
+Verificado en `https://davidmontealegreux.com/`:
+- Las 12 rutas, el sitemap, `robots.txt`, las imágenes Open Graph, los videos (incluidos los nombres con tildes) y `js/analytics.js` con `site_version: 'v3'` responden 200.
+- Una ruta inexistente responde 404.
+- En Chrome, la página de Switch carga sin errores de consola ni de red, el panel de cookies aparece y Google no se carga antes de aceptar.
+
+Pendiente: confirmar en GA4 que llegan datos reales cuando alguien acepta las cookies.
+
+Pasos que se siguieron:
 - Revisar el manifest y el peso total.
 - Reemplazar el árbol de `main` por el contenido de `releases/github-pages-v3/`, sin superponerlo, para que no sobrevivan archivos viejos de la V2.
 - Commit, push y verificación en `https://davidmontealegreux.com/`: las 11 páginas, los videos y la ingesta real de GA4.

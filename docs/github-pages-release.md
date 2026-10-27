@@ -1,3 +1,5 @@
+> **Estado actual (27-oct-2026): la V3 reemplazó a esta V2 en producción.** `main` está en `78f919e` y su árbol es `releases/github-pages-v3/`, generado por `scripts/prepare-github-pages-v3.py`. Proceso y validación en `docs/v3-release-plan.md`. Lo que sigue documenta la entrega V2 histórica.
+
 # Entrega estática V2 para GitHub Pages
 
 La versión independiente está en `releases/github-pages/`; el ZIP en `releases/portfolio-v2-github-pages.zip`. Se prepara desde los archivos actuales de trabajo con `python3 scripts/prepare-github-pages.py`. La carpeta `releases/` está excluida de Git para evitar duplicar medios en el repositorio de trabajo.
