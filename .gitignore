@@ -69,3 +69,16 @@
 
 # Pixel Perfect audit output.
 /.pixel-perfect/
+
+# Review evidence (screenshots, measurements) stays local from October 27, 2026; folders already in Git stay.
+# Handoffs and reviews (intercambio/handoffs/, intercambio/revisiones/) remain versioned.
+/intercambio/evidencia/*
+!/intercambio/evidencia/2026-10-27_videos-mp4/
+
+# Source PNGs exported from Figma; the site serves the .webp exports beside them.
+/assets/Menores/v3/Img hero.png
+/assets/Registro ML/v3/
+/assets/Ropstar/Hero/
+/assets/Ropstar/v3/*.png
+/assets/Winefast/Img hero/
+/assets/Winefast/V3/*.png
