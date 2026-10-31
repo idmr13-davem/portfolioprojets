@@ -1125,6 +1125,7 @@ window.V3_CONTENT = {
          "type": "video",
          "src": "assets/Videos/Motion DS/Motion DS 01.web.mp4",
          "poster": "assets/Motion DS/v2/expressivity-0-hd.jpg",
+         "once": true,
          "caption": {
           "en": "Less expressive",
           "es": "Menos expresiva"
@@ -1134,6 +1135,7 @@ window.V3_CONTENT = {
          "type": "video",
          "src": "assets/Videos/Motion DS/Motion DS 02.web.mp4",
          "poster": "assets/Motion DS/v2/expressivity-1-hd.jpg",
+         "once": true,
          "caption": {
           "en": "More expressive",
           "es": "Más expresiva"
@@ -1438,6 +1440,7 @@ window.V3_CONTENT = {
     },
     {
      "id": "flows",
+     "sequence": "once",
      "title": {
       "en": "The adult and minor journey",
       "es": "Flujo adulto y menor"
@@ -1705,6 +1708,7 @@ window.V3_CONTENT = {
        "type": "video",
        "src": "assets/Videos/Switch/Switch productivo.web.mp4",
        "poster": "assets/Switch países/v3/current-poster.jpg",
+       "once": true,
        "alt": {
         "en": "Previous account switch: the panel lets people choose from their available accounts.",
         "es": "Cambio de cuentas previo: el panel permite elegir entre las cuentas disponibles."
@@ -1714,6 +1718,7 @@ window.V3_CONTENT = {
        "type": "video",
        "src": "assets/Videos/Switch/Nuevo Switch.web.mp4",
        "poster": "assets/Switch países/v3/proposed-poster.jpg",
+       "once": true,
        "alt": {
         "en": "New cross-country switch: a flag beside the avatar identifies the destination account’s country.",
         "es": "Nuevo cambio entre países: una bandera junto al avatar permite reconocer el país de la cuenta de destino."

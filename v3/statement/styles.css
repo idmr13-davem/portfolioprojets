@@ -377,6 +377,11 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-case .a-case__media { border-radius: 0; overflow: hidden; isolation: isolate; background: var(--surface); }
 .a-case .a-case__video { background: transparent; mix-blend-mode: lighten; }
 .a-case .a-case__media .v3-play { z-index: 1; }
+/* Motion curve 1 (video and poster) carries its own ground, rgb(23 25 29), whose red sits 3 above
+   Background/Deep rgb(20 25 30), so lighten showed its box. A 10% contrast pushes that ground (and its
+   compression noise) below the container colour on every channel, so lighten hides it; the curve and
+   guides barely change. MP4 has no alpha channel, so this is how the ground is removed (David, October 31, 2026). */
+.a-case--motion .a-case__video { filter: contrast(1.1); }
 /* Phones (Figma Home 5059:614): every case video sits in a frame 560 tall, the mobile media height
    shared by all V3 pages, fitted inside it on Background/Deep (David, October 27, 2026: Motion included). */
 /* Tablet and phones (Figma 5223:11959, 5203:82753): the Switch entry's impact fills the copy column. */
@@ -446,6 +451,19 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-cs--grid .cs-figure { display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; }
 .a-cs--grid .cs-figure > video, .a-cs--grid .cs-figure > .v3-play { grid-row: 1; grid-column: 1; }
 .a-cs--grid .cs-figure > .v3-play { position: relative; inset: auto; align-self: end; justify-self: end; margin: 0 .75rem .75rem 0; }
+/* Play/pause buttons are the Mute button (css/components.css .btn--mute; David, October 31, 2026):
+   interactive-secondary ground, accent label, stroke-secondary border, with its hover and click states.
+   A solid accent button competed with "See case study" in the Home entries. */
+.v3-play { background: var(--interactive-secondary-idle); color: var(--interactive-primary-idle); border: 1px solid var(--stroke-secondary); transition: transform var(--t-press) var(--ease-out), background-color var(--t-hover) ease, color var(--t-hover) ease; }
+.v3-play:hover { background: var(--interactive-secondary-hover); color: var(--interactive-primary-hover); }
+.v3-play:active { background: var(--interactive-secondary-clic); color: var(--interactive-primary-clic); }
+/* The video frame (Figma Video figure > Media: square, Background/Deep) is its own layer in the video's
+   cell, because the recording itself is clipped to 20 px corners (site.js) and that clip would cut a
+   ground painted on the video. Cases whose recordings sit in a visible frame set --video-ground; it
+   shows only when the recording leaves bands (is-letterboxed, site.js), so a recording that fills its
+   box keeps its rounded corners clean. */
+.a-cs--grid .cs-figure--video.is-letterboxed::before { content: ""; grid-row: 1; grid-column: 1; background: var(--video-ground, none); }
+.a-cs--registro .cs-figure, .a-cs--motion .cs-figure { --video-ground: var(--surface); }
 /* Copy: paragraphs keep para-gap (p + p, .9em of Body); lists read as plain lines, full column width. */
 /* A list after a paragraph, and the closing line after both, keep copy-block-gap (20). */
 .a-cs--grid .cs-copy p + .cs-list { margin-top: 1.25rem; }
@@ -486,6 +504,13 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
    the three stay in one row, edge to edge, at gutter. */
 .a-cs--motion .a-cs__heroset { background: none; }
 .a-cs--motion .a-cs__heroset video { aspect-ratio: 850 / 860; max-height: none; background: none; }
+/* The curves carry their own ground, rgb(23 25 29), against the page's Background/Primary rgb(23 27 31).
+   As on the Home Motion card: lighten over the page colour, with a 10% contrast that keeps the ground
+   and its compression noise below it on every channel, so the curves sit on the page with no box.
+   The band paints the page colour and isolates the blend so it never mixes with what is behind it
+   (David, October 31, 2026). */
+.a-cs--motion .a-cs__heroset { background: var(--bg); isolation: isolate; }
+.a-cs--motion .a-cs__heroset video { mix-blend-mode: lighten; filter: contrast(1.1); }
 /* Objectives and outcomes: Body strong lines, goal-list-gap kept at .6 of the lead size. */
 .a-cs--motion .a-cs__goals .cs-list { gap: calc(var(--step-lead) * .6); font-size: var(--step-body); font-weight: 700; line-height: 1.5; }
 /* Roadmap: the steps are a bulleted list right after the paragraph, at every width. */
@@ -497,12 +522,14 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 /* Expressivity videos keep three columns each (title-width) inside the nine-column content. */
 .a-cs--motion .cs-part .cs-media--2 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 /* Example videos share one frame (example-height: 9:20 of the column, capped at 80svh) on
-   Background/Secondary, so the three line up even when a recording has another ratio; images are fitted without a ground. */
-.a-cs--motion .cs-section--examples .cs-figure video { aspect-ratio: 9 / 20; background: var(--background-secondary); }
+   Background/Deep like every other video frame (David, October 31, 2026; it was Background/Secondary), so the
+   three line up even when a recording has another ratio; images are fitted without a ground. */
+.a-cs--motion .cs-section--examples .cs-figure video { aspect-ratio: 9 / 20; }
 .a-cs--motion .cs-section > .cs-media img { background: none; }
-/* Benchmark image sits on a Surface/Main ground (Figma 5110:4747); on desktop its frame keeps the
-   figure height (80svh: 720 / 640) and the image is fitted inside it. */
-.a-cs--motion .cs-section--benchmark .cs-figure img { background: var(--surface-main); }
+/* Benchmark image (transparent PNG) sits on Background/Deep like every video frame (David, October 31,
+   2026; Figma 5110:4747 had Surface/Main); on desktop its frame keeps the figure height (80svh: 720 / 640)
+   and the image is fitted inside it. */
+.a-cs--motion .cs-section--benchmark .cs-figure img { background: var(--surface); }
 @media (min-width: 1024px) {
   .a-cs--motion .cs-section--benchmark .cs-figure img { height: 80svh; }
 }
@@ -543,11 +570,11 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 }
 /* The four recordings share one frame (journey-video-height): the native 716 × 1596 of the screen
    recordings, capped at 80svh, on Background/Deep, so the captions line up across the row; corners use
-   Border radius L (32) at every width. */
+   the 20 px clip every recording gets (site.js). */
 .a-cs--menores .cs-section--flows .cs-figure { container-type: inline-size; }
 /* The video box is the recording itself (no side bands when 80svh caps the height), centred in its
-   columns, so the 32 radius rounds the recording; cover crops ≤1.2% of the native width per side. */
-.a-cs--menores .cs-section--flows .cs-figure video { width: min(100cqw, 80svh * 716 / 1596); max-height: none; aspect-ratio: 716 / 1596; justify-self: center; object-fit: cover; border-radius: var(--radius-l); }
+   columns, so the rounded clip follows the recording; cover crops ≤1.2% of the native width per side. */
+.a-cs--menores .cs-section--flows .cs-figure video { width: min(100cqw, 80svh * 716 / 1596); max-height: none; aspect-ratio: 716 / 1596; justify-self: center; object-fit: cover; }
 .a-cs--menores .cs-section--flows .cs-figure > .v3-play { margin-right: calc((100cqw - min(100cqw, 80svh * 716 / 1596)) / 2 + .75rem); }
 /* Case steps (Figma 5093:1306): stacked with no gap and no ground; each keeps its M (24) padding. */
 .a-cs--menores .cs-steps { gap: 0; }
@@ -578,7 +605,7 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-cs--switch .cs-section--comparison > .cs-media, .a-cs--switch .cs-section--variants > .cs-media { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gutter); }
 .a-cs--switch .cs-section--comparison .cs-figure video { aspect-ratio: 718 / 1592; }
 .a-cs--switch .cs-section--variants .cs-figure video { aspect-ratio: 714 / 1594; }
-.a-cs--switch .cs-section .cs-figure video { width: 100%; height: auto; max-height: none; object-fit: cover; border-radius: var(--radius-xs); background: none; }
+.a-cs--switch .cs-section .cs-figure video { width: 100%; height: auto; max-height: none; object-fit: cover; background: none; }
 /* The variants list reads right after its intro (one text block in Figma), with bullets. */
 .a-cs--switch .cs-section--variants .cs-copy p + .cs-list { gap: 0; margin-top: 0; padding-left: 1.5em; list-style: disc; }
 @media (max-width: 1023px) {
@@ -618,10 +645,12 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 .a-craft__copy h3 { font-size: clamp(2rem, 3.2vw, 3rem); letter-spacing: -0.035em; line-height: 1; }
 .a-craft__copy p { max-width: none; font-size: var(--step-body); line-height: 1.5; }
 /* The collage is the source composition (579×500, intrinsic): three captures that overlap on purpose,
-   scaled as one box. Side captures at 40% behind the main one, which carries the shadow. */
+   scaled as one box. Side captures at 40% behind the main one, which carries the shadow. The exports
+   have rounded corners, so each capture is clipped to the same 20 px radius as the videos and the main
+   one's shadow follows it (David, October 31, 2026). */
 .a-craft__art { position: relative; width: 100%; max-width: 579px; aspect-ratio: 579 / 500; margin: 0; filter: drop-shadow(0 2px 5px color-mix(in srgb, var(--accent) 20%, transparent)); }
 .a-craft__entry:nth-child(2) .a-craft__art { filter: drop-shadow(0 2px 2px color-mix(in srgb, var(--accent) 20%, transparent)); }
-.a-craft__screen { position: absolute; width: auto; height: auto; max-width: none; object-fit: cover; }
+.a-craft__screen { position: absolute; width: auto; height: auto; max-width: none; object-fit: cover; border-radius: var(--radius-m); }
 .a-craft__screen--main { inset: 0 30.05%; width: 39.9%; height: 100%; z-index: 1; box-shadow: 0 4px 8px rgb(56 56 56 / .5); }
 .a-craft__screen--left { inset: 8% 53.63% 8% 12.87%; width: 33.5%; height: 84%; opacity: .4; }
 .a-craft__screen--right { inset: 8% 12.69% 8% 53.8%; width: 33.51%; height: 84%; opacity: .4; }

@@ -68,18 +68,56 @@
       if (el.getBoundingClientRect().top < innerHeight) el.classList.add('is-in');
     }), 2500);
     watchVideos();
+    roundVideos();
   }
 
-  // Muted loops play only while visible and never under reduced motion.
+  // Muted loops play only while visible and never under reduced motion. A video without loop that
+  // already ended stays paused; only its play button starts it again. The observer watches the
+  // video's frame, not the video: Chrome counts only the clipped area (roundVideos), and a phone
+  // recording in a 4:3 frame never reaches the threshold on its own.
   let videoObserver;
+  const watchedVideo = new WeakMap();
   function watchVideos() {
     const videos = document.querySelectorAll('video[data-autoplay]');
     if (reduced.matches || !('IntersectionObserver' in window)) return;
     videoObserver ??= new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting }) => {
-      if (isIntersecting) target.play().catch(() => {});
-      else target.pause();
+      const video = watchedVideo.get(target);
+      if (!video) return;
+      if (isIntersecting) { if (!video.ended) video.play().catch(() => {}); }
+      else video.pause();
     }), { threshold: 0.35 });
-    videos.forEach(v => videoObserver.observe(v));
+    videos.forEach(v => {
+      const frame = v.closest('figure, [data-video-wrap]') || v;
+      watchedVideo.set(frame, v);
+      videoObserver.observe(frame);
+    });
+  }
+
+  // Every recording gets a 20 px radius (David, October 31, 2026). Most videos are fitted with
+  // object-fit: contain inside a larger frame, where border-radius would round the empty frame
+  // instead of the recording, so the rounded clip follows the area the recording actually covers.
+  const VIDEO_RADIUS = 20;
+  let videoResizer;
+  function clipVideo(v) {
+    const w = v.clientWidth, h = v.clientHeight, vw = v.videoWidth, vh = v.videoHeight;
+    if (!w || !h) return;
+    let x = 0, y = 0;
+    if (vw && vh && getComputedStyle(v).objectFit === 'contain') {
+      const scale = Math.min(w / vw, h / vh);
+      x = Math.max(0, (w - vw * scale) / 2);
+      y = Math.max(0, (h - vh * scale) / 2);
+    }
+    v.style.clipPath = `inset(${y}px ${x}px round ${VIDEO_RADIUS}px)`;
+    // A frame behind the video only shows when the recording leaves bands around it.
+    v.closest('figure')?.classList.toggle('is-letterboxed', x > 2 || y > 2);
+  }
+  function roundVideos() {
+    videoResizer ??= 'ResizeObserver' in window ? new ResizeObserver(entries => entries.forEach(e => clipVideo(e.target))) : null;
+    document.querySelectorAll('video').forEach(v => {
+      clipVideo(v);
+      v.addEventListener('loadedmetadata', () => clipVideo(v), { once: true });
+      videoResizer?.observe(v);
+    });
   }
 
   document.addEventListener('click', event => {
@@ -97,11 +135,12 @@
 
   // Markup helpers shared by the proposals. Classes are neutral; each proposal styles them.
   const ui = key => t(C.site.ui[key]);
-  function media(m, { cls = '', autoplay = true, eager = false, sizes = '' } = {}) {
+  function media(m, { cls = '', autoplay = true, loop = true, eager = false, sizes = '' } = {}) {
     if (!m) return '';
     if (m.type === 'video') {
       const label = esc(t(m.caption) || t(m.alt) || '');
-      return `<video class="${cls}" muted loop playsinline preload="${eager ? 'auto' : 'none'}" ${autoplay ? 'data-autoplay' : ''} poster="${asset(m.poster)}" ${label ? `aria-label="${label}"` : 'aria-hidden="true"'}><source src="${asset(m.src)}"></video>`;
+      // m.once: this video plays once even where its case loops (Motion expressivity, David, October 31, 2026).
+      return `<video class="${cls}" muted ${loop && !m.once ? 'loop' : ''} playsinline preload="${eager ? 'auto' : 'metadata'}" ${autoplay ? 'data-autoplay' : ''} poster="${asset(m.poster)}" ${label ? `aria-label="${label}"` : 'aria-hidden="true"'}><source src="${asset(m.src)}"></video>`;
     }
     const source = m.mobile ? `<source media="(max-width: 767px)" srcset="${asset(m.mobile)}">` : '';
     return `<picture class="${cls}">${source}<img src="${asset(m.src)}" alt="${esc(t(m.alt))}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} ${sizes}></picture>`;

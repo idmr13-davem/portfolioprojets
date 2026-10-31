@@ -88,7 +88,7 @@
       ${cases.map(c => `
       <section class="a-case a-case--${c.id}" aria-labelledby="case-${c.id}">
         <div class="a-case__media" data-reveal data-video-wrap>
-          ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video' })}
+          ${media({ type: 'video', src: c.card.video, poster: c.card.poster, caption: c.card.videoLabel }, { cls: 'a-case__video', loop: false })}
           <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">${ui('play')}</span><span class="v3-play__pause">${ui('pause')}</span></button>
         </div>
         <div class="a-case__copy">
@@ -141,10 +141,11 @@
 
   // Case sections on the Figma template (Motion Level 5076:1275, Registro ML 5065:519, Menores 5076:2434, Switch 5170:54941): the title on columns 1–3, everything
   // that explains it on 4–12, and wide evidence (images, example videos) below on columns 4–12
-  // on desktop, or all twelve columns on tablet and phones.
-  function gridSection(s) {
+  // on desktop, or all twelve columns on tablet and phones. `base` holds media options for the whole
+  // case (Registro ML videos play once, like the Home ones: David, October 31, 2026).
+  function gridSection(s, base = {}) {
     const { paras, bullets, figure } = V3;
-    const row = (list, opts = {}) => `<div class="cs-media cs-media--${list.length}"${opts.autoplay === false && list === s.media ? ' data-sequence' : ''}>${list.map(m => figure(m, opts)).join('')}</div>`;
+    const row = (list, opts = {}) => `<div class="cs-media cs-media--${list.length}"${opts.autoplay === false && list === s.media ? ` data-sequence${s.sequence === 'once' ? '="once"' : ''}` : ''}>${list.map(m => figure(m, { ...base, ...opts })).join('')}</div>`;
     const text = (body, list, closing) => (t(body) || []).length || (t(list) || []).length || closing ? `<div class="cs-copy">${paras(body)}${bullets(list, s.ordered)}${closing ? `<p class="cs-closing">${esc(t(closing))}</p>` : ''}</div>` : '';
     const copy = text(s.body, s.list, s.closing).replace('class="cs-copy"', 'class="cs-copy" data-reveal');
     const steps = s.steps ? `<ol class="cs-steps">${s.steps.map(step => step.title ? `<li data-reveal><h3>${esc(t(step.title))}</h3><p>${esc(t(step.body))}</p></li>` : `<li data-reveal>${esc(t(step))}</li>`).join('')}</ol>` : '';
@@ -168,7 +169,8 @@
   function casePage(id) {
     const c = C.cases[id];
     const grid = ['motion', 'registro', 'menores', 'switch', 'ropstar', 'winefast'].includes(id);
-    const section = grid ? gridSection : caseSection;
+    const playOnce = id === 'registro' ? { loop: false } : {};
+    const section = grid ? s => gridSection(s, playOnce) : caseSection;
     const i = cases.findIndex(x => x.id === id);
     const next = cases[(i + 1) % cases.length];
     // Side projects (Figma Case navigation in 5280:90729) close with the Home craft section and the other side project.
@@ -249,7 +251,9 @@
 
   // Clips that play one at a time (Motion Level property samples, Switch variants): each plays once, in
   // reading order (row by row, left to right). The sequence starts over only when the block is scrolled
-  // out of view and back in.
+  // out of view and back in. With data-sequence="once" (Menores journey, David, October 31, 2026) it never
+  // starts over: leaving the view pauses the clip in progress, coming back resumes it, and after the last
+  // clip every recording stays on its final frame until someone presses its play button.
   let samplesCleanups = [];
   function sequenceSamples() {
     samplesCleanups.forEach(cleanup => cleanup());
@@ -264,6 +268,8 @@
     let disposed = false;
     let removeEnded = () => {};
     let current = -1;
+    const once = groups.dataset.sequence === 'once';
+    let started = false;
     const reset = () => {
       run += 1;
       current = -1;
@@ -282,6 +288,12 @@
     const observer = new IntersectionObserver(([entry]) => {
       if (disposed || entry.isIntersecting === visible) return;
       visible = entry.isIntersecting;
+      if (once) {
+        if (!visible) clips[current]?.pause();
+        else if (!started) { started = true; play(0, run); }
+        else clips[current]?.play().catch(() => {});
+        return;
+      }
       reset();
       if (visible) play(0, run);
     }, { threshold: 0 });

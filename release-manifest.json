@@ -7,8 +7,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 1386,
-      "sha256": "eccc4de2edb7692b519f5acec67027e4cd4c90721b9e469e2b0b4925fa40a226"
+      "bytes": 1406,
+      "sha256": "a634e96046c5095b3110ff64789f40315ee9776db7d31bfa43b90c457a39f9e7"
     },
     {
       "path": "CNAME",
@@ -27,18 +27,18 @@
     },
     {
       "path": "articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html",
-      "bytes": 2777,
-      "sha256": "d99b6a60ba3104d5c1fe596cba6a453b1ab38e5db8d71c88525f7fc755d9d388"
+      "bytes": 2797,
+      "sha256": "919081385e9a3ad3853929fc8d97d685f034c3bd439f564238d0d937af70ef54"
     },
     {
       "path": "articles/page-under-work.html",
-      "bytes": 1415,
-      "sha256": "ad5381cb82b5c9aaa1ec2de5daaf5830c3de16ee37d646a34d4638cb2d9f0853"
+      "bytes": 1435,
+      "sha256": "1f32edf7bfdabfd0c82514188b148ae5e8eed31f6461911c35c55836c1c36129"
     },
     {
       "path": "articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html",
-      "bytes": 2737,
-      "sha256": "4436c224c2bf03ab1258529e5cfc4ec47825fdb90ab23fa83a1345e599058537"
+      "bytes": 2757,
+      "sha256": "4a8cf12d9c81d1079e2e7beec67f8058570fea03cca8c9dbd451a7897bc939b2"
     },
     {
       "path": "assets/Articles/v2/auto-desktop.png",
@@ -787,8 +787,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 2338,
-      "sha256": "80a26132f7209b14049239a70a55d116c8b1a37a6e93dccd4f099a1324524cd2"
+      "bytes": 2358,
+      "sha256": "f530aae34e085fc4ab00169e176c221df3e77f05467377c43b0a693bf48d6a56"
     },
     {
       "path": "js/analytics.js",
@@ -812,53 +812,53 @@
     },
     {
       "path": "v3/shared/content.js",
-      "bytes": 131635,
-      "sha256": "91a350a2912dd0565b453d871ae7cc3eefc1ec00a89c0748aa0aedacbfd5e0e8"
+      "bytes": 131748,
+      "sha256": "5d49b19f137ed9ac4f2ce2d96e44b13ec13c372d4259d6c12cad6ab7335bd23d"
     },
     {
       "path": "v3/shared/site.js",
-      "bytes": 9723,
-      "sha256": "a699be2e5ac5b486d263d75fd3075f0b5ec8d5b9e3958345a29d7cac685a548b"
+      "bytes": 11742,
+      "sha256": "f734a727039b5463fbacc8c2ada52bf0783ec5ebf779c251722ca825aa00dd9c"
     },
     {
       "path": "v3/statement/app.js",
-      "bytes": 25070,
-      "sha256": "f02bd1d92fb41bc078cf7de441cd1e61d7ef9fce88c3a939d9ca361afc7a5910"
+      "bytes": 25916,
+      "sha256": "5fedda22594bb97af343c930707ca6424beb102e301b7c9a592bf402269367a4"
     },
     {
       "path": "v3/statement/styles.css",
-      "bytes": 51786,
-      "sha256": "7ef7b142f18b241ead2bdf7b25b768d8e05499105de67967b391ac01e29f63a4"
+      "bytes": 54580,
+      "sha256": "f81766eec7704a85b3eb25f759df03573878eed40f17434731f4923cc5c82285"
     },
     {
       "path": "work/cambio-cuentas-paises.html",
-      "bytes": 2552,
-      "sha256": "5de59d709acf1fb187b3bd86d30383dba31c0e4e550ebf46049a18dd330c4612"
+      "bytes": 2572,
+      "sha256": "d8187e3c8f74a8e41b08565508d859fa66faa691ed137af11f4b7e47b7589f93"
     },
     {
       "path": "work/menores-mexico.html",
-      "bytes": 2504,
-      "sha256": "e34422744b1f608e3bcfe9267ca54cd521c26aa70d171f245e0223cf0b1169c2"
+      "bytes": 2524,
+      "sha256": "88c4bb2f498bdff1e8dc0feb517c465829c2c5e3ca63aa3fe08ecea4397fcef0"
     },
     {
       "path": "work/motion-design-system.html",
-      "bytes": 2470,
-      "sha256": "1cf6870fb2a783b993b47cdb82eafaf1ac6b10f9da7b51963b5701af78f405ae"
+      "bytes": 2490,
+      "sha256": "8ccb27f99e7ba2ea960b3bb087a7dfcab8291d4496ff3a040184a44301aab293"
     },
     {
       "path": "work/registro-ml.html",
-      "bytes": 2436,
-      "sha256": "3533b1236c278a6a64d0913564d38705593f95e54607d91e927e037d5bbcf16b"
+      "bytes": 2456,
+      "sha256": "dc4013ebaaf0bdefb9b05a6cb5121cb4adf20f41d65f010c5d2e77c6113394ff"
     },
     {
       "path": "work/ropstar.html",
-      "bytes": 2282,
-      "sha256": "36dd8f85dc64eee37c0f1f607160da15dc0ab9aae1aca727755be1f335ed60e3"
+      "bytes": 2302,
+      "sha256": "feb1a61ab3f8d2269d7624b85222a9c64f174a95761ee8a90979423aa7989152"
     },
     {
       "path": "work/winefast.html",
-      "bytes": 2312,
-      "sha256": "40ddf919d4218694a6aa329171a93a625df777e9480b7fe2cd862118e761039d"
+      "bytes": 2332,
+      "sha256": "dfd9ff935e27a994b84778eb6bbdc4cc57fe7add6e4d53b75a0e7c15a321c10e"
     }
   ]
 }
