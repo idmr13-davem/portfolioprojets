@@ -349,7 +349,7 @@ body.is-locked .a-top { color: var(--ink); }
 .a-foot__legal { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; column-gap: var(--space-l); row-gap: var(--space-s); padding-bottom: var(--space-m); line-height: 1.5; }
 .a-foot__credits { display: flex; flex-direction: column; gap: var(--space-xxs); margin: 0; font: inherit; max-width: none; }
 .a-foot__base { display: inline-flex; align-items: center; gap: var(--space-xxs); }
-.a-foot__base img { display: block; width: 22px; height: 16px; margin: -1px; flex: none; }
+.a-foot__base img { display: block; width: 22px; height: 16px; margin: -1px; flex: none; background: none; }
 .a-foot__aside { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xxs); flex: 1 1 0; min-width: 0; }
 .a-foot__aside .a-foot__consent { max-width: 852px; }
 .a-foot__credit { margin: 0; font: inherit; max-width: none; }
