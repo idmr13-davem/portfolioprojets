@@ -164,6 +164,10 @@ window.V3_CONTENT = {
      "en": "Visit my profile",
      "es": "Visita mi perfil"
     },
+    "menuLabel": {
+     "en": "Visit my LinkedIn profile",
+     "es": "Visita mi perfil de LinkedIn"
+    },
     "value": "LinkedIn"
    },
    {
@@ -173,6 +177,10 @@ window.V3_CONTENT = {
      "en": "Send me a message",
      "es": "Envíame un mensaje"
     },
+    "menuLabel": {
+     "en": "Send me a message by WhatsApp",
+     "es": "Envíame un mensaje por WhatsApp"
+    },
     "value": "WhatsApp"
    },
    {
@@ -181,6 +189,10 @@ window.V3_CONTENT = {
     "label": {
      "en": "Schedule a call",
      "es": "Agenda una llamada"
+    },
+    "menuLabel": {
+     "en": "Schedule a call in my calendar",
+     "es": "Agenda una llamada en mi calendario"
     },
     "value": "ADPlist"
    }
@@ -702,8 +714,8 @@ window.V3_CONTENT = {
    "slug": "motion-design-system",
    "home": 1,
    "title": {
-    "en": "Motion design system - Motion Level",
-    "es": "Motion design system - Motion Level"
+    "en": "Motion design system",
+    "es": "Motion design system"
    },
    "role": {
     "en": "Role: Senior UI designer, researcher",
@@ -1246,8 +1258,8 @@ window.V3_CONTENT = {
    },
    "meta": {
     "title": {
-     "en": "Motion Level | David Montealegre",
-     "es": "Motion Level | David Montealegre"
+     "en": "Motion design system | David Montealegre",
+     "es": "Motion design system | David Montealegre"
     },
     "description": {
      "en": "Motion Level: research and a framework for shared motion decisions by David Montealegre.",
@@ -1256,8 +1268,8 @@ window.V3_CONTENT = {
    },
    "card": {
     "title": {
-     "en": "Motion design system - Motion Level",
-     "es": "Motion design system - motion level"
+     "en": "Motion design system",
+     "es": "Motion design system"
     },
     "role": {
      "en": "Role: Senior UX analyst / UI designer",

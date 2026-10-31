@@ -178,7 +178,7 @@
   }
 
   const langToggle = (cls = '') => `<div class="v3-lang ${cls}" role="group" aria-label="${ui('language')}"><button type="button" data-set-lang="en" aria-pressed="false">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div>`;
-  const contactLinks = (cls = '') => C.site.contact.map(c => `<a class="${cls} ${cls}--${c.id}" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c.label))}</a>`).join('');
+  const contactLinks = (cls = '', key = 'label') => C.site.contact.map(c => `<a class="${cls} ${cls}--${c.id}" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c[key] || c.label))}</a>`).join('');
 
   window.V3 = {
     C, t, esc, asset, href, ui, media, figure, paras, bullets, caseSection, articleBody, langToggle, contactLinks,

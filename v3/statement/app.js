@@ -29,9 +29,9 @@
         <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
         ${langToggle('a-lang')}
       </nav>
-      <button class="a-menu-btn" type="button" aria-expanded="false" aria-controls="a-menu">${esc(t(copy.menu))}</button>
+      <button class="a-menu-btn" type="button" aria-expanded="false" aria-controls="a-menu" aria-label="${esc(t(copy.menu))}"><span class="a-burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
     </header>
-    <div class="a-menu" id="a-menu" hidden>
+    <div class="a-menu" id="a-menu" inert>
       <nav aria-label="${esc(t(copy.menu))}">
         <a href="${href.home()}">${esc(t(S.nav.home))}</a>
         <a href="${href.home('#work')}">${esc(t(S.nav.work))}</a>
@@ -39,7 +39,7 @@
         <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
       </nav>
       ${langToggle('a-lang a-lang--menu')}
-      <div class="a-menu__links">${contactLinks('a-menu__link')}</div>
+      <div class="a-menu__links">${contactLinks('a-menu__link', 'menuLabel')}</div>
     </div>`;
 
   const footer = () => `
@@ -360,6 +360,8 @@
   }
 
   let statusResizeHandler = null;
+  let menuOpen = false;
+  let menuCleanup = null;
   function wire() {
     sequenceSamples();
     playHeroOnce();
@@ -383,14 +385,46 @@
     statusResizeHandler = null;
     const btn = app.querySelector('.a-menu-btn');
     const menu = app.querySelector('#a-menu');
-    btn?.addEventListener('click', () => {
-      const open = btn.getAttribute('aria-expanded') !== 'true';
+    const mobile = matchMedia('(max-width: 767px)');
+    const background = [...app.querySelectorAll('main, .a-foot, .v3-skip')];
+    const setMenu = (open, moveFocus = true) => {
+      open = open && mobile.matches;
+      menuOpen = open;
       btn.setAttribute('aria-expanded', String(open));
-      btn.textContent = open ? ui('close') : t(copy.menu);
-      menu.hidden = !open;
+      btn.setAttribute('aria-label', open ? ui('close') : t(copy.menu));
+      menu.inert = !open;
+      menu.classList.toggle('is-open', open);
       document.body.classList.toggle('is-locked', open);
-    });
-    menu?.addEventListener('click', e => { if (e.target.closest('a')) btn.click(); });
+      background.forEach(el => { el.inert = open; });
+      if (moveFocus) (open ? menu.querySelector('nav a') : btn).focus({ preventScroll: true });
+    };
+    btn.addEventListener('click', () => setMenu(!menuOpen));
+    menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+    const menuKeys = e => {
+      if (!menuOpen) return;
+      if (e.key === 'Escape') { e.preventDefault(); setMenu(false); }
+      if (e.key !== 'Tab') return;
+      const controls = [app.querySelector('.a-mark'), btn, ...menu.querySelectorAll('a, button')];
+      const index = controls.indexOf(document.activeElement);
+      if (index === -1 || (e.shiftKey ? index === 0 : index === controls.length - 1)) {
+        e.preventDefault();
+        controls[e.shiftKey ? controls.length - 1 : 0].focus({ preventScroll: true });
+      }
+    };
+    const menuBreakpoint = () => {
+      if (menuOpen && !mobile.matches) {
+        const hadFocus = menu.contains(document.activeElement) || document.activeElement === btn;
+        setMenu(false, false);
+        if (hadFocus) app.querySelector('.a-mark').focus({ preventScroll: true });
+      }
+    };
+    document.addEventListener('keydown', menuKeys);
+    mobile.addEventListener('change', menuBreakpoint);
+    menuCleanup = () => {
+      document.removeEventListener('keydown', menuKeys);
+      mobile.removeEventListener('change', menuBreakpoint);
+    };
+    setMenu(menuOpen, false);
 
     // Status headings: fit the longest line to the grid on phones (17vw at most), whatever the language.
     // Measured once Inter has loaded (the fallback face is narrower) and again on resize.
@@ -427,11 +461,15 @@
 
   V3.onRender(() => {
     const p = V3.page;
+    // Language changes replace the DOM: preserve the drawer and the selected control's focus.
+    const focusedLanguage = menuOpen ? document.activeElement?.dataset.setLang : null;
+    menuCleanup?.();
     const kept = consentSettings();
     if (kept && app.contains(kept)) document.body.append(kept);
     app.innerHTML = p === 'home' ? home() : p === 'case' ? casePage(V3.id) : p === 'article' ? articlePage(V3.id) : statusPage(V3.id);
     if (p === 'home') document.title = t(S.pageTitle);
     wire();
+    if (menuOpen) (app.querySelector(`#a-menu [data-set-lang="${focusedLanguage}"]`) || app.querySelector('#a-menu nav a')).focus({ preventScroll: true });
     placeConsent();
   });
   V3.start();
