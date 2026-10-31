@@ -15,7 +15,8 @@
     soon: { en: 'Soon', es: 'Pronto' },
     aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' },
     craftAll: { en: 'All craft projects', es: 'Todos los proyectos personales' },
-    craftMore: { en: 'Explore more craft', es: 'Más proyectos personales' }
+    craftMore: { en: 'Explore more craft', es: 'Más proyectos personales' },
+    based: { en: 'Based in Bogotá - Colombia', es: 'Radicado en Bogotá - Colombia' }
   };
 
   const header = () => `
@@ -49,7 +50,10 @@
           <div class="a-foot__buttons">${S.contact.map(c => `<a class="a-btn a-btn--dark" href="${c.href}" ${c.id === 'email' ? '' : 'target="_blank" rel="noopener noreferrer"'}>${esc(t(c.label))}</a>`).join('')}</div>
         </div>
       </div>
-      <div class="a-foot__legal"><p class="a-foot__credits"><span>${esc(t(S.footer)[0])}</span><span>${esc(t(S.footer)[1])}</span></p><div class="a-foot__consent" data-consent-slot></div></div>
+      <div class="a-foot__legal">
+        <p class="a-foot__credits"><span>${esc(t(S.footer)[0])}</span><span class="a-foot__base"><img src="${asset('assets/Home/v2/flag-colombia.svg')}" alt="" width="22" height="16">${esc(t(copy.based))}</span></p>
+        <div class="a-foot__aside"><div class="a-foot__consent" data-consent-slot></div><p class="a-foot__credit">${esc(t(S.footer)[1])}</p></div>
+      </div>
       <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
     </footer>`;
 

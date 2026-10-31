@@ -36,8 +36,9 @@ body { font-weight: var(--body-l-font-weight); }
 body.is-locked { overflow: hidden; }
 h1, h2, h3 { font-weight: 700; letter-spacing: -0.035em; line-height: 0.95; }
 
-/* ---------- top: no bar, just words in the corners ---------- */
-.a-top { position: absolute; inset: 0 0 auto; z-index: 20; display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--margin); font-size: 0.9375rem; }
+/* ---------- top: fixed on every page (David, 31-oct-2026), on the page ground so content scrolls under it ---------- */
+html { scroll-padding-top: 84px; }
+.a-top { position: fixed; inset: 0 0 auto; z-index: 20; background: var(--bg); display: flex; justify-content: space-between; align-items: center; padding: 1rem var(--margin); font-size: 0.9375rem; }
 .a-mark { display: block; flex: none; }
 .a-mark img { display: block; width: 59px; height: 52px; background: none; transition: opacity var(--t-hover) ease; }
 .a-mark:hover img { opacity: .8; }
@@ -55,7 +56,7 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.035em; line-height: 0.95; }
 .a-menu nav a { position: relative; justify-self: start; font-size: 3rem; font-weight: 700; letter-spacing: -0.035em; text-decoration: none; line-height: 1.1; }
 .a-menu .v3-lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
 .a-menu__links { display: grid; gap: .75rem; font-size: 1.0625rem; }
-body.is-locked .a-top { position: fixed; color: var(--ink); }
+body.is-locked .a-top { color: var(--ink); }
 
 /* ---------- buttons ---------- */
 .a-btn { border-radius: var(--radius-control); display: inline-flex; align-items: center; justify-content: center; min-height: 3.25rem; padding: 0 1.6rem; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none; white-space: nowrap; transition: transform var(--t-press) var(--ease-out), background-color var(--t-hover) ease; }
@@ -340,11 +341,18 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 @media (max-width: 767px) {
 }
 
-/* Footer legal row (Figma Footer 5120:1494): copyright above the credit (XXS, 6) on the left and the
-   analytics disclaimer on the right, bottom-aligned, with M (24) below. Tablet keeps both on one row
-   (the disclaimer fills what is left) and phones stack them, XL (48) apart: Figma uses an unbound 43. */
+/* Footer legal row (Figma Footer 5120:1494): copyright above "Based in Bogotá - Colombia" with the flag
+   (XXS, 6) on the left; the analytics disclaimer above the credit on the right, bottom-aligned, with M (24)
+   below. Tablet keeps both on one row (the right side fills what is left, right-aligned) and phones stack
+   them, XL (48) apart: Figma uses an unbound 43. The flag is the only origin signal (David, 31-oct-2026);
+   the EN/ES toggle stays text. */
 .a-foot__legal { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; column-gap: var(--space-l); row-gap: var(--space-s); padding-bottom: var(--space-m); line-height: 1.5; }
 .a-foot__credits { display: flex; flex-direction: column; gap: var(--space-xxs); margin: 0; font: inherit; max-width: none; }
+.a-foot__base { display: inline-flex; align-items: center; gap: var(--space-xxs); }
+.a-foot__base img { display: block; width: 22px; height: 16px; margin: -1px; flex: none; }
+.a-foot__aside { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-xxs); flex: 1 1 0; min-width: 0; }
+.a-foot__aside .a-foot__consent { max-width: 852px; }
+.a-foot__credit { margin: 0; font: inherit; max-width: none; }
 .a-foot__consent:empty { display: none; }
 /* The V2 settings strip from css/analytics.css reads here as plain footer text with an underlined button. */
 .a-foot .analytics-settings { width: auto; padding: 0; border: 0; background: none; color: inherit; font: inherit; }
@@ -356,11 +364,12 @@ body.is-locked .a-top { position: fixed; color: var(--ink); }
 }
 @media (max-width: 1023px) {
   .a-foot__legal { flex-wrap: nowrap; justify-content: flex-start; column-gap: var(--space-xl); }
-  .a-foot__consent { flex: 1 1 0; min-width: 0; }
+  .a-foot__aside, .a-foot__aside .analytics-settings, .a-foot__aside .analytics-settings p { text-align: right; }
 }
 @media (max-width: 767px) {
   .a-foot__legal { flex-direction: column; align-items: flex-start; gap: var(--space-xl); }
-  .a-foot__consent { flex: none; }
+  .a-foot__aside { flex: none; align-items: flex-start; gap: 10px; }
+  .a-foot__aside, .a-foot__aside .analytics-settings, .a-foot__aside .analytics-settings p { text-align: left; }
 }
 
 /* The three case bands share one layout: video on columns 1–7 in a 4:3 container, copy on 9–12. */
