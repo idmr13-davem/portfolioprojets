@@ -48,7 +48,16 @@ html { scroll-padding-top: 84px; }
 .a-nav > a { text-decoration: none; position: relative; }
 .a-nav > a::after, .a-menu nav a::after, .a-menu__links a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform var(--t-ui) var(--ease-out); }
 .a-nav > a:hover::after, .a-nav > a:focus-visible::after, .a-menu nav a:hover::after, .a-menu nav a:focus-visible::after, .a-menu__links a:hover::after, .a-menu__links a:focus-visible::after { transform: scaleX(1); }
-.a-lang button { min-width: 2.5rem; min-height: 2.5rem; }
+/* Header language toggle (desktop and tablet, David 31-oct-2026): the active pill slides between EN and ES
+   and the labels swap colour in 500 ms with cubic-bezier(.45, 0, .1, 1), instead of switching instantly.
+   app.js sets --lang-i to the active index and replays the slide from the previous language after a render. */
+.a-top { --ease-menu: cubic-bezier(.45, 0, .1, 1); --t-menu: 500ms; }
+.a-lang { position: relative; isolation: isolate; }
+.a-lang::before { content: ''; position: absolute; z-index: -1; top: 0; left: 0; width: 2.5rem; height: 100%; border-radius: var(--radius); background: var(--accent); transform: translateX(calc(var(--lang-i, 0) * (2.5rem + .25rem))); transition: transform var(--t-menu) var(--ease-menu); }
+.a-lang.is-instant::before, .a-lang.is-instant button { transition: none; }
+.a-lang button { width: 2.5rem; min-width: 2.5rem; min-height: 2.5rem; padding: 0; transition: opacity var(--t-menu) var(--ease-menu), color var(--t-menu) var(--ease-menu); }
+.v3-lang.a-lang button[aria-pressed="true"] { background: none; color: var(--accent-ink); }
+@media (prefers-reduced-motion: reduce) { .a-lang::before, .a-lang button { transition: none; } }
 /* Mobile menu (Figma 5404:14862): a 28 px burger that turns into an X, and a drawer under the fixed
    header whose navigation fills the height, so the language toggle and the contact links sit at the bottom.
    Motion from the V2 drawer (Figma 4776:3713): 500 ms; the drawer comes down 200 px with a decelerating
@@ -76,8 +85,7 @@ html { scroll-padding-top: 84px; }
 }
 .a-menu nav { display: grid; align-content: start; gap: var(--space-xs); flex: 1 0 auto; }
 .a-menu nav a { position: relative; justify-self: start; font-size: 3rem; font-weight: 700; letter-spacing: -0.035em; text-decoration: none; line-height: 1.1; }
-.a-menu .a-lang button { width: 2.5rem; padding: 0; }
-.a-menu .v3-lang button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+.a-menu { --ease-menu: cubic-bezier(.45, 0, .1, 1); --t-menu: 500ms; }
 .a-menu__links { display: grid; gap: .75rem; font-size: 1.0625rem; }
 .a-menu__links a { position: relative; justify-self: start; text-decoration: none; }
 body.is-locked .a-top { color: var(--ink); }

@@ -362,7 +362,75 @@
   let statusResizeHandler = null;
   let menuOpen = false;
   let menuCleanup = null;
+  let shownLang = null;
+
+  // Menu interactions on desktop and tablet (David, 31-oct-2026): 500 ms with cubic-bezier(.45, 0, .1, 1).
+  const MENU_MS = 500;
+  const bezier = (x1, y1, x2, y2) => t => {
+    // Solve x(u) = t by Newton steps, then return y(u).
+    const c = (a, b) => [3 * a, 3 * (b - a) - 3 * a, 1 - 3 * b + 3 * a];
+    const [ax, bx, cx] = c(x1, x2), [ay, by, cy] = c(y1, y2);
+    let u = t;
+    for (let i = 0; i < 8; i++) {
+      const x = ((cx * u + bx) * u + ax) * u - t, d = (3 * cx * u + 2 * bx) * u + ax;
+      if (Math.abs(x) < 1e-5 || !d) break;
+      u -= x / d;
+    }
+    u = Math.min(1, Math.max(0, u));
+    return ((cy * u + by) * u + ay) * u;
+  };
+  const menuEase = bezier(.45, 0, .1, 1);
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let scrollRun = 0;
+  const scrollToY = y => {
+    const from = scrollY, run = ++scrollRun, start = performance.now();
+    if (reducedMotion.matches || Math.abs(y - from) < 2) { scrollTo(0, y); return; }
+    const step = now => {
+      if (run !== scrollRun) return;
+      const p = Math.min(1, (now - start) / MENU_MS);
+      scrollTo(0, from + (y - from) * menuEase(p));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  // A wheel or touch during the scroll hands control back to the person.
+  ['wheel', 'touchstart', 'keydown'].forEach(type => addEventListener(type, () => { scrollRun++; }, { passive: true }));
+
+  // The language pill sits under the active option; after a language change the DOM is rebuilt in the
+  // new state, so replay the slide from the previous language once the toggles are synced.
+  const placeLangPills = () => {
+    const from = shownLang, to = V3.lang;
+    shownLang = to;
+    const groups = [...app.querySelectorAll('.a-lang')];
+    const index = l => (l === 'es' ? 1 : 0);
+    groups.forEach(g => g.style.setProperty('--lang-i', index(to)));
+    if (!from || from === to) return;
+    queueMicrotask(() => groups.forEach(g => {
+      const buttons = [...g.querySelectorAll('[data-set-lang]')];
+      g.classList.add('is-instant');
+      g.style.setProperty('--lang-i', index(from));
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === from)));
+      getComputedStyle(g).transform;
+      buttons.forEach(b => getComputedStyle(b).color);
+      g.classList.remove('is-instant');
+      g.style.setProperty('--lang-i', index(to));
+      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === to)));
+    }));
+  };
   function wire() {
+    placeLangPills();
+    // Header links to a section of the page they are on scroll there instead of jumping.
+    app.querySelectorAll('.a-nav > a[href*="#"]').forEach(a => a.addEventListener('click', e => {
+      const url = new URL(a.href);
+      const page = p => p.replace(/index\.html$/, '');
+      if (page(url.pathname) !== page(location.pathname)) return;
+      const target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+      if (!target) return;
+      e.preventDefault();
+      const offset = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+      scrollToY(Math.round(target.getBoundingClientRect().top + scrollY - offset));
+      history.pushState(null, '', url.hash);
+    }));
     sequenceSamples();
     playHeroOnce();
     // Identify Switch controls in a screen-reader button list without adding visible captions.

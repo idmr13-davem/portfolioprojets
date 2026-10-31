@@ -7,8 +7,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 1392,
-      "sha256": "eeaf1c1719cd251499f5b83524c2a89fa08bd6768093cdd1c31671da56380082"
+      "bytes": 1396,
+      "sha256": "a9ffd488b85890a0f48269d0ec5feeeec36f554c1884938fdad71a37815a1dff"
     },
     {
       "path": "CNAME",
@@ -27,18 +27,18 @@
     },
     {
       "path": "articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html",
-      "bytes": 2783,
-      "sha256": "00e4d5c14bd4a853fb5236529a4fb41d7593653fc374e763b8574eeac3e5f8d9"
+      "bytes": 2787,
+      "sha256": "90a1096a85eaac8761266c66b8109bff2557297b840f392836a0532d766a039b"
     },
     {
       "path": "articles/page-under-work.html",
-      "bytes": 1421,
-      "sha256": "7adcf1d49c46f8cb490815b4634326da6ab8e1d1d4727746f699a7716317e11c"
+      "bytes": 1425,
+      "sha256": "76226ded99bdca63e74db4fad6784a922305f107e0a0e0435dffb992c3777e57"
     },
     {
       "path": "articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html",
-      "bytes": 2743,
-      "sha256": "c18fdaac134fa5fbdfd25387d0631ee975b34f904b32fa0dc22bacef1bbf1c0e"
+      "bytes": 2747,
+      "sha256": "dad93ca61e35e575fe0e816fca70c3ff8be474137eb703205894aaba847bb1fd"
     },
     {
       "path": "assets/Articles/v2/auto-desktop.png",
@@ -792,8 +792,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 2344,
-      "sha256": "eecd2eb999fee6a2c7ce8b71bffe384deea022ed23ab02ab875fb12bf70715c3"
+      "bytes": 2348,
+      "sha256": "37c3f46746501d80246495caa8e0699c05e26669d615f8c6d6657fea9506bc8c"
     },
     {
       "path": "js/analytics.js",
@@ -827,43 +827,43 @@
     },
     {
       "path": "v3/statement/app.js",
-      "bytes": 28259,
-      "sha256": "06aae1d3af2ec0ac7bbf40f767082d45cdd4244eeee23b992471ca8dbf23f50c"
+      "bytes": 31539,
+      "sha256": "38e82fc0bf639352c675ff939fe5d2668d70cb5cba733e5f2f83aa00b3127d6f"
     },
     {
       "path": "v3/statement/styles.css",
-      "bytes": 58061,
-      "sha256": "6877dc0923fd00c02292e760c3b4293866cd15be18f635b5a4c680520a2923cf"
+      "bytes": 59097,
+      "sha256": "8f74d110a3726eff3de2b2f2bab6501566c5bd7abaac99ef21a1eab2add2cdfa"
     },
     {
       "path": "work/cambio-cuentas-paises.html",
-      "bytes": 2558,
-      "sha256": "a0e001a550ce21326b280ba8da8bc4cddf984bba8fbb721c02509dbfebfcce9b"
+      "bytes": 2562,
+      "sha256": "369dea7b10edab64f18735ba67a69da56b370c586fe88c6bb4fc5a6397f0284d"
     },
     {
       "path": "work/menores-mexico.html",
-      "bytes": 2510,
-      "sha256": "0447801a13dbcda10c4975dfa907f9d6f9d06477765c4acd6a19acd61652d61d"
+      "bytes": 2514,
+      "sha256": "172d23efe52d5488eed9b6972d6b930c7916738bdc3ec61325c56a808708be7b"
     },
     {
       "path": "work/motion-design-system.html",
-      "bytes": 2492,
-      "sha256": "8ebdb09bd8839fc2702b6af16503ef578d78ef096c0aa29fe0eef28a4ebf3e03"
+      "bytes": 2496,
+      "sha256": "c90a53ac4bd073155814464834912a40fbce94ed88615b14edd4dd502bd64a67"
     },
     {
       "path": "work/registro-ml.html",
-      "bytes": 2442,
-      "sha256": "281c286c345d7bcc6f34e0f9f53d4b9a6782b53179849d3f29bc54d661dc3044"
+      "bytes": 2446,
+      "sha256": "c160e562e663f9548e7cc9b8f9f203a748d98a5097d990ce111c06372eb040d7"
     },
     {
       "path": "work/ropstar.html",
-      "bytes": 2288,
-      "sha256": "2e925fa8f1036713751571415e891b69e8f5feef9111af36d4f25865fd262afb"
+      "bytes": 2292,
+      "sha256": "49f12bd7cdc410433d999fef1e0dfa5ad5d3f9cd8bbb6548d979b36d5fdbaa66"
     },
     {
       "path": "work/winefast.html",
-      "bytes": 2318,
-      "sha256": "2c8e32ed233b55a60c6a8cf74f4a56b514e5bdcb2e52eb7480e103270f732f08"
+      "bytes": 2322,
+      "sha256": "b7a8866e7b64fe16d5fe6f047df1e443d64a316db9a901403e45051daec8c316"
     }
   ]
 }
