@@ -142,7 +142,7 @@
       } else if (internal && articlePaths[url.pathname] && url.pathname !== location.pathname) {
         name = 'article_select'; details = { article_id: articlePaths[url.pathname] };
       } else if (internal && ['/', '/index.html', location.pathname].includes(url.pathname)) {
-        const sections = { '#main': 'intro', '#about-title': 'about', '#work': 'work', '#craft': 'side_projects', '#blog': 'articles', '#contact': 'contact' };
+        const sections = { '#main': 'intro', '#about-title': 'about', '#work': 'work', '#craft': 'side_projects', '#recommendations': 'recommendations', '#blog': 'articles', '#contact': 'contact' };
         if (!sections[url.hash]) return;
         name = 'navigation_click'; details = { section_id: sections[url.hash] };
       } else return;

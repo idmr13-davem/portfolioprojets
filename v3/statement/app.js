@@ -16,8 +16,16 @@
     aboutHeading: { en: 'Beyond design, my interests include:', es: 'Además del diseño, mis intereses incluyen:' },
     craftAll: { en: 'All craft projects', es: 'Todos los proyectos personales' },
     craftMore: { en: 'Explore more craft', es: 'Más proyectos personales' },
-    based: { en: 'Based in Bogotá - Colombia', es: 'Radicado en Bogotá - Colombia' }
+    based: { en: 'Based in Bogotá - Colombia', es: 'Radicado en Bogotá - Colombia' },
+    recsTrack: { en: 'Recommendations', es: 'Recomendaciones' },
+    recsPrev: { en: 'Previous recommendation', es: 'Recomendación anterior' },
+    recsNext: { en: 'Next recommendation', es: 'Siguiente recomendación' },
+    recsOf: { en: 'of', es: 'de' },
+    recsCarousel: { en: 'carousel', es: 'carrusel' },
+    recsSlide: { en: 'slide', es: 'diapositiva' }
   };
+  // Mute / Small / Arrow geometry from assets/Home/v2/button-arrow-state-3.svg.
+  const chevron = `<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><g transform="rotate(-90 10 10)"><path d="M16.6096 6.11423C16.83 5.89422 17.2945 6.00166 17.6467 6.35366C17.9989 6.70583 18.1056 7.16942 17.8855 7.38972L11.7757 13.4977H11.7721C11.4376 13.8079 10.9921 14 10.4999 14C10.0075 14 9.56144 13.8081 9.22694 13.4977H9.22401L3.11423 7.39045C2.89427 7.17005 3.00156 6.70578 3.35373 6.35366C3.70598 6.00159 4.17039 5.895 4.39082 6.11496L10.4991 12.2215L16.6096 6.11423Z" fill="currentColor"/></g></svg>`;
 
   const header = () => `
     <a class="v3-skip" href="#main">${ui('skip')}</a>
@@ -113,6 +121,28 @@
             <figure class="a-craft__art" role="img" aria-label="${esc(t(p.alt))}">${p.screens.map((src, n) => `<img class="a-craft__screen a-craft__screen--${['main', 'left', 'right'][n]}" src="${asset(src)}" alt="" loading="lazy" width="${n ? 388 : 462}" height="${n ? 840 : 1000}">`).join('')}</figure>
             <a class="a-btn" href="${p.case ? href.case(C.cases[p.case]) : href.article('page-under-work')}">${esc(t(S.craftCta))}<span class="sr-only">: ${esc(t(p.title))}</span></a>
           </article>`).join('')}
+        </div>
+      </section>
+
+      <section class="a-recs" id="recommendations" aria-labelledby="recs-title" aria-roledescription="${esc(t(copy.recsCarousel))}">
+        <h2 class="a-recs__title" id="recs-title" data-reveal>${esc(t(S.recommendationsTitle))}</h2>
+        <div class="a-recs__carousel" data-reveal>
+          <ul class="a-recs__track" role="list" tabindex="0" aria-label="${esc(t(copy.recsTrack))}" data-recs-track>
+            ${S.recommendations.map((r, n, all) => `
+            <li class="a-rec" aria-roledescription="${esc(t(copy.recsSlide))}" aria-label="${n + 1} ${esc(t(copy.recsOf))} ${all.length}">
+              <figure>
+                <blockquote lang="${r.lang}">${r.text.map(p => `<p>${esc(p)}</p>`).join('')}</blockquote>
+                <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="92" height="92"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)}</span></span></figcaption>
+              </figure>
+            </li>`).join('')}
+          </ul>
+          <div class="a-recs__controls">
+            <div class="a-recs__arrows">
+              <button class="a-recs__arrow a-recs__arrow--prev" type="button" data-recs-prev aria-label="${esc(t(copy.recsPrev))}" disabled>${chevron}</button>
+              <button class="a-recs__arrow" type="button" data-recs-next aria-label="${esc(t(copy.recsNext))}">${chevron}</button>
+            </div>
+            <p class="a-recs__note">${esc(t(S.recommendationsNote))}</p>
+          </div>
         </div>
       </section>
 
@@ -417,8 +447,65 @@
       buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.setLang === to)));
     }));
   };
+  // Recommendations (Figma 5280:92062): a bounded carousel. Each arrow moves one card with the menu's
+  // 500 ms curve; swipe, trackpad and arrow keys on the focused track also scroll it. The arrows switch
+  // off at the ends.
+  let recsCleanup = null;
+  function recsCarousel() {
+    recsCleanup?.();
+    recsCleanup = null;
+    const track = app.querySelector('[data-recs-track]');
+    if (!track) return;
+    const prev = app.querySelector('[data-recs-prev]');
+    const next = app.querySelector('[data-recs-next]');
+    const cards = [...track.querySelectorAll('.a-rec')];
+    const ends = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      prev.disabled = track.scrollLeft <= 1;
+      next.disabled = track.scrollLeft >= max - 1;
+      const viewport = track.getBoundingClientRect();
+      cards.forEach(card => {
+        const bounds = card.getBoundingClientRect();
+        const hidden = bounds.right <= viewport.left + 1 || bounds.left >= viewport.right - 1;
+        card.inert = hidden;
+        card.setAttribute('aria-hidden', String(hidden));
+      });
+    };
+    let run = 0;
+    const cancel = () => { run++; track.classList.remove('is-sliding'); };
+    const slide = dir => {
+      cancel();
+      const card = track.querySelector('.a-rec');
+      const step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 0);
+      const from = track.scrollLeft;
+      const to = Math.max(0, Math.min(track.scrollWidth - track.clientWidth, Math.round((from + dir * step) / step) * step));
+      const id = ++run;
+      if (reducedMotion.matches) { track.scrollLeft = to; ends(); return; }
+      // Snap is held off while the script moves the track, or the browser would fight each frame.
+      track.classList.add('is-sliding');
+      const start = performance.now();
+      const frame = now => {
+        if (id !== run) return;
+        const p = Math.min(1, (now - start) / MENU_MS);
+        track.scrollLeft = from + (to - from) * menuEase(p);
+        if (p < 1) requestAnimationFrame(frame);
+        else track.classList.remove('is-sliding');
+      };
+      requestAnimationFrame(frame);
+    };
+    prev.addEventListener('click', () => slide(-1));
+    next.addEventListener('click', () => slide(1));
+    track.addEventListener('scroll', ends, { passive: true });
+    // A swipe or wheel during a slide hands the track back to the person.
+    ['wheel', 'touchstart', 'keydown'].forEach(type => track.addEventListener(type, cancel, { passive: true }));
+    addEventListener('resize', ends);
+    ends();
+    recsCleanup = () => { cancel(); removeEventListener('resize', ends); };
+  }
+
   function wire() {
     placeLangPills();
+    recsCarousel();
     // Header links to a section of the page they are on scroll there instead of jumping.
     app.querySelectorAll('.a-nav > a[href*="#"]').forEach(a => a.addEventListener('click', e => {
       const url = new URL(a.href);

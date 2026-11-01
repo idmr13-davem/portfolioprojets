@@ -127,6 +127,37 @@ window.V3_CONTENT = {
    "en": "See proposal",
    "es": "Ver propuesta"
   },
+  "recommendationsTitle": {
+   "en": "In their words",
+   "es": "En sus palabras"
+  },
+  "recommendationsNote": {
+   "en": "Original recommendations in Spanish, from LinkedIn.",
+   "es": "Recomendaciones originales de LinkedIn."
+  },
+  "recommendations": [
+   {
+    "name": "Maria Alejandra Camargo",
+    "role": "UX Designer · Mercado Libre",
+    "avatar": "assets/Home/v3/recommendations/maria.png",
+    "lang": "es",
+    "text": ["Tuve la oportunidad de trabajar junto a Dave durante 2 años y es un profesional sumamente dedicado y estructurado. Su atención al detalle y la calidad excepcional de sus entregables fueron clave para elevar la vara en el diseño y lograr el pixel perfect en cada entregable. Es evidente la pasión que siente por su trabajo, lo que además lo convierte en un excelente compañero que siempre impulsa a los demás a mejorar."]
+   },
+   {
+    "name": "Luz Orsatti",
+    "role": "Sr UX Designer · Mercado Libre",
+    "avatar": "assets/Home/v3/recommendations/luz.png",
+    "lang": "es",
+    "text": ["Tuve la suerte de trabajar con Dave en el mismo equipo y destaco su compañerismo y compromiso. Siempre dispuesto a ayudar al resto y a compartir sus aprendizajes.", "Dave es una persona muy responsable y dedicada, que se destaca por la prolijidad de sus entregables y sus conocimientos técnicos. Tiene muy buena predisposición para aprender, explorar nuevas herramientas y enfrentar nuevos desafíos. Creo que tiene mucho potencial como diseñador y que su interés por seguir creciendo y desarrollándose profesionalmente es una gran fortaleza."]
+   },
+   {
+    "name": "Cesar Fabian Sanabria",
+    "role": "Project Manager · Mercado Libre",
+    "avatar": "assets/Home/v3/recommendations/cesar.png",
+    "lang": "es",
+    "text": ["Coincidí con David en Mercado Libre y, aunque no trabajamos juntos en un proyecto directo, tuve la oportunidad de conversar con él con frecuencia y ver de cerca cómo trabaja. Siempre me pareció un profesional responsable, comprometido y con muy buena disposición para colaborar y ayudar a otros. Se nota su dedicación y las ganas de hacer las cosas bien. Es una persona con quien da gusto trabajar y con quien se puede contar. Lo recomiendo con total confianza."]
+   }
+  ],
   "blogTitle": {
    "en": "Personal blog",
    "es": "Blog personal"

@@ -442,6 +442,45 @@ body.is-locked .a-top { color: var(--ink); }
 .a-contact .a-contact__note { max-width: none; }
 .a-about__close { grid-column: 7 / span 5; display: grid; gap: 10px; }
 .a-about__cv { color: var(--text-accent-primary); }
+/* Recommendations (Figma 5280:92062, David 31-oct-2026): heading and carousel on columns 2–11 (content-inset-wide).
+   Cards are 6 columns on desktop (two in view), the whole content width below 1024; every card takes the
+   tallest one's height, with the person pinned to the bottom. Arrows are the library Mute / Small / Arrow
+   button (36 px, with a 44 px hit area). */
+.a-recs { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--space-l); padding: var(--space-mega) var(--margin); color: var(--ink); }
+.a-recs__title { grid-column: 2 / span 10; font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
+.a-recs__carousel { grid-column: 2 / span 10; display: grid; gap: var(--space-l); min-width: 0; }
+.a-recs__track { display: flex; gap: var(--gutter); margin: 0; padding: 0; list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.a-recs__track::-webkit-scrollbar { display: none; }
+.a-recs__track.is-sliding { scroll-snap-type: none; }
+.a-recs__track:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.a-rec { flex: 0 0 calc((100% - var(--gutter)) / 2); display: flex; scroll-snap-align: start; }
+.a-rec figure { flex: 1; display: flex; flex-direction: column; justify-content: space-between; margin: 0; padding: var(--space-m); border-radius: var(--radius-m); background: var(--surface); }
+.a-rec blockquote { margin: 0; padding-bottom: var(--space-l); font-size: var(--step-body); line-height: 1.5; color: var(--ink); }
+.a-rec blockquote p { max-width: none; margin: 0; }
+.a-rec blockquote::before { content: '\201C'; display: block; margin-bottom: var(--space-s); color: var(--text-accent-primary); font-size: 1.75rem; line-height: 2.25rem; font-weight: 700; }
+.a-rec figcaption { display: flex; align-items: center; gap: var(--space-s); }
+.a-rec figcaption img { flex: none; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: none; }
+.a-rec figcaption > span { display: grid; gap: 2px; }
+.a-rec figcaption strong { font-size: 1.1875rem; line-height: 1.2; font-weight: 700; }
+.a-rec figcaption span span { color: var(--muted); font-size: .9375rem; }
+.a-recs__controls { display: flex; align-items: center; gap: var(--space-m); }
+.a-recs__arrows { display: flex; flex: none; gap: var(--space-xs); }
+.a-recs__arrow { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius-control); background: var(--interactive-secondary-idle); color: var(--interactive-primary-idle); border: 1px solid var(--stroke-secondary); transition: transform var(--t-press) var(--ease-out), opacity var(--t-hover) ease; }
+.a-recs__arrow::after { content: ''; position: absolute; inset: -5px; }
+.a-recs__arrow--prev svg { transform: scaleX(-1); }
+.a-recs__arrow:hover:not(:disabled) { background: var(--interactive-secondary-hover); color: var(--interactive-primary-hover); }
+.a-recs__arrow:active:not(:disabled) { transform: scale(.96); background: var(--interactive-secondary-clic); color: var(--interactive-primary-clic); }
+.a-recs__arrow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.a-recs__arrow:disabled { opacity: .4; cursor: default; }
+.a-recs__note { font-size: var(--step-small); color: var(--muted); }
+@media (max-width: 1023px) {
+  .a-rec { flex-basis: 100%; }
+  .a-rec figcaption img { width: 56px; height: 56px; }
+}
+@media (max-width: 767px) {
+  .a-recs__title, .a-recs__carousel { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) { .a-recs__arrow { transition: none; } }
 /* Blog on columns 2–11 over Background/Primary; rows: thumbnail, text and reading time on 1 / 8 / 1 columns.
    Contact stays on columns 3–10 with Hero (160) above and below; Mega (120) below 1024. */
 .a-blog { padding-block: calc(var(--section) / 2); }
