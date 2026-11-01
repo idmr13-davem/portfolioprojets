@@ -132,7 +132,7 @@
             <li class="a-rec" aria-roledescription="${esc(t(copy.recsSlide))}" aria-label="${n + 1} ${esc(t(copy.recsOf))} ${all.length}">
               <figure>
                 <blockquote lang="${r.lang}">${r.text.map(p => `<p>${esc(p)}</p>`).join('')}</blockquote>
-                <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="92" height="92"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)}</span></span></figcaption>
+                <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="256" height="256"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)}</span></span></figcaption>
               </figure>
             </li>`).join('')}
           </ul>
