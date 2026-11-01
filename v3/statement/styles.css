@@ -449,7 +449,9 @@ body.is-locked .a-top { color: var(--ink); }
 .a-recs { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--space-l); padding: var(--space-mega) var(--margin); color: var(--ink); }
 .a-recs__title { grid-column: 2 / span 10; font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
 .a-recs__carousel { grid-column: 2 / span 10; display: grid; gap: var(--space-l); min-width: 0; }
-.a-recs__track { display: flex; gap: var(--gutter); margin: 0; padding: 0; list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
+/* The track bleeds to the page edges so the neighbouring cards show cut (Figma 5280:92062). recsCarousel()
+   sets --recs-inset-start/end to the gap between the carousel and the viewport; padding keeps card 1 on column 2. */
+.a-recs .a-recs__track { display: flex; gap: var(--gutter); margin: 0 calc(-1 * var(--recs-inset-end, 0px)) 0 calc(-1 * var(--recs-inset-start, 0px)); padding: 0 var(--recs-inset-end, 0px) 0 var(--recs-inset-start, 0px); scroll-padding-inline: var(--recs-inset-start, 0px) var(--recs-inset-end, 0px); list-style: none; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .a-recs__track::-webkit-scrollbar { display: none; }
 .a-recs__track.is-sliding { scroll-snap-type: none; }
 .a-recs__track:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -463,6 +465,8 @@ body.is-locked .a-top { color: var(--ink); }
 .a-rec figcaption > span { display: grid; gap: 2px; }
 .a-rec figcaption strong { font-size: 1.1875rem; line-height: 1.2; font-weight: 700; }
 .a-rec figcaption span span { color: var(--muted); font-size: .9375rem; }
+.a-rec__country { white-space: nowrap; }
+.a-rec figcaption .a-rec__country img { display: inline-block; width: 22px; height: 16px; margin: -1px 5px 0 -1px; vertical-align: middle; border-radius: 0; background: none; }
 .a-recs__controls { display: flex; align-items: center; gap: var(--space-m); }
 .a-recs__arrows { display: flex; flex: none; gap: var(--space-xs); }
 .a-recs__arrow { position: relative; display: grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius-control); background: var(--interactive-secondary-idle); color: var(--interactive-primary-idle); border: 1px solid var(--stroke-secondary); transition: transform var(--t-press) var(--ease-out), opacity var(--t-hover) ease; }

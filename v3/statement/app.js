@@ -132,7 +132,7 @@
             <li class="a-rec" aria-roledescription="${esc(t(copy.recsSlide))}" aria-label="${n + 1} ${esc(t(copy.recsOf))} ${all.length}">
               <figure>
                 <blockquote lang="${r.lang}">${r.text.map(p => `<p>${esc(p)}</p>`).join('')}</blockquote>
-                <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="256" height="256"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)}</span></span></figcaption>
+                <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="256" height="256"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)} · <span class="a-rec__country"><img src="${asset(r.flag)}" alt="" width="22" height="16">${esc(t(r.country))}</span></span></span></figcaption>
               </figure>
             </li>`).join('')}
           </ul>
@@ -459,6 +459,13 @@
     const prev = app.querySelector('[data-recs-prev]');
     const next = app.querySelector('[data-recs-next]');
     const cards = [...track.querySelectorAll('.a-rec')];
+    const carousel = track.parentElement;
+    // Inset from the carousel (columns 2–11, or 1–12 on phones) to each viewport edge, for the bleed.
+    const fit = () => {
+      const box = carousel.getBoundingClientRect();
+      track.style.setProperty('--recs-inset-start', `${box.left}px`);
+      track.style.setProperty('--recs-inset-end', `${document.documentElement.clientWidth - box.right}px`);
+    };
     const ends = () => {
       const max = track.scrollWidth - track.clientWidth;
       prev.disabled = track.scrollLeft <= 1;
@@ -498,9 +505,10 @@
     track.addEventListener('scroll', ends, { passive: true });
     // A swipe or wheel during a slide hands the track back to the person.
     ['wheel', 'touchstart', 'keydown'].forEach(type => track.addEventListener(type, cancel, { passive: true }));
-    addEventListener('resize', ends);
-    ends();
-    recsCleanup = () => { cancel(); removeEventListener('resize', ends); };
+    const resize = () => { fit(); ends(); };
+    addEventListener('resize', resize);
+    resize();
+    recsCleanup = () => { cancel(); removeEventListener('resize', resize); };
   }
 
   function wire() {
