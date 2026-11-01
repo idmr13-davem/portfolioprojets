@@ -489,6 +489,67 @@ body.is-locked .a-top { color: var(--ink); }
   .a-recs__title, .a-recs__carousel { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) { .a-recs__arrow { transition: none; } }
+/* Why design engineering (Figma 5437:16664, 1-nov-2026): title and intro on columns 2–11, lead and body
+   side by side on desktop, stacked below 1024. The contribution graph card sits on Background/Deep; empty days
+   use Surface/Main, levels 1–3 the Brand logo tints and level 4 the accent. Tablet keeps the last 26 weeks and
+   phones the last 17, with the matching date range. */
+.a-gh { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--space-l); padding: var(--space-mega) var(--margin); color: var(--ink); }
+.a-gh__title, .a-gh__intro, .a-gh__card { grid-column: 2 / span 10; }
+.a-gh__title { font-size: var(--step-head); line-height: .95; letter-spacing: -0.035em; }
+.a-gh__intro { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--space-l); }
+.a-gh__lead { grid-column: 1 / span 5; max-width: none; font-size: var(--step-lead); font-weight: 400; line-height: 1.25; }
+.a-gh__more { grid-column: 6 / span 5; display: grid; justify-items: start; align-content: start; gap: var(--space-l); }
+.a-gh__more p { max-width: none; font-size: var(--step-body); line-height: 1.5; color: var(--muted); }
+.a-gh .a-btn { width: auto; }
+.a-gh__card { display: grid; gap: var(--space-m); margin: 0; padding: var(--space-l); border-radius: var(--radius-m); background: var(--surface); }
+.a-gh__head, .a-gh__foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-xs) var(--space-m); }
+.a-gh__total { max-width: none; font-size: 1.1875rem; line-height: 1.3; font-weight: 700; }
+.a-gh__range, .a-gh__foot { font-size: var(--step-small); color: var(--muted); }
+.a-gh__range--tablet, .a-gh__range--mobile, .a-gh__m--tab, .a-gh__m--mob { display: none; }
+.a-gh__weeks { --weeks: 53; display: grid; grid-template-columns: repeat(var(--weeks), minmax(0, 1fr)); gap: var(--space-nano); }
+.a-gh__week { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-nano); min-width: 0; }
+.a-gh__m { height: 1.25rem; margin-bottom: var(--space-xs); overflow: visible; white-space: nowrap; font-size: var(--step-small); line-height: 1.25rem; color: var(--muted); }
+.a-gh__day { display: block; aspect-ratio: 1; border-radius: var(--space-micro); background: var(--field); }
+.a-gh__day[data-l="1"] { background: var(--brand-logo-main-50pct); }
+.a-gh__day[data-l="2"] { background: var(--brand-logo-main-75pct); }
+.a-gh__day[data-l="3"] { background: var(--brand-logo-main-100pct); }
+.a-gh__day[data-l="4"] { background: var(--accent); }
+.a-gh__day[data-future] { visibility: hidden; }
+.a-gh__legend { display: inline-flex; align-items: center; gap: var(--space-nano); }
+.a-gh__legend .a-gh__day { width: 14px; }
+.a-gh__legend .a-gh__day:first-child { margin-left: var(--space-xxs); }
+.a-gh__legend .a-gh__day:last-child { margin-right: var(--space-xxs); }
+@media (max-width: 1023px) {
+  .a-gh__lead, .a-gh__more { grid-column: 1 / -1; }
+  .a-gh__weeks { --weeks: 26; }
+  .a-gh__week.is-before-tab { display: none; }
+  .a-gh__range--full { display: none; }
+  .a-gh__range--tablet, .a-gh__m--tab { display: block; }
+  .a-gh__m--not-tab { display: none; }
+}
+@media (max-width: 767px) {
+  .a-gh__title, .a-gh__intro, .a-gh__card { grid-column: 1 / -1; }
+  .a-gh__card { padding: var(--space-m) var(--space-s); }
+  .a-gh__head, .a-gh__foot { flex-direction: column; align-items: flex-start; }
+  .a-gh__weeks { --weeks: 17; }
+  .a-gh__week.is-before-mob { display: none; }
+  .a-gh__range--tablet, .a-gh__m--tab { display: none; }
+  .a-gh__range--mobile, .a-gh__m--mob { display: block; }
+  .a-gh__m--not-mob { display: none; }
+}
+/* Facts photo carousel: the photos share one cell of the 4:5 frame; photosCarousel() raises the next one
+   and lets it slide in from the right edge while it fades in (500 ms, menu curve). */
+.a-photos { display: grid; isolation: isolate; }
+.a-photos-wrap { position: relative; }
+.a-facts__chip .a-photos { margin: 0; }
+/* Pause/Play sits in the photo's bottom-right corner, above the stacked photos; hidden with reduced motion,
+   where nothing moves. */
+.a-photos__toggle { z-index: 1; }
+.a-photos__toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.a-photos img { grid-area: 1 / 1; opacity: 0; transform: translateX(100%); }
+.a-photos img.is-shown { opacity: 1; transform: none; transition: transform 500ms cubic-bezier(.45, 0, .1, 1), opacity 500ms cubic-bezier(.45, 0, .1, 1); }
+.a-photos img.is-reset { transition: none; }
+@media (prefers-reduced-motion: reduce) { .a-photos img.is-shown { transition: none; } .a-photos__toggle { display: none; } }
 /* Blog on columns 2–11 over Background/Primary; rows: thumbnail, text and reading time on 1 / 8 / 1 columns.
    Contact stays on columns 3–10 with Hero (160) above and below; Mega (120) below 1024. */
 .a-blog { padding-block: calc(var(--section) / 2); }

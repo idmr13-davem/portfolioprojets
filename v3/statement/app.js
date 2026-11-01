@@ -22,7 +22,26 @@
     recsNext: { en: 'Next recommendation', es: 'Siguiente recomendación' },
     recsOf: { en: 'of', es: 'de' },
     recsCarousel: { en: 'carousel', es: 'carrusel' },
-    recsSlide: { en: 'slide', es: 'diapositiva' }
+    recsSlide: { en: 'slide', es: 'diapositiva' },
+    photos: { en: 'photos', es: 'fotos' },
+    months: { en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], es: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'] }
+  };
+  // GitHub contribution graph (Figma 5437:16664): one column per week, Sunday to Saturday; levels 0–4, x = future.
+  // Tablet shows the last 26 weeks and phones the last 17, so the first visible week gets its month label there.
+  const TAB_WEEKS = 26, MOB_WEEKS = 17;
+  const ghGraph = g => {
+    const weeks = Math.ceil(g.levels.length / 7), start = new Date(`${g.start}T00:00:00`), months = t(copy.months);
+    let prev = -1;
+    return Array.from({ length: weeks }, (_, w) => {
+      const day = new Date(start); day.setDate(day.getDate() + w * 7);
+      const m = day.getMonth(), label = m !== prev ? months[m] : '';
+      prev = m;
+      const cls = [w < weeks - TAB_WEEKS && 'is-before-tab', w < weeks - MOB_WEEKS && 'is-before-mob'].filter(Boolean).join(' ');
+      const win = label ? '' : w === weeks - TAB_WEEKS ? 'tab' : w === weeks - MOB_WEEKS ? 'mob' : '';
+      const windowLabel = win ? `<span class="a-gh__m a-gh__m--${win}">${months[m]}</span>` : '';
+      const days = [...g.levels.slice(w * 7, w * 7 + 7)].map(l => `<span class="a-gh__day"${l === 'x' ? ' data-future' : ` data-l="${l}"`}></span>`).join('');
+      return `<div class="a-gh__week${cls ? ` ${cls}` : ''}"><span class="a-gh__m${win ? ` a-gh__m--not-${win}` : ''}">${label}</span>${windowLabel}${days}</div>`;
+    }).join('');
   };
   // Mute / Small / Arrow geometry from assets/Home/v2/button-arrow-state-3.svg.
   const chevron = `<svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><g transform="rotate(-90 10 10)"><path d="M16.6096 6.11423C16.83 5.89422 17.2945 6.00166 17.6467 6.35366C17.9989 6.70583 18.1056 7.16942 17.8855 7.38972L11.7757 13.4977H11.7721C11.4376 13.8079 10.9921 14 10.4999 14C10.0075 14 9.56144 13.8081 9.22694 13.4977H9.22401L3.11423 7.39045C2.89427 7.17005 3.00156 6.70578 3.35373 6.35366C3.70598 6.00159 4.17039 5.895 4.39082 6.11496L10.4991 12.2215L16.6096 6.11423Z" fill="currentColor"/></g></svg>`;
@@ -89,7 +108,10 @@
         <div class="a-facts__nums">
           ${numeric.map(([, n, rest]) => `<div class="a-fact" data-reveal><p class="a-fact__n">${n}</p><p class="a-fact__t">${esc(rest)}</p></div>`).join('')}
         </div>
-        <figure class="a-facts__chip" data-reveal><img src="${asset(S.portrait)}" alt="David Montealegre" loading="lazy" width="600" height="750"></figure>
+        <div class="a-facts__chip a-photos-wrap${photosPaused ? '' : ' is-playing'}" data-reveal data-photos-wrap>
+          <figure class="a-photos" data-photos role="img" aria-label="David Montealegre">${S.photos.map((src, n) => `<img${n ? '' : ' class="is-shown"'} src="${asset(src)}" alt="" loading="lazy" width="800" height="1000">`).join('')}</figure>
+          <button class="v3-play a-photos__toggle" type="button" data-photos-toggle><span class="v3-play__play">${esc(ui('play'))}</span><span class="v3-play__pause">${esc(ui('pause'))}</span><span class="sr-only"> ${esc(t(copy.photos))}</span></button>
+        </div>
         <ul class="a-facts__list">${plain.map(f => `<li data-reveal>${esc(f)}</li>`).join('')}</ul>
       </section>
 
@@ -122,6 +144,28 @@
             <a class="a-btn" href="${p.case ? href.case(C.cases[p.case]) : href.article('page-under-work')}">${esc(t(S.craftCta))}<span class="sr-only">: ${esc(t(p.title))}</span></a>
           </article>`).join('')}
         </div>
+      </section>
+
+      <section class="a-gh" id="github" aria-labelledby="gh-title">
+        <h2 class="a-gh__title" id="gh-title" data-reveal>${esc(t(S.github.title))}</h2>
+        <div class="a-gh__intro" data-reveal>
+          <p class="a-gh__lead">${esc(t(S.github.lead))}</p>
+          <div class="a-gh__more">
+            <p>${esc(t(S.github.body))}</p>
+            <a class="a-btn" href="${S.github.link}" target="_blank" rel="noopener noreferrer">${esc(t(S.github.cta))}</a>
+          </div>
+        </div>
+        <figure class="a-gh__card" data-reveal>
+          <div class="a-gh__head">
+            <p class="a-gh__total">${esc(t(S.github.total))}</p>
+            <p class="a-gh__range">${['full', 'tablet', 'mobile'].map(k => `<span class="a-gh__range--${k}">${esc(t(S.github.range[k]))}</span>`).join('')}</p>
+          </div>
+          <div class="a-gh__graph" role="img" aria-label="${esc(`${t(S.github.total)}, ${t(S.github.range.full)}`)}"><div class="a-gh__weeks" aria-hidden="true">${ghGraph(S.github)}</div></div>
+          <figcaption class="a-gh__foot">
+            <span>${esc(t(S.github.source))}</span>
+            <span class="a-gh__legend" aria-hidden="true">${esc(t(S.github.less))}${[0, 1, 2, 3, 4].map(l => `<span class="a-gh__day" data-l="${l}"></span>`).join('')}${esc(t(S.github.more))}</span>
+          </figcaption>
+        </figure>
       </section>
 
       <section class="a-recs" id="recommendations" aria-labelledby="recs-title" aria-roledescription="${esc(t(copy.recsCarousel))}">
@@ -511,9 +555,70 @@
     recsCleanup = () => { cancel(); removeEventListener('resize', resize); };
   }
 
+  // Facts photo carousel (Figma 5444:18990, 1-nov-2026): every 3 s the next photo slides in from the right edge
+  // of the frame and fades in over the one before, 500 ms on the menu curve. It runs only while the frame is
+  // on screen and the tab is visible, pauses under the pointer and stays on the first photo with reduced motion.
+  // The Pause/Play button (Mute style, WCAG 2.2.2) stops it for keyboard and touch too; the choice survives a
+  // language change.
+  const PHOTO_MS = 3000;
+  let photosCleanup = null, photosPaused = false;
+  function photosCarousel() {
+    photosCleanup?.();
+    photosCleanup = null;
+    const wrap = app.querySelector('[data-photos-wrap]'), box = wrap?.querySelector('[data-photos]');
+    const toggle = wrap?.querySelector('[data-photos-toggle]');
+    const imgs = box ? [...box.querySelectorAll('img')] : [];
+    if (imgs.length < 2) return;
+    let cur = 0, z = 1, timer = 0, settle = 0, inView = false, hover = false;
+    const advance = () => {
+      const next = imgs[(cur + 1) % imgs.length];
+      if (!next.complete || !next.naturalWidth) return;
+      cur = (cur + 1) % imgs.length;
+      next.classList.add('is-reset');
+      next.classList.remove('is-shown');
+      void next.offsetWidth;
+      next.classList.remove('is-reset');
+      next.style.zIndex = ++z;
+      next.classList.add('is-shown');
+      clearTimeout(settle);
+      settle = setTimeout(() => imgs.forEach((img, i) => { if (i !== cur) img.classList.remove('is-shown'); }), MENU_MS);
+    };
+    const update = () => {
+      if (reducedMotion.matches) {
+        clearTimeout(settle);
+        cur = 0; z = 1;
+        imgs.forEach((img, i) => {
+          img.classList.toggle('is-shown', i === 0);
+          img.style.zIndex = i === 0 ? '1' : '';
+        });
+      }
+      const run = inView && !hover && !photosPaused && !document.hidden && !reducedMotion.matches;
+      if (run && !timer) timer = setInterval(advance, PHOTO_MS);
+      if (!run && timer) { clearInterval(timer); timer = 0; }
+    };
+    const io = new IntersectionObserver(([e]) => { inView = e.isIntersecting; update(); });
+    io.observe(box);
+    const enter = () => { hover = true; update(); }, leave = () => { hover = false; update(); };
+    const press = () => { photosPaused = !photosPaused; wrap.classList.toggle('is-playing', !photosPaused); update(); };
+    wrap.addEventListener('pointerenter', enter);
+    wrap.addEventListener('pointerleave', leave);
+    toggle.addEventListener('click', press);
+    document.addEventListener('visibilitychange', update);
+    reducedMotion.addEventListener('change', update);
+    photosCleanup = () => {
+      clearInterval(timer); clearTimeout(settle); io.disconnect();
+      wrap.removeEventListener('pointerenter', enter);
+      wrap.removeEventListener('pointerleave', leave);
+      toggle.removeEventListener('click', press);
+      document.removeEventListener('visibilitychange', update);
+      reducedMotion.removeEventListener('change', update);
+    };
+  }
+
   function wire() {
     placeLangPills();
     recsCarousel();
+    photosCarousel();
     // Header links to a section of the page they are on scroll there instead of jumping.
     app.querySelectorAll('.a-nav > a[href*="#"]').forEach(a => a.addEventListener('click', e => {
       const url = new URL(a.href);

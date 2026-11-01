@@ -97,6 +97,25 @@ window.V3_CONTENT = {
    "es": "assets/CV/DavidMontealegre-HV-ES.pdf"
   },
   "portrait": "assets/Home/v2/david.png",
+  "photos": ["assets/Home/v3/photos/david-1.jpg", "assets/Home/v3/photos/david-2.jpg", "assets/Home/v3/photos/david-3.jpg", "assets/Home/v3/photos/david-4.jpg"],
+  "github": {
+   "title": { "en": "Why design engineering?", "es": "¿Por qué design engineering?" },
+   "lead": { "en": "I believe the future of design goes beyond static screens in Figma. That's why I'm moving from product design toward design engineering: designing interfaces and building them in code.", "es": "Creo que el futuro del diseño va más allá de pantallas estáticas en Figma. Por eso estoy pasando del diseño de producto al design engineering: diseñar interfaces y construirlas en código." },
+   "body": { "en": "It started with a small experiment: this portfolio. I used it to learn Git and GitHub, and built the site with AI, one commit at a time. Working in the same tools as developers showed me how much closer we can collaborate, so I now use this workflow in other projects too.", "es": "Todo empezó con un experimento pequeño: este portafolio. Lo usé para aprender Git y GitHub, y construí el sitio con IA, un commit a la vez. Trabajar con las mismas herramientas que los desarrolladores me mostró lo mucho que podemos acercarnos al colaborar, así que ahora uso este flujo de trabajo también en otros proyectos." },
+   "cta": { "en": "View my GitHub profile", "es": "Ver mi perfil de GitHub" },
+   "link": "https://github.com/idmr13-davem",
+   "total": { "en": "104 contributions in the last year", "es": "104 contribuciones en el último año" },
+   "range": {
+    "full": { "en": "Nov 2, 2025 – Nov 1, 2026", "es": "2 nov 2025 – 1 nov 2026" },
+    "tablet": { "en": "May 10 – Nov 1, 2026", "es": "10 may – 1 nov 2026" },
+    "mobile": { "en": "Jul 12 – Nov 1, 2026", "es": "12 jul – 1 nov 2026" }
+   },
+   "source": { "en": "Public and private repositories · github.com/idmr13-davem", "es": "Repositorios públicos y privados · github.com/idmr13-davem" },
+   "less": { "en": "Less", "es": "Menos" },
+   "more": { "en": "More", "es": "Más" },
+   "start": "2025-11-02",
+   "levels": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020100000400000103021200130210000100000000020000000100000000000000000000000004100000000000100200432000110040xxxxxx"
+  },
   "workTitle": {
    "en": "Case studies",
    "es": "Casos de estudio"
