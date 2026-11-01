@@ -131,7 +131,7 @@
             ${S.recommendations.map((r, n, all) => `
             <li class="a-rec" aria-roledescription="${esc(t(copy.recsSlide))}" aria-label="${n + 1} ${esc(t(copy.recsOf))} ${all.length}">
               <figure>
-                <blockquote lang="${r.lang}">${r.text.map(p => `<p>${esc(p)}</p>`).join('')}</blockquote>
+                <blockquote>${t(r.text).map(p => `<p>${esc(p)}</p>`).join('')}</blockquote>
                 <figcaption><img src="${asset(r.avatar)}" alt="" loading="lazy" width="256" height="256"><span><strong>${esc(r.name)}</strong><span>${esc(r.role)} · <span class="a-rec__country"><img src="${asset(r.flag)}" alt="" width="22" height="16">${esc(t(r.country))}</span></span></span></figcaption>
               </figure>
             </li>`).join('')}
@@ -141,7 +141,7 @@
               <button class="a-recs__arrow a-recs__arrow--prev" type="button" data-recs-prev aria-label="${esc(t(copy.recsPrev))}" disabled>${chevron}</button>
               <button class="a-recs__arrow" type="button" data-recs-next aria-label="${esc(t(copy.recsNext))}">${chevron}</button>
             </div>
-            <p class="a-recs__note">${esc(t(S.recommendationsNote))}</p>
+            <p class="a-recs__note">${esc(t(S.recommendationsNote)).replace('{link}', `<a href="${esc(S.recommendationsLink)}" target="_blank" rel="noopener noreferrer">LinkedIn</a>`)}</p>
           </div>
         </div>
       </section>

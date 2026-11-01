@@ -132,9 +132,10 @@ window.V3_CONTENT = {
    "es": "En sus palabras"
   },
   "recommendationsNote": {
-   "en": "Original recommendations in Spanish, from LinkedIn.",
-   "es": "Recomendaciones originales de LinkedIn."
+   "en": "Translated from the original Spanish recommendations on {link}.",
+   "es": "Recomendaciones originales de {link}."
   },
+  "recommendationsLink": "https://www.linkedin.com/in/david-montealegre-rey/details/recommendations/?detailScreenTabIndex=0",
   "recommendations": [
    {
     "name": "Maria Alejandra Camargo",
@@ -142,8 +143,10 @@ window.V3_CONTENT = {
     "country": { "en": "Colombia", "es": "Colombia" },
     "flag": "assets/Home/v2/flag-colombia.svg",
     "avatar": "assets/Home/v3/recommendations/maria.jpg",
-    "lang": "es",
-    "text": ["Tuve la oportunidad de trabajar junto a Dave durante 2 años y es un profesional sumamente dedicado y estructurado. Su atención al detalle y la calidad excepcional de sus entregables fueron clave para elevar la vara en el diseño y lograr el pixel perfect en cada entregable. Es evidente la pasión que siente por su trabajo, lo que además lo convierte en un excelente compañero que siempre impulsa a los demás a mejorar."]
+    "text": {
+     "en": ["I had the opportunity to work alongside Dave for 2 years, and he is an extremely dedicated and structured professional. His attention to detail and the exceptional quality of his deliverables were key to raising the bar in design and achieving pixel perfection in every deliverable. His passion for his work is evident, which also makes him an excellent teammate who always pushes others to improve."],
+     "es": ["Tuve la oportunidad de trabajar junto a Dave durante 2 años y es un profesional sumamente dedicado y estructurado. Su atención al detalle y la calidad excepcional de sus entregables fueron clave para elevar la vara en el diseño y lograr el pixel perfect en cada entregable. Es evidente la pasión que siente por su trabajo, lo que además lo convierte en un excelente compañero que siempre impulsa a los demás a mejorar."]
+    }
    },
    {
     "name": "Luz Orsatti",
@@ -151,8 +154,10 @@ window.V3_CONTENT = {
     "country": { "en": "Argentina", "es": "Argentina" },
     "flag": "assets/Home/v2/flag-argentina.svg",
     "avatar": "assets/Home/v3/recommendations/luz.jpg",
-    "lang": "es",
-    "text": ["Tuve la suerte de trabajar con Dave en el mismo equipo y destaco su compañerismo y compromiso. Siempre dispuesto a ayudar al resto y a compartir sus aprendizajes.", "Dave es una persona muy responsable y dedicada, que se destaca por la prolijidad de sus entregables y sus conocimientos técnicos. Tiene muy buena predisposición para aprender, explorar nuevas herramientas y enfrentar nuevos desafíos. Creo que tiene mucho potencial como diseñador y que su interés por seguir creciendo y desarrollándose profesionalmente es una gran fortaleza."]
+    "text": {
+     "en": ["I was lucky to work with Dave on the same team, and I want to highlight his team spirit and commitment. He is always willing to help others and share what he has learned.", "Dave is a very responsible and dedicated person who stands out for the polish of his deliverables and his technical knowledge. He is very open to learning, exploring new tools and taking on new challenges. I believe he has great potential as a designer, and his drive to keep growing and developing professionally is a great strength."],
+     "es": ["Tuve la suerte de trabajar con Dave en el mismo equipo y destaco su compañerismo y compromiso. Siempre dispuesto a ayudar al resto y a compartir sus aprendizajes.", "Dave es una persona muy responsable y dedicada, que se destaca por la prolijidad de sus entregables y sus conocimientos técnicos. Tiene muy buena predisposición para aprender, explorar nuevas herramientas y enfrentar nuevos desafíos. Creo que tiene mucho potencial como diseñador y que su interés por seguir creciendo y desarrollándose profesionalmente es una gran fortaleza."]
+    }
    },
    {
     "name": "Cesar Fabian Sanabria",
@@ -160,8 +165,10 @@ window.V3_CONTENT = {
     "country": { "en": "Colombia", "es": "Colombia" },
     "flag": "assets/Home/v2/flag-colombia.svg",
     "avatar": "assets/Home/v3/recommendations/cesar.jpg",
-    "lang": "es",
-    "text": ["Coincidí con David en Mercado Libre y, aunque no trabajamos juntos en un proyecto directo, tuve la oportunidad de conversar con él con frecuencia y ver de cerca cómo trabaja. Siempre me pareció un profesional responsable, comprometido y con muy buena disposición para colaborar y ayudar a otros. Se nota su dedicación y las ganas de hacer las cosas bien. Es una persona con quien da gusto trabajar y con quien se puede contar. Lo recomiendo con total confianza."]
+    "text": {
+     "en": ["David and I overlapped at Mercado Libre and, although we didn't work together on a project directly, I had the chance to talk with him often and see up close how he works. He always struck me as a responsible, committed professional, very willing to collaborate and help others. His dedication and his desire to do things well are clear. He is someone it's a pleasure to work with and someone you can count on. I recommend him with complete confidence."],
+     "es": ["Coincidí con David en Mercado Libre y, aunque no trabajamos juntos en un proyecto directo, tuve la oportunidad de conversar con él con frecuencia y ver de cerca cómo trabaja. Siempre me pareció un profesional responsable, comprometido y con muy buena disposición para colaborar y ayudar a otros. Se nota su dedicación y las ganas de hacer las cosas bien. Es una persona con quien da gusto trabajar y con quien se puede contar. Lo recomiendo con total confianza."]
+    }
    }
   ],
   "blogTitle": {

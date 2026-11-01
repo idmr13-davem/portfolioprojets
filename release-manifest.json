@@ -7,8 +7,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 1432,
-      "sha256": "3dc91c9e38aa46135e965454b9be0c3ba68843ee91eebaa6e75c912bc3834ec8"
+      "bytes": 1419,
+      "sha256": "fd4ce577b89d2fcaff78343aa7608562c17b0fbe8f8dc18de32b48ca8c6ef1b5"
     },
     {
       "path": "CNAME",
@@ -27,18 +27,18 @@
     },
     {
       "path": "articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html",
-      "bytes": 2823,
-      "sha256": "a7b7ab9daa10d5796f8a0339dfcec6947ad54d9a7dc6894d0bfbd6bffb9c47a3"
+      "bytes": 2810,
+      "sha256": "3e3e8b895f602f5dfdcab79c1830f8fe66940164179b058c8746e6d38e9915c0"
     },
     {
       "path": "articles/page-under-work.html",
-      "bytes": 1461,
-      "sha256": "fc34d72d68fbd8d822eaecd3a3d44586fb7b248bc31fc3f2e75e3fd77867ad06"
+      "bytes": 1448,
+      "sha256": "1afd1bcc4bdc0544ffe2b29161ab243c6ebb32e02740c962ecbe334ed411be75"
     },
     {
       "path": "articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html",
-      "bytes": 2783,
-      "sha256": "74ad4762ca8ae8902143989e63d2f10370253ef98a1ad0b0a108a440d34854db"
+      "bytes": 2770,
+      "sha256": "fad94393c0b4f6892a0d81bb900a7d24a4285426e10aa8e9e7ea3da5ac760b73"
     },
     {
       "path": "assets/Articles/v2/auto-desktop.png",
@@ -812,8 +812,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 2384,
-      "sha256": "f24d67d15d849bdb1edf530c26704957f44d8c0e15da0d952e0a7d504676fcee"
+      "bytes": 2371,
+      "sha256": "ddc9d05bc57bfb3d51f9e0fe5dbef1d4162d0f9e785ed1dc75dde29de50f0420"
     },
     {
       "path": "js/analytics.js",
@@ -837,8 +837,8 @@
     },
     {
       "path": "v3/shared/content.js",
-      "bytes": 134613,
-      "sha256": "90af2a2033ea4ec9f5219373e26c1765311e12eee5faa4b9a807fc9c7df9cee6"
+      "bytes": 136162,
+      "sha256": "a7e46f8d194d2a1bc6ec89d2f294eda85a5f0215ba855b85c8ce8831bcd2d64e"
     },
     {
       "path": "v3/shared/site.js",
@@ -847,43 +847,43 @@
     },
     {
       "path": "v3/statement/app.js",
-      "bytes": 37256,
-      "sha256": "516a4cdb4b9117fa3e920a4fd6a47a499a0863771c869d642324f7b242f63032"
+      "bytes": 37358,
+      "sha256": "d185aecfe74a9509f717a8d7ffd490d40e2d5b02af292ac4cc17dfa9b069ffc6"
     },
     {
       "path": "v3/statement/styles.css",
-      "bytes": 63433,
-      "sha256": "8df8edab8149087cfda490a532aa76a347dc2149da3c7e7a0c11a02311368f65"
+      "bytes": 63835,
+      "sha256": "15a1e1493c6a7306897b9d07391c9e8b71d57b87dbd0a35e10274e21795ec5ed"
     },
     {
       "path": "work/cambio-cuentas-paises.html",
-      "bytes": 2598,
-      "sha256": "3f00ddb541e226a745e8909435b99e8abce0c8ae1ffeeeaab4be4bdefa201eed"
+      "bytes": 2585,
+      "sha256": "2e0007b82856eedacc448747a55bdf02d6a2c2c634609ff598ed1e4a83f804af"
     },
     {
       "path": "work/menores-mexico.html",
-      "bytes": 2550,
-      "sha256": "b634511429dbd115f11583ec89a2fcae5f78a5dbce6852791d5c9262e159bb98"
+      "bytes": 2537,
+      "sha256": "8f09ffd284d68fbda8f2ba33774dc43283f339a6219e65ee68d897828649d05c"
     },
     {
       "path": "work/motion-design-system.html",
-      "bytes": 2532,
-      "sha256": "2cb8a3310d7d4face2fd50c3fb9d0238e7ffcfaf6639e73c74a0d7d9170e8f32"
+      "bytes": 2519,
+      "sha256": "60777b0cac5d0b02d0e0ad636c9a7ecfb720f0d9b4cfc95d39ac1602df20ac45"
     },
     {
       "path": "work/registro-ml.html",
-      "bytes": 2482,
-      "sha256": "36c667c93d6ac6c31f70b2dea054f5d048da78172eee347026871c5682c8b03a"
+      "bytes": 2469,
+      "sha256": "bd61c5b3e8ecdeb448517519322bbdde9012221c2af29c4a0d927e868ff9dfa8"
     },
     {
       "path": "work/ropstar.html",
-      "bytes": 2328,
-      "sha256": "c23b7f7c2c4fe3c51aea55234c46e2ae369c0450223c0f51cde0f58b47a2af05"
+      "bytes": 2315,
+      "sha256": "dc99714355e8254e419cfe47c3ea0dc37c0af845f7e8334365d6d4f5d8f7f072"
     },
     {
       "path": "work/winefast.html",
-      "bytes": 2358,
-      "sha256": "b202fdd0ca5b9a25e94c3e25bc1d77e62a131f636c49e791a6b81ee629ab7ce3"
+      "bytes": 2345,
+      "sha256": "fdb9b45d5b3156226b98b134fbc565c0b0ab74d732aba292259ecb5a417d1bc4"
     }
   ]
 }
