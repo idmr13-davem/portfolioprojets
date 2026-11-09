@@ -8,6 +8,7 @@
     '/', '/index.html', '/articles/page-under-work.html',
     '/work/registro-ml.html', '/work/motion-design-system.html', '/work/menores-mexico.html',
     '/work/cambio-cuentas-paises.html', '/work/ropstar.html', '/work/winefast.html',
+    '/articles/construir-mi-portafolio-con-ia.html',
     '/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html',
     '/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html'
   ]);
@@ -90,6 +91,7 @@
   };
   const projectIds = { '1': 'registro_ml', '2': 'motion_level', '3': 'accounts_minors_mexico', '4': 'country_switch' };
   const articlePaths = {
+    '/articles/construir-mi-portafolio-con-ia.html': 'portfolio_with_ai',
     '/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html': 'mercado_libre_career',
     '/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html': 'automotive_ux',
     '/articles/page-under-work.html': 'upcoming_article'

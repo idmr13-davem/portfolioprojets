@@ -52,6 +52,14 @@ window.V3_CONTENT = {
    "contact": {
     "en": "Contact",
     "es": "Contacto"
+   },
+   "github": {
+    "en": "GitHub profile",
+    "es": "Perfil de GitHub"
+   },
+   "recommendations": {
+    "en": "In their words",
+    "es": "En sus palabras"
    }
   },
   "aboutTitle": {
@@ -328,6 +336,10 @@ window.V3_CONTENT = {
    "next": {
     "en": "Next case study",
     "es": "Siguiente caso"
+   },
+   "prevArticle": {
+    "en": "Previous article",
+    "es": "Artículo anterior"
    },
    "readArticle": {
     "en": "Read article",
@@ -2941,6 +2953,464 @@ window.V3_CONTENT = {
     }
    },
    "img": "assets/Home/v2/article-automotive.png"
+  },
+  "construir-mi-portafolio-con-ia": {
+   "title": {
+    "en": "Building my portfolio with AI: what I decided and learned to delegate",
+    "es": "Construir mi portafolio con IA: lo que decidí y aprendí a delegar"
+   },
+   "titleLines": {
+    "en": [
+     "Building my portfolio with AI:",
+     "what I decided and learned to delegate"
+    ],
+    "es": [
+     "Construir mi portafolio con IA:",
+     "lo que decidí y aprendí a delegar"
+    ]
+   },
+   "meta": {
+    "en": [
+     "November 2026",
+     "English",
+     "8 min read"
+    ],
+    "es": [
+     "Noviembre de 2026",
+     "Español",
+     "8 minutos de lectura"
+    ]
+   },
+   "read": {
+    "en": "8 min read",
+    "es": "8 minutos de lectura"
+   },
+   "date": "2026-11-09",
+   "sectioned": true,
+   "summary": {
+    "en": "My experience integrating AI, from content analysis to building and publishing my portfolio.",
+    "es": "Mi experiencia integrando la IA, desde el análisis del contenido hasta la construcción y publicación de mi portafolio."
+   },
+   "tags": {
+    "en": [
+     "Artificial intelligence",
+     "Web design"
+    ],
+    "es": [
+     "Inteligencia artificial",
+     "Diseño web"
+    ]
+   },
+   "hero": {
+    "pair": [
+     {
+      "src": "assets/Articles/v3/portfolio-ai/hero-1.jpg",
+      "alt": {
+       "en": "Black-and-white photograph of a desktop monitor and a phone showing the Home of David Montealegre’s portfolio.",
+       "es": "Fotografía en blanco y negro de un monitor y un teléfono con la Home del portafolio de David Montealegre."
+      }
+     },
+     {
+      "src": "assets/Articles/v3/portfolio-ai/hero-2.jpg",
+      "alt": {
+       "en": "Black-and-white photograph of a laptop with a code editor open on the portfolio project.",
+       "es": "Fotografía en blanco y negro de un portátil con un editor de código abierto en el proyecto del portafolio."
+      }
+     }
+    ]
+   },
+   "blocks": [
+    {
+     "t": "p",
+     "x": {
+      "en": "If you have ever had to create a portfolio or a website for your business, you have probably faced questions like these: What should I show? What do I need to say, and how should I tell the story? What do I want someone to understand about me or my business when they arrive?",
+      "es": "Si alguna vez has tenido que crear un portafolio o un sitio web para tu negocio, probablemente te has enfrentado a preguntas como estas: ¿Qué debo mostrar? ¿Qué necesito decir y cómo debo contar la historia? ¿Qué quiero que alguien entienda de mí o de mi negocio cuando llegue?"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "For me, designing my own portfolio is one of the most challenging tasks in my profession. It means looking at my work, choosing what to show, and finding a way to explain it to people who arrive with different expectations.",
+      "es": "Para mí, diseñar mi propio portafolio es una de las tareas más desafiantes de mi profesión. Implica mirar mi trabajo, elegir qué mostrar y encontrar la forma de explicarlo a personas que llegan con expectativas diferentes."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "And, to top it all off, how does the arrival of AI change this challenge?",
+      "es": "Y, para completar, ¿cómo cambia este reto la llegada de la IA?"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Over the past month, I decided to create a new version of my portfolio. To make it more interesting, I wanted to work differently from how I had built previous versions: involving AI from the analysis stage through to building and publishing the site.",
+      "es": "Durante el último mes decidí crear una nueva versión de mi portafolio. Para hacerlo más interesante, quise trabajar de una forma distinta a como había construido las versiones anteriores: involucrar la IA desde la etapa de análisis hasta la construcción y publicación del sitio."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Today, I want to share what the process was like and what I learned along the way.",
+      "es": "Hoy quiero compartir cómo fue el proceso y lo que aprendí en el camino."
+     }
+    },
+    {
+     "t": "h2",
+     "x": {
+      "en": "1. Who I am designing for",
+      "es": "1. Para quién estoy diseñando"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "As a UX designer, starting by understanding the people who will use a product is part of my job. But this time, I wondered what AI could contribute at that early stage and how I could use it to challenge my own ideas.",
+      "es": "Como UX designer, empezar por entender a las personas que van a usar un producto es parte de mi trabajo. Pero esta vez me pregunté qué podía aportar la IA en esa etapa inicial y cómo podía usarla para cuestionar mis propias ideas."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "With its help, I outlined three potential visitor profiles using proto-personas. I used them as hypotheses to organize the content, considering what they might need and how much time they would be willing to spend on it.",
+      "es": "Con su ayuda, planteé tres posibles perfiles de visitantes usando proto-personas. Las usé como hipótesis para organizar el contenido, pensando en lo que podrían necesitar y en cuánto tiempo estarían dispuestos a dedicarle."
+     }
+    },
+    {
+     "t": "figure",
+     "src": "assets/Articles/v3/portfolio-ai/proto-personas.png",
+     "max": 800,
+     "plain": true,
+     "alt": {
+      "en": "Three proto-persona cards stacked on top of each other. The front one, a design leader, lists her biography, what she looks for in a profile, the time she has available and an evaluation panel.",
+      "es": "Tres fichas de proto-personas apiladas. La del frente, una líder de diseño, muestra su biografía, lo que busca en un perfil, el tiempo disponible y un panel de evaluación."
+     }
+    },
+    {
+     "t": "ul",
+     "x": {
+      "en": [
+       "Recruiters: people who find my profile and need to quickly understand whether my experience fits an open role. I could not expect them to explore my entire website or read a full case study just to discover my role, my background, or the kinds of projects I have worked on.",
+       "Design leads: people interested in understanding my decisions, my involvement in projects, the results, and the quality of the visual execution. To do so, they would be willing to explore a portfolio in greater depth.",
+       "Potential clients and business stakeholders: people who want to know how I could help with their challenges and how my work relates to product or business outcomes. They look for evidence of impact over execution and craft."
+      ],
+      "es": [
+       "Reclutadores: personas que encuentran mi perfil y necesitan entender rápidamente si mi experiencia encaja con una vacante abierta. No podía esperar que exploraran todo mi sitio o leyeran un caso de estudio completo solo para descubrir mi rol, mi trayectoria o el tipo de proyectos en los que he trabajado.",
+       "Líderes de diseño: personas interesadas en entender mis decisiones, mi participación en los proyectos, los resultados y la calidad de la ejecución visual. Para eso, estarían dispuestas a explorar un portafolio con más profundidad.",
+       "Posibles clientes y líderes de negocio: personas que quieren saber cómo podría ayudarles con sus retos y cómo se relaciona mi trabajo con resultados de producto o de negocio. Buscan evidencia de impacto por encima de la ejecución y el craft."
+      ]
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Although these profiles are not completely fixed, and the same person may have more than one interest, thinking about these priorities helped me ask a more useful question: what does each person need to find to decide whether they want to learn more about my work?",
+      "es": "Aunque estos perfiles no son del todo cerrados, y una misma persona puede tener más de un interés, pensar en estas prioridades me ayudó a hacerme una pregunta más útil: ¿qué necesita encontrar cada persona para decidir si quiere conocer más de mi trabajo?"
+     }
+    },
+    {
+     "t": "h2",
+     "x": {
+      "en": "2. What to share, and when",
+      "es": "2. Qué contar y en qué momento"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "These profiles gave me an initial sense of how to organize the content, both across the site as a whole and within each case study.",
+      "es": "Estos perfiles me dieron una primera idea de cómo organizar el contenido, tanto en el sitio completo como dentro de cada caso de estudio."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "At this stage, I used AI to explore references and compare portfolios. Then I began looking at what each one said about the person behind it and which aspects of their work they chose to highlight.",
+      "es": "En esta etapa usé la IA para explorar referentes y comparar portafolios. Luego empecé a mirar qué decía cada uno de la persona que estaba detrás y qué aspectos de su trabajo elegía destacar."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "I found portfolios where visual quality took center stage: interfaces, interactions, and details that turned something everyday into an extraordinary experience. Others devoted more space to explaining the problem, the decisions, and their connection to business metrics. And in some, especially those focused on animation, the site itself served as a demonstration of what its creator could do.",
+      "es": "Encontré portafolios donde la calidad visual era la protagonista: interfaces, interacciones y detalles que convertían algo cotidiano en una experiencia extraordinaria. Otros dedicaban más espacio a explicar el problema, las decisiones y su relación con las métricas de negocio. Y en algunos, sobre todo en los enfocados en animación, el propio sitio servía como demostración de lo que su creador podía hacer."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "After exploring them, I asked myself: who am I, and what do I want someone to recognize in my work? That helped me define which aspects I wanted to highlight and how to organize the information so each visitor could find what they were looking for.",
+      "es": "Después de explorarlos, me pregunté: ¿quién soy y qué quiero que alguien reconozca en mi trabajo? Eso me ayudó a definir qué aspectos quería destacar y cómo organizar la información para que cada visitante encontrara lo que buscaba."
+     }
+    },
+    {
+     "t": "figure",
+     "src": "assets/Articles/v3/portfolio-ai/references.png",
+     "max": 925,
+     "rounded": true,
+     "alt": {
+      "en": "Code editor showing a Markdown file of the portfolio project with notes that compare three Home proposals and the case study template.",
+      "es": "Editor de código con un archivo Markdown del proyecto del portafolio, con notas que comparan tres propuestas de Home y la plantilla de los casos de estudio."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "The question was no longer just which projects to include. I also needed to decide what someone should understand before opening them, at first glance, and as the case study provided more context.",
+      "es": "La pregunta ya no era solo qué proyectos incluir. También necesitaba decidir qué debía entender alguien antes de abrirlos, a primera vista y a medida que el caso de estudio le daba más contexto."
+     }
+    },
+    {
+     "t": "h2",
+     "x": {
+      "en": "3. Shaping the content and testing it",
+      "es": "3. Armar el contenido y ponerlo a prueba"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Having an initial understanding of my visitors, their potential needs, and how I wanted to present myself allowed me to create a first “content sketch.”",
+      "es": "Tener un primer entendimiento de mis visitantes, de sus posibles necesidades y de cómo quería presentarme me permitió crear un primer “boceto de contenido”."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Before getting into visual design, I worked on the narrative: what to say about myself, how to present the projects, and how much context each story needed to make sense. This part is especially challenging for those of us who are not content writers or come from a UX writing background. Some of the questions I had were: How much should I explain? How much content should I include? And at what point is it too much?",
+      "es": "Antes de entrar en el diseño visual, trabajé la narrativa: qué decir de mí, cómo presentar los proyectos y cuánto contexto necesitaba cada historia para tener sentido. Esta parte es especialmente retadora para quienes no somos redactores de contenido ni venimos de UX writing. Algunas de las preguntas que tenía eran: ¿Cuánto debo explicar? ¿Cuánto contenido debo incluir? ¿Y en qué punto es demasiado?"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "I used AI simulations and built custom content skills for my workflow. I followed a writing-and-iteration process and used the three profiles I had outlined (recruiter, design lead, and project manager) as references in a synthetic user test to explore questions and identify potential gaps. I also received feedback from real people throughout the process, which helped me review what I was building from other perspectives.",
+      "es": "Usé simulaciones con IA y construí skills de contenido a la medida de mi flujo de trabajo. Seguí un proceso de escritura e iteración y usé los tres perfiles que había planteado (reclutador, líder de diseño y gerente de proyecto) como referencia en una prueba con usuarios sintéticos para explorar preguntas e identificar posibles vacíos. También recibí feedback de personas reales durante el proceso, lo que me ayudó a revisar lo que estaba construyendo desde otras perspectivas."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "This was where I began to see the value of integrating AI from the start. The context from the previous steps helped me better direct the tasks I assigned to AI and maintain a connection between the analysis and the content.",
+      "es": "Aquí empecé a ver el valor de integrar la IA desde el principio. El contexto de los pasos anteriores me ayudó a dirigir mejor las tareas que le asignaba a la IA y a mantener la conexión entre el análisis y el contenido."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Even so, reviewing the suggestions was still part of my job. I had to decide what added to the story, what was unnecessary, and what did not accurately reflect my experience.",
+      "es": "Aun así, revisar las sugerencias seguía siendo parte de mi trabajo. Tenía que decidir qué le aportaba a la historia, qué sobraba y qué no reflejaba con precisión mi experiencia."
+     }
+    },
+    {
+     "t": "h2",
+     "x": {
+      "en": "4. Designing, building, and publishing",
+      "es": "4. Diseñar, construir y publicar"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "In total, my portfolio went through three design versions. With each one, I delegated a little more of the execution as I came to understand the results I could achieve and how to better guide the work.",
+      "es": "En total, mi portafolio pasó por tres versiones de diseño. Con cada una delegué un poco más de la ejecución, a medida que entendía los resultados que podía lograr y cómo guiar mejor el trabajo."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "At first, I was deeply involved in every visual detail. I wanted control over the final finish, which meant the early versions took days or even weeks.",
+      "es": "Al principio estaba muy involucrado en cada detalle visual. Quería tener el control del acabado final, lo que hizo que las primeras versiones tomaran días o incluso semanas."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "The final version, by contrast, took less than a week of work. By then, I had a clearer sense of what I needed to design myself and what I could delegate with specific instructions and references.",
+      "es": "La versión final, en cambio, tomó menos de una semana de trabajo. Para entonces tenía más claro qué necesitaba diseñar yo y qué podía delegar con instrucciones y referentes concretos."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Working with Claude Code and Codex also led me to get involved in building the site, learn to work with Git and GitHub, and move forward with each new version until I saw it published on my own domain.",
+      "es": "Trabajar con Claude Code y Codex también me llevó a involucrarme en la construcción del sitio, aprender a trabajar con Git y GitHub, y avanzar con cada nueva versión hasta verla publicada en mi propio dominio."
+     }
+    },
+    {
+     "t": "figure",
+     "src": "assets/Articles/v3/portfolio-ai/github-repo.png",
+     "max": 925,
+     "rounded": true,
+     "alt": {
+      "en": "GitHub repository of the portfolio showing the release files and the README for the V3 GitHub Pages release.",
+      "es": "Repositorio del portafolio en GitHub con los archivos de la release y el README de la publicación V3 en GitHub Pages."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "That brought up another question: deciding when it was ready to launch. At first, I did not want to publish anything I was not 100% happy with. I worried about the impression the first visitors would take away. But waiting also meant continuing to make tiny adjustments based on my own assumptions. Having the portfolio live allowed me to get fresh perspectives and spot things I had stopped noticing.",
+      "es": "Eso trajo otra pregunta: decidir cuándo estaba listo para lanzarlo. Al principio no quería publicar nada con lo que no estuviera 100 % conforme. Me preocupaba la impresión que se llevarían los primeros visitantes. Pero esperar también significaba seguir haciendo pequeños ajustes basados en mis propias suposiciones. Tener el portafolio en línea me permitió recibir miradas frescas y notar cosas que había dejado de ver."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Publishing became part of the process, not its endpoint. I could review, correct, and keep improving with each new version.",
+      "es": "Publicar se volvió parte del proceso, no su punto final. Podía revisar, corregir y seguir mejorando con cada nueva versión."
+     }
+    },
+    {
+     "t": "h2",
+     "x": {
+      "en": "What I learned from working with AI",
+      "es": "Lo que aprendí de trabajar con IA"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "This project taught me several lessons that I am already applying to other work. Beyond which skill, agent, LLM, or framework to use, what interested me most was understanding how to integrate AI into the way I design and build.",
+      "es": "Este proyecto me dejó varias enseñanzas que ya estoy llevando a otros trabajos. Más allá de qué skill, agente, LLM o framework usar, lo que más me interesó fue entender cómo integrar la IA en mi forma de diseñar y construir."
+     }
+    },
+    {
+     "t": "h3",
+     "x": {
+      "en": "Providing context is part of the work, too",
+      "es": "Dar contexto también es parte del trabajo"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "I have seen many tools promise to create an entire ecosystem from a single initial instruction. Whenever I see that, I wonder: who decides which image, text, or composition to use? And beyond that, what about the “intangible” decisions that are not immediately visible, such as: who am I speaking to? And why am I saying this instead of something else? Using AI does not mean handing over decisions about what you, as the owner of the final product, want to communicate to whoever visits your portfolio or website. Asking AI for something is quick and easy. Explaining what you want to achieve, who you are working for, and which constraints it must respect takes more dedication.",
+      "es": "He visto muchas herramientas que prometen crear todo un ecosistema a partir de una sola instrucción inicial. Cada vez que lo veo me pregunto: ¿quién decide qué imagen, texto o composición usar? Y más allá de eso, ¿qué pasa con las decisiones “intangibles” que no se ven a primera vista, como: ¿a quién le estoy hablando? ¿Y por qué digo esto y no otra cosa? Usar IA no significa entregar las decisiones sobre lo que tú, como dueño del producto final, quieres comunicarle a quien visita tu portafolio o tu sitio web. Pedirle algo a la IA es rápido y fácil. Explicar qué quieres lograr, para quién trabajas y qué restricciones debe respetar exige más dedicación."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "In my experience, that effort helped connect the tasks to one another. I could revisit earlier decisions, use them as references, and assess whether what I was building still made sense.",
+      "es": "En mi experiencia, ese esfuerzo ayudó a conectar las tareas entre sí. Podía volver a decisiones anteriores, usarlas como referencia y evaluar si lo que estaba construyendo seguía teniendo sentido."
+     }
+    },
+    {
+     "t": "h3",
+     "x": {
+      "en": "Speed helps when you have a direction",
+      "es": "La velocidad sirve cuando tienes una dirección"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "The difference between the early versions and the final one was very clear to me. As I clarified the content, visual direction, and sequence of work, I was able to move faster. AI helped me explore and implement changes, while I focused on deciding which changes to keep and what needed improvement.",
+      "es": "La diferencia entre las primeras versiones y la final fue muy clara para mí. A medida que aclaraba el contenido, la dirección visual y la secuencia de trabajo, pude avanzar más rápido. La IA me ayudó a explorar e implementar cambios, mientras yo me enfocaba en decidir qué cambios conservar y qué necesitaba mejorar."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "I also learned to recognize when I was spending too much time on a task I could delegate and then review.",
+      "es": "También aprendí a reconocer cuándo estaba dedicando demasiado tiempo a una tarea que podía delegar y luego revisar."
+     }
+    },
+    {
+     "t": "h3",
+     "x": {
+      "en": "What to decide and what to delegate",
+      "es": "Qué decidir y qué delegar"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "One question helped me a great deal throughout the process:",
+      "es": "Una pregunta me ayudó mucho durante todo el proceso:"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "What do I need to decide myself, and what can AI do with the decision I have already made?",
+      "es": "¿Qué necesito decidir yo y qué puede hacer la IA con la decisión que ya tomé?"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "In my case, I wanted to remain responsible for the message, the site’s priorities, the visual direction, and reviewing the result. That allowed me to let go of some of the execution with greater confidence. I had a basis for evaluating proposals and deciding when something needed another attempt.",
+      "es": "En mi caso, quise seguir siendo responsable del mensaje, las prioridades del sitio, la dirección visual y la revisión del resultado. Eso me permitió soltar parte de la ejecución con más confianza. Tenía una base para evaluar las propuestas y decidir cuándo algo necesitaba otro intento."
+     }
+    },
+    {
+     "t": "h3",
+     "x": {
+      "en": "Publishing helps you learn, too",
+      "es": "Publicar también te ayuda a aprender"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Seeing the site working and receiving feedback gave me insights I had not found while refining it on my own.",
+      "es": "Ver el sitio funcionando y recibir feedback me dio aprendizajes que no había encontrado mientras lo pulía por mi cuenta."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "There are still things I want to improve, but I now have a published version I can keep working on. For me, that shift mattered: moving from waiting for the ideal moment to having something real that I can review and iterate on.",
+      "es": "Todavía hay cosas que quiero mejorar, pero ahora tengo una versión publicada sobre la que puedo seguir trabajando. Para mí ese cambio fue importante: pasar de esperar el momento ideal a tener algo real que puedo revisar e iterar."
+     }
+    },
+    {
+     "t": "h3",
+     "x": {
+      "en": "From my portfolio to other projects",
+      "es": "Del portafolio a otros proyectos"
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "Creating my portfolio allowed me to go all the way from the first questions about analysis and building context to a published site with a direction of its own, with AI supporting the process from start to finish.",
+      "es": "Crear mi portafolio me permitió recorrer todo el camino, desde las primeras preguntas de análisis y construcción de contexto hasta un sitio publicado con una dirección propia, con la IA acompañando el proceso de principio a fin."
+     }
+    },
+    {
+     "t": "p",
+     "x": {
+      "en": "It also helped me better define how I want to work: understanding what a project needs to communicate, making decisions with clear intent, and using AI to speed up the build without ever stopping my review of the result.",
+      "es": "También me ayudó a definir mejor cómo quiero trabajar: entender qué necesita comunicar un proyecto, tomar decisiones con una intención clara y usar la IA para acelerar la construcción sin dejar nunca de revisar el resultado."
+     }
+    }
+   ],
+   "prev": {
+    "slug": "lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias",
+    "title": {
+     "en": "My passion for cars",
+     "es": "Mi pasión por los autos"
+    }
+   },
+   "card": {
+    "en": {
+     "alt": "",
+     "title": "Building my portfolio with AI: what I decided and learned to delegate",
+     "body": "My experience integrating AI, from content analysis to building and publishing my portfolio.",
+     "cta": "Continue reading"
+    },
+    "es": {
+     "alt": "",
+     "title": "Construir mi portafolio con IA: lo que decidí y aprendí a delegar",
+     "body": "Mi experiencia integrando la IA, desde el análisis del contenido hasta la construcción y publicación de mi portafolio.",
+     "cta": "Continuar leyendo"
+    }
+   },
+   "img": "assets/Articles/v3/portfolio-ai/thumb.jpg",
+   "thumbFit": "contain"
   },
   "page-under-work": {
    "underWork": true,

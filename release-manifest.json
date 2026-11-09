@@ -7,8 +7,8 @@
     },
     {
       "path": "404.html",
-      "bytes": 1396,
-      "sha256": "c36bb4ee3f7ce40da4c7c37a5359a5a623dfcd5aede96791d0b7a58838608477"
+      "bytes": 1384,
+      "sha256": "82eef42f104e933d11ad3c5a2968d2e6fc6cb2a8da8f618e27c4cebbeb722627"
     },
     {
       "path": "CNAME",
@@ -17,8 +17,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 942,
-      "sha256": "efaa72f4a4add0b5f6361b310488e728eb65b2807b4aef29a46f63e5f465bf4e"
+      "bytes": 944,
+      "sha256": "edd7e7b6fb496de381a63379a09ddbb128b3d39322fd4931e340e30ded07f105"
     },
     {
       "path": "about.html",
@@ -26,19 +26,24 @@
       "sha256": "d9256c9158980b102fcb20bbec5d0d1a70c8f0aec5c2e52cd50885d459400e0a"
     },
     {
+      "path": "articles/construir-mi-portafolio-con-ia.html",
+      "bytes": 2573,
+      "sha256": "3941c45b2fc0333db6a8479c60a2342ab52030c0101930e69a7def021685fd86"
+    },
+    {
       "path": "articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html",
-      "bytes": 2787,
-      "sha256": "e9a518577869ae53ff5b3ee2f5bb29db964cccd5fb9aec1de4d028b8b8721d7f"
+      "bytes": 2775,
+      "sha256": "c8d754ff7c7b37290b5339b617a9d7c0967ae6c3581755d528fd9310a7084da8"
     },
     {
       "path": "articles/page-under-work.html",
-      "bytes": 1425,
-      "sha256": "d969569afcde42d948a82f9a89add83d979a7f425d04ee3381b6d66d51378535"
+      "bytes": 1413,
+      "sha256": "5c656ee3ac1250468ef1b02b786b2b6b49edb28c3aac959e5f49135dc50945c7"
     },
     {
       "path": "articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html",
-      "bytes": 2747,
-      "sha256": "80f83ec48ff17b963fac5ac51e9333fa006bf8db90ab8c02086b8cdac24387ef"
+      "bytes": 2735,
+      "sha256": "ec7eb2f7a9b91a5beafabcb7a209b576c7dab3d74ecf0041ac307c5894128634"
     },
     {
       "path": "assets/Articles/v2/auto-desktop.png",
@@ -59,6 +64,36 @@
       "path": "assets/Articles/v2/ml-mobile.png",
       "bytes": 670417,
       "sha256": "3d2887fc579892f1fc5cffdd607575d1921e22ec1bf1bd1792c5bfa0590104cf"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/github-repo.png",
+      "bytes": 151298,
+      "sha256": "463969fe3e25dfc2824774421ca437564d075f6d395e77669bc551c1cc9acd2b"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/hero-1.jpg",
+      "bytes": 128845,
+      "sha256": "56a86dc7f2fca857c8c06b2a53b10bcd7ca019602f8252e183586484b20d2415"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/hero-2.jpg",
+      "bytes": 195334,
+      "sha256": "96d85e299559f8bf5e5fa4fe2054f5102165b4f0ff5c5ace7bed2a250a89967c"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/proto-personas.png",
+      "bytes": 520919,
+      "sha256": "ea78cdaca4cee8eae79ffbf23200a96df3a44d375c2e0d313f8aa3c82ae36eaf"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/references.png",
+      "bytes": 294147,
+      "sha256": "affc9822487f7744411acb5e736ec2ae0c5132c25c5d868f13d9f404648377ae"
+    },
+    {
+      "path": "assets/Articles/v3/portfolio-ai/thumb.jpg",
+      "bytes": 13306,
+      "sha256": "e613652869c17b580eeb7ec73061e82009cc2e8387232cacb2e61e247158adc9"
     },
     {
       "path": "assets/CV/DavidMontealegre-CV-EN.pdf",
@@ -776,6 +811,11 @@
       "sha256": "6ad4a6fb83ef0f92f58da6dfd1e1726552a18fdbd595353a6f7c3ff344a02c04"
     },
     {
+      "path": "assets/og/construir-mi-portafolio-con-ia.jpg",
+      "bytes": 63940,
+      "sha256": "0bf82f39ca32cb5cbf41effc29291a39d1cfd4268a0a0281394770e1b2e88534"
+    },
+    {
       "path": "assets/og/home.jpg",
       "bytes": 68168,
       "sha256": "8439ff13e81761c98cf176e71aa57b783540f0b809fc982ebab6f0bda490815d"
@@ -832,13 +872,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 2348,
-      "sha256": "3c2c29c88a994e444f0381e84785c7729aa516079e7086bb545000ba58e4e088"
+      "bytes": 2336,
+      "sha256": "9d6ba86a4e07180a24cab21c5afb0ad5ad56a1b3195e45b1ca702ee3741a57be"
     },
     {
       "path": "js/analytics.js",
-      "bytes": 12458,
-      "sha256": "25ca7619d22752d1786baf8665fb253f42c75b1b0e0f9b6d4f4753ad901be87c"
+      "bytes": 12585,
+      "sha256": "ab3940b9ea0c3bbc5008159a4a24d0faa4efacfe1f08127cba0e8fb3581473d4"
     },
     {
       "path": "robots.txt",
@@ -847,8 +887,8 @@
     },
     {
       "path": "sitemap.xml",
-      "bytes": 913,
-      "sha256": "36866265c59f0b14bcdd0d9fb7b3d51d6531234e1d4a60d40d68f4c1cce0abe2"
+      "bytes": 1013,
+      "sha256": "9af7df085f4327e5dbe7a053deeda44a984a152a5f69e5e2658f7d8d2d083fdf"
     },
     {
       "path": "v3/shared/base.css",
@@ -857,53 +897,53 @@
     },
     {
       "path": "v3/shared/content.js",
-      "bytes": 138639,
-      "sha256": "6a17e3706bc52d852ecc21082c6aec04cabe4d6efc60f411f12bb60e47793cce"
+      "bytes": 165684,
+      "sha256": "f2362ab3b5bb25951fae53c312d299b477ef57e53c8159515b845da401852e9f"
     },
     {
       "path": "v3/shared/site.js",
-      "bytes": 11767,
-      "sha256": "30b86dc5b73fbd73c15e5f8050e3d30f398cf880addd8458548a3a22f1f5949e"
+      "bytes": 11975,
+      "sha256": "588e8316fb55823a21221d48e3e32864e609d5db3c969c5092f3b77a50c44088"
     },
     {
       "path": "v3/statement/app.js",
-      "bytes": 43771,
-      "sha256": "1a5ae7aa3d0172ce7ddf00c2d1dd5c955cb03a9607a34a76b7acc66999978c90"
+      "bytes": 44827,
+      "sha256": "fe7820daa62b3d9366ab2e7e425c9a48aa05832a837b77fa1e831f9bb1b44419"
     },
     {
       "path": "v3/statement/styles.css",
-      "bytes": 68508,
-      "sha256": "eae4133ab6ba80d691184dd4ee6976593920ceda127e3563d7dee5b3293701cf"
+      "bytes": 70384,
+      "sha256": "a02976e5eb1bcd2340d3810216004342d64ff4b7d11cafb7d89211ea8e93888b"
     },
     {
       "path": "work/cambio-cuentas-paises.html",
-      "bytes": 2562,
-      "sha256": "2f05290512fdfdf4354c732296f7a69a5691c3e18b9274f75fd07d0d6dd1afa3"
+      "bytes": 2550,
+      "sha256": "06937c2134dba543a156b244c7012f265746b730829e3ee5e22cf53029b18040"
     },
     {
       "path": "work/menores-mexico.html",
-      "bytes": 2514,
-      "sha256": "b4ae4095ba18d35eeb1763450c4276a149475b8146a22517f02d91d55f5fbddf"
+      "bytes": 2502,
+      "sha256": "feed9e9ea4fcd8da74fd7de087764c4af24855a0ef9b89c0abcf1fa2e14eccb5"
     },
     {
       "path": "work/motion-design-system.html",
-      "bytes": 2496,
-      "sha256": "db56c992e7681de5a8d2d684487a74c0ceeb67b506a87161b0431df4456760a9"
+      "bytes": 2484,
+      "sha256": "49fb9f067c9fb4a16eaf470cdc20c9461d05205e8a325fe9d3498f09ff09ab2b"
     },
     {
       "path": "work/registro-ml.html",
-      "bytes": 2446,
-      "sha256": "fa176e9ce42eaf8e6166b36eff76a37e3f38fbf53171d21dc0b12bc5000364d8"
+      "bytes": 2434,
+      "sha256": "04e2cea3e116be40803de0072b7f5fe7f77426c649701154f921c42bb4c978c4"
     },
     {
       "path": "work/ropstar.html",
-      "bytes": 2292,
-      "sha256": "35e8573115aaa2277f20c38e3a3aee44e767c15354973c2ac70f7b0b8018561d"
+      "bytes": 2280,
+      "sha256": "a2738ce2c27ac7ef7f6b01a1415ce44b0790035ace009eb1333661df07ae22dc"
     },
     {
       "path": "work/winefast.html",
-      "bytes": 2322,
-      "sha256": "b5ae972d666973f9e4d769cf6be3a8b32ea3513118ac753e72b6985669312193"
+      "bytes": 2310,
+      "sha256": "f92b98a58ef46f882a881dd869dc45aa3f17cc2290b37b1afe1b94f96ea7cfdd"
     }
   ]
 }

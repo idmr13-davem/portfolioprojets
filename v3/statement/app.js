@@ -62,6 +62,8 @@
       <nav aria-label="${esc(t(copy.menu))}">
         <a href="${href.home()}">${esc(t(S.nav.home))}</a>
         <a href="${href.home('#work')}">${esc(t(S.nav.work))}</a>
+        <a href="${href.home('#github')}">${esc(t(S.nav.github))}</a>
+        <a href="${href.home('#recommendations')}">${esc(t(S.nav.recommendations))}</a>
         <a href="${href.home('#blog')}">${esc(t(S.nav.blog))}</a>
         <a href="${href.home('#contact')}">${esc(t(S.nav.contact))}</a>
       </nav>
@@ -199,7 +201,7 @@
       <section class="a-blog" id="blog" aria-labelledby="blog-title">
         <h2 class="a-blog__title" id="blog-title" data-reveal>${esc(t(S.blogTitle))}</h2>
         <ul class="a-rows">
-          ${articles.map(a => `<li data-reveal><a class="a-row" href="${href.article(a.slug)}"><img src="${asset(a.img)}" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>${esc(t(a.card).title)}</strong><span>${esc(t(a.card).body)}</span></span><span class="a-row__value">${a.underWork ? esc(t(copy.soon)) : esc(t(a.meta)[0])}</span></a></li>`).join('')}
+          ${articles.filter(a => !a.underWork).map(a => `<li data-reveal><a class="a-row" href="${href.article(a.slug)}"><img${a.thumbFit ? ' class="a-row__img--contain"' : ''} src="${asset(a.img)}" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>${esc(t(a.card).title)}</strong><span>${esc(t(a.card).body)}</span></span><span class="a-row__value">${a.underWork ? esc(t(copy.soon)) : esc(a.read ? t(a.read) : t(a.meta)[0])}</span></a></li>`).join('')}
         </ul>
       </section>
 
@@ -294,19 +296,28 @@
   function articlePage(slug) {
     const a = C.articles[slug];
     document.title = `${t(a.title)} — David Montealegre`;
+    // Blog 3 (Figma 5487:14423) adds a title with a fixed break from 768 up, a pair of hero photos, section
+    // gaps without separators and a link back to the previous article.
+    const title = a.titleLines ? t(a.titleLines).map(l => `<span>${esc(l)}</span>`).join(' ') : esc(t(a.title));
+    const hero = a.hero.pair
+      ? `<div class="a-ar__hero a-ar__hero--pair" data-reveal>${a.hero.pair.map(h => `<img src="${asset(h.src)}" alt="${esc(t(h.alt))}" width="1382" height="1064">`).join('')}</div>`
+      : `<figure class="a-ar__hero" data-reveal>${media({ type: 'image', src: a.hero.src, mobile: a.hero.mobile, alt: a.hero.alt }, { eager: true })}<figcaption>${esc(t(a.hero.caption))}</figcaption></figure>`;
+    const back = a.prev
+      ? `<a class="a-cs__nextlink" href="${href.article(a.prev.slug)}"><span>${ui('prevArticle')}</span><strong>${esc(t(a.prev.title))}</strong></a>`
+      : `<a class="a-cs__nextlink" href="${href.home('#work')}"><span>${esc(t(S.nav.work))}</span><strong>${esc(t(cases[0].card.title))}</strong></a>`;
     return `${header()}
-    <main id="main" class="a-ar">
+    <main id="main" class="a-ar${a.sectioned ? ' a-ar--sectioned' : ''}">
       <header class="a-ar__head">
-        <h1 data-rise>${esc(t(a.title))}</h1>
+        <h1 data-rise${a.titleLines ? ' class="a-ar__title--lines"' : ''}>${title}</h1>
         <p class="a-ar__meta" data-rise style="--i:1">${t(a.meta).map(esc).join(' · ')}</p>
         <p class="a-ar__summary" data-rise style="--i:2">${esc(t(a.summary))}</p>
         <ul class="a-ar__tags" data-grid-ignore data-rise style="--i:3">${t(a.tags).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
       </header>
-      <figure class="a-ar__hero" data-reveal>${media({ type: 'image', src: a.hero.src, mobile: a.hero.mobile, alt: a.hero.alt }, { eager: true })}<figcaption>${esc(t(a.hero.caption))}</figcaption></figure>
+      ${hero}
       <div class="a-ar__body">${articleBody(a)}</div>
       <nav class="a-cs__next" aria-label="${esc(t(S.blogTitle))}">
         <a href="${href.home('#blog')}">${esc(t(S.blogTitle))}</a>
-        <a class="a-cs__nextlink" href="${href.home('#work')}"><span>${esc(t(S.nav.work))}</span><strong>${esc(t(cases[0].card.title))}</strong></a>
+        ${back}
       </nav>
     </main>
     ${footer()}`;

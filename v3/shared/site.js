@@ -172,7 +172,8 @@
     return a.blocks.map(b => {
       if (b.t === 'hr') return '<div class="ar-break" aria-hidden="true"></div>';
       if (b.t === 'ul' || b.t === 'ol') return `<${b.t}>${t(b.x).map(li => `<li>${esc(li)}</li>`).join('')}</${b.t}>`;
-      if (b.t === 'figure') return `<figure class="ar-figure"><img src="${asset(b.src)}" alt="${esc(t(b.alt))}" loading="lazy">${t(b.x) ? `<figcaption>${esc(t(b.x))}</figcaption>` : ''}</figure>`;
+      // max: the image width in the ≥1500 reading column (Figma Blog 3); below it the image fills the column.
+      if (b.t === 'figure') return `<figure class="ar-figure${b.rounded ? ' ar-figure--rounded' : ''}"${b.max ? ` style="--fig-max:${b.max}px"` : ''}><img src="${asset(b.src)}" alt="${esc(t(b.alt))}" loading="lazy">${b.x && t(b.x) ? `<figcaption>${esc(t(b.x))}</figcaption>` : ''}</figure>`;
       return `<${b.t}>${esc(t(b.x))}</${b.t}>`;
     }).join('');
   }

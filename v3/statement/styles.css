@@ -254,6 +254,30 @@ body.is-locked .a-top { color: var(--ink); }
 .a-ar__body blockquote { margin: 2.5rem 0; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.1; letter-spacing: -0.02em; }
 .ar-break { height: 3rem; }
 .ar-figure { margin: 2.5rem 0; }
+.ar-figure img { width: 100%; margin-inline: auto; background: none; }
+.ar-figure--rounded img { border-radius: var(--radius-xs); }
+
+/* Blog 3 (Figma 5487:14423). The title breaks after the colon from 768 up (three natural lines on phones).
+   Two hero photos share the twelve columns with SS (12) between and below them, stacked on phones. The
+   body keeps the reading column but its padding is section-half (110 / 89.6 / 60), sections sit XL (48)
+   apart without separators, subsections use Title M (32/40) and figures add L (32) above and below the
+   image. From 1500 up each figure keeps its Figma width (800 or 925) centred in the column. */
+.a-ar__title--lines span { display: block; }
+.a-ar__hero--pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-ss); padding-bottom: var(--space-ss); }
+/* Each photo is rounded on its own with Radius XS (8), David 9-nov-2026. The exports were trimmed 18–23 px
+   per side to remove the 40 px corners Figma had baked into them. */
+.a-ar__hero--pair img { width: 100%; aspect-ratio: 1429 / 1100; object-fit: cover; border-radius: var(--radius-xs); }
+.a-ar--sectioned .a-ar__body { padding-block: calc(var(--section) / 2); }
+.a-ar--sectioned .a-ar__body h2, .a-ar--sectioned .a-ar__body h3 { margin: var(--space-xl) 0 1.25rem; }
+.a-ar--sectioned .a-ar__body h3 { font-size: 2rem; line-height: 2.5rem; letter-spacing: 0; }
+.a-ar--sectioned .ar-figure { margin: 1.1em 0; padding-block: var(--space-l); }
+@media (min-width: 1500px) {
+  .a-ar--sectioned .ar-figure img { max-width: var(--fig-max, 100%); }
+}
+@media (max-width: 767px) {
+  .a-ar__title--lines span { display: inline; }
+  .a-ar__hero--pair { grid-template-columns: 1fr; }
+}
 
 /* ---------- status pages ---------- */
 /* Figma 5095:4266: one centred stack under the 84 px header — illustration at its native size, Title
@@ -345,6 +369,8 @@ body.is-locked .a-top { color: var(--ink); }
 .a-rows > li { grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; }
 .a-row { grid-column: 1 / -1; grid-template-columns: subgrid; column-gap: var(--gutter); }
 .a-row img { grid-column: 1; width: 100%; height: auto; aspect-ratio: 1; }
+/* Blog 3 row (Figma 5280:92075): the landscape hero photo sits whole inside the square thumbnail. */
+.a-row img.a-row__img--contain { object-fit: contain; background: none; }
 .a-row__name { grid-column: 2 / -2; }
 .a-row__value { grid-column: -2 / -1; justify-self: end; }
 /* Contact rows (columns 4–9): label on two columns, value on four. */
