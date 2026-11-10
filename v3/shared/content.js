@@ -167,6 +167,17 @@ window.V3_CONTENT = {
   "recommendationsLink": "https://www.linkedin.com/in/david-montealegre-rey/details/recommendations/?detailScreenTabIndex=0",
   "recommendations": [
    {
+    "name": "Fiamma Coedo",
+    "role": "Software Project Leader · Mercado Libre",
+    "country": { "en": "Argentina", "es": "Argentina" },
+    "flag": "assets/Home/v2/flag-argentina.svg",
+    "avatar": "assets/Home/v3/recommendations/fiamma.jpg",
+    "text": {
+     "en": ["I had the opportunity to work with Dave on several projects, with him on the UX team and me as a software developer and, on other occasions, as a team lead. In both roles, my experience working with him was always excellent. He is a highly meticulous designer, clear in his communication and open to dialogue. He enjoys discussing ideas and collaborating, bringing together different perspectives, listening to feedback, and iterating as needed. Very patient and clear in his deliverables. I would definitely recommend Dave!"],
+     "es": ["Tuve la oportunidad de trabajar con Dave en varios proyectos, él en el equipo de UX y yo como desarrolladora de software y, en otras ocasiones, como líder de equipo. En ambos roles, mi experiencia trabajando con él fue siempre excelente. Es un diseñador muy meticuloso, claro en su comunicación y abierto al diálogo. Le gusta discutir ideas y colaborar, integrando distintas perspectivas, escuchando el feedback e iterando cuando hace falta. Muy paciente y claro en sus entregables. ¡Sin dudas recomendaría a Dave!"]
+    }
+   },
+   {
     "name": "Maria Alejandra Camargo",
     "role": "UX Designer · Mercado Libre",
     "country": { "en": "Colombia", "es": "Colombia" },
