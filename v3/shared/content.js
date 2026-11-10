@@ -109,8 +109,10 @@ window.V3_CONTENT = {
   "github": {
    "title": { "en": "Why design engineering?", "es": "¿Por qué design engineering?" },
    "lead": { "en": "I believe the future of design goes beyond static screens in Figma. That's why I'm moving from product design toward design engineering: designing interfaces and building them in code.", "es": "Creo que el futuro del diseño va más allá de pantallas estáticas en Figma. Por eso estoy pasando del diseño de producto al design engineering: diseñar interfaces y construirlas en código." },
-   "body": { "en": "It started with a small experiment: this portfolio. I used it to learn Git and GitHub, and built the site with AI, one commit at a time. Working in the same tools as developers showed me how much closer we can collaborate, so I now use this workflow in other projects too.", "es": "Todo empezó con un experimento pequeño: este portafolio. Lo usé para aprender Git y GitHub, y construí el sitio con IA, un commit a la vez. Trabajar con las mismas herramientas que los desarrolladores me mostró lo mucho que podemos acercarnos al colaborar, así que ahora uso este flujo de trabajo también en otros proyectos." },
+   "body": { "en": "It started with a small experiment: this portfolio. I used it to learn new tools like Git and GitHub, but mainly to discover how I can keep my judgment at the center of the process while speeding up the execution with AI.", "es": "Todo empezó con un experimento pequeño: este portafolio. Lo usé para aprender herramientas nuevas como Git y GitHub, pero sobre todo para descubrir cómo mantener mi criterio en el centro del proceso mientras acelero la ejecución con IA." },
    "cta": { "en": "View my GitHub profile", "es": "Ver mi perfil de GitHub" },
+   "articleCta": { "en": "How I build with AI", "es": "Cómo construyo con IA" },
+   "article": "construir-mi-portafolio-con-ia",
    "link": "https://github.com/idmr13-davem",
    "total": { "en": "104 contributions in the last year", "es": "104 contribuciones en el último año" },
    "range": {

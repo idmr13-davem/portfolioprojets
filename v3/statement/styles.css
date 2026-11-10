@@ -527,6 +527,14 @@ body.is-locked .a-top { color: var(--ink); }
 .a-gh__more { grid-column: 6 / span 5; display: grid; justify-items: start; align-content: start; gap: var(--space-l); }
 .a-gh__more p { max-width: none; font-size: var(--step-body); line-height: 1.5; color: var(--muted); }
 .a-gh .a-btn { width: auto; }
+/* Figma 5444:17428 (9-nov-2026): body and buttons M (24) apart; the article button (accent) leads and the
+   GitHub profile is a Mute button (Text/Inverse ground, Stroke/Secondary border, Surface/Inverse label). The
+   pair keeps XS (8) between and wraps when it does not fit: one row at 1600 and 768, stacked at 1280 and 390. */
+.a-gh__more { gap: var(--space-m); }
+.a-gh__ctas { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.a-btn--mute { background: var(--text-inverse); color: var(--surface-inverse); border: 1px solid var(--stroke-secondary); }
+.a-btn--mute:hover { background: var(--interactive-secondary-hover); }
+.a-btn--mute:active { background: var(--interactive-secondary-clic); }
 .a-gh__card { display: grid; gap: var(--space-m); margin: 0; padding: var(--space-l); border-radius: var(--radius-m); background: var(--surface); }
 .a-gh__head, .a-gh__foot { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-xs) var(--space-m); }
 .a-gh__total { max-width: none; font-size: 1.1875rem; line-height: 1.3; font-weight: 700; }

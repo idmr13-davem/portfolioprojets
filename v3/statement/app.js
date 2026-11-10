@@ -154,7 +154,10 @@
           <p class="a-gh__lead">${esc(t(S.github.lead))}</p>
           <div class="a-gh__more">
             <p>${esc(t(S.github.body))}</p>
-            <a class="a-btn" href="${S.github.link}" target="_blank" rel="noopener noreferrer">${esc(t(S.github.cta))}</a>
+            <div class="a-gh__ctas">
+              <a class="a-btn" href="${href.article(S.github.article)}">${esc(t(S.github.articleCta))}</a>
+              <a class="a-btn a-btn--mute" href="${S.github.link}" target="_blank" rel="noopener noreferrer">${esc(t(S.github.cta))}</a>
+            </div>
           </div>
         </div>
         <figure class="a-gh__card" data-reveal>
