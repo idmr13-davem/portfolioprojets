@@ -167,6 +167,17 @@ window.V3_CONTENT = {
   "recommendationsLink": "https://www.linkedin.com/in/david-montealegre-rey/details/recommendations/?detailScreenTabIndex=0",
   "recommendations": [
    {
+    "name": "Débora Arruda Cabral",
+    "role": "Product Manager · Mercado Libre",
+    "country": { "en": "Brazil", "es": "Brasil" },
+    "flag": "assets/Home/v2/flag-brazil.svg",
+    "avatar": "assets/Home/v3/recommendations/debora.jpg",
+    "text": {
+     "en": ["I had the opportunity to work with David at Mercado Libre, primarily on the marketplace’s user registration experience. When we were part of the same triad, he always stood out for his strong UX design skills, his focus on the user experience, and his curiosity about exploring different alternatives.", "David shared his explorations in great detail and had a remarkable ability to connect product needs with technical feasibility. I especially value his contribution to the preparation for each rollout, actively participating in testing and sharing valuable feedback to improve the experience. Without a doubt, our account creation experience is better today thanks in large part to Dave’s contributions."],
+     "es": ["Tuve la oportunidad de trabajar con David en Mercado Libre, principalmente en la experiencia de registro de usuarios del marketplace. Cuando formamos parte de la misma tríada, siempre se destacó por sus sólidas habilidades de diseño UX, su foco en la experiencia del usuario y su curiosidad por explorar distintas alternativas.", "David compartía sus exploraciones con gran detalle y tenía una notable capacidad para conectar las necesidades del producto con la factibilidad técnica. Valoro especialmente su aporte en la preparación de cada lanzamiento, participando activamente en las pruebas y compartiendo feedback valioso para mejorar la experiencia. Sin duda, nuestra experiencia de creación de cuenta es mejor hoy gracias, en gran parte, a los aportes de Dave."]
+    }
+   },
+   {
     "name": "Fiamma Coedo",
     "role": "Software Project Leader · Mercado Libre",
     "country": { "en": "Argentina", "es": "Argentina" },

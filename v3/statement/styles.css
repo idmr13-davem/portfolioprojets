@@ -485,6 +485,7 @@ body.is-locked .a-top { color: var(--ink); }
 .a-rec figure { flex: 1; display: flex; flex-direction: column; justify-content: space-between; margin: 0; padding: var(--space-m); border-radius: var(--radius-m); background: var(--surface); }
 .a-rec blockquote { margin: 0; padding-bottom: var(--space-l); font-size: var(--step-body); line-height: 1.5; color: var(--ink); }
 .a-rec blockquote p { max-width: none; margin: 0; }
+.a-rec blockquote p + p { margin-top: 1.5em; }
 .a-rec blockquote::before { content: '\201C'; display: block; margin-bottom: var(--space-s); color: var(--text-accent-primary); font-size: 1.75rem; line-height: 2.25rem; font-weight: 700; }
 .a-rec figcaption { display: flex; align-items: center; gap: var(--space-s); }
 .a-rec figcaption img { flex: none; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; background: none; }
