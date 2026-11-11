@@ -2676,7 +2676,7 @@ window.V3_CONTENT = {
      "cta": "Continuar leyendo"
     }
    },
-   "img": "assets/Home/v2/article-career.png"
+   "img": "assets/Home/v2/article-career.jpg"
   },
   "lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias": {
    "title": {
@@ -2976,7 +2976,7 @@ window.V3_CONTENT = {
      "cta": "Continuar leyendo"
     }
    },
-   "img": "assets/Home/v2/article-automotive.png"
+   "img": "assets/Home/v2/article-automotive.jpg"
   },
   "construir-mi-portafolio-con-ia": {
    "title": {
