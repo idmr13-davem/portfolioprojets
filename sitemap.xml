@@ -1,13 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://davidmontealegreux.com/</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/registro-ml.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/motion-design-system.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/menores-mexico.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/cambio-cuentas-paises.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/ropstar.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/work/winefast.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html</loc></url>
-  <url><loc>https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://davidmontealegreux.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/registro-ml.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/registro-ml.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/registro-ml.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/registro-ml.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/registro-ml.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/registro-ml.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/registro-ml.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/registro-ml.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/motion-design-system.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/motion-design-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/motion-design-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/motion-design-system.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/motion-design-system.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/motion-design-system.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/motion-design-system.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/motion-design-system.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/menores-mexico.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/menores-mexico.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/menores-mexico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/menores-mexico.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/menores-mexico.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/menores-mexico.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/menores-mexico.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/menores-mexico.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/cambio-cuentas-paises.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/cambio-cuentas-paises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/cambio-cuentas-paises.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/cambio-cuentas-paises.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/ropstar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/ropstar.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/ropstar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/ropstar.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/ropstar.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/ropstar.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/ropstar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/ropstar.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/work/winefast.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/winefast.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/winefast.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/winefast.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/work/winefast.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/winefast.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/winefast.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/winefast.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/construir-mi-portafolio-con-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/articles/construir-mi-portafolio-con-ia.html</loc>
+    <lastmod>2026-11-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/construir-mi-portafolio-con-ia.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/construir-mi-portafolio-con-ia.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html</loc>
+    <lastmod>2026-08-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+  </url>
+  <url>
+    <loc>https://davidmontealegreux.com/es/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html</loc>
+    <lastmod>2026-09-06</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"/>
+  </url>
 </urlset>

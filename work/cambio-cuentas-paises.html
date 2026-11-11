@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-root="../" data-base="../">
+<html lang="en" data-root="/" data-base="/" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,9 @@
 <meta name="robots" content="index, follow">
 <meta name="description" content="Created the country switch experience, an animated flow visible to people with accounts in multiple Latin American countries when switching between them.">
 <link rel="canonical" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html">
+<link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html">
+<link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/work/cambio-cuentas-paises.html">
+<link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/work/cambio-cuentas-paises.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="David Montealegre">
 <meta property="og:title" content="Account switching between countries — David Montealegre">
@@ -19,20 +22,109 @@
 <meta property="og:locale:alternate" content="es_LA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#171b1f">
-<link rel="icon" href="../assets/Favicon/favicon.ico">
+<link rel="icon" href="/assets/Favicon/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="../css/tokens/figma.css">
-<link rel="stylesheet" href="../css/analytics.css">
-<link rel="stylesheet" href="../v3/shared/base.css">
-<link rel="stylesheet" href="../v3/statement/styles.css?v=20261110-rec-debora">
+<link rel="stylesheet" href="/css/tokens/figma.css">
+<link rel="stylesheet" href="/css/analytics.css">
+<link rel="stylesheet" href="/v3/shared/base.css">
+<link rel="stylesheet" href="/v3/statement/styles.css?v=20261110-rec-debora">
 </head>
 <body class="v3-statement" data-page="case" data-id="switch">
-<div id="app"></div>
-<noscript><p style="padding:24px">This portfolio needs JavaScript to display. Contact: <a href="mailto:idmr13@gmail.com">idmr13@gmail.com</a>.</p></noscript>
-<script src="../v3/shared/content.js?v=20261110-blog-thumbs"></script>
-<script src="../v3/shared/site.js?v=20261109-blog-ai"></script>
-<script src="../v3/statement/app.js?v=20261109-gh-article"></script>
-<script src="../js/analytics.js" defer></script>
+<div id="app">
+    <a class="v3-skip" href="#main">Skip to content</a>
+    <header class="a-top">
+      <a class="a-mark" href="/index.html" aria-label="David Montealegre — Home"><img src="/assets/Home/v2/header-logo.svg" alt="" width="59" height="52"></a>
+      <nav class="a-nav" data-grid-ignore aria-label="Home">
+        <a href="/index.html#work">Case studies</a>
+        <a href="/index.html#blog">Blog</a>
+        <a href="/index.html#contact">Contact</a>
+        <div class="v3-lang a-lang" role="group" aria-label="Language"><button type="button" data-set-lang="en" aria-pressed="false">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div>
+      </nav>
+      <button class="a-menu-btn" type="button" aria-expanded="false" aria-controls="a-menu" aria-label="Menu"><span class="a-burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    </header>
+    <div class="a-menu" id="a-menu" inert>
+      <nav aria-label="Menu">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#work">Case studies</a>
+        <a href="/index.html#github">GitHub profile</a>
+        <a href="/index.html#recommendations">In their words</a>
+        <a href="/index.html#blog">Blog</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+      <div class="v3-lang a-lang a-lang--menu" role="group" aria-label="Language"><button type="button" data-set-lang="en" aria-pressed="false">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div>
+      <div class="a-menu__links"><a class="a-menu__link a-menu__link--email" href="mailto:idmr13@gmail.com" >Send me an email</a><a class="a-menu__link a-menu__link--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">Visit my LinkedIn profile</a><a class="a-menu__link a-menu__link--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">Send me a message by WhatsApp</a><a class="a-menu__link a-menu__link--adplist" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer">Schedule a call in my calendar</a></div>
+    </div>
+    <main id="main" class="a-cs a-cs--switch a-cs--grid">
+      <section class="a-cs__hero">
+        <h1 class="a-cs__title lines"><span class="line"><span data-line style="--i:0">Account switching</span></span><span class="line"><span data-line style="--i:1">between countries</span></span></h1>
+        
+        <dl class="a-cs__meta" data-rise style="--i:3">
+          <div><dt>Role</dt><dd>UI designer, motion designer</dd></div><div><dt>Period</dt><dd>Q3 2026</dd></div><div><dt>Status</dt><dd>On develop</dd></div>
+        </dl>
+      </section>
+      <div class="a-cs__visual" data-reveal><picture class="a-cs__heroimg"><source media="(max-width: 767px)" srcset="/assets/Switch%20pa%C3%ADses/v3/hero-v3-mobile.webp"><img src="/assets/Switch%20pa%C3%ADses/v3/hero-v3.webp" alt="Mobile app screens with a yellow interface showing an account switch between countries." fetchpriority="high" ></picture></div>
+      <section class="a-cs__goals">
+        <div data-reveal><h2>Objectives</h2><ul class="cs-list"><li>Reduce switching between countries by logging out and logging in.</li><li>Increase multi-country sessions per person.</li><li>Reduce account duplication from logging in across countries.</li></ul></div>
+        <div data-reveal><h2>Outcomes</h2><ul class="cs-list"><li>Enable switching accounts between countries from the personal account manager.</li></ul></div>
+      </section>
+      <div class="a-cs__body"><section class="cs-section cs-section--context" id="context">
+      <div class="cs-intro">
+        <h2 class="cs-title" data-reveal>Context</h2>
+        <div class="cs-content"><div class="cs-copy" data-reveal><p>On Mercado Libre and Mercado Pago, a person can have multiple accounts under the same identity. All these accounts can be managed through a personal identity panel and account switching widget. From there, a person can switch between multiple accounts as long as they are in the same country.</p><p>In recent quarters, we noticed that more users had accounts in more than one country, reaching a significant 2% of users with the panel active in Argentina, Brazil, and Uruguay. These users could not switch between their accounts via the identity panel and had to log out and log back in, adding friction to the switching experience; they also faced issues like forgetting their username and password, increasing difficulty and causing additional problems such as duplicate account creation.</p></div></div>
+        
+      </div>
+      
+    </section><section class="cs-section cs-section--challenges" id="challenges">
+      <div class="cs-intro">
+        <h2 class="cs-title" data-reveal>Challenges Faced</h2>
+        <div class="cs-content"><div class="cs-copy" data-reveal><ul class="cs-list"><li>Switching between accounts of the same identity already existed within the same country.</li><li>The experience does not scale for multiple countries because it does not allow identifying the destination country in the account list.</li><li>The experience must communicate the switch between accounts in terms of continuity and history, differentiating it from the use case of switching between accounts within the same country.</li></ul></div></div>
+        
+      </div>
+      
+    </section><section class="cs-section cs-section--comparison" id="comparison">
+      <div class="cs-intro">
+        <h2 class="cs-title" data-reveal>Comparative experiences</h2>
+        <div class="cs-content"><div class="cs-copy" data-reveal><p>The first step to identify the account was to add a visual identifier with the country&#39;s flag next to the account avatar. This avatar helps with identification in lists of more than two accounts and is only shown when there are three accounts in total (one active and two available on the panel).</p></div></div>
+        
+      </div>
+      <div class="cs-media cs-media--2"><figure class="cs-figure cs-figure--video" data-reveal><video class="" muted  playsinline preload="metadata" data-autoplay poster="/assets/Switch%20pa%C3%ADses/v3/current-poster.jpg" aria-label="Previous account switch: the panel lets people choose from their available accounts."><source src="/assets/Videos/Switch/Switch%20productivo.web.mp4"></video><button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button></figure><figure class="cs-figure cs-figure--video" data-reveal><video class="" muted  playsinline preload="metadata" data-autoplay poster="/assets/Switch%20pa%C3%ADses/v3/proposed-poster.jpg" aria-label="New cross-country switch: a flag beside the avatar identifies the destination account’s country."><source src="/assets/Videos/Switch/Nuevo%20Switch.web.mp4"></video><button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button></figure></div>
+    </section><section class="cs-section cs-section--variants" id="variants">
+      <div class="cs-intro">
+        <h2 class="cs-title" data-reveal>Change Animation and Variants</h2>
+        <div class="cs-content"><div class="cs-copy" data-reveal><p>The implementation of this animation includes three use cases with different solutions:</p><ul class="cs-list"><li>Happy path, the experience without a request for an authentication factor and immediate change.</li><li>Technical error, in case the change cannot be completed due to an authentication failure.</li><li>Security factor request, applies if the person lost the active session in the chosen account.</li></ul></div></div>
+        
+      </div>
+      <div class="cs-media cs-media--3" data-sequence><figure class="cs-figure cs-figure--video" data-reveal><video class="" muted loop playsinline preload="metadata"  poster="/assets/Switch%20pa%C3%ADses/v3/happy-poster.jpg" aria-label="Happy path: the animation communicates the country change without requesting another authentication factor."><source src="/assets/Videos/Switch/Happy%20path%20con%20SL.web.mp4"></video><button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button></figure><figure class="cs-figure cs-figure--video" data-reveal><video class="" muted loop playsinline preload="metadata"  poster="/assets/Switch%20pa%C3%ADses/v3/error-poster.jpg" aria-label="Technical error: the experience communicates that authentication failed and the switch could not be completed."><source src="/assets/Videos/Switch/CDU%20error.web.mp4"></video><button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button></figure><figure class="cs-figure cs-figure--video" data-reveal><video class="" muted loop playsinline preload="metadata"  poster="/assets/Switch%20pa%C3%ADses/v3/auth-poster.jpg" aria-label="Security factor request: a second authentication factor is requested when the selected account no longer has an active session."><source src="/assets/Videos/Switch/Paso%20a%202FA.web.mp4"></video><button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button></figure></div>
+    </section></div>
+      <section class="a-cs__final">
+        <h2 data-reveal>Final outcome</h2>
+        
+        <ul class="cs-list"><li>It is estimated to reach 200k people with shared accounts among Argentina, Brazil, and Uruguay. At the time of my departure from the project, this change had not yet been implemented.</li></ul>
+        
+      </section>
+      <nav class="a-cs__next" aria-label="Next case study">
+        <a href="/index.html#work">All case studies</a>
+        <a class="a-cs__nextlink" href="/work/registro-ml.html"><span>Next case study</span><strong>Mercado Libre sign-up</strong></a>
+      </nav>
+    </main>
+    
+    <footer class="a-foot" id="contact-close">
+      <div class="a-foot__top">
+        <div class="a-foot__invite" data-reveal>
+          <p class="a-foot__line">Could we work together?</p>
+          <div class="a-foot__buttons"><a class="a-btn a-btn--dark" href="mailto:idmr13@gmail.com" >Send me an email</a><a class="a-btn a-btn--dark" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">Visit my profile</a><a class="a-btn a-btn--dark" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">Send me a message</a><a class="a-btn a-btn--dark" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer">Schedule a call</a></div>
+        </div>
+      </div>
+      <div class="a-foot__legal">
+        <p class="a-foot__credits"><span>© David Montealegre 2026</span><span class="a-foot__base"><img src="/assets/Home/v2/flag-colombia.svg" alt="" width="22" height="16">Based in Bogotá - Colombia</span></p>
+        <div class="a-foot__aside"><div class="a-foot__consent" data-consent-slot></div><p class="a-foot__credit">Website created with Claude Code + Codex</p></div>
+      </div>
+      <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
+    </footer></div>
+<script src="/v3/shared/content.js?v=20261110-blog-thumbs"></script>
+<script src="/v3/shared/site.js?v=20261110-seo"></script>
+<script src="/v3/statement/app.js?v=20261109-gh-article"></script>
+<script src="/js/analytics.js" defer></script>
 </body>
 </html>

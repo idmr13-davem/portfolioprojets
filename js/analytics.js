@@ -14,7 +14,7 @@
   ]);
   const production = location.protocol === 'https:' &&
     ['davidmontealegreux.com', 'www.davidmontealegreux.com'].includes(location.hostname);
-  const measurable = production && publicPaths.has(location.pathname);
+  const measurable = production && publicPaths.has(location.pathname.replace(/^\/es(?=\/)/, ''));
   let loaded = false;
   let previousFocus;
   let choice = readChoice();
@@ -128,9 +128,9 @@
       let url;
       try { url = new URL(element.href, location.href); } catch { return; }
       const internal = url.origin === location.origin;
-      if (internal && casePaths[url.pathname]) {
+      if (internal && casePaths[url.pathname.replace(/^\/es(?=\/)/, '')]) {
         name = 'case_select';
-        details = { case_id: casePaths[url.pathname], destination_status: 'case_link' };
+        details = { case_id: casePaths[url.pathname.replace(/^\/es(?=\/)/, '')], destination_status: 'case_link' };
       } else if (url.protocol === 'mailto:') {
         name = 'contact_click'; details = { contact_method: 'email' };
       } else if (url.protocol === 'https:' && ['wa.me', 'api.whatsapp.com'].includes(url.hostname)) {
@@ -141,8 +141,8 @@
         name = 'schedule_click'; details = { contact_method: 'adplist' };
       } else if (internal && /^\/assets\/CV\/(DavidMontealegre-CV-EN|DavidMontealegre-HV-ES)\.pdf$/.test(url.pathname)) {
         name = 'cv_open'; details = { cv_language: url.pathname.endsWith('-ES.pdf') ? 'es' : 'en' };
-      } else if (internal && articlePaths[url.pathname] && url.pathname !== location.pathname) {
-        name = 'article_select'; details = { article_id: articlePaths[url.pathname] };
+      } else if (internal && articlePaths[url.pathname.replace(/^\/es(?=\/)/, '')] && url.pathname !== location.pathname) {
+        name = 'article_select'; details = { article_id: articlePaths[url.pathname.replace(/^\/es(?=\/)/, '')] };
       } else if (internal && ['/', '/index.html', location.pathname].includes(url.pathname)) {
         const sections = { '#main': 'intro', '#about-title': 'about', '#work': 'work', '#craft': 'side_projects', '#github': 'design_engineering', '#recommendations': 'recommendations', '#blog': 'articles', '#contact': 'contact' };
         if (!sections[url.hash]) return;

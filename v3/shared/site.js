@@ -10,7 +10,22 @@
   const query = new URLSearchParams(location.search).get('lang');
   let stored = null;
   try { stored = localStorage.getItem('portfolio-language'); } catch (error) { /* private mode */ }
-  let lang = supported.includes(query) ? query : supported.includes(stored) ? stored : 'en';
+  // Release pages carry data-lang: each language has its own URL (/… and /es/…, SEO plan 2026-11-10).
+  // There the URL's language wins over the stored preference; only an explicit ?lang= (old links)
+  // overrides it, and the URL follows. Shells without data-lang keep the stored preference.
+  const urlLang = supported.includes(html.dataset.lang) ? html.dataset.lang : null;
+  let lang = supported.includes(query) ? query : urlLang || (supported.includes(stored) ? stored : 'en');
+  const langPath = (path, to) => { const bare = path.replace(/^\/es(?=\/)/, ''); return to === 'es' ? '/es' + bare : bare; };
+  const followUrl = () => {
+    if (!urlLang) return;
+    const url = new URL(location.href);
+    const next = langPath(url.pathname, lang);
+    if (next === url.pathname) return;
+    url.pathname = next;
+    history.replaceState(history.state, '', url);
+  };
+  followUrl();
+  const prefix = () => (urlLang && lang === 'es' ? 'es/' : '');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const renderers = [];
 
@@ -23,9 +38,9 @@
   const articleList = Object.entries(C.articles).map(([slug, a]) => ({ slug, ...a }));
 
   const href = {
-    home: (hash = '') => `${base}index.html${hash}`,
-    case: c => `${base}work/${c.slug}.html`,
-    article: slug => `${base}articles/${slug}.html`,
+    home: (hash = '') => `${base}${prefix()}index.html${hash}`,
+    case: c => `${base}${prefix()}work/${c.slug}.html`,
+    article: slug => `${base}${prefix()}articles/${slug}.html`,
     cv: () => asset(t(C.site.cv))
   };
 
@@ -35,6 +50,7 @@
     try { localStorage.setItem('portfolio-language', next); } catch (error) { /* private mode */ }
     const url = new URL(location.href);
     if (url.searchParams.has('lang')) { url.searchParams.set('lang', next); history.replaceState(null, '', url); }
+    followUrl();
     render();
   }
 

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-root="" data-base="">
+<html lang="en" data-root="/" data-base="/" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,9 @@
 <meta name="robots" content="index, follow">
 <meta name="description" content="Hi, I'm David Montealegre, senior product designer, ex-Mercado Libre, consultant and freelance designer, mentor at ADPlist">
 <link rel="canonical" href="https://davidmontealegreux.com/">
+<link rel="alternate" hreflang="en" href="https://davidmontealegreux.com/">
+<link rel="alternate" hreflang="es" href="https://davidmontealegreux.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://davidmontealegreux.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="David Montealegre">
 <meta property="og:title" content="David Montealegre — Product Designer">
@@ -18,21 +21,283 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_LA">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://davidmontealegreux.com/#person",
+   "name": "David Montealegre",
+   "url": "https://davidmontealegreux.com/",
+   "jobTitle": "Senior Product Designer",
+   "image": "https://davidmontealegreux.com/assets/Home/v3/photos/david-1.jpg",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressCountry": "CO"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/david-montealegre-rey/",
+    "https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd",
+    "https://github.com/idmr13-davem"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://davidmontealegreux.com/#website",
+   "url": "https://davidmontealegreux.com/",
+   "name": "David Montealegre",
+   "inLanguage": [
+    "en",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://davidmontealegreux.com/#person"
+   }
+  }
+ ]
+}</script>
 <meta name="theme-color" content="#171b1f">
-<link rel="icon" href="assets/Favicon/favicon.ico">
+<link rel="icon" href="/assets/Favicon/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="css/tokens/figma.css">
-<link rel="stylesheet" href="css/analytics.css">
-<link rel="stylesheet" href="v3/shared/base.css">
-<link rel="stylesheet" href="v3/statement/styles.css?v=20261110-rec-debora">
+<link rel="stylesheet" href="/css/tokens/figma.css">
+<link rel="stylesheet" href="/css/analytics.css">
+<link rel="stylesheet" href="/v3/shared/base.css">
+<link rel="stylesheet" href="/v3/statement/styles.css?v=20261110-rec-debora">
 </head>
 <body class="v3-statement" data-page="home">
-<div id="app"></div>
-<noscript><p style="padding:24px">This portfolio needs JavaScript to display. Contact: <a href="mailto:idmr13@gmail.com">idmr13@gmail.com</a>.</p></noscript>
-<script src="v3/shared/content.js?v=20261110-blog-thumbs"></script>
-<script src="v3/shared/site.js?v=20261109-blog-ai"></script>
-<script src="v3/statement/app.js?v=20261109-gh-article"></script>
-<script src="js/analytics.js" defer></script>
+<div id="app">
+    <a class="v3-skip" href="#main">Skip to content</a>
+    <header class="a-top">
+      <a class="a-mark" href="/index.html" aria-label="David Montealegre — Home"><img src="/assets/Home/v2/header-logo.svg" alt="" width="59" height="52"></a>
+      <nav class="a-nav" data-grid-ignore aria-label="Home">
+        <a href="/index.html#work">Case studies</a>
+        <a href="/index.html#blog">Blog</a>
+        <a href="/index.html#contact">Contact</a>
+        <div class="v3-lang a-lang" role="group" aria-label="Language"><button type="button" data-set-lang="en" aria-pressed="false">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div>
+      </nav>
+      <button class="a-menu-btn" type="button" aria-expanded="false" aria-controls="a-menu" aria-label="Menu"><span class="a-burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    </header>
+    <div class="a-menu" id="a-menu" inert>
+      <nav aria-label="Menu">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#work">Case studies</a>
+        <a href="/index.html#github">GitHub profile</a>
+        <a href="/index.html#recommendations">In their words</a>
+        <a href="/index.html#blog">Blog</a>
+        <a href="/index.html#contact">Contact</a>
+      </nav>
+      <div class="v3-lang a-lang a-lang--menu" role="group" aria-label="Language"><button type="button" data-set-lang="en" aria-pressed="false">EN</button><button type="button" data-set-lang="es" aria-pressed="false">ES</button></div>
+      <div class="a-menu__links"><a class="a-menu__link a-menu__link--email" href="mailto:idmr13@gmail.com" >Send me an email</a><a class="a-menu__link a-menu__link--linkedin" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">Visit my LinkedIn profile</a><a class="a-menu__link a-menu__link--whatsapp" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">Send me a message by WhatsApp</a><a class="a-menu__link a-menu__link--adplist" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer">Schedule a call in my calendar</a></div>
+    </div>
+    <main id="main">
+      <section class="a-hero">
+        <h1 class="a-hero__name lines" aria-label="David Montealegre"><span class="line"><span data-line style="--i:0">David</span></span><span class="line"><span data-line style="--i:1">Montealegre</span></span></h1>
+        <div class="a-hero__foot">
+          <p class="a-hero__role" data-rise style="--i:3">Senior product designer, ex-Mercado Libre, consultant and freelance designer, mentor at ADPlist</p>
+          <a class="a-btn" data-rise style="--i:4" href="#work">Explore my case studies</a>
+        </div>
+      </section>
+
+      <section class="a-facts" aria-label="About me">
+        <div class="a-facts__nums">
+          <div class="a-fact" data-reveal><p class="a-fact__n">10</p><p class="a-fact__t">years of design experience: 2 in graphic design and 8 in UX, UI, and product design.</p></div><div class="a-fact" data-reveal><p class="a-fact__n">5</p><p class="a-fact__t">years designing at Mercado Libre / Mercado Pago for people across Latin America.</p></div><div class="a-fact" data-reveal><p class="a-fact__n">1</p><p class="a-fact__t">year as a freelance product designer.</p></div>
+        </div>
+        <div class="a-facts__chip a-photos-wrap is-playing" data-reveal data-photos-wrap>
+          <figure class="a-photos" data-photos role="img" aria-label="David Montealegre"><img class="is-shown" src="/assets/Home/v3/photos/david-1.jpg" alt="" loading="lazy" width="800" height="1000"><img src="/assets/Home/v3/photos/david-2.jpg" alt="" loading="lazy" width="800" height="1000"><img src="/assets/Home/v3/photos/david-3.jpg" alt="" loading="lazy" width="800" height="1000"><img src="/assets/Home/v3/photos/david-4.jpg" alt="" loading="lazy" width="800" height="1000"></figure>
+          <button class="v3-play a-photos__toggle" type="button" data-photos-toggle><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span><span class="sr-only"> photos</span></button>
+        </div>
+        <ul class="a-facts__list"><li data-reveal>Currently moving into design engineering.</li><li data-reveal>Mentor at ADPlist and an active member of UX learning communities.</li><li data-reveal>Aspiring entrepreneur.</li></ul>
+      </section>
+
+      <section class="a-work" id="work" aria-labelledby="work-title">
+        <h2 class="a-work__title" id="work-title">Case studies</h2>
+      </section>
+
+      
+      <section class="a-case a-case--registro" aria-labelledby="case-registro">
+        <div class="a-case__media" data-reveal data-video-wrap>
+          <video class="a-case__video" muted  playsinline preload="metadata" data-autoplay poster="/assets/Videos/home-v2-poster-1.png" aria-label="Entry into Mercado Libre’s unified sign-up flow."><source src="/assets/Videos/Flujo%20registro%20ML.web.mp4"></video>
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button>
+        </div>
+        <div class="a-case__copy">
+          <h3 id="case-registro" data-reveal>Mercado Libre sign-up</h3>
+          <p class="a-case__impact" data-reveal>I reduced average sign-up time from 3:25 minutes to 52 seconds</p>
+          <p class="a-case__summary" data-reveal>I led the iteration of Mercado Libre’s sign-up model, impacting 60 million users across 9 Latin American countries.</p>
+          <p class="a-case__role" data-reveal>Role: Senior UX analyst / UI designer</p>
+          <a class="a-btn" data-reveal href="/work/registro-ml.html">See case study</a>
+        </div>
+      </section>
+      <section class="a-case a-case--motion" aria-labelledby="case-motion">
+        <div class="a-case__media" data-reveal data-video-wrap>
+          <video class="a-case__video" muted  playsinline preload="metadata" data-autoplay poster="/assets/Motion%20DS/v3/motion-curve-1-poster.png" aria-label="Easing tests for the motion design system at Mercado Libre."><source src="/assets/Motion%20DS/v3/Motion%20curve%201.web.mp4"></video>
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button>
+        </div>
+        <div class="a-case__copy">
+          <h3 id="case-motion" data-reveal>Motion design system</h3>
+          <p class="a-case__impact" data-reveal>I created the conceptual framework that unifies how expressive motion is at Mercado Libre</p>
+          <p class="a-case__summary" data-reveal>I co-led the first phase of Mercado Libre’s motion design system, developing the conceptual foundation for the Motion Level framework.</p>
+          <p class="a-case__role" data-reveal>Role: Senior UX analyst / UI designer</p>
+          <a class="a-btn" data-reveal href="/work/motion-design-system.html">See case study</a>
+        </div>
+      </section>
+      <section class="a-case a-case--menores" aria-labelledby="case-menores">
+        <div class="a-case__media" data-reveal data-video-wrap>
+          <video class="a-case__video" muted  playsinline preload="metadata" data-autoplay poster="/assets/Videos/home-v2-poster-3.png" aria-label="Account creation flow for minors in Mercado Pago in Mexico."><source src="/assets/Videos/MenoresMLM.web.mp4"></video>
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button>
+        </div>
+        <div class="a-case__copy">
+          <h3 id="case-menores" data-reveal>Sign-up for minors in Mexico</h3>
+          <p class="a-case__impact" data-reveal>Reducing identity verification time from 24 hours to 20 seconds</p>
+          <p class="a-case__summary" data-reveal>I designed Mercado Pago’s sign-up flow for minors in Mexico, working within Mexican regulations, among the most demanding in Latin America.</p>
+          <p class="a-case__role" data-reveal>Role: Senior UX analyst / UI designer</p>
+          <a class="a-btn" data-reveal href="/work/menores-mexico.html">See case study</a>
+        </div>
+      </section>
+      <section class="a-case a-case--switch" aria-labelledby="case-switch">
+        <div class="a-case__media" data-reveal data-video-wrap>
+          <video class="a-case__video" muted  playsinline preload="metadata" data-autoplay poster="/assets/Videos/home-v2-poster-4.png" aria-label="Switching accounts between Argentina and Brazil in Mercado Pago."><source src="/assets/Videos/Switch%20entre%20pa%C3%ADses.web.mp4"></video>
+          <button class="v3-play" type="button" data-video-toggle data-grid-ignore><span class="v3-play__play">Play</span><span class="v3-play__pause">Pause</span></button>
+        </div>
+        <div class="a-case__copy">
+          <h3 id="case-switch" data-reveal>Account switching between countries</h3>
+          <p class="a-case__impact" data-reveal>Designed an experience with an estimated reach of 200k people with more than one account across Brazil, Argentina, and Uruguay, a number that has been growing in recent quarters.</p>
+          <p class="a-case__summary" data-reveal>Created the country switch experience, an animated flow visible to people with accounts in multiple Latin American countries when switching between them.</p>
+          <p class="a-case__role" data-reveal>Role: UI designer, motion designer</p>
+          <a class="a-btn" data-reveal href="/work/cambio-cuentas-paises.html">See case study</a>
+        </div>
+      </section>
+
+      <section class="a-craft" id="craft" aria-labelledby="craft-title">
+        <h2 class="a-craft__title" id="craft-title" data-reveal>Freelance and side projects</h2>
+        <div class="a-craft__list">
+          
+          <article class="a-craft__entry" data-reveal>
+            <div class="a-craft__copy"><h3>Ropstar UI</h3><p>UI design for a circular fashion marketplace.</p></div>
+            <figure class="a-craft__art" role="img" aria-label="Three Ropstar screens: search by category, a product post for a blue hoodie, and a grid of liked garments."><img class="a-craft__screen a-craft__screen--main" src="/assets/Ropstar/v3/home/main.webp" alt="" loading="lazy" width="462" height="1000"><img class="a-craft__screen a-craft__screen--left" src="/assets/Ropstar/v3/home/left.webp" alt="" loading="lazy" width="388" height="840"><img class="a-craft__screen a-craft__screen--right" src="/assets/Ropstar/v3/home/right.webp" alt="" loading="lazy" width="388" height="840"></figure>
+            <a class="a-btn" href="/work/ropstar.html">See proposal<span class="sr-only">: Ropstar UI</span></a>
+          </article>
+          <article class="a-craft__entry" data-reveal>
+            <div class="a-craft__copy"><h3>Winefast app concept</h3><p>UI concept for discovering and buying wine.</p></div>
+            <figure class="a-craft__art" role="img" aria-label="Three Winefast screens: choosing favourite wine countries, a list of saved wines with prices, and a taster level screen."><img class="a-craft__screen a-craft__screen--main" src="/assets/Winefast/V3/home/main.webp" alt="" loading="lazy" width="462" height="1000"><img class="a-craft__screen a-craft__screen--left" src="/assets/Winefast/V3/home/left.webp" alt="" loading="lazy" width="388" height="840"><img class="a-craft__screen a-craft__screen--right" src="/assets/Winefast/V3/home/right.webp" alt="" loading="lazy" width="388" height="840"></figure>
+            <a class="a-btn" href="/work/winefast.html">See proposal<span class="sr-only">: Winefast app concept</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="a-gh" id="github" aria-labelledby="gh-title">
+        <h2 class="a-gh__title" id="gh-title" data-reveal>Why design engineering?</h2>
+        <div class="a-gh__intro" data-reveal>
+          <p class="a-gh__lead">I believe the future of design goes beyond static screens in Figma. That&#39;s why I&#39;m moving from product design toward design engineering: designing interfaces and building them in code.</p>
+          <div class="a-gh__more">
+            <p>It started with a small experiment: this portfolio. I used it to learn new tools like Git and GitHub, but mainly to discover how I can keep my judgment at the center of the process while speeding up the execution with AI.</p>
+            <div class="a-gh__ctas">
+              <a class="a-btn" href="/articles/construir-mi-portafolio-con-ia.html">How I build with AI</a>
+              <a class="a-btn a-btn--mute" href="https://github.com/idmr13-davem" target="_blank" rel="noopener noreferrer">View my GitHub profile</a>
+            </div>
+          </div>
+        </div>
+        <figure class="a-gh__card" data-reveal>
+          <div class="a-gh__head">
+            <p class="a-gh__total">104 contributions in the last year</p>
+            <p class="a-gh__range"><span class="a-gh__range--full">Nov 2, 2025 – Nov 1, 2026</span><span class="a-gh__range--tablet">May 10 – Nov 1, 2026</span><span class="a-gh__range--mobile">Jul 12 – Nov 1, 2026</span></p>
+          </div>
+          <div class="a-gh__graph" role="img" aria-label="104 contributions in the last year, Nov 2, 2025 – Nov 1, 2026"><div class="a-gh__weeks" aria-hidden="true"><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Nov</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Dec</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Jan</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Feb</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Mar</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">Apr</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-tab is-before-mob"><span class="a-gh__m">May</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m a-gh__m--not-tab"></span><span class="a-gh__m a-gh__m--tab">May</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m">Jun</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week is-before-mob"><span class="a-gh__m">Jul</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m a-gh__m--not-mob"></span><span class="a-gh__m a-gh__m--mob">Jul</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="2"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="4"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span></div><div class="a-gh__week"><span class="a-gh__m">Aug</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="3"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="3"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="2"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m">Sep</span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="4"></span><span class="a-gh__day" data-l="1"></span></div><div class="a-gh__week"><span class="a-gh__m">Oct</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="4"></span><span class="a-gh__day" data-l="3"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="0"></span></div><div class="a-gh__week"><span class="a-gh__m"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="4"></span></div><div class="a-gh__week"><span class="a-gh__m">Nov</span><span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-future></span><span class="a-gh__day" data-future></span><span class="a-gh__day" data-future></span><span class="a-gh__day" data-future></span><span class="a-gh__day" data-future></span><span class="a-gh__day" data-future></span></div></div></div>
+          <figcaption class="a-gh__foot">
+            <span>Public and private repositories · github.com/idmr13-davem</span>
+            <span class="a-gh__legend" aria-hidden="true">Less<span class="a-gh__day" data-l="0"></span><span class="a-gh__day" data-l="1"></span><span class="a-gh__day" data-l="2"></span><span class="a-gh__day" data-l="3"></span><span class="a-gh__day" data-l="4"></span>More</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="a-recs" id="recommendations" aria-labelledby="recs-title" aria-roledescription="carousel">
+        <h2 class="a-recs__title" id="recs-title" data-reveal>In their words</h2>
+        <div class="a-recs__carousel" data-reveal>
+          <ul class="a-recs__track" role="list" tabindex="0" aria-label="Recommendations" data-recs-track>
+            
+            <li class="a-rec" aria-roledescription="slide" aria-label="1 of 5">
+              <figure>
+                <blockquote><p>I had the opportunity to work with David at Mercado Libre, primarily on the marketplace’s user registration experience. When we were part of the same triad, he always stood out for his strong UX design skills, his focus on the user experience, and his curiosity about exploring different alternatives.</p><p>David shared his explorations in great detail and had a remarkable ability to connect product needs with technical feasibility. I especially value his contribution to the preparation for each rollout, actively participating in testing and sharing valuable feedback to improve the experience. Without a doubt, our account creation experience is better today thanks in large part to Dave’s contributions.</p></blockquote>
+                <figcaption><img src="/assets/Home/v3/recommendations/debora.jpg" alt="" loading="lazy" width="256" height="256"><span><strong>Débora Arruda Cabral</strong><span>Product Manager · Mercado Libre · <span class="a-rec__country"><img src="/assets/Home/v2/flag-brazil.svg" alt="" width="22" height="16">Brazil</span></span></span></figcaption>
+              </figure>
+            </li>
+            <li class="a-rec" aria-roledescription="slide" aria-label="2 of 5">
+              <figure>
+                <blockquote><p>I had the opportunity to work with Dave on several projects, with him on the UX team and me as a software developer and, on other occasions, as a team lead. In both roles, my experience working with him was always excellent. He is a highly meticulous designer, clear in his communication and open to dialogue. He enjoys discussing ideas and collaborating, bringing together different perspectives, listening to feedback, and iterating as needed. Very patient and clear in his deliverables. I would definitely recommend Dave!</p></blockquote>
+                <figcaption><img src="/assets/Home/v3/recommendations/fiamma.jpg" alt="" loading="lazy" width="256" height="256"><span><strong>Fiamma Coedo</strong><span>Software Project Leader · Mercado Libre · <span class="a-rec__country"><img src="/assets/Home/v2/flag-argentina.svg" alt="" width="22" height="16">Argentina</span></span></span></figcaption>
+              </figure>
+            </li>
+            <li class="a-rec" aria-roledescription="slide" aria-label="3 of 5">
+              <figure>
+                <blockquote><p>I had the opportunity to work alongside Dave for 2 years, and he is an extremely dedicated and structured professional. His attention to detail and the exceptional quality of his deliverables were key to raising the bar in design and achieving pixel perfection in every deliverable. His passion for his work is evident, which also makes him an excellent teammate who always pushes others to improve.</p></blockquote>
+                <figcaption><img src="/assets/Home/v3/recommendations/maria.jpg" alt="" loading="lazy" width="256" height="256"><span><strong>Maria Alejandra Camargo</strong><span>UX Designer · Mercado Libre · <span class="a-rec__country"><img src="/assets/Home/v2/flag-colombia.svg" alt="" width="22" height="16">Colombia</span></span></span></figcaption>
+              </figure>
+            </li>
+            <li class="a-rec" aria-roledescription="slide" aria-label="4 of 5">
+              <figure>
+                <blockquote><p>I was lucky to work with Dave on the same team, and I want to highlight his team spirit and commitment. He is always willing to help others and share what he has learned.</p><p>Dave is a very responsible and dedicated person who stands out for the polish of his deliverables and his technical knowledge. He is very open to learning, exploring new tools and taking on new challenges. I believe he has great potential as a designer, and his drive to keep growing and developing professionally is a great strength.</p></blockquote>
+                <figcaption><img src="/assets/Home/v3/recommendations/luz.jpg" alt="" loading="lazy" width="256" height="256"><span><strong>Luz Orsatti</strong><span>Sr UX Designer · Mercado Libre · <span class="a-rec__country"><img src="/assets/Home/v2/flag-argentina.svg" alt="" width="22" height="16">Argentina</span></span></span></figcaption>
+              </figure>
+            </li>
+            <li class="a-rec" aria-roledescription="slide" aria-label="5 of 5">
+              <figure>
+                <blockquote><p>David and I overlapped at Mercado Libre and, although we didn&#39;t work together on a project directly, I had the chance to talk with him often and see up close how he works. He always struck me as a responsible, committed professional, very willing to collaborate and help others. His dedication and his desire to do things well are clear. He is someone it&#39;s a pleasure to work with and someone you can count on. I recommend him with complete confidence.</p></blockquote>
+                <figcaption><img src="/assets/Home/v3/recommendations/cesar.jpg" alt="" loading="lazy" width="256" height="256"><span><strong>Cesar Fabian Sanabria</strong><span>Project Manager · Mercado Libre · <span class="a-rec__country"><img src="/assets/Home/v2/flag-colombia.svg" alt="" width="22" height="16">Colombia</span></span></span></figcaption>
+              </figure>
+            </li>
+          </ul>
+          <div class="a-recs__controls">
+            <div class="a-recs__arrows">
+              <button class="a-recs__arrow a-recs__arrow--prev" type="button" data-recs-prev aria-label="Previous recommendation" disabled><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><g transform="rotate(-90 10 10)"><path d="M16.6096 6.11423C16.83 5.89422 17.2945 6.00166 17.6467 6.35366C17.9989 6.70583 18.1056 7.16942 17.8855 7.38972L11.7757 13.4977H11.7721C11.4376 13.8079 10.9921 14 10.4999 14C10.0075 14 9.56144 13.8081 9.22694 13.4977H9.22401L3.11423 7.39045C2.89427 7.17005 3.00156 6.70578 3.35373 6.35366C3.70598 6.00159 4.17039 5.895 4.39082 6.11496L10.4991 12.2215L16.6096 6.11423Z" fill="currentColor"/></g></svg></button>
+              <button class="a-recs__arrow" type="button" data-recs-next aria-label="Next recommendation"><svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><g transform="rotate(-90 10 10)"><path d="M16.6096 6.11423C16.83 5.89422 17.2945 6.00166 17.6467 6.35366C17.9989 6.70583 18.1056 7.16942 17.8855 7.38972L11.7757 13.4977H11.7721C11.4376 13.8079 10.9921 14 10.4999 14C10.0075 14 9.56144 13.8081 9.22694 13.4977H9.22401L3.11423 7.39045C2.89427 7.17005 3.00156 6.70578 3.35373 6.35366C3.70598 6.00159 4.17039 5.895 4.39082 6.11496L10.4991 12.2215L16.6096 6.11423Z" fill="currentColor"/></g></svg></button>
+            </div>
+            <p class="a-recs__note">Translated from the original Spanish recommendations on <a href="https://www.linkedin.com/in/david-montealegre-rey/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="a-about" aria-labelledby="about-title">
+        <h2 class="a-about__title" id="about-title" data-reveal>Beyond design, my interests include:</h2>
+        <ul class="a-about__list" data-reveal><li>photography as an amateur landscape photographer.</li><li>music as an amateur guitarist.</li><li>trekking and spending time in nature.</li><li>driving and the automotive industry.</li><li>and building products as an aspiring entrepreneur.</li></ul>
+        <div class="a-about__close" data-reveal><p>These passions shape my approach to design, the projects I love working on, and the knowledge I enjoy sharing on my personal blog.</p><p><a class="a-about__cv" href="/assets/CV/DavidMontealegre-CV-EN.pdf" target="_blank" rel="noopener">Want to learn more about my professional experience? Take a look at my resume.</a></p></div>
+      </section>
+
+      <section class="a-blog" id="blog" aria-labelledby="blog-title">
+        <h2 class="a-blog__title" id="blog-title" data-reveal>Personal blog</h2>
+        <ul class="a-rows">
+          <li data-reveal><a class="a-row" href="/articles/por-que-mercado-libre-fue-el-primer-lugar-del-que-no-quise-irme.html"><img src="/assets/Home/v2/article-career.jpg" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>Why I&#39;ve worked with 4 different teams at Mercado Libre</strong><span>A couple of years ago, an interviewer asked me: why have you stayed so long at the same…</span></span><span class="a-row__value">6 min read</span></a></li><li data-reveal><a class="a-row" href="/articles/lo-que-mi-pasion-por-los-autos-me-enseno-sobre-disenar-experiencias.html"><img src="/assets/Home/v2/article-automotive.jpg" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>A bad interface not only creates a bad experience, it could be much worse</strong><span>I&#39;m not only a designer who likes to create interfaces, I’m also passionate about automotive UX…</span></span><span class="a-row__value">6 min read</span></a></li><li data-reveal><a class="a-row" href="/articles/construir-mi-portafolio-con-ia.html"><img class="a-row__img--contain" src="/assets/Articles/v3/portfolio-ai/thumb.jpg" alt="" loading="lazy" width="96" height="96"><span class="a-row__name"><strong>Building my portfolio with AI: what I decided and learned to delegate</strong><span>My experience integrating AI, from content analysis to building and publishing my portfolio.</span></span><span class="a-row__value">8 min read</span></a></li>
+        </ul>
+      </section>
+
+      <section class="a-contact" id="contact" aria-labelledby="contact-title">
+        <h2 class="sr-only" id="contact-title">Contact</h2>
+        <p class="a-contact__prompt" data-reveal><span>Now that you know a little more about me, what’s your next step?</span> Write the first line.</p>
+        <form class="a-field" data-reveal action="mailto:idmr13@gmail.com" data-mail>
+          <label class="sr-only" for="a-message">Write the first line.</label>
+          <input id="a-message" name="message" autocomplete="off" placeholder="Hi David, I’d like to talk about…">
+          <button type="submit" data-grid-ignore aria-label="Open in your email app"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+        </form>
+        <p class="a-contact__note" data-reveal>Your email app opens with this message to idmr13@gmail.com. Nothing is sent from this page.</p>
+      </section>
+    </main>
+    
+    <footer class="a-foot" id="contact-close">
+      <div class="a-foot__top">
+        <div class="a-foot__invite" data-reveal>
+          <p class="a-foot__line">Could we work together?</p>
+          <div class="a-foot__buttons"><a class="a-btn a-btn--dark" href="mailto:idmr13@gmail.com" >Send me an email</a><a class="a-btn a-btn--dark" href="https://www.linkedin.com/in/david-montealegre-rey/" target="_blank" rel="noopener noreferrer">Visit my profile</a><a class="a-btn a-btn--dark" href="https://wa.me/573183922306" target="_blank" rel="noopener noreferrer">Send me a message</a><a class="a-btn a-btn--dark" href="https://adplist.org/mentors/ivn-david-montealegre-rey-msahzjpd" target="_blank" rel="noopener noreferrer">Schedule a call</a></div>
+        </div>
+      </div>
+      <div class="a-foot__legal">
+        <p class="a-foot__credits"><span>© David Montealegre 2026</span><span class="a-foot__base"><img src="/assets/Home/v2/flag-colombia.svg" alt="" width="22" height="16">Based in Bogotá - Colombia</span></p>
+        <div class="a-foot__aside"><div class="a-foot__consent" data-consent-slot></div><p class="a-foot__credit">Website created with Claude Code + Codex</p></div>
+      </div>
+      <p class="a-foot__name" aria-hidden="true" data-grid-ignore>Montealegre</p>
+    </footer></div>
+<script src="/v3/shared/content.js?v=20261110-blog-thumbs"></script>
+<script src="/v3/shared/site.js?v=20261110-seo"></script>
+<script src="/v3/statement/app.js?v=20261109-gh-article"></script>
+<script src="/js/analytics.js" defer></script>
 </body>
 </html>
